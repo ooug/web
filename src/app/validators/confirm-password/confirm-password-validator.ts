@@ -1,2 +1,1 @@
-export class ConfirmPasswordValidator {
-}
+export class ConfirmPasswordValidator {}

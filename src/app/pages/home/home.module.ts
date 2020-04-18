@@ -9,16 +9,16 @@ import { HomeComponent } from './home.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-  },
+    component: HomeComponent
+  }
 ];
 
 @NgModule({
   declarations: [
     UpcomingEventsComponent,
     TechnologyStackComponent,
-    HomeComponent,
+    HomeComponent
   ],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes)]
 })
 export class HomeModule {}

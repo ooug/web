@@ -8,9 +8,8 @@ describe('OtpComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OtpComponent ]
-    })
-    .compileComponents();
+      declarations: [OtpComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

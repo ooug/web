@@ -1,2 +1,1 @@
-export class RollNumberValidator {
-}
+export class RollNumberValidator {}

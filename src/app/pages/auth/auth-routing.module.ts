@@ -9,28 +9,28 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 const routes: Routes = [
   {
     path: '',
-    component: AuthComponent,
+    component: AuthComponent
   },
   {
     path: 'login',
-    component: LoginComponent,
+    component: LoginComponent
   },
   {
     path: 'otp',
-    component: OtpComponent,
+    component: OtpComponent
   },
   {
     path: 'forgot-password',
-    component: FooterComponent,
+    component: FooterComponent
   },
   {
     path: 'reset-password',
-    component: ResetPasswordComponent,
-  },
+    component: ResetPasswordComponent
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AuthRoutingModule {}

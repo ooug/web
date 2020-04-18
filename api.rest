@@ -1,0 +1,2 @@
+### ping
+GET https://api.ipify.org?format=json HTTP/1.1

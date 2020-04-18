@@ -8,12 +8,14 @@ import { ForgotPassordComponent } from './components/forgot-passord/forgot-passo
 import { OtpComponent } from './components/otp/otp.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
-
 @NgModule({
-  declarations: [AuthComponent, LoginComponent, ForgotPassordComponent, OtpComponent, ResetPasswordComponent],
-  imports: [
-    CommonModule,
-    AuthRoutingModule
-  ]
+  declarations: [
+    AuthComponent,
+    LoginComponent,
+    ForgotPassordComponent,
+    OtpComponent,
+    ResetPasswordComponent
+  ],
+  imports: [CommonModule, AuthRoutingModule]
 })
-export class AuthModule { }
+export class AuthModule {}
