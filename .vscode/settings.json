@@ -2,6 +2,7 @@
   "files.autoSave": "onWindowChange",
   "editor.formatOnSave": true,
   "cSpell.words": [
-    "OOUG"
+    "OOUG",
+    "Zilla"
   ]
 }

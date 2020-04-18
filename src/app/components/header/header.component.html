@@ -1,1 +1,51 @@
-<p>header works!</p>
+<header>
+  <menu class="container-fluid">
+    <ul>
+      <li>
+        <a
+          routerLink="/auth"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: false }"
+        >
+          Auth
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/auth/login"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Login
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/auth/otp"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          OTP
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/auth/forgot-password"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Forgot Password
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/auth/reset-password"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Reset Password
+        </a>
+      </li>
+    </ul>
+  </menu>
+</header>

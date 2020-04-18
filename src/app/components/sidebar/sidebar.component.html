@@ -1,1 +1,49 @@
-<p>sidebar works!</p>
+<nav class="container-fluid">
+  <ul>
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        About
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="/activities"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Activities
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="/gallery"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Gallery
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="/members"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Members
+      </a>
+    </li>
+  </ul>
+</nav>
