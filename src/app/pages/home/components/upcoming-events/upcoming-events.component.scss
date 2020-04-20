@@ -1,0 +1,14 @@
+@import "https://fonts.googleapis.com/css?family=Roboto";
+#heading {
+    font-family: "Roboto";
+}
+
+.card {
+    transition: box-shadow .3s;
+    background-color: #652e90;
+}
+
+.card:hover {
+    box-shadow: 0 0 2rem #652e90;
+    ;
+}

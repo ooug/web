@@ -1,6 +1,22 @@
-<p>technology-stack works!</p>
-
-<p>
-  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam magnam eius
-  odio dicta et atque cumque saepe culpa quibusdam placeat!
-</p>
+<!-- upcoming events -->
+<section class="container">
+    <div class="row mt-5">
+        <div class="col-md-12 col-12 text-center">
+            <h2 id="heading">ARTICLES/BLOGS</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <div *ngFor="let article of articles">
+                <div class="card card-block my-1">
+                    <div class="card-body">
+                        {{article.title}}
+                        <span class="text-secondary"> By: {{article.author}}</span>
+                        <a href="{{article.link}}" class="card-link float-right">View Full Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

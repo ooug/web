@@ -1,5 +1,51 @@
-<p>upcoming-events works!</p>
-
-<u>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, iusto!
-</u>
+<!-- upcoming events -->
+<section class="container">
+    <div class="row mt-5">
+        <div class="col-md-12 col-12 text-center">
+            <h2 id="heading">UPCOMING EVENTS</h2>
+            <hr>
+        </div>
+    </div>
+    <!-- event cards -->
+    <div class="row">
+        <div class="col-md-4">
+            <!-- event1 -->
+            <div class="card card-block text-light my-1">
+                <img class="card-img-top" src="{{upcoming_events[0].img_link}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{upcoming_events[0].title}}</h5>
+                    <p class="card-text">{{upcoming_events[0].description}}</p>
+                    <div class="text-center">
+                        <a href="{{upcoming_events[0].link}}" class="btn btn-primary btn-sm">Know more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- event2 -->
+            <div class="card card-block text-light my-1">
+                <img class="card-img-top" src="{{upcoming_events[1].img_link}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{upcoming_events[1].title}}</h5>
+                    <p class="card-text">{{upcoming_events[1].description}}</p>
+                    <div class="text-center">
+                        <a href="{{upcoming_events[1].link}}" class="btn btn-primary btn-sm">Know more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- event3 -->
+            <div class="card card-block text-light my-1">
+                <img class="card-img-top" src="{{upcoming_events[2].img_link}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{upcoming_events[2].title}}</h5>
+                    <p class="card-text">{{upcoming_events[2].description}}</p>
+                    <div class="text-center">
+                        <a href="{{upcoming_events[2].link}}" class="btn btn-primary btn-sm">Know more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
