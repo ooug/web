@@ -1,51 +1,51 @@
 <header>
-  <menu class="container-fluid">
-    <ul>
-      <li>
-        <a
-          routerLink="/auth"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: false }"
-        >
+    <menu class="container-fluid">
+        <ul>
+            <li>
+                <a routerLink="/auth" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">
           Auth
         </a>
-      </li>
-      <li>
-        <a
-          routerLink="/auth/login"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
+            </li>
+            <li>
+                <a routerLink="/auth/login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
           Login
         </a>
-      </li>
-      <li>
-        <a
-          routerLink="/auth/otp"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
+            </li>
+            <li>
+                <a routerLink="/auth/otp" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
           OTP
         </a>
-      </li>
-      <li>
-        <a
-          routerLink="/auth/forgot-password"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
+            </li>
+            <li>
+                <a routerLink="/auth/forgot-password" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
           Forgot Password
         </a>
-      </li>
-      <li>
-        <a
-          routerLink="/auth/reset-password"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
+            </li>
+            <li>
+                <a routerLink="/auth/reset-password" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
           Reset Password
         </a>
-      </li>
-    </ul>
-  </menu>
+            </li>
+        </ul>
+    </menu>
 </header>
+
+
+<!-- <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+    <a class="navbar-brand" href="#">Angular</a>
+    <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown" ngbDropdown>
+                <a class="nav-link dropdown-toggle" id="id01" href="#" ngbDropdownToggle>Files</a>
+                <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+                    <a class="dropdown-item" href="#">HTML</a>
+                    <a class="dropdown-item" href="#">TS</a>
+                    <a class="dropdown-item" href="#">JS</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav> -->
