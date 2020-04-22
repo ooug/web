@@ -8,12 +8,12 @@ export const membersComponents = [MembersComponent];
 const routes: Routes = [
   {
     path: '',
-    component: MembersComponent
-  }
+    component: MembersComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class MembersRoutingModule {}

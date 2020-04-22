@@ -9,55 +9,55 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./pages/home/home.module').then(m => m.HomeModule)
+      import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'about',
     loadChildren: () =>
-      import('./pages/about/about.module').then(m => m.AboutModule)
+      import('./pages/about/about.module').then((m) => m.AboutModule),
   },
   {
     path: 'gallery',
     loadChildren: () =>
-      import('./pages/gallery/gallery.module').then(m => m.GalleryModule)
+      import('./pages/gallery/gallery.module').then((m) => m.GalleryModule),
   },
   {
     path: 'activities',
     loadChildren: () =>
       import('./pages/activities/activities.module').then(
-        m => m.ActivitiesModule
-      )
+        (m) => m.ActivitiesModule
+      ),
   },
   {
     path: 'members',
     loadChildren: () =>
-      import('./pages/members/members.module').then(m => m.MembersModule)
+      import('./pages/members/members.module').then((m) => m.MembersModule),
   },
   {
     path: 'auth',
     loadChildren: () =>
-      import('./pages/auth/auth.module').then(m => m.AuthModule)
+      import('./pages/auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path: 'offline',
-    component: OfflineComponent
+    component: OfflineComponent,
   },
   {
     path: 'maintenance',
-    component: MaintenanceComponent
+    component: MaintenanceComponent,
   },
   {
     path: 'errors',
-    component: ErrorsComponent
+    component: ErrorsComponent,
   },
   {
     path: '**',
-    component: NotFoundComponent
-  }
+    component: NotFoundComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

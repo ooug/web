@@ -8,41 +8,15 @@
     </div>
     <!-- event cards -->
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" *ngFor="let item of upcomingEvents">
             <!-- event1 -->
             <div class="card card-block text-light my-1">
-                <img class="card-img-top" src="{{upcoming_events[0].img_link}}" alt="Card image cap">
+                <img class="card-img-top" src="{{item?.Image?.host + item?.Image?.path}}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">{{upcoming_events[0].title}}</h5>
-                    <p class="card-text">{{upcoming_events[0].description}}</p>
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="card-text">{{item.description}}</p>
                     <div class="text-center">
-                        <a href="{{upcoming_events[0].link}}" class="btn btn-primary btn-sm">Know more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <!-- event2 -->
-            <div class="card card-block text-light my-1">
-                <img class="card-img-top" src="{{upcoming_events[1].img_link}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{upcoming_events[1].title}}</h5>
-                    <p class="card-text">{{upcoming_events[1].description}}</p>
-                    <div class="text-center">
-                        <a href="{{upcoming_events[1].link}}" class="btn btn-primary btn-sm">Know more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <!-- event3 -->
-            <div class="card card-block text-light my-1">
-                <img class="card-img-top" src="{{upcoming_events[2].img_link}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{upcoming_events[2].title}}</h5>
-                    <p class="card-text">{{upcoming_events[2].description}}</p>
-                    <div class="text-center">
-                        <a href="{{upcoming_events[2].link}}" class="btn btn-primary btn-sm">Know more</a>
+                        <a href="{{item.link}}" class="btn btn-primary btn-sm">Know more</a>
                     </div>
                 </div>
             </div>
