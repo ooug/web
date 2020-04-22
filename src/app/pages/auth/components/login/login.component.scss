@@ -1,6 +1,6 @@
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css";
-@import "https://fonts.googleapis.com/css?family=Poppins:600&display=swap";
-@import "https://fonts.googleapis.com/css?family=Roboto";
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css';
+@import 'https://fonts.googleapis.com/css?family=Poppins:600&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Roboto';
 * {
     padding: 0;
     margin: 0;
@@ -21,7 +21,7 @@ body {
 }
 
 .container1 {
-    background-color: #7a3fa7;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -31,9 +31,9 @@ body {
 
 #ooug {
     font-size: 5rem;
-    font-family: "GoodTimesRg-Regular";
+    font-family: 'GoodTimesRg-Regular';
     color: red;
-    transition: text-shadow .3s;
+    transition: text-shadow 0.3s;
 }
 
 #ooug:hover {
@@ -79,7 +79,7 @@ form {
     grid-template-columns: 7% 93%;
     margin: 25px 0;
     padding: 5px 0;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid rgb(189, 188, 188);
 }
 
 .login-content .input-div.one {
@@ -87,14 +87,14 @@ form {
 }
 
 .i {
-    color: gray;
+    color: rgb(189, 188, 188);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .i i {
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .input-div>div {
@@ -107,9 +107,9 @@ form {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: gray;
+    color: rgb(189, 188, 188);
     font-size: 18px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .input-div:before,
@@ -120,7 +120,7 @@ form {
     width: 0%;
     height: 2px;
     background-color: white;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .input-div:before {
@@ -169,9 +169,9 @@ a {
     display: block;
     text-align: right;
     text-decoration: none;
-    color: #999;
+    color: rgb(189, 188, 188);
     font-size: 0.9rem;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 a:hover {
@@ -193,7 +193,7 @@ a:hover {
     text-transform: uppercase;
     margin: 1rem 0;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .btn:hover {
@@ -275,8 +275,8 @@ a:hover {
     font-size: 18px;
     text-decoration: none;
     text-align: center;
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     opacity: 0;
 }
 
@@ -297,11 +297,11 @@ figure:hover+span {
 .hover10 figure img {
     -webkit-filter: grayscale(0) blur(0);
     filter: grayscale(0) blur(0);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .hover10 figure:hover img {
-    -webkit-filter: grayscale(50%)blur(1px);
+    -webkit-filter: grayscale(50%) blur(1px);
     filter: grayscale(50%) blur(1px);
 }

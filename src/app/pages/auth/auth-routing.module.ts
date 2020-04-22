@@ -5,32 +5,33 @@ import { LoginComponent } from './components/login/login.component';
 import { OtpComponent } from './components/otp/otp.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: AuthComponent
+    component: AuthComponent,
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'otp',
-    component: OtpComponent
+    component: OtpComponent,
   },
   {
     path: 'forgot-password',
-    component: FooterComponent
+    component: ForgotPasswordComponent,
   },
   {
     path: 'reset-password',
-    component: ResetPasswordComponent
-  }
+    component: ResetPasswordComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AuthRoutingModule {}
