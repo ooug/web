@@ -1,0 +1,17 @@
+@import "https://fonts.googleapis.com/css?family=Good+Times";
+div.dropdown-menu {
+    background-color: #652e90;
+    border: 1px solid gray;
+    a.dropdown-item:hover {
+        background-color: #7c41a8;
+    }
+}
+
+.navbar-brand {
+    font-family: "Good Times";
+    font-size: 1.5rem;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}

@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
     <menu class="container-fluid">
         <ul>
             <li>
@@ -28,24 +28,25 @@
             </li>
         </ul>
     </menu>
-</header>
+</header> -->
 
 
-<!-- <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-    <a class="navbar-brand" href="#">Angular</a>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #652e90;" [ngStyle]="headerStyles">
+    <a class="navbar-brand" routerLink="/">OOUG</a>
     <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
     <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown" ngbDropdown>
-                <a class="nav-link dropdown-toggle" id="id01" href="#" ngbDropdownToggle>Files</a>
+                <a class="nav-link dropdown-toggle" id="id01" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }" ngbDropdownToggle>Auth</a>
                 <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
-                    <a class="dropdown-item" href="#">HTML</a>
-                    <a class="dropdown-item" href="#">TS</a>
-                    <a class="dropdown-item" href="#">JS</a>
+                    <a class="dropdown-item text-white" routerLink="/auth/login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Login</a>
+                    <a class="dropdown-item text-white" routerLink="/auth/otp" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">OTP</a>
+                    <a class="dropdown-item text-white" routerLink="/auth/forgot-password" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Forgot Password</a>
+                    <a class="dropdown-item text-white" routerLink="/auth/reset-password" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Reset Password</a>
                 </div>
             </li>
         </ul>
     </div>
-</nav> -->
+</nav>
