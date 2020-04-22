@@ -15,8 +15,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     ForgotPassordComponent,
     OtpComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
   ],
-  imports: [CommonModule, AuthRoutingModule, FormsModule]
+  imports: [CommonModule, AuthRoutingModule, FormsModule],
 })
-export class AuthModule { }
+export class AuthModule {}

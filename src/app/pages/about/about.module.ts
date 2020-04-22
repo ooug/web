@@ -9,12 +9,12 @@ import { NewsletterComponent } from './components/newsletter/newsletter.componen
 const routes: Routes = [
   {
     path: '',
-    component: AboutComponent
-  }
+    component: AboutComponent,
+  },
 ];
 
 @NgModule({
   declarations: [AboutComponent, ContactComponent, NewsletterComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)]
+  imports: [CommonModule, RouterModule.forChild(routes)],
 })
 export class AboutModule {}

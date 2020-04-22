@@ -6,6 +6,6 @@ import { MembersComponent } from './members.component';
 
 @NgModule({
   declarations: [MembersComponent],
-  imports: [CommonModule, MembersRoutingModule]
+  imports: [CommonModule, MembersRoutingModule],
 })
 export class MembersModule {}

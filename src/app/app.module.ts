@@ -25,17 +25,17 @@ import { environment } from '../environments/environment';
     NotFoundComponent,
     OfflineComponent,
     ErrorsComponent,
-    MaintenanceComponent
+    MaintenanceComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production
-    })
+      enabled: environment.production,
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -7,12 +7,12 @@ import { ActivitiesComponent } from './activities.component';
 const routes: Routes = [
   {
     path: '',
-    component: ActivitiesComponent
-  }
+    component: ActivitiesComponent,
+  },
 ];
 
 @NgModule({
   declarations: [ActivitiesComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)]
+  imports: [CommonModule, RouterModule.forChild(routes)],
 })
 export class ActivitiesModule {}

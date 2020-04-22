@@ -8,7 +8,7 @@ describe('OtpComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [OtpComponent]
+      declarations: [OtpComponent],
     }).compileComponents();
   }));
 
