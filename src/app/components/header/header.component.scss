@@ -12,6 +12,10 @@ div.dropdown-menu {
     font-size: 1.5rem;
 }
 
+.navbar {
+    transition: background-color .3s;
+}
+
 .dropdown-toggle {
     cursor: pointer;
 }
