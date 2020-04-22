@@ -3,7 +3,11 @@
   "editor.formatOnSave": true,
   "cSpell.words": [
     "OOUG",
+<<<<<<< HEAD
     "Scroller",
+=======
+    "Techbhookads",
+>>>>>>> about
     "Zilla",
     "imgs",
     "prebuild"
