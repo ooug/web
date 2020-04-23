@@ -1,6 +1,7 @@
 import { HostListener, Component, OnInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { Router, NavigationStart } from '@angular/router';
+import { ToggleSidebar } from '../sidebar/toggleSidebar.service';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +9,19 @@ import { Router, NavigationStart } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private scroll: ViewportScroller, private router: Router) {}
+  constructor(
+    private scroll: ViewportScroller,
+    private router: Router,
+    public sidebarService: ToggleSidebar
+  ) {}
 
   public isNavbarCollapsed = true;
   public headerStyles = { 'background-color': '#652e90' };
   private isHomePage = false;
+
+  toggleSidebar() {
+    this.sidebarService.toggleSidebar();
+  }
 
   ngOnInit(): void {
     this.router.events.subscribe((val) => {

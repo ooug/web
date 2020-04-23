@@ -1,29 +1,100 @@
-<nav class="container-fluid">
-    <ul>
-        <li>
-            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+<!-- <nav class="container-fluid">
+  <ul>
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
         Home
       </a>
-        </li>
-        <li>
-            <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    </li>
+    <li>
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
         About
       </a>
-        </li>
-        <li>
-            <a routerLink="/activities" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    </li>
+    <li>
+      <a
+        routerLink="/activities"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
         Activities
       </a>
-        </li>
-        <li>
-            <a routerLink="/gallery" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    </li>
+    <li>
+      <a
+        routerLink="/gallery"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
         Gallery
       </a>
-        </li>
-        <li>
-            <a routerLink="/members" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        Members
+    </li>
+    <li>
+      <a
+        routerLink="/members"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Member
       </a>
-        </li>
-    </ul>
-</nav>
+    </li>
+  </ul>
+</nav> -->
+
+<div [ngClass]="sidebarService.getClasses()" id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <div class="sidebar-heading"><strong>Navigation</strong></div>
+    <div class="list-group list-group-flush">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="sidebarService.toggleSidebar()"
+        >Home</a
+      >
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="sidebarService.toggleSidebar()"
+        >About</a
+      >
+      <a
+        routerLink="/activities"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="sidebarService.toggleSidebar()"
+        >Activities</a
+      >
+      <a
+        routerLink="/gallery"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="sidebarService.toggleSidebar()"
+        >Gallery</a
+      >
+      <a
+        routerLink="/members"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="sidebarService.toggleSidebar()"
+        >Members</a
+      >
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> -->
+</div>
