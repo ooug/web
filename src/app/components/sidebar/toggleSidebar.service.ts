@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class ToggleSidebar {
-  private sidebarClasses = 'toggled';
+  private sidebarClasses = '';
 
   toggleSidebar() {
     if (this.sidebarClasses === 'toggled') {
