@@ -1,6 +1,6 @@
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css";
-@import "https://fonts.googleapis.com/css?family=Poppins:600&display=swap";
-@import "https://fonts.googleapis.com/css?family=Roboto";
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css';
+@import 'https://fonts.googleapis.com/css?family=Poppins:600&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Roboto';
 * {
     padding: 0;
     margin: 0;
@@ -16,12 +16,12 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
 }
 
-.container1 {
-    background-color: #652e90;
+.container {
+    width: auto;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -29,37 +29,26 @@ body {
     padding: 0 2rem;
 }
 
-#ooug {
-    font-size: 5rem;
-    font-family: "Good Times";
-    color: red;
-    transition: text-shadow .3s;
-}
-
-#ooug:hover {
-    text-shadow: 0 0 1rem white;
-}
-
 .img {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: default;
 }
 
 .login-content {
     display: flex;
+    width: auto;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
 }
 
 .img img {
-    width: 500px;
+    width: 200px;
 }
 
 form {
-    width: 360px;
+    width: auto;
 }
 
 .login-content img {
@@ -79,7 +68,7 @@ form {
     grid-template-columns: 7% 93%;
     margin: 25px 0;
     padding: 5px 0;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid #d9d9d9;
 }
 
 .login-content .input-div.one {
@@ -87,7 +76,7 @@ form {
 }
 
 .i {
-    color: gray;
+    color: #d9d9d9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +96,7 @@ form {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: gray;
+    color: #999;
     font-size: 18px;
     transition: .3s;
 }
@@ -119,7 +108,7 @@ form {
     bottom: -2px;
     width: 0%;
     height: 2px;
-    background-color: white;
+    background-color: #38d39f;
     transition: .4s;
 }
 
@@ -139,11 +128,10 @@ form {
 .input-div.focus>div>h5 {
     top: -5px;
     font-size: 15px;
-    color: white;
 }
 
 .input-div.focus>.i>i {
-    color: white;
+    color: #38d39f;
 }
 
 .input-div>div>input {
@@ -157,7 +145,7 @@ form {
     background: none;
     padding: 0.5rem 0.7rem;
     font-size: 1.2rem;
-    color: white;
+    color: #555;
     font-family: 'poppins', sans-serif;
 }
 
@@ -175,7 +163,7 @@ a {
 }
 
 a:hover {
-    color: white;
+    color: #38d39f;
 }
 
 .btn {
@@ -185,7 +173,7 @@ a:hover {
     border-radius: 25px;
     outline: none;
     border: none;
-    background-image: linear-gradient(to right, #8353a8, #b88dd8, #8353a8);
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
     background-size: 200%;
     font-size: 1.2rem;
     color: #fff;
@@ -206,22 +194,23 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     form {
-        width: 290px;
+        width: auto;
     }
     .login-content h2 {
         font-size: 2.4rem;
         margin: 8px 0;
     }
     .img img {
-        width: 400px;
+        width: 200px;
     }
 }
 
 @media screen and (max-width: 900px) {
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
+        width: auto;
     }
     .img {
         display: none;
@@ -231,12 +220,13 @@ a:hover {
     }
     .login-content {
         justify-content: center;
+        width: auto;
     }
 }
 
 .column {
-    margin: 15px 15px 0;
-    padding: 0;
+    margin: auto;
+    padding-block-end: 56px;
 }
 
 .column:last-child {
@@ -252,7 +242,7 @@ a:hover {
 .column div {
     position: relative;
     float: left;
-    width: 200px;
+    width: fit-content;
     height: 100px;
     margin: 0 0 0 25px;
     padding: 0;
@@ -268,21 +258,20 @@ a:hover {
     left: 0;
     z-index: -1;
     display: block;
-    width: 300px;
+    width: auto;
     margin: 0;
     padding: 0;
     color: #444;
     font-size: 18px;
     text-decoration: none;
-    text-align: center;
+    text-align: right;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     opacity: 0;
 }
 
 figure {
-    width: 300px;
-    height: 200px;
+    height: 100px;
     margin: 0;
     padding: 0;
     background: #fff;
