@@ -7,12 +7,12 @@ import {
   UrlSegment,
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
-  UrlTree
+  UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UnauthorizedGuard
   implements CanActivate, CanActivateChild, CanLoad {

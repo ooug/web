@@ -1,4 +1,4 @@
-<nav class="container-fluid">
+<!-- <nav class="container-fluid">
   <ul>
     <li>
       <a
@@ -42,8 +42,59 @@
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
       >
-        Members
+        Member
       </a>
     </li>
   </ul>
-</nav>
+</nav> -->
+
+<div [ngClass]="sidebarService.getClasses()" id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <div class="sidebar-heading"><strong>Navigation</strong></div>
+    <div class="list-group list-group-flush">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="sidebarService.toggleSidebar()"
+        >Home</a
+      >
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="sidebarService.toggleSidebar()"
+        >About</a
+      >
+      <a
+        routerLink="/activities"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="sidebarService.toggleSidebar()"
+        >Activities</a
+      >
+      <a
+        routerLink="/gallery"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="sidebarService.toggleSidebar()"
+        >Gallery</a
+      >
+      <a
+        routerLink="/members"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="sidebarService.toggleSidebar()"
+        >Members</a
+      >
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> -->
+</div>

@@ -9,15 +9,15 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent implements OnInit {
   constructor() {}
 
-  public usernameClass = ['input-div']; //classes used for username field
-  public passwordClass = ['input-div']; //classes used for password field
+  public usernameClass = ['input-div']; // classes used for username field
+  public passwordClass = ['input-div']; // classes used for password field
   public user = {
     username: '',
     password: '',
   };
 
   // when focused on input fields
-  focus(input: String) {
+  focus(input: string) {
     if (input === 'password') {
       this.passwordClass.push('focus');
     }
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   // when focused out
-  focusout(input: String) {
+  focusout(input: string) {
     if (input === 'password') {
       if (this.user.password === '') {
         this.passwordClass.pop();
@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 }
-
+//style of login page
 const inputs = document.querySelectorAll('.input');
 
 function addcl() {

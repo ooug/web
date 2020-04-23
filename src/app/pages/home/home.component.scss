@@ -1,12 +1,12 @@
-@import "https://fonts.googleapis.com/css?family=Good+Times";
 #intro {
     height: 100vh;
-    background: url('../../../assets/imgs/back2.jpg');
+    background: url('../../../assets/images/back2.jpg');
     background-size: cover !important;
+    cursor: default;
 }
 
 #ooug_title {
-    font-family: "Good Times", "Roboto";
+    font-family: 'GoodTimesRg-Regular', 'Roboto';
     font-size: 3rem;
     line-height: 3.8rem;
 }
@@ -17,5 +17,5 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Roboto";
+    font-family: 'Roboto';
 }
