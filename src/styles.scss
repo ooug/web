@@ -6,3 +6,7 @@
 .active {
   color: green;
 }
+
+button:focus {
+  outline: none;
+}

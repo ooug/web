@@ -1,54 +1,4 @@
-<!-- <nav class="container-fluid">
-  <ul>
-    <li>
-      <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
-        Home
-      </a>
-    </li>
-    <li>
-      <a
-        routerLink="/about"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
-        About
-      </a>
-    </li>
-    <li>
-      <a
-        routerLink="/activities"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
-        Activities
-      </a>
-    </li>
-    <li>
-      <a
-        routerLink="/gallery"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
-        Gallery
-      </a>
-    </li>
-    <li>
-      <a
-        routerLink="/members"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
-        Member
-      </a>
-    </li>
-  </ul>
-</nav> -->
-
-<div [ngClass]="sidebarService.getClasses()" id="wrapper">
+<div [ngClass]="{ toggled: !isSideBarCollapse }" id="wrapper">
   <!-- Sidebar -->
   <div id="sidebar-wrapper">
     <div class="sidebar-heading"><strong>Navigation</strong></div>
@@ -58,15 +8,16 @@
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
         class="list-group-item list-group-item-action"
-        (click)="sidebarService.toggleSidebar()"
-        >Home</a
+        (click)="helperService.toggleSideBar()"
       >
+        Home
+      </a>
       <a
         routerLink="/about"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
         class="list-group-item list-group-item-action"
-        (click)="sidebarService.toggleSidebar()"
+        (click)="helperService.toggleSideBar()"
         >About</a
       >
       <a
@@ -74,7 +25,7 @@
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
         class="list-group-item list-group-item-action"
-        (click)="sidebarService.toggleSidebar()"
+        (click)="helperService.toggleSideBar()"
         >Activities</a
       >
       <a
@@ -82,7 +33,7 @@
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
         class="list-group-item list-group-item-action"
-        (click)="sidebarService.toggleSidebar()"
+        (click)="helperService.toggleSideBar()"
         >Gallery</a
       >
       <a
@@ -90,11 +41,9 @@
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
         class="list-group-item list-group-item-action"
-        (click)="sidebarService.toggleSidebar()"
+        (click)="helperService.toggleSideBar()"
         >Members</a
       >
     </div>
   </div>
-  <!-- /#sidebar-wrapper -->
-  <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> -->
 </div>

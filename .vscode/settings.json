@@ -6,6 +6,7 @@
     "Scroller",
     "Zilla",
     "imgs",
-    "prebuild"
+    "prebuild",
+    "svgs"
   ]
 }
