@@ -8,7 +8,7 @@ describe('OfflineComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [OfflineComponent],
+      declarations: [OfflineComponent]
     }).compileComponents();
   }));
 

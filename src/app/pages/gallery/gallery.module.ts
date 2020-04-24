@@ -7,12 +7,12 @@ import { GalleryComponent } from './gallery.component';
 const routes: Routes = [
   {
     path: '',
-    component: GalleryComponent,
-  },
+    component: GalleryComponent
+  }
 ];
 
 @NgModule({
   declarations: [GalleryComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes)]
 })
 export class GalleryModule {}

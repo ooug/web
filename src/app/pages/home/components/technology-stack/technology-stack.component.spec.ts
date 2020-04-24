@@ -8,7 +8,7 @@ describe('TechnologyStackComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TechnologyStackComponent],
+      declarations: [TechnologyStackComponent]
     }).compileComponents();
   }));
 
