@@ -1,4 +1,4 @@
-<p>auth works!</p>
+<!-- <p>auth works!</p>
 <div class="text-center">
   <button
     class="btn btn-primary btn-lg px-5"
@@ -6,4 +6,47 @@
   >
     <span class="underline">Login</span>
   </button>
-</div>
+</div> -->
+<section>
+  <div class="container h-100">
+    <div class="row h-100">
+      <!-- welcome to ooug part -->
+      <div class="d-none d-md-block col-md-6 text-center my-auto" id="welcome">
+        <span style="font-size: 3.5rem; font-family: Roboto; color: white;"
+          >Welcome to</span
+        ><br />
+        <span id="ooug">OOUG</span>
+      </div>
+
+      <!-- extra space -->
+      <div class="col-md-1"></div>
+
+      <!-- Buttons of login -->
+      <div class="col-md-4 my-auto text-center">
+        <button class="btn my-2">
+          <img src="./assets/images/social/mail.svg" alt="email" />&nbsp;&nbsp;
+          Login with Google
+        </button>
+        <button class="btn my-2">
+          <img
+            src="./assets/images/social/linkedin.svg"
+            alt="email"
+          />&nbsp;&nbsp; Login with LinkedIn
+        </button>
+        <button class="btn my-2">
+          <img
+            src="./assets/images/social/facebook.svg"
+            alt="email"
+          />&nbsp;&nbsp; Login with Facebook
+        </button>
+        <button routerLink="/auth/login" class="btn my-2">
+          <img src="./assets/images/social/mail.svg" alt="email" />&nbsp;&nbsp;
+          Login with Email
+        </button>
+      </div>
+
+      <!-- extra space -->
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</section>

@@ -40,21 +40,21 @@
     (click)="toggleSidebar()"
     style="background-color: transparent; border: none; color: white;"
   >
-    <i class="fas fa-2x fa-bars"></i>
+    <img src="./assets/images/menu.svg" alt="MenuOpen" />
   </button>
   <button
     *ngIf="sidebarService.getClasses() !== ''"
     (click)="toggleSidebar()"
     style="background-color: transparent; border: none; color: white;"
   >
-    <i class="fas fa-2x fa-times-circle"></i>
+    <img src="./assets/images/x-square.svg" alt="MenuClose" />
   </button>
   <a class="navbar-brand ml-2" routerLink="/">OOUG</a>
   <ul class="navbar-nav ml-auto mr-3">
     <li class="navbar-item">
       <a
         class="nav-link"
-        routerLink="/auth/login"
+        routerLink="/auth"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
         >Login</a
