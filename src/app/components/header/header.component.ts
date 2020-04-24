@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       if (val instanceof NavigationStart) {
         this.isHomePage = val.url === '/';
       }
-      this.isTransparent = this.isTransparent;
+      this.isTransparent = this.isHomePage;
     });
 
     this.subs.add(
