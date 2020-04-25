@@ -127,5 +127,15 @@ export class MembersComponent implements OnInit {
     },
   ];
 
+  public presidentData = {
+    Image: { host: '', path: './assets/images/gray.jpg' },
+    name: 'Name 1',
+    description: 'Some Description',
+    Links: {
+      github: 'github',
+      linkedin: 'linkedin',
+    },
+  };
+
   ngOnInit(): void {}
 }
