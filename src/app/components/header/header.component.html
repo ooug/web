@@ -1,82 +1,34 @@
-<!-- <header>
-    <menu class="container-fluid">
-        <ul>
-            <li>
-                <a routerLink="/auth" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">
-          Auth
-        </a>
-            </li>
-            <li>
-                <a routerLink="/auth/login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          Login
-        </a>
-            </li>
-            <li>
-                <a routerLink="/auth/otp" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          OTP
-        </a>
-            </li>
-            <li>
-                <a routerLink="/auth/forgot-password" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          Forgot Password
-        </a>
-            </li>
-            <li>
-                <a routerLink="/auth/reset-password" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          Reset Password
-        </a>
-            </li>
-        </ul>
-    </menu>
-</header> -->
-
-<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #652e90;" [ngStyle]="headerStyles">
-    <a class="navbar-brand" routerLink="/">OOUG</a>
-    <ul class="navbar-nav ml-auto mr-3">
-        <li class="navbar-item">
-            <a class="nav-link" routerLink="/auth/login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Login</a
-          >
-      </li>
-    </ul>
-    <!-- <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<nav
+  class="navbar navbar-expand-md navbar-dark fixed-top"
+  [ngClass]="{
+    'bg-transparent': isTransparent,
+    headerBackgroundColor: !isTransparent
+  }"
+>
+  <!-- style="background-color: #652e90;"
+  [ngStyle]="headerStyles" -->
+  <button
+    (click)="helperService.toggleSideBar()"
+    style="background-color: transparent; border: none; color: white;"
+  >
+    <img
+      class="svg"
+      [src]="
+        isSideBarCollapse ? './assets/svgs/menu.svg' : './assets/svgs/x.svg'
+      "
+      alt="close"
+    />
   </button>
-    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown" ngbDropdown>
-                <a class="nav-link dropdown-toggle" id="id01" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }" ngbDropdownToggle>Auth</a
-        >
-        <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
-          <a
-            class="dropdown-item text-white"
-            routerLink="/auth/login"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >Login</a
-          >
-          <a
-            class="dropdown-item text-white"
-            routerLink="/auth/otp"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >OTP</a
-          >
-          <a
-            class="dropdown-item text-white"
-            routerLink="/auth/forgot-password"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >Forgot Password</a
-          >
-          <a
-            class="dropdown-item text-white"
-            routerLink="/auth/reset-password"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >Reset Password</a
-          >
-        </div>
-      </li>
-    </ul>
-  </div> -->
+  <a class="navbar-brand ml-2" routerLink="/">OOUG</a>
+  <ul class="navbar-nav ml-auto mr-3">
+    <li class="navbar-item">
+      <a
+        class="nav-link"
+        routerLink="/auth"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Login</a
+      >
+    </li>
+  </ul>
 </nav>

@@ -1,29 +1,49 @@
-<nav class="container-fluid">
-    <ul>
-        <li>
-            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+<div [ngClass]="{ toggled: !isSideBarCollapse }" id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <div class="sidebar-heading"><strong>Navigation</strong></div>
+    <div class="list-group list-group-flush">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="helperService.toggleSideBar()"
+      >
         Home
       </a>
-        </li>
-        <li>
-            <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        About
-      </a>
-        </li>
-        <li>
-            <a routerLink="/activities" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        Activities
-      </a>
-        </li>
-        <li>
-            <a routerLink="/gallery" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        Gallery
-      </a>
-        </li>
-        <li>
-            <a routerLink="/members" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        Members
-      </a>
-        </li>
-    </ul>
-</nav>
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="helperService.toggleSideBar()"
+        >About</a
+      >
+      <a
+        routerLink="/activities"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="helperService.toggleSideBar()"
+        >Activities</a
+      >
+      <a
+        routerLink="/gallery"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="helperService.toggleSideBar()"
+        >Gallery</a
+      >
+      <a
+        routerLink="/members"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="helperService.toggleSideBar()"
+        >Members</a
+      >
+    </div>
+  </div>
+</div>

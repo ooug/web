@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/scss/bootstrap';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css';
+@import 'https://fonts.googleapis.com/css?family=Roboto';
 
 * {
   margin: auto; // remove this code
@@ -25,4 +27,8 @@
 .text {
   // TODO: implement global text for the web
   font-size: 16px;
+}
+
+button:focus {
+  outline: none;
 }
