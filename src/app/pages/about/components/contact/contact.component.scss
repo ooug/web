@@ -29,12 +29,11 @@ h2 {
   opacity: 50%;
 }
 .card:hover {
-  background: linear-gradient(to left, #500a6e, #4f2283);
-  //background: rgb(236, 195, 58);
+  background: rgb(107, 14, 119);
   padding: 6px;
   border-radius: 10px;
   opacity: 100%;
-  transition: 1.5s;
+  transition: 1.4s;
 }
 .md-form {
   margin-top: 10px;
@@ -60,11 +59,5 @@ a {
   border-radius: 20px;
   background: rgb(247, 245, 248);
   color: black;
-  font-weight: bold;
-}
-.btn:hover {
-  border-radius: 20px;
-  background: green;
-  color: white;
   font-weight: bold;
 }
