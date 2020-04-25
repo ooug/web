@@ -6,11 +6,12 @@
     "Scroller",
     "Techbhookads",
     "Zilla",
+    "cufonfonts",
     "imgs",
+    "linkedin",
     "prebuild",
     "svgs",
     "tabset",
-    "webfont",
-    "cufonfonts"
+    "webfont"
   ]
 }
