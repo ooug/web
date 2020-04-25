@@ -9,6 +9,8 @@
     "imgs",
     "prebuild",
     "svgs",
-    "tabset"
+    "tabset",
+    "webfont",
+    "cufonfonts"
   ]
 }
