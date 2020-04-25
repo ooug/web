@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "ooug-dev-1fbf3"
+  },
+  "targets": {
+    "ooug-dev-1fbf3": {
+      "hosting": {
+        "web": [
+          "ooug-dev-1fbf3"
+        ]
+      }
+    }
   }
 }
