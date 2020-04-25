@@ -2,15 +2,18 @@
   "files.autoSave": "onWindowChange",
   "editor.formatOnSave": true,
   "cSpell.words": [
+    "GIET",
+    "Gunupur",
     "OOUG",
     "Scroller",
     "Techbhookads",
     "Zilla",
+    "cufonfonts",
     "imgs",
     "prebuild",
     "svgs",
     "tabset",
     "webfont",
-    "cufonfonts"
+    "woff"
   ]
 }
