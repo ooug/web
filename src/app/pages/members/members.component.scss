@@ -37,3 +37,20 @@
 .icons:hover {
   background-color: rgb(70, 1, 1);
 }
+
+.members-text {
+  font: bold 3rem 'Montserrat';
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a7d5, #23d5ab);
+  background-size: 300%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
