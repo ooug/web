@@ -13,30 +13,34 @@
                 <div class="row">
                   <div class="col-md-5 my-1">
                     <div class="card card-block text-light my-1">
-                      <img class="image card-img-top" src="./assets/images/gray.jpg" alt="alt added" />
+                      <img
+                        class="image card-img-top"
+                        src="./assets/images/gray.jpg"
+                        alt="alt added"
+                      />
                     </div>
                   </div>
                   <div class="col-md-7">
                     <div class="card-body">
                       <div class="card-title">
-                        description:wjhfjwhjhe j dsjwefw ejhfvejf ajhve ghv
-                        jhvfe3 jhevf gecf gavefh ge vef khewf kjbef hwjf jhevf
-                        jwhevvf we kaf jhvj jhqvw qwgvw gwhcvw qgv nagwvd nwv
-                        description:wjhfjwhjhe j dsjwefw ejhfvejf ajhve ghv
-                        jhvfe3 jhevf gecf gavefh ge vef khewf kjbef hwjf jhevf
-                        jwhevvf we kaf jhvj jhqvw qwgvw gwhcvw qgv nagwvd nwvdescription:wjhfjwhjhe j dsjwefw ejhfvejf
-                        ajhve ghv
-                        jhvfe3 jhevf gecf gavefh ge vef khewf kjbef hwjf jhevf
-                        jwhevvf we kaf jhvj jhqvw qwgvw gwhcvw qgv nagwvd nwv
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eos, modi earum! Laborum eos earum quia et accusamus
+                        ipsa tempore voluptas non excepturi, culpa est dolor.
+                        Doloribus quo fugit sed sunt. Lorem ipsum dolor sit
+                        amet, consectetur adipisicing elit. Quo suscipit veniam,
+                        ratione odit possimus obcaecati voluptatem velit
+                        pariatur deleniti excepturi porro, reprehenderit
+                        temporibus sit eligendi vel placeat neque amet
+                        necessitatibus!
                       </div>
                     </div>
                   </div>
                 </div>
                 <p>
-                  description:wjhfjwhjhe j dsjwefw ejhfvejf ajhve ghv jhvfe3
-                  jhevf gecf gavefh ge vef khewf kjbef hwjf jhevf jwhevvf we kaf
-                  jhvj jhqvw qwgvw gwhcvw qgv nagwvd nwvdh mhwef hevf hevf
-                  nwhevf jwb
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum cupiditate iusto voluptate nemo magnam culpa molestias
+                  rem quis adipisci animi. Autem a quia nesciunt? Rem porro vero
+                  beatae ipsam dignissimos?
                 </p>
                 <div class="text-center">
                   <a href="#" class="icons btn btn-sm mx-1">
@@ -63,9 +67,16 @@
             <ng-template ngbTabTitle>Corporate Members</ng-template>
             <ng-template ngbTabContent>
               <div class="row my-3">
-                <div class="col-md-4 my-1" *ngFor="let member of corporateMembers; let i = index">
+                <div
+                  class="col-md-4 my-1"
+                  *ngFor="let member of corporateMembers; let i = index"
+                >
                   <div class="card card-block text-light my-1">
-                    <img class="card-img-top" src="{{ member.Image.host + member.Image.path }}" alt="Card image cap" />
+                    <img
+                      class="card-img-top"
+                      src="{{ member.Image.host + member.Image.path }}"
+                      alt="Card image cap"
+                    />
                     <div class="card-body">
                       <h5 class="card-title" style="line-height: 0.7rem;">
                         {{ member.name }}
@@ -75,11 +86,20 @@
                       </p>
                       <p class="card-text">{{ member.description }}</p>
                       <div class="text-center">
-                        <a href="{{ member.Links.github }}" class="btn btn-sm mx-1">
+                        <a
+                          href="{{ member.Links.github }}"
+                          class="btn btn-sm mx-1"
+                        >
                           <img src="./assets/images/social/github.svg" alt="" />
                         </a>
-                        <a href="{{ member.Links.linkedin }}" class="btn btn-sm mx-1">
-                          <img src="./assets/images/social/linkedin.svg" alt="" />
+                        <a
+                          href="{{ member.Links.linkedin }}"
+                          class="btn btn-sm mx-1"
+                        >
+                          <img
+                            src="./assets/images/social/linkedin.svg"
+                            alt=""
+                          />
                         </a>
                       </div>
                     </div>
@@ -92,20 +112,36 @@
             <ng-template ngbTabTitle>Student Members</ng-template>
             <ng-template ngbTabContent>
               <div class="row my-3">
-                <div class="col-md-4 my-1" *ngFor="let member of studentMembers; let i = index">
+                <div
+                  class="col-md-4 my-1"
+                  *ngFor="let member of studentMembers; let i = index"
+                >
                   <div class="card card-block text-light my-1">
-                    <img class="card-img-top" src="{{ member.Image.host + member.Image.path }}" alt="Card image cap" />
+                    <img
+                      class="card-img-top"
+                      src="{{ member.Image.host + member.Image.path }}"
+                      alt="Card image cap"
+                    />
                     <div class="card-body">
                       <h5 class="card-title" style="line-height: 0.7rem;">
                         {{ member.name }}
                       </h5>
                       <p class="card-text">{{ member.description }}</p>
                       <div class="text-center">
-                        <a href="{{ member.Links.github }}" class="btn btn-sm mx-1">
+                        <a
+                          href="{{ member.Links.github }}"
+                          class="btn btn-sm mx-1"
+                        >
                           <img src="./assets/images/social/github.svg" alt="" />
                         </a>
-                        <a href="{{ member.Links.linkedin }}" class="btn btn-sm mx-1">
-                          <img src="./assets/images/social/linkedin.svg" alt="" />
+                        <a
+                          href="{{ member.Links.linkedin }}"
+                          class="btn btn-sm mx-1"
+                        >
+                          <img
+                            src="./assets/images/social/linkedin.svg"
+                            alt=""
+                          />
                         </a>
                       </div>
                     </div>
