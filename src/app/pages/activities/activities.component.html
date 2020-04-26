@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 col-12">
-      <h2 class="my-1 text-center" id="title">ACTIVITIES</h2>
+      <h2 class="my-1 text-center" id="title">
+        <span class="activity-text">ACTIVITIES</span>
+      </h2>
       <div class="mt-3">
         <ngb-tabset [destroyOnHide]="false">
           <ngb-tab>
@@ -10,11 +12,7 @@
               <div class="row" *ngFor="let item of workshop; let i = index">
                 <div class="col-md-5 my-1">
                   <div class="card card-block text-light my-1">
-                    <img
-                      class="card-img-top"
-                      src="{{ item.Image.host + item.Image.path }}"
-                      alt="Card image cap"
-                    />
+                    <img class="card-img-top" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" />
                   </div>
                 </div>
                 <div class="card-body">
@@ -37,11 +35,7 @@
               <div class="row" *ngFor="let item of techbhukkads; let i = index">
                 <div class="col-md-5 my-1">
                   <div class="card card-block text-light my-1">
-                    <img
-                      class="card-img-top"
-                      src="{{ item.Image.host + item.Image.path }}"
-                      alt="Card image cap"
-                    />
+                    <img class="card-img-top" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" />
                   </div>
                 </div>
                 <div class="card-body">
@@ -64,11 +58,7 @@
               <div class="row" *ngFor="let item of farewell; let i = index">
                 <div class="col-md-5 my-1">
                   <div class="card card-block text-light my-1">
-                    <img
-                      class="card-img-top"
-                      src="{{ item.Image.host + item.Image.path }}"
-                      alt="Card image cap"
-                    />
+                    <img class="card-img-top" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" />
                   </div>
                 </div>
                 <div class="card-body">
