@@ -1,3 +1,21 @@
+.activity-page {
+  background: linear-gradient(25deg, #f16c1f, #4b2172, #206b3f, #44a098);
+  background-size: 500%;
+  animation: animate 5s linear infinite;
+  background-clip: content-box;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 500% 0;
+  }
+}
+
+.button {
+  background: green;
+}
 .container {
   padding-top: 5rem;
   min-height: 85vh;
@@ -15,23 +33,9 @@
 }
 
 .card:hover {
-  box-shadow: 0 0 2rem #652e90;
+  box-shadow: 0 0 2rem #1b0900;
 }
 
-.activity-box {
-  background: linear-gradient(25deg, #f59157, #f7a4c3, #c0ebfa, #fdb2b2);
-  background-size: 500%;
-  animation: animate 5s linear infinite;
-  background-clip: content-box;
-}
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 500% 0;
-  }
-}
 .card-body {
   margin: 10px;
 }
