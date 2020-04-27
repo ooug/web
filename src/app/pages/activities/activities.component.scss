@@ -10,11 +10,30 @@
 
 .card {
   transition: box-shadow 0.3s;
-  background-color: #652e90;
+  background-color: #f59157;
+  margin: 10px;
 }
 
 .card:hover {
   box-shadow: 0 0 2rem #652e90;
+}
+
+.activity-box {
+  background: linear-gradient(25deg, #f59157, #f7a4c3, #c0ebfa, #fdb2b2);
+  background-size: 500%;
+  animation: animate 5s linear infinite;
+  background-clip: content-box;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 500% 0;
+  }
+}
+.card-body {
+  margin: 10px;
 }
 
 .activity-text {
