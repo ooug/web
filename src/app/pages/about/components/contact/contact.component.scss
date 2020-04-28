@@ -23,18 +23,12 @@ h2 {
   background: linear-gradient(to left, #fa6f65, #8942a8);
 }
 .card {
-  background: black;
+  background: rgb(214, 168, 168);
   padding: 6px;
   border-radius: 10px;
-  opacity: 50%;
+  opacity: 95%;
 }
-.card:hover {
-  background: rgb(107, 14, 119);
-  padding: 6px;
-  border-radius: 10px;
-  opacity: 100%;
-  transition: 1.4s;
-}
+
 .md-form {
   margin-top: 10px;
 }
@@ -55,9 +49,6 @@ a {
 .col-lg-7 {
   margin-top: 5px;
 }
-.btn {
-  border-radius: 20px;
-  background: rgb(247, 245, 248);
-  color: black;
-  font-weight: bold;
+.form-control {
+  background: white;
 }
