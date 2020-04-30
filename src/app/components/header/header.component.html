@@ -8,6 +8,7 @@
   <!-- style="background-color: #652e90;"
   [ngStyle]="headerStyles" -->
   <button
+    class="d-md-none d-lg-none"
     (click)="helperService.toggleSideBar()"
     style="background-color: transparent; border: none; color: white;"
   >
@@ -21,6 +22,53 @@
   </button>
   <a class="navbar-brand ml-2" routerLink="/">OOUG</a>
   <ul class="navbar-nav ml-auto mr-3">
+    <!-- items that will hide on smaller device -->
+    <li class="navbar-item d-none d-md-block">
+      <a
+        class="nav-link"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </li>
+    <li class="navbar-item d-none d-md-block">
+      <a
+        class="nav-link"
+        routerLink="/about"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >About</a
+      >
+    </li>
+    <li class="navbar-item d-none d-md-block">
+      <a
+        class="nav-link"
+        routerLink="/activities"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Activities</a
+      >
+    </li>
+    <li class="navbar-item d-none d-md-block">
+      <a
+        class="nav-link"
+        routerLink="/gallery"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Gallery</a
+      >
+    </li>
+    <li class="navbar-item d-none d-md-block">
+      <a
+        class="nav-link"
+        routerLink="/members"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Members</a
+      >
+    </li>
+    <!-- end of items that will hide on smaller device -->
     <li class="navbar-item">
       <a
         class="nav-link"
