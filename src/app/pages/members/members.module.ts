@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +9,6 @@ import { MembersComponent } from './members.component';
 
 @NgModule({
   declarations: [MembersComponent],
-  imports: [NgbModule, CommonModule, MembersRoutingModule],
+  imports: [NgbDropdownModule, CommonModule, MembersRoutingModule, NgbModule],
 })
 export class MembersModule {}

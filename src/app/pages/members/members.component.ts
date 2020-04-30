@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembersComponent implements OnInit {
   constructor() {}
+  active = 1;
+  active2 = 0;
 
   public corporateMembers = [
     {
@@ -70,7 +72,7 @@ export class MembersComponent implements OnInit {
       },
     },
   ];
-  public studentMembers = [
+  public studentMembers2ndyear = [
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
       name: 'Name 1',
@@ -127,15 +129,119 @@ export class MembersComponent implements OnInit {
     },
   ];
 
-  public presidentData = {
-    Image: { host: '', path: './assets/images/gray.jpg' },
-    name: 'Name 1',
-    description: 'Some Description',
-    Links: {
-      github: 'github',
-      linkedin: 'linkedin',
+  public studentMembers3rdyear = [
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 1',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
     },
-  };
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 2',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 3',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 4',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 5',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 6',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+  ];
+
+  public studentMembers4thyear = [
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 1',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 2',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 3',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 4',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 5',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Name 6',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+      },
+    },
+  ];
 
   ngOnInit(): void {}
 }
