@@ -19,6 +19,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -29,6 +30,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -39,6 +41,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -49,6 +52,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -59,6 +63,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -69,6 +74,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
   ];
@@ -80,6 +86,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -89,6 +96,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -98,6 +106,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -107,6 +116,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -116,6 +126,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -125,6 +136,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
   ];
@@ -137,6 +149,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -146,6 +159,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -155,6 +169,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -164,6 +179,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -173,6 +189,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -182,6 +199,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
   ];
@@ -194,6 +212,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -203,6 +222,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -212,6 +232,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -221,6 +242,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -230,6 +252,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
     {
@@ -239,6 +262,7 @@ export class MembersComponent implements OnInit {
       Links: {
         github: 'github',
         linkedin: 'linkedin',
+        insta: 'insta',
       },
     },
   ];
