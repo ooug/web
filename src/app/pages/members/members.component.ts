@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembersComponent implements OnInit {
   constructor() {}
+
   active = 1;
   active2 = 0;
 
   public corporateMembers = [
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 1',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -23,7 +24,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 2',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -34,7 +35,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 3',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -45,7 +46,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 4',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -56,7 +57,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -67,7 +68,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -80,7 +81,7 @@ export class MembersComponent implements OnInit {
   ];
   public studentMembers2ndyear = [
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 1',
       description: 'Some Description',
       Links: {
@@ -90,7 +91,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 2',
       description: 'Some Description',
       Links: {
@@ -100,7 +101,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 3',
       description: 'Some Description',
       Links: {
@@ -110,7 +111,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 4',
       description: 'Some Description',
       Links: {
@@ -120,7 +121,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
       description: 'Some Description',
       Links: {
@@ -130,7 +131,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
       description: 'Some Description',
       Links: {

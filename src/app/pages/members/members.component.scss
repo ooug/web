@@ -8,12 +8,11 @@
 }
 
 .det-box {
-  background-color: rgb(250, 226, 194);
-  box-shadow: 0 0 0.5rem #231f25;
-  transition: box-shadow 0.3s;
-  margin: 30px;
+  background-color: rgb(240, 238, 236);
 }
 .det-box:hover {
+  box-shadow: 0 0 1rem #000000;
+  transition: box-shadow 0.3s;
   background-color: rgb(199, 195, 189);
 }
 .name {
