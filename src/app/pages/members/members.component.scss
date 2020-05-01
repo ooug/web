@@ -1,7 +1,49 @@
-.container {
-  padding-top: 5rem;
-  min-height: 85vh;
+.but {
+  border: none;
+  background-color: rgb(119, 96, 80);
+  color: #fdfbf9;
 }
+.but:hover {
+  border: none;
+}
+
+.det-box {
+  background-color: rgb(240, 238, 236);
+}
+.det-box:hover {
+  box-shadow: 0 0 1rem #000000;
+  transition: box-shadow 0.3s;
+  background-color: rgb(199, 195, 189);
+}
+.name {
+  font-family: cursive;
+  color: black;
+}
+.msg {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: rgb(0, 0, 0);
+}
+
+.col-md-5 {
+  padding: 0;
+  margin: 0;
+}
+.col-md-6 {
+  padding: 0;
+}
+
+.view {
+  background-image: url('../../../assets/images/gray.jpg');
+  transition: abs;
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+//--------------------------------
 
 #title {
   font-family: Roboto;
@@ -36,4 +78,21 @@
 }
 .icons:hover {
   background-color: rgb(70, 1, 1);
+}
+
+.members-text {
+  font: bold 3rem 'Montserrat';
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a7d5, #23d5ab);
+  background-size: 300%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
 }
