@@ -13,11 +13,7 @@
                 <div class="row">
                   <div class="col-md-5 my-1">
                     <div class="card card-block text-light my-1">
-                      <img
-                        class="image card-img-top"
-                        src="./assets/images/gray.jpg"
-                        alt="alt added"
-                      />
+                      <img class="image card-img-top" src="./assets/images/gray.jpg" alt="alt added" />
                     </div>
                   </div>
                   <div class="col-md-7">
@@ -67,16 +63,9 @@
             <ng-template ngbTabTitle>Corporate Members</ng-template>
             <ng-template ngbTabContent>
               <div class="row my-3">
-                <div
-                  class="col-md-4 my-1"
-                  *ngFor="let member of corporateMembers; let i = index"
-                >
+                <div class="col-md-4 my-1" *ngFor="let member of corporateMembers; let i = index">
                   <div class="card card-block text-light my-1">
-                    <img
-                      class="card-img-top"
-                      src="{{ member.Image.host + member.Image.path }}"
-                      alt="Card image cap"
-                    />
+                    <img class="card-img-top" src="{{ member.Image.host + member.Image.path }}" alt="Card image cap" />
                     <div class="card-body">
                       <h5 class="card-title" style="line-height: 0.7rem;">
                         {{ member.name }}
@@ -86,20 +75,11 @@
                       </p>
                       <p class="card-text">{{ member.description }}</p>
                       <div class="text-center">
-                        <a
-                          href="{{ member.Links.github }}"
-                          class="btn btn-sm mx-1"
-                        >
+                        <a href="{{ member.Links.github }}" class="btn btn-sm mx-1">
                           <img src="./assets/images/social/github.svg" alt="" />
                         </a>
-                        <a
-                          href="{{ member.Links.linkedin }}"
-                          class="btn btn-sm mx-1"
-                        >
-                          <img
-                            src="./assets/images/social/linkedin.svg"
-                            alt=""
-                          />
+                        <a href="{{ member.Links.linkedin }}" class="btn btn-sm mx-1">
+                          <img src="./assets/images/social/linkedin.svg" alt="" />
                         </a>
                       </div>
                     </div>
@@ -112,36 +92,20 @@
             <ng-template ngbTabTitle>Student Members</ng-template>
             <ng-template ngbTabContent>
               <div class="row my-3">
-                <div
-                  class="col-md-4 my-1"
-                  *ngFor="let member of studentMembers; let i = index"
-                >
+                <div class="col-md-4 my-1" *ngFor="let member of studentMembers; let i = index">
                   <div class="card card-block text-light my-1">
-                    <img
-                      class="card-img-top"
-                      src="{{ member.Image.host + member.Image.path }}"
-                      alt="Card image cap"
-                    />
+                    <img class="card-img-top" src="{{ member.Image.host + member.Image.path }}" alt="Card image cap" />
                     <div class="card-body">
                       <h5 class="card-title" style="line-height: 0.7rem;">
                         {{ member.name }}
                       </h5>
                       <p class="card-text">{{ member.description }}</p>
                       <div class="text-center">
-                        <a
-                          href="{{ member.Links.github }}"
-                          class="btn btn-sm mx-1"
-                        >
+                        <a href="{{ member.Links.github }}" class="btn btn-sm mx-1">
                           <img src="./assets/images/social/github.svg" alt="" />
                         </a>
-                        <a
-                          href="{{ member.Links.linkedin }}"
-                          class="btn btn-sm mx-1"
-                        >
-                          <img
-                            src="./assets/images/social/linkedin.svg"
-                            alt=""
-                          />
+                        <a href="{{ member.Links.linkedin }}" class="btn btn-sm mx-1">
+                          <img src="./assets/images/social/linkedin.svg" alt="" />
                         </a>
                       </div>
                     </div>
