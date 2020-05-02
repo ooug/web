@@ -8,89 +8,135 @@ import { Component, OnInit } from '@angular/core';
 export class ActivitiesComponent implements OnInit {
   constructor() {}
 
-  public upcomingActivities = [
+  public workshop = [
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 1',
+      name: 'Activity 1',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 2',
+      name: 'Activity 2',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 3',
+      name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 4',
+      name: 'Activity 4',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 5',
+      name: 'Activity 5',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 6',
+      name: 'Activity 6',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
   ];
-  public previousActivities = [
+
+  public techbhukkads = [
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 1',
+      name: 'Activity 1',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 2',
+      name: 'Activity 2',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 3',
+      name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 4',
+      name: 'Activity 4',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 5',
+      name: 'Activity 5',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Name 6',
+      name: 'Activity 6',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+  ];
+
+  public farewell = [
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 1',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 2',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 3',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 4',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 5',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 6',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',

@@ -14,40 +14,33 @@
 h2 {
   font-size: 30px;
   text-align: center;
-  color: white;
+  color: black;
 
   padding-top: 10px;
   text-shadow: tan;
 }
 .container-fluid {
-  background: linear-gradient(to left, #fa6f65, #8942a8);
+  background: rgb(233, 229, 229);
 }
 .card {
-  background: black;
+  background: rgb(66, 65, 65);
   padding: 6px;
-  border-radius: 10px;
-  opacity: 50%;
+  border-radius: 30px;
+  opacity: 95%;
 }
-.card:hover {
-  background: linear-gradient(to left, #500a6e, #4f2283);
-  //background: rgb(236, 195, 58);
-  padding: 6px;
-  border-radius: 10px;
-  opacity: 100%;
-  transition: 1.5s;
-}
+
 .md-form {
   margin-top: 10px;
 }
 .border {
   width: 160px;
-  height: 2px;
-  background: white;
+  height: 5px;
+  background: black;
   margin: 10px auto;
   margin-bottom: 30px;
 }
 p {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 a {
@@ -56,15 +49,13 @@ a {
 .col-lg-7 {
   margin-top: 5px;
 }
-.btn {
-  border-radius: 20px;
-  background: rgb(247, 245, 248);
-  color: black;
-  font-weight: bold;
+.form-control {
+  background: white;
 }
-.btn:hover {
-  border-radius: 20px;
-  background: green;
-  color: white;
-  font-weight: bold;
+img {
+  background: black;
+  border-radius: 15px;
+  width: 25px;
+  height: 25px;
+  padding: 4px;
 }
