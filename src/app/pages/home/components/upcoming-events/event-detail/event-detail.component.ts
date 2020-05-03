@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-event-detail',
@@ -9,7 +10,12 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./event-detail.component.scss'],
 })
 export class EventDetailComponent implements OnInit {
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(
+    private route: ActivatedRoute,
+    private http: HttpClient,
+    private titleService: Title,
+    private metaService: Meta
+  ) {}
 
   public event = null;
   public flags = {
@@ -30,6 +36,26 @@ export class EventDetailComponent implements OnInit {
     alert('Registered');
   }
 
+  updateMetaTags() {
+    this.titleService.setTitle(this.event.title);
+    this.metaService.updateTag({
+      name: 'description',
+      content: this.event.shortDescription,
+    });
+    this.metaService.updateTag({
+      property: 'og:url',
+      content: 'https://odishaoug.in/event/' + this.event.id,
+    });
+    this.metaService.updateTag({
+      property: 'og:title',
+      content: this.event.title,
+    });
+    this.metaService.updateTag({
+      property: 'og:description',
+      content: this.event.shortDescription,
+    });
+  }
+
   ngOnInit(): void {
     this.flags.isLoading = true;
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
@@ -44,6 +70,8 @@ export class EventDetailComponent implements OnInit {
           // if event not found
           if (!this.event) {
             this.flags.notFound = true;
+          } else {
+            this.updateMetaTags();
           }
           this.flags.isLoading = false;
         });
