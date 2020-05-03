@@ -6,11 +6,26 @@
       <hr />
     </div>
   </div>
+
+  <!-- loading icon-->
+  <div class="row" *ngIf="isLoading">
+    <div class="col text-center mt-2">
+      <img
+        src="./assets/images/loading-blue.gif"
+        width="50px"
+        alt="Loading.."
+      />
+    </div>
+  </div>
+
   <!-- event cards -->
-  <div class="row">
+  <div class="row" *ngIf="!isLoading">
     <div class="col-md-4" *ngFor="let item of upcomingEvents">
       <!-- event1 -->
       <div class="card card-block text-light my-1">
+        <span id="reg-open-banner" *ngIf="item.enableRegistration">
+          Registration Open
+        </span>
         <img
           class="card-img-top"
           src="{{ item.Image.host + item.Image.path }}"
@@ -18,10 +33,10 @@
         />
         <div class="card-body">
           <h5 class="card-title">{{ item.title }}</h5>
-          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text">{{ item.shortDescription }}</p>
           <div class="text-center">
-            <a href="{{ item.link }}" class="btn btn-primary btn-sm"
-              >Know more</a
+            <a [routerLink]="['/event', item.id]" class="btn btn-primary btn-sm"
+              >Know More</a
             >
           </div>
         </div>
