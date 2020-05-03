@@ -1,7 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/scss/bootstrap';
 
+* {
+  margin: auto; // remove this code
+  // background: #f6f6f6;
+  // TODO: please make your code to be compatible with this background color. i have decided to use same background color for all the page
+}
+
 /* link active styles */
 .active {
   color: green;
+}
+
+.title {
+  // TODO: implement global title for the web
+  font-size: 16px;
+}
+
+.subTitle {
+  // TODO: implement global sub title  for the web
+  font-size: 16px;
+}
+
+.text {
+  // TODO: implement global text for the web
+  font-size: 16px;
+}
+
+button:focus {
+  outline: none;
 }

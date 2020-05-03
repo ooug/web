@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { ActivitiesComponent } from './activities.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ActivitiesComponent
-  }
+    component: ActivitiesComponent,
+  },
 ];
 
 @NgModule({
   declarations: [ActivitiesComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)]
+  imports: [NgbModule, CommonModule, RouterModule.forChild(routes)],
 })
 export class ActivitiesModule {}
