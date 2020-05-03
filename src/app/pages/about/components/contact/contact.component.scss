@@ -14,12 +14,17 @@
 h2 {
   font-size: 30px;
   text-align: center;
+<<<<<<< HEAD
   color: black;
+=======
+  color: white;
+>>>>>>> 912591bae239497aadb44997be08e5a5456dcc93
 
   padding-top: 10px;
   text-shadow: tan;
 }
 .container-fluid {
+<<<<<<< HEAD
   background: rgb(233, 229, 229);
 }
 .card {
@@ -29,18 +34,44 @@ h2 {
   opacity: 95%;
 }
 
+=======
+  background: linear-gradient(to left, #fa6f65, #8942a8);
+}
+.card {
+  background: black;
+  padding: 6px;
+  border-radius: 10px;
+  opacity: 50%;
+}
+.card:hover {
+  background: rgb(107, 14, 119);
+  padding: 6px;
+  border-radius: 10px;
+  opacity: 100%;
+  transition: 1.4s;
+}
+>>>>>>> 912591bae239497aadb44997be08e5a5456dcc93
 .md-form {
   margin-top: 10px;
 }
 .border {
   width: 160px;
+<<<<<<< HEAD
   height: 5px;
   background: black;
+=======
+  height: 2px;
+  background: white;
+>>>>>>> 912591bae239497aadb44997be08e5a5456dcc93
   margin: 10px auto;
   margin-bottom: 30px;
 }
 p {
+<<<<<<< HEAD
   color: black;
+=======
+  color: white;
+>>>>>>> 912591bae239497aadb44997be08e5a5456dcc93
   font-weight: bold;
 }
 a {
@@ -49,6 +80,7 @@ a {
 .col-lg-7 {
   margin-top: 5px;
 }
+<<<<<<< HEAD
 .form-control {
   background: white;
 }
@@ -58,4 +90,11 @@ img {
   width: 25px;
   height: 25px;
   padding: 4px;
+=======
+.btn {
+  border-radius: 20px;
+  background: rgb(247, 245, 248);
+  color: black;
+  font-weight: bold;
+>>>>>>> 912591bae239497aadb44997be08e5a5456dcc93
 }

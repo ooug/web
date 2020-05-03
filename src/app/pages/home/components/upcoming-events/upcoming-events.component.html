@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -99,3 +100,36 @@
     ​
   </body>
 </html>
+=======
+<!-- upcoming events -->
+<section class="container">
+  <div class="row mt-5">
+    <div class="col-md-12 col-12 text-center">
+      <h2 id="heading">UPCOMING EVENTS</h2>
+      <hr />
+    </div>
+  </div>
+  <!-- event cards -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of upcomingEvents">
+      <!-- event1 -->
+      <div class="card card-block text-light my-1">
+        <img
+          class="card-img-top"
+          src="{{ item.Image.host + item.Image.path }}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <div class="text-center">
+            <a href="{{ item.link }}" class="btn btn-primary btn-sm"
+              >Know more</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+>>>>>>> 912591bae239497aadb44997be08e5a5456dcc93
