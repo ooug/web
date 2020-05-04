@@ -11,28 +11,83 @@ export class TechnologyStackComponent implements OnInit {
   public articles = [
     {
       title: 'Title 1',
+      date: '15 December,17',
       author: 'Author 1',
-      link: 'Link 1',
+      paragraph:
+        'TBritish military courts use aginst protesters busines cultural...1',
+      link: 'link',
     },
     {
-      title: 'Title 2',
-      author: 'Author 2',
-      link: 'Link 2',
+      title: 'Title 1',
+      date: '15 December,17',
+      author: 'Author 1',
+      paragraph:
+        'TBritish military courts use aginst protesters busines cultural...1',
+      link: 'link',
+      category: 'food',
     },
     {
-      title: 'Title 3',
-      author: 'Author 3',
-      link: 'Link 3',
+      title: 'Title 1',
+      date: '15 December,17',
+      author: 'Author 1',
+      paragraph:
+        'TBritish military courts use aginst protesters busines cultural...1',
+      link: 'link',
+      category: 'animal',
     },
     {
-      title: 'Title 4',
-      author: 'Author 4',
-      link: 'Link 4',
+      title: 'Title 1',
+      date: '15 December,17',
+      author: 'Author 1',
+      paragraph:
+        'TBritish military courts use aginst protesters busines cultural...1',
+      link: 'link',
+      category: 'food',
     },
     {
-      title: 'Title 5',
-      author: 'Author 5',
-      link: 'Link 5',
+      title: 'Title 1',
+      date: '15 December,17',
+      author: 'Author 1',
+      paragraph:
+        'TBritish military courts use aginst protesters busines cultural...1',
+      link: 'link',
+      category: 'travel',
+    },
+    {
+      title: 'Title 1',
+      date: '15 December,17',
+      author: 'Author 1',
+      paragraph:
+        'TBritish military courts use aginst protesters busines cultural...1',
+      link: 'link',
+      category: 'food',
+    },
+    {
+      title: 'Title 1',
+      date: '15 December,17',
+      author: 'Author 1',
+      paragraph:
+        'TBritish military courts use aginst protesters busines cultural...1',
+      link: 'link',
+      category: 'animal',
+    },
+    {
+      title: 'Title 1',
+      date: '15 December,17',
+      author: 'Author 1',
+      paragraph:
+        'TBritish military courts use aginst protesters busines cultural...1',
+      link: 'link',
+      category: 'food',
+    },
+    {
+      title: 'Title 1',
+      date: '15 December,17',
+      author: 'Author 1',
+      paragraph:
+        'TBritish military courts use aginst protesters busines cultural...1',
+      link: 'link',
+      category: 'travel',
     },
   ];
 
