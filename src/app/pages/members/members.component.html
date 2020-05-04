@@ -1,9 +1,5 @@
-<div style="margin-top:15%;"></div>
-
-
-
-
-<div style="margin-top: 10%; background-color: rgb(119, 96, 80);">
+<div style="margin-top:5%;"></div>
+<div style=" background-color: rgb(119, 96, 80);">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="navbar-collapse text-center" id="navbarSupportedContent">
       <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="navbar-nav ml-auto">
@@ -72,18 +68,12 @@
                   <div class="container">
 
                     <div class="det-box row" style="margin: auto;">
-                      <div class="col-md-5">
-                        <img src="{{ member.Image.host + member.Image.path }}" alt="Avatar1" height="100%"
-                          width="100%" />
-                      </div>
-                      <div class="col-md-7">
-                        <div class="details">
-                          <b>name of the member</b><br>
-                          <b class="msg">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-                            excepturi, quas vel ad quia totam dolor sit amet consectetur adipisicing eli.
-
-                          </b>
+                      <div class="box col-md-5">
+                        <div class="front" style="border-radius: 5px;">
+                          <img src="{{ member.Image.host + member.Image.path }}" alt="Avatar1" height="100%"
+                            width="100%" />
+                        </div>
+                        <div class="back midd" style="background-color: rgb(143, 138, 138);border-radius: 5px;">
                           <div class="text-center">
                             <a href="{{ member.Links.insta }}" class="icons btn btn-sm mx-1">
                               <img src="./assets/images/social/instagram.svg" alt="" />
@@ -95,6 +85,19 @@
                               <img src="./assets/images/social/linkedin.svg" alt="" />
                             </a>
                           </div>
+
+                        </div>
+
+                      </div>
+                      <div class="col-md-7">
+                        <div class="details">
+                          <b>name of the member</b><br>
+                          <b class="msg">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+                            excepturi, quas vel ad quia totam dolor sit amet consectetur adipisicing eli.
+
+                          </b>
+
                           <hr>
                         </div>
                       </div>
@@ -107,162 +110,187 @@
 
           </ng-template>
         </li>
+        <li [ngbNavItem]="2" class="but">
+          <div [ngbNavItem]="3" ngbDropdown class="d-inline-block">
+            <button class="but nav-link" id="dropdownBasic1" ngbDropdownToggle>Student Members</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="background-color: rgb(119, 96, 80);">
 
-        <div [ngbNavItem]="3" ngbDropdown class="d-inline-block">
-          <button class="but nav-link" id="dropdownBasic1" ngbDropdownToggle>Student Members</button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="background-color: rgb(119, 96, 80);">
-
-            <ul ngbNav #nav2="ngbNav" [(activeId)]="active">
-              <li [ngbNavItem]="3" class="but">
-                <a class="nav-link" ngbNavLink>2nd year Members</a>
-                <ng-template ngbNavContent>
+              <ul ngbNav #nav2="ngbNav" [(activeId)]="active">
+                <li [ngbNavItem]="3" class="but">
+                  <a class="nav-link" ngbNavLink>2nd year Members</a>
+                  <ng-template ngbNavContent>
 
 
 
-                  <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
-                    <div class="row">
-                      <div class="col-md-6" *ngFor="let member of studentMembers2ndyear; let i = index">
-                        <div class="container">
+                    <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+                      <div class="row">
+                        <div class="col-md-6" *ngFor="let member of studentMembers2ndyear; let i = index">
+                          <div class="container">
 
-                          <div class="det-box row" style="margin: auto;">
-                            <div class="col-md-5">
-                              <img src="{{ member.Image.host + member.Image.path }}" alt="Avatar1" height="100%"
-                                width="100%" />
-                            </div>
-                            <div class="col-md-7">
-                              <div class="details">
-                                <b>name of the member</b><br>
-                                <b class="msg">
-                                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-                                  excepturi, quas vel ad quia totam dolor sit amet consectetur adipisicing eli.
-                                </b>
-                                <div class="text-center">
-
-                                  <a href="{{ member.Links.insta }}" class="icons btn btn-sm mx-1">
-                                    <img src="./assets/images/social/instagram.svg" alt="" />
-                                  </a>
-                                  <a href="{{ member.Links.github }}" class="icons btn btn-sm mx-1">
-                                    <img src="./assets/images/social/github.svg" alt="" />
-                                  </a>
-                                  <a href="{{ member.Links.linkedin }}" class="icons btn btn-sm mx-1">
-                                    <img src="./assets/images/social/linkedin.svg" alt="" />
-                                  </a>
+                            <div class="det-box row" style="margin: auto;">
+                              <div class="box col-md-5">
+                                <div class="front" style="border-radius: 5px;">
+                                  <img src="{{ member.Image.host + member.Image.path }}" alt="Avatar1" height="100%"
+                                    width="100%" />
                                 </div>
-                                <hr>
-                              </div>
-                            </div>
+                                <div class="back midd" style="background-color: rgb(143, 138, 138);border-radius: 5px;">
+                                  <div class="text-center">
+                                    <a href="{{ member.Links.insta }}" class="icons btn btn-sm mx-1">
+                                      <img src="./assets/images/social/instagram.svg" alt="" />
+                                    </a>
+                                    <a href="{{ member.Links.github }}" class="icons btn btn-sm mx-1">
+                                      <img src="./assets/images/social/github.svg" alt="" />
+                                    </a>
+                                    <a href="{{ member.Links.linkedin }}" class="icons btn btn-sm mx-1">
+                                      <img src="./assets/images/social/linkedin.svg" alt="" />
+                                    </a>
+                                  </div>
 
+                                </div>
+
+                              </div>
+                              <div class="col-md-7">
+                                <div class="details">
+                                  <b>name of the member</b><br>
+                                  <b class="msg">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+                                    excepturi, quas vel ad quia totam dolor sit amet consectetur adipisicing eli.
+                                  </b>
+
+                                  <hr>
+                                </div>
+                              </div>
+
+                            </div>
                           </div>
+                          <br>
                         </div>
-                        <br>
                       </div>
                     </div>
-                  </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="4" class="but">
+                  <a ngbNavLink>3rd year Members</a>
+                  <ng-template ngbNavContent>
 
 
+                    <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+                      <div class="row">
+                        <div class="col-md-6" *ngFor="let member of studentMembers3rdyear; let i = index">
+                          <div class="container">
 
-
-                </ng-template>
-              </li>
-              <li [ngbNavItem]="4" class="but">
-                <a ngbNavLink>3rd year Members</a>
-                <ng-template ngbNavContent>
-
-
-                  <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
-                    <div class="row">
-                      <div class="col-md-6" *ngFor="let member of studentMembers3rdyear; let i = index">
-                        <div class="container">
-
-                          <div class="det-box row" style="margin: auto;">
-                            <div class="col-md-5">
-                              <img src="{{ member.Image.host + member.Image.path }}" alt="Avatar1" height="100%"
-                                width="100%" />
-                            </div>
-                            <div class="col-md-7">
-                              <div class="details">
-                                <b>name of the member</b><br>
-                                <b class="msg">
-                                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-                                  excepturi, quas vel ad quia totam dolor sit amet consectetur adipisicing eli.
-                                </b>
-                                <div class="text-center">
-
-                                  <a href="{{ member.Links.insta }}" class="icons btn btn-sm mx-1">
-                                    <img src="./assets/images/social/instagram.svg" alt="" />
-                                  </a>
-                                  <a href="{{ member.Links.github }}" class="icons btn btn-sm mx-1">
-                                    <img src="./assets/images/social/github.svg" alt="" />
-                                  </a>
-                                  <a href="{{ member.Links.linkedin }}" class="icons btn btn-sm mx-1">
-                                    <img src="./assets/images/social/linkedin.svg" alt="" />
-                                  </a>
+                            <div class="det-box row" style="margin: auto;">
+                              <div class="box col-md-5">
+                                <div class="front" style="border-radius: 5px;">
+                                  <img src="{{ member.Image.host + member.Image.path }}" alt="Avatar1" height="100%"
+                                    width="100%" />
                                 </div>
-                                <hr>
+                                <div class="back midd" style="background-color: rgb(143, 138, 138);border-radius: 5px;">
+                                  <div class="text-center">
+                                    <a href="{{ member.Links.insta }}" class="icons btn btn-sm mx-1">
+                                      <img src="./assets/images/social/instagram.svg" alt="" />
+                                    </a>
+                                    <a href="{{ member.Links.github }}" class="icons btn btn-sm mx-1">
+                                      <img src="./assets/images/social/github.svg" alt="" />
+                                    </a>
+                                    <a href="{{ member.Links.linkedin }}" class="icons btn btn-sm mx-1">
+                                      <img src="./assets/images/social/linkedin.svg" alt="" />
+                                    </a>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
+                              <div class="col-md-7">
+                                <div class="details">
+                                  <b>name of the member</b><br>
+                                  <b class="msg">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+                                    excepturi, quas vel ad quia totam dolor sit amet consectetur adipisicing eli.
+                                  </b>
 
+                                  <hr>
+                                </div>
+                              </div>
+
+                            </div>
                           </div>
+                          <br>
                         </div>
-                        <br>
                       </div>
                     </div>
-                  </div>
 
 
-                </ng-template>
-              </li>
-              <li [ngbNavItem]="5" class="but">
-                <a ngbNavLink>4th year Members</a>
-                <ng-template ngbNavContent>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="5" class="but">
+                  <a ngbNavLink>4th year Members</a>
+                  <ng-template ngbNavContent>
 
 
-                  <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
-                    <div class="row">
-                      <div class="col-md-6" *ngFor="let member of studentMembers4thyear; let i = index">
-                        <div class="container">
+                    <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+                      <div class="row">
+                        <div class="col-md-6" *ngFor="let member of studentMembers4thyear; let i = index">
+                          <div class="container">
 
-                          <div class="det-box row" style="margin: auto;">
-                            <div class="col-md-5">
-                              <img src="{{ member.Image.host + member.Image.path }}" alt="Avatar1" height="100%"
-                                width="100%" />
-                            </div>
-                            <div class="col-md-7">
-                              <div class="details">
-                                <b>name of the member</b><br>
-                                <b class="msg">
-                                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-                                  excepturi, quas vel ad quia totam dolor sit amet consectetur adipisicing eli.
-                                </b>
-                                <div class="text-center">
-
-                                  <a href="{{ member.Links.insta }}" class="icons btn btn-sm mx-1">
-                                    <img src="./assets/images/social/instagram.svg" alt="" />
-                                  </a>
-                                  <a href="{{ member.Links.github }}" class="icons btn btn-sm mx-1">
-                                    <img src="./assets/images/social/github.svg" alt="" />
-                                  </a>
-                                  <a href="{{ member.Links.linkedin }}" class="icons btn btn-sm mx-1">
-                                    <img src="./assets/images/social/linkedin.svg" alt="" />
-                                  </a>
+                            <div class="det-box row" style="margin: auto;">
+                              <div class="box col-md-5">
+                                <div class="front" style="border-radius: 5px;">
+                                  <img src="{{ member.Image.host + member.Image.path }}" alt="Avatar1" height="100%"
+                                    width="100%" />
                                 </div>
-                                <hr>
-                              </div>
-                            </div>
+                                <div class="back midd" style="background-color: rgb(143, 138, 138);border-radius: 5px;">
+                                  <div class="text-center">
+                                    <a href="{{ member.Links.insta }}" class="icons btn btn-sm mx-1">
+                                      <img src="./assets/images/social/instagram.svg" alt="" />
+                                    </a>
+                                    <a href="{{ member.Links.github }}" class="icons btn btn-sm mx-1">
+                                      <img src="./assets/images/social/github.svg" alt="" />
+                                    </a>
+                                    <a href="{{ member.Links.linkedin }}" class="icons btn btn-sm mx-1">
+                                      <img src="./assets/images/social/linkedin.svg" alt="" />
+                                    </a>
+                                  </div>
 
+                                </div>
+
+                              </div>
+                              <div class="col-md-7">
+                                <div class="details">
+                                  <b>name of the member</b><br>
+                                  <b class="msg">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+                                    excepturi, quas vel ad quia totam dolor sit amet consectetur adipisicing eli.
+                                  </b>
+
+                                  <hr>
+                                </div>
+                              </div>
+
+                            </div>
                           </div>
+                          <br>
                         </div>
-                        <br>
                       </div>
                     </div>
-                  </div>
 
 
-                </ng-template>
-              </li>
-            </ul>
+                  </ng-template>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </li>
+        <li [ngbNavItem]="4" class="but">
+          <form class="navbar-form navbar-left" action="">
+            <div class="input-group">
+              <input type="text" class="inp" placeholder="Enter Your Name">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  search-icon
+                </button>
+              </div>
+            </div>
+          </form>
+        </li>
       </ul>
 
     </div>
