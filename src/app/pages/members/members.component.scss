@@ -1,92 +1,78 @@
-// for circular display pictures
-.avatar {
-  vertical-align: middle;
-  width: 33%;
-  height: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 50%;
-}
-.avatar:hover {
-  transform: scale(120%);
-  z-index: 2;
-  border-radius: 50%;
-  box-shadow: 0 0 1rem #ffffffe8;
-  transition: box-shadow(0.5s);
-}
-@media only screen and (max-width: 500px) {
-  /* For mobile phones: */
-  .avatar {
-    width: 100%;
-  }
-}
-// display picture
-.dp:hover {
-  transform: scale(140%);
-  z-index: 2;
-  border-radius: 50%;
-  box-shadow: 0 0 1rem #ffffffe8;
-  transition: box-shadow(0.5s);
+//-----------------flip----------
+
+.midd {
+  position: inherit;
+  top: -100%;
 }
 
-// different text formats
-.nme {
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  font-size: xx-large;
-  color: rgba(0, 0, 0, 0.514);
-}
-.msg {
-  // font-family: cursive;
-  color: rgb(0, 0, 0);
-  font-size: medium;
-  font-weight: lighter;
-}
-.name {
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  color: rgba(0, 0, 0, 0.514);
-  font-size: x-large;
-  font-weight: lighter;
-}
-.msg1 {
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  color: rgb(0, 0, 0);
-  font-size: xx-large;
-}
-.msg2 {
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  color: rgb(0, 0, 0);
-  font-size: x-large;
-
-  padding-left: 10%;
-  padding-right: 10%;
-}
-#title {
-  font-family: Roboto;
+.box {
+  text-align: center;
+  border-radius: 5%;
 }
 
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.6s linear;
+}
+
+.front {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+  background: #fff;
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.box:hover .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.box:hover .back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+//--------------------------------------------------
+.inp {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: rgb(119, 96, 80);
+  border-bottom-color: white;
+}
 .but {
   border: none;
-  background-color: rgb(52, 176, 224);
+  background-color: rgb(119, 96, 80);
   color: #fdfbf9;
 }
 .but:hover {
   border: none;
-  background-color: rgb(52, 176, 224);
 }
 
 .det-box {
-  background-color: #b4b4ff41;
-  border-radius: 10%;
-  box-shadow: 0 0 1rem #ffffffe8;
-
-  border-radius: 2%;
+  background-color: rgb(240, 238, 236);
+  border-radius: 5px;
 }
 .det-box:hover {
-  box-shadow: inset 0 0 36px rgba(255, 255, 255, 0.884);
+  position: relative;
+  box-shadow: 0 0 1rem #000000;
   transition: box-shadow 0.3s;
-  // background-color: rgb(199, 195, 189);
+  background-color: rgb(199, 195, 189);
 }
-.col-md-4 {
+.name {
+  font-family: cursive;
+  color: black;
+}
+.msg {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: rgb(0, 0, 0);
+}
+
+.col-md-5 {
   padding: 0;
   margin: 0;
 }
@@ -107,15 +93,18 @@
 
 //--------------------------------
 
-.card {
-  transition: box-shadow 0.3s;
-  border: 0px;
-  background-color: transparent;
+#title {
+  font-family: Roboto;
 }
 
-// .card:hover {
-//   box-shadow: 0 0 2rem #652e90;
-// }
+.card {
+  transition: box-shadow 0.3s;
+  background-color: #652e90;
+}
+
+.card:hover {
+  box-shadow: 0 0 2rem #652e90;
+}
 //-------------------------
 //-------------------------
 .image {
@@ -124,21 +113,19 @@
 }
 
 .founder {
-  background-color: #b4b4ff41;
+  background-color: #b4b4ff;
   margin: 3%;
   padding: 3%;
-  border-radius: 1px;
-  box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
-  border-radius: 2%;
+  border-radius: 10px;
+  box-shadow: inset 0 0 16px rgb(68, 3, 3);
 }
 
-// .image:hover {
-//   transform: scale(1.1);
-//   z-index: 2;
-// }
-
+.image:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
 .icons:hover {
-  filter: brightness(150%);
+  background-color: rgb(70, 1, 1);
 }
 
 .members-text {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .activity-page {
   background: linear-gradient(25deg, #f16c1f, #4b2172, #206b3f, #44a098);
   background-size: 500%;
@@ -17,8 +16,6 @@
 .button {
   background: green;
 }
-=======
->>>>>>> 912591bae239497aadb44997be08e5a5456dcc93
 .container {
   padding-top: 5rem;
   min-height: 85vh;
@@ -31,13 +28,13 @@
 
 .card {
   transition: box-shadow 0.3s;
-<<<<<<< HEAD
   background-color: #f59157;
   margin: 10px;
+  margin-left: 20px;
 }
 
 .card:hover {
-  box-shadow: 0 0 2rem #1b0900;
+  box-shadow: 0 0 1rem #ffffff;
 }
 
 .card-body {
@@ -52,23 +49,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-=======
-  background-color: #652e90;
-}
-
-.card:hover {
-  box-shadow: 0 0 2rem #652e90;
-}
-
-.activity-text {
-  font: bold 3rem 'Montserrat';
-  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a7d5, #23d5ab);
-  background-size: 300%;
-  animation: animate 3s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
->>>>>>> 912591bae239497aadb44997be08e5a5456dcc93
 @keyframes animate {
   0% {
     background-position: 0 0;
