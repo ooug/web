@@ -1,3 +1,21 @@
+<ngb-carousel #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" style="background-color: rgb(133, 126, 126);">
+  <ng-template ngbSlide *ngFor="let img of images; index as i">
+    <div class="carousel-caption">
+      <h2 style="top: 100%; color: rgb(196, 192, 192);">Join Our Events</h2>
+      <h3>{{ slidertitle[i] }}</h3>
+    </div>
+    <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+      <div class="picsum-img-wrapper">
+        <img [src]="img" alt="image not found!!" height="450px" width="100%">
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>
+
+
+<!--------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------->
+
 <div class="activity-page">
   <div class="container">
     <div class="row">

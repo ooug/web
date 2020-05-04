@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
+import {
+  NgbCarousel,
+  NgbSlideEvent,
+  NgbSlideEventSource,
+} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-activities',
@@ -7,7 +12,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivitiesComponent implements OnInit {
   constructor() {}
-
   public workshop = [
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
@@ -142,6 +146,41 @@ export class ActivitiesComponent implements OnInit {
       description: 'Some Description',
     },
   ];
+
+  // slider------------------------
+
+  images = [
+    './assets/images/ooug.png',
+    './assets/images/1.jpg',
+    './assets/images/2.jpg',
+    './assets/images/3.jpg',
+    './assets/images/4.jpg',
+    './assets/images/bg.jpg',
+    './assets/images/e.jpg',
+  ];
+  slidertitle = [
+    'ooug logo',
+    'workshop on python',
+    'web develop workshop',
+    'selebration party',
+    'Motivational speach is delivered by the president',
+    'Accept the challenges so that you can feel the exhilaration of victory.',
+    'Failure will never overtake me if my determination to succeed is strong enough.',
+  ];
+
+  paused = false;
+  pauseOnHover = false;
+
+  @ViewChild('carousel', { static: true }) carousel: NgbCarousel;
+
+  togglePaused() {
+    if (this.paused) {
+      this.carousel.cycle();
+    } else {
+      this.carousel.pause();
+    }
+    this.paused = !this.paused;
+  }
 
   ngOnInit(): void {}
 }
