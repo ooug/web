@@ -5,7 +5,7 @@
       <img src="./assets/images/ooug.png" alt="OOUG Logo" />
     </div>
     <div class="login-content">
-      <form #loginForm="ngForm" (submit)="login(loginForm)">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
         <h2 class="title" style="font-family: Roboto; color: #1e4235;">
           Login
         </h2>
@@ -40,16 +40,16 @@
             <!-- <img src="./assets/svgs/user.svg" width="50px" alt="user" /> -->
           </div>
           <div class="div">
-            <h5>Username</h5>
+            <h5>Email</h5>
             <input
               (focus)="focus('username')"
               name="user"
               required
-              #username="ngModel"
-              [(ngModel)]="user.username"
+              email
               (focusout)="focusout('username')"
               type="text"
               class="input"
+              formControlName="email"
             />
           </div>
         </div>
@@ -77,17 +77,21 @@
             <input
               (focus)="focus('password')"
               name="password"
-              #password="ngModel"
               required
-              [(ngModel)]="user.password"
               (focusout)="focusout('password')"
               type="password"
               class="input"
+              formControlName="password"
             />
           </div>
         </div>
         <a routerLink="/auth/forgot-password">Forgot Password?</a>
-        <input type="submit" class="btn" value="Login" />
+        <input
+          type="submit"
+          class="btn"
+          [disabled]="loginForm.invalid"
+          value="Login"
+        />
       </form>
     </div>
   </div>
