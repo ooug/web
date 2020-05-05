@@ -17,26 +17,32 @@
       />
     </div>
   </div>
-
   <!-- event cards -->
   <div class="row" *ngIf="!isLoading">
-    <div class="col-md-4" *ngFor="let item of upcomingEvents">
-      <!-- event1 -->
-      <div class="card card-block text-light my-1">
-        <span id="reg-open-banner" *ngIf="item.enableRegistration">
-          Registration Open
-        </span>
-        <img
-          class="card-img-top"
-          src="{{ item.Image.host + item.Image.path }}"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ item.title }}</h5>
-          <p class="card-text">{{ item.shortDescription }}</p>
-          <div class="text-center">
-            <a [routerLink]="['/event', item.id]" class="btn btn-primary btn-sm"
-              >Know More</a
+    <div class="example-2 card" *ngFor="let item of upcomingEvents">
+      <div class="wrapper">
+        <div class="header">
+          <div class="date">
+            <span class="day">{{ item.date.day }}</span>
+            <span class="month">{{ item.date.month }}</span>
+            <span class="year">{{ item.date.year }}</span>
+          </div>
+        </div>
+        <div class="data">
+          <div class="content">
+            <span class="author">{{ item.title }}</span>
+            <h1 class="title">
+              <a href="#">{{ item.shortDescription }}</a>
+            </h1>
+            <p class="text">{{ item.longDescription }}</p>
+            <a
+              [routerLink]="['/event', item.id]"
+              class="button"
+              *ngIf="item.enableRegistration"
+              >Registration Opene</a
+            >
+            <a href="#" class="button" *ngIf="!item.enableRegistration"
+              >Registration Close</a
             >
           </div>
         </div>
