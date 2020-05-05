@@ -1,46 +1,49 @@
+//menu container
+#menu {
+  margin-top: 0%;
+  background-color: rgb(52, 176, 224);
+  position: fixed;
+  z-index: 1;
+  //buttons in menu
+  .but {
+    border: none;
+    background-color: rgb(52, 176, 224);
+  }
+  .but:hover {
+    border: none;
+  }
+}
 // for circular display pictures
 .avatar {
   vertical-align: middle;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 500px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 50%;
 }
-// .avatar:hover {
-//   transform: scale(120%);
-//   z-index: 2;
-//   border-radius: 50%;
-//   box-shadow: 0 0 1rem #ffffffe8;
-//   transition: box-shadow(0.5s);
-// }
-@media only screen and (max-width: 500px) {
-  /* For mobile phones: */
-  .avatar {
-    width: 100%;
-  }
+
+// display picture for members
+.dp {
+  width: 100%;
+  height: auto;
 }
-// display picture
-// .dp:hover {
-//   transform: scale(140%);
-//   z-index: 2;
-//   border-radius: 50%;
-//   box-shadow: 0 0 1rem #ffffffe8;
-//   transition: box-shadow(0.5s);
-// }
 
 // different text formats
+//president name
 .nme {
   font-family: Brush Script MT, Brush Script Std, cursive;
   font-size: xx-large;
   color: rgba(0, 0, 0, 0.514);
 }
+//president msg
 .msg {
   // font-family: cursive;
   color: rgb(0, 0, 0);
   font-size: medium;
   font-weight: lighter;
 }
+//members name
 .name {
   font-family: Brush Script MT, Brush Script Std, cursive;
   color: rgba(0, 0, 0, 0.514);
@@ -63,17 +66,6 @@
 #title {
   font-family: Roboto;
 }
-
-.but {
-  border: none;
-  background-color: rgb(52, 176, 224);
-  color: #fdfbf9;
-}
-.but:hover {
-  border: none;
-  background-color: rgb(52, 176, 224);
-}
-
 .det-box {
   background-color: #b4b4ff41;
   border-radius: 10%;
@@ -205,7 +197,6 @@
 .flip-box-member {
   background-image: url('C:/git aj/web_04-05/web/src/assets/images/ooug.png');
   background-size: cover;
-
   width: 100%;
   height: 100%;
   border: 1px solid #f1f1f1;
@@ -245,9 +236,28 @@
   color: white;
   transform: rotateY(180deg);
 }
-@media only screen and (max-width: 500px) {
+
+@media only screen and (max-width: 700px) {
   .flip-box {
     width: 300px;
     height: 300px;
+  }
+  .flip-box-member:active .flip-box-inner-member {
+    transform: rotateY(180deg);
+  }
+  .flip-box:active .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  .avatar {
+    width: 300px;
+    height: 300px;
+  }
+  .flip-box-member {
+    width: 300px;
+    height: 300px;
+  }
+  #menu {
+    width: 100%;
+    position: relative;
   }
 }
