@@ -35,6 +35,15 @@
     <li class="navbar-item d-none d-md-block">
       <a
         class="nav-link"
+        routerLink="/blog"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Blog</a
+      >
+    </li>
+    <li class="navbar-item d-none d-md-block">
+      <a
+        class="nav-link"
         routerLink="/about"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
