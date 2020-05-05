@@ -15,6 +15,10 @@
   background-color: var(--primary) !important;
 }
 
+#heading {
+  font-family: 'Roboto';
+}
+
 .badge-secondary,
 .bg-secondary {
   background-color: var(--secondary) !important;
@@ -228,6 +232,11 @@ body {
   border-radius: 0;
   -webkit-box-shadow: 0 15px 15px -10px rgba(23, 16, 159, 0.15);
   box-shadow: 0 15px 15px -10px rgba(23, 16, 159, 0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 2rem gray;
 }
 
 body {
