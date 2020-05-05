@@ -57,3 +57,18 @@
     background-position: 300% 0;
   }
 }
+
+//-----------------slide bar------------------------
+.bar-but {
+  color: rgb(75, 39, 39);
+  text-shadow: 0 0 0.05rem #ffffff;
+}
+.bar-but:hover {
+  padding: 5px;
+  background-color: rgb(255, 0, 51);
+  color: rgb(240, 217, 217);
+}
+.img-box {
+  background-color: rgb(255, 238, 0);
+  opacity: 0.4;
+}

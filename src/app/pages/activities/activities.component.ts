@@ -12,6 +12,51 @@ import {
 })
 export class ActivitiesComponent implements OnInit {
   constructor() {}
+  active = 'all';
+  public all = [
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 1',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 2',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 3',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 4',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 5',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 6',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+  ];
   public workshop = [
     {
       Image: { host: '', path: './assets/images/gray.jpg' },
@@ -183,4 +228,8 @@ export class ActivitiesComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  public activateTab(tab: string) {
+    this.active = tab;
+  }
 }
