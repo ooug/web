@@ -6,8 +6,20 @@
       <hr />
     </div>
   </div>
+
+  <!-- loading icon-->
+  <div class="row" *ngIf="isLoading">
+    <div class="col text-center mt-2">
+      <img
+        src="./assets/images/loading-blue.gif"
+        width="50px"
+        alt="Loading.."
+      />
+    </div>
+  </div>
+
   <!-- Main Wrapper -->
-  <div class="fbt-main-wrapper col-xl-12">
+  <div class="fbt-main-wrapper col-xl-12" *ngIf="!isLoading">
     <div id="main-wrapper">
       <div class="main-section" id="main_content">
         <!-- blogs wrapper -->
@@ -37,7 +49,9 @@
                 <span class="post-date published">{{ article.date }}</span>
               </div>
               <p class="post-excerpt card-text">
-                {{ article.paragraph }}
+                {{
+                  article.paragraph.split(' ').slice(0, 28).join(' ') + '...'
+                }}
               </p>
             </div>
           </div>
