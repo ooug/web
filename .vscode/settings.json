@@ -20,5 +20,8 @@
     "tabset",
     "webfont",
     "woff"
+  ],
+  "cSpell.ignoreWords": [
+    "prefered"
   ]
 }
