@@ -1,0 +1,32 @@
+[
+  {
+    "name": "xyz",
+    "email": "xyz@gmail.com",
+    "subject": "About android",
+    "message": "Main message"
+  },
+  {
+    "name": "xyz",
+    "email": "xyz@gmail.com",
+    "subject": "About web",
+    "message": "Main message"
+  },
+  {
+    "name": "xyz",
+    "email": "xyz@gmail.com",
+    "subject": "About foundation day",
+    "message": "Main message"
+  },
+  {
+    "name": "xyz",
+    "email": "xyz@gmail.com",
+    "subject": "About fresher party",
+    "message": "Main message"
+  },
+  {
+    "name": "xyz",
+    "email": "xyz@gmail.com",
+    "subject": "About fresher party",
+    "message": "Main message"
+  }
+]
