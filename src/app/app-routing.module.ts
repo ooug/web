@@ -39,6 +39,11 @@ const routes: Routes = [
       import('./pages/auth/auth.module').then((m) => m.AuthModule),
   },
   {
+    path: 'blog',
+    loadChildren: () =>
+      import('./pages/blog/blog.module').then((m) => m.BlogModule),
+  },
+  {
     path: 'offline',
     component: OfflineComponent,
   },
