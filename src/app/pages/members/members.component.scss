@@ -146,8 +146,6 @@
   background: linear-gradient(45deg, #ee7752, #e73c7e, #23a7d5, #23d5ab);
   background-size: 300%;
   animation: animate 3s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 @keyframes animate {
   0% {
@@ -159,7 +157,7 @@
 }
 
 .flip-box {
-  background-image: url('C:/git aj/web_04-05/web/src/assets/images/ooug.png');
+  background-image: url('../../../assets/images/ooug.png');
   background-size: cover;
   width: 500px;
   height: 500px;
@@ -203,9 +201,8 @@
 }
 
 .flip-box-member {
-  background-image: url('C:/git aj/web_04-05/web/src/assets/images/ooug.png');
+  background-image: url('../../../assets/images/ooug.png');
   background-size: cover;
-
   width: 100%;
   height: 100%;
   border: 1px solid #f1f1f1;
