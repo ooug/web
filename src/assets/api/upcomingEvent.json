@@ -5,7 +5,7 @@
     "title": "Upcoming Event 1",
     "shortDescription": "Some data about the event. Not more than 2 lines.",
     "enableRegistration": true,
-    "date": { "day": "25", "month": "may", "year": "2020" },
+    "Date": { "day": "25", "month": "May", "year": "2020" },
     "time": "10:30 AM",
     "venue": "Somewhere",
     "longDescription": "The bulk of a new Mayflower is complete and on the road. Workers in Gdansk, Poland have completed work on the hull of what is being called the first full-sized, fully autonomous vessel to cross the Atlantic Ocean. , which built the hull, placed the hull on a special truck, and the next step is Plymouth, in the U.K., where other workers will finish the job. To mark the 400th anniversary of the journey of the Pilgrims to the New World, the Mayflower Autonomous Ship (MAS) will sail from Plymouth in September 2020 across the Atlantic to the United States. The plan is for the self-guided vessel to complete its journey in two weeks. The original Mayflower, carrying 102 English people in search of religious freedom, took two months, launching in September 1620 and reaching the eastern coast of North America in December of that year."
@@ -16,7 +16,7 @@
     "title": "Upcoming Event 2",
     "shortDescription": "Some data about the event. Not more than 2 lines.",
     "enableRegistration": false,
-    "date": { "day": "25", "month": "may", "year": "2020" },
+    "Date": { "day": "25", "month": "May", "year": "2020" },
     "time": "10:30 AM",
     "venue": "Somewhere",
     "longDescription": "The bulk of a new Mayflower is complete and on the road. Workers in Gdansk, Poland have completed work on the hull of what is being called the first full-sized, fully autonomous vessel to cross the Atlantic Ocean. , which built the hull, placed the hull on a special truck, and the next step is Plymouth, in the U.K., where other workers will finish the job. To mark the 400th anniversary of the journey of the Pilgrims to the New World, the Mayflower Autonomous Ship (MAS) will sail from Plymouth in September 2020 across the Atlantic to the United States. The plan is for the self-guided vessel to complete its journey in two weeks. The original Mayflower, carrying 102 English people in search of religious freedom, took two months, launching in September 1620 and reaching the eastern coast of North America in December of that year."
@@ -28,7 +28,7 @@
     "shortDescription": "Some data about the event. Not more than 2 lines.",
     "enableRegistration": true,
     "longDescription": "The bulk of a new Mayflower is complete and on the road. Workers in Gdansk, Poland have completed work on the hull of what is being called the first full-sized, fully autonomous vessel to cross the Atlantic Ocean. , which built the hull, placed the hull on a special truck, and the next step is Plymouth, in the U.K., where other workers will finish the job. To mark the 400th anniversary of the journey of the Pilgrims to the New World, the Mayflower Autonomous Ship (MAS) will sail from Plymouth in September 2020 across the Atlantic to the United States. The plan is for the self-guided vessel to complete its journey in two weeks. The original Mayflower, carrying 102 English people in search of religious freedom, took two months, launching in September 1620 and reaching the eastern coast of North America in December of that year.",
-    "date": { "day": "25", "month": "may", "year": "2020" },
+    "Date": { "day": "25", "month": "May", "year": "2020" },
     "time": "10:30 AM",
     "venue": "Somewhere"
   }
