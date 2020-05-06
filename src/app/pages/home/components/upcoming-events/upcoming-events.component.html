@@ -19,31 +19,23 @@
   </div>
   <!-- event cards -->
   <div class="row" *ngIf="!isLoading">
-    <div class="example-2 card" *ngFor="let item of upcomingEvents">
-      <div class="wrapper">
-        <div class="header">
-          <div class="date">
+    <div class="example-2 s-card col-md-4" *ngFor="let item of upcomingEvents">
+      <div class="s-wrapper">
+        <div class="s-header">
+          <div class="s-date">
             <span class="day">{{ item.date.day }}</span>
             <span class="month">{{ item.date.month }}</span>
             <span class="year">{{ item.date.year }}</span>
           </div>
         </div>
-        <div class="data">
+        <div class="s-data">
           <div class="content">
-            <span class="author">{{ item.title }}</span>
-            <h1 class="title">
+            <span class="s-author">{{ item.title }}</span>
+            <h1 class="s-title">
               <a href="#">{{ item.shortDescription }}</a>
             </h1>
             <p class="text">{{ item.longDescription }}</p>
-            <a
-              [routerLink]="['/event', item.id]"
-              class="button"
-              *ngIf="item.enableRegistration"
-              >Registration Opene</a
-            >
-            <a href="#" class="button" *ngIf="!item.enableRegistration"
-              >Registration Close</a
-            >
+            <a [routerLink]="['/event', item.id]" class="s-button">Know More</a>
           </div>
         </div>
       </div>

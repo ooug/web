@@ -39,13 +39,13 @@ h1 {
   font-weight: 300;
 }
 
-.row {
+.s-row {
   max-width: 900px;
   margin: 50px auto 0;
 }
 
 // Base styles
-.card {
+.s-card {
   float: left;
   padding: 0 1.7rem;
   width: 50%;
@@ -70,19 +70,19 @@ h1 {
       transform: translate(-50%, 0);
     }
   }
-  .wrapper {
+  .s-wrapper {
     background-color: $white;
     min-height: 540px;
     position: relative;
     overflow: hidden;
     box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
     &:hover {
-      .data {
+      .s-data {
         transform: translateY(0);
       }
     }
   }
-  .data {
+  .s-data {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -94,10 +94,10 @@ h1 {
       z-index: 1;
     }
   }
-  .author {
+  .s-author {
     font-size: 12px;
   }
-  .title {
+  .s-title {
     margin-top: 10px;
   }
   .text {
@@ -113,7 +113,7 @@ h1 {
 }
 // Second example styles
 .example-2 {
-  .wrapper {
+  .s-wrapper {
     background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg)
       center / cover no-repeat;
     &:hover {
@@ -125,11 +125,11 @@ h1 {
       }
     }
   }
-  .header {
+  .s-header {
     @include cf;
     color: $white;
     padding: 1em;
-    .date {
+    .s-date {
       float: left;
       font-size: 12px;
     }
@@ -145,16 +145,16 @@ h1 {
       opacity: 0;
     }
   }
-  .data {
+  .s-data {
     color: $white;
     transform: translateY(calc(70px + 4em));
   }
-  .title {
+  .s-title {
     a {
       color: $white;
     }
   }
-  .button {
+  .s-button {
     display: block;
     width: 100px;
     margin: 2em auto 1em;
