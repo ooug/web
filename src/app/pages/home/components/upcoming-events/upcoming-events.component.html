@@ -17,27 +17,38 @@
       />
     </div>
   </div>
-
   <!-- event cards -->
   <div class="row" *ngIf="!isLoading">
-    <div class="col-md-4" *ngFor="let item of upcomingEvents">
-      <!-- event1 -->
-      <div class="card card-block text-light my-2">
-        <span id="reg-open-banner" *ngIf="item.enableRegistration">
-          Registration Open
-        </span>
-        <img
-          class="card-img-top"
-          src="{{ item.Image.host + item.Image.path }}"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ item.title }}</h5>
-          <p class="card-text">{{ item.shortDescription }}</p>
-          <div class="text-center">
-            <a [routerLink]="['/event', item.id]" class="btn btn-primary btn-sm"
-              >Know More</a
-            >
+    <div class="example-2 card" *ngFor="let item of upcomingEvents">
+      <div class="col-md-4 col-12">
+        <div class="wrapper">
+          <div class="header">
+            <div class="date">
+              <span class="day">{{ item.Date.day }}</span
+              >&nbsp; <span class="month">{{ item.Date.month }}</span
+              >&nbsp;
+              <span class="year">{{ item.Date.year }}</span>
+            </div>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">{{ item.title }}</span>
+              <h1 class="title">
+                <a [routerLink]="['/event', item.id]">{{
+                  item.shortDescription
+                }}</a>
+              </h1>
+              <p class="text">{{ item.longDescription }}</p>
+              <a
+                [routerLink]="['/event', item.id]"
+                class="button"
+                *ngIf="item.enableRegistration"
+                >Registration Open</a
+              >
+              <a href="#" class="button" *ngIf="!item.enableRegistration"
+                >Registration Close</a
+              >
+            </div>
           </div>
         </div>
       </div>
