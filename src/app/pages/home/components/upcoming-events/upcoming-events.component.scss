@@ -22,14 +22,6 @@ $open-sans: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 
-body {
-  background-image: linear-gradient(to right, $regal-blue, $san-juan);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
-  font-family: $open-sans;
-}
-
 a {
   text-decoration: none;
 }
@@ -72,21 +64,30 @@ h1 {
   }
   .s-wrapper {
     background-color: $white;
-    min-height: 540px;
+    min-height: 340px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+    transition: 0.3s;
     &:hover {
+      box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
       .s-data {
         transform: translateY(0);
       }
     }
   }
+
+  .reg-open {
+    // position: absolute;
+    float: right;
+    border: 1px solid white;
+    padding: 5px;
+    font-size: 12px;
+  }
   .s-data {
     position: absolute;
     bottom: 0;
     width: 100%;
-    transform: translateY(calc(70px + 1em));
+    // transform: translateY(calc(70px + 1em));
     transition: transform 0.3s;
     .content {
       padding: 1em;
@@ -95,7 +96,7 @@ h1 {
     }
   }
   .s-author {
-    font-size: 12px;
+    font-size: 18px;
   }
   .s-title {
     margin-top: 10px;
@@ -114,8 +115,6 @@ h1 {
 // Second example styles
 .example-2 {
   .s-wrapper {
-    background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg)
-      center / cover no-repeat;
     &:hover {
       .menu-content {
         span {
@@ -130,6 +129,7 @@ h1 {
     color: $white;
     padding: 1em;
     .s-date {
+      padding-top: 5px;
       float: left;
       font-size: 12px;
     }
@@ -147,7 +147,7 @@ h1 {
   }
   .s-data {
     color: $white;
-    transform: translateY(calc(70px + 4em));
+    // transform: translateY(calc(70px + 4em));
   }
   .s-title {
     a {

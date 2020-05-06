@@ -19,22 +19,34 @@
   </div>
   <!-- event cards -->
   <div class="row" *ngIf="!isLoading">
-    <div class="example-2 s-card col-md-4" *ngFor="let item of upcomingEvents">
-      <div class="s-wrapper">
+    <div
+      class="example-2 s-card col-md-4 col-12 my-2"
+      *ngFor="let item of upcomingEvents"
+    >
+      <div
+        class="s-wrapper"
+        style="
+          background: url('./assets/images/bg.jpg') center / cover no-repeat;
+        "
+      >
         <div class="s-header">
           <div class="s-date">
-            <span class="day">{{ item.date.day }}</span>
-            <span class="month">{{ item.date.month }}</span>
-            <span class="year">{{ item.date.year }}</span>
+            <span class="day">{{ item.Date.day }}</span
+            >&nbsp; <span class="month">{{ item.Date.month }}</span
+            >&nbsp;
+            <span class="year">{{ item.Date.year }}</span>
+          </div>
+          <div class="reg-open" *ngIf="item.enableRegistration">
+            Registration Open
           </div>
         </div>
         <div class="s-data">
           <div class="content">
-            <span class="s-author">{{ item.title }}</span>
-            <h1 class="s-title">
-              <a href="#">{{ item.shortDescription }}</a>
-            </h1>
-            <p class="text">{{ item.longDescription }}</p>
+            <h2 class="s-title">
+              <a [routerLink]="['/event', item.id]">{{ item.title }}</a>
+            </h2>
+            <span class="s-author">{{ item.shortDescription }}</span>
+            <!-- <p class="text">{{ item.longDescription }}</p> -->
             <a [routerLink]="['/event', item.id]" class="s-button">Know More</a>
           </div>
         </div>
