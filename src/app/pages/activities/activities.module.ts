@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ActivitiesComponent } from './activities.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -15,6 +16,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [ActivitiesComponent],
-  imports: [NgbModule, CommonModule, RouterModule.forChild(routes)],
+  imports: [
+    NgbModule,
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild(routes),
+  ],
 })
 export class ActivitiesModule {}

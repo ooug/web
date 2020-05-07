@@ -30,10 +30,11 @@
   transition: box-shadow 0.3s;
   background-color: #f59157;
   margin: 10px;
+  margin-left: 20px;
 }
 
 .card:hover {
-  box-shadow: 0 0 2rem #1b0900;
+  box-shadow: 0 0 1rem #ffffff;
 }
 
 .card-body {
@@ -55,4 +56,19 @@
   100% {
     background-position: 300% 0;
   }
+}
+
+//-----------------slide bar------------------------
+.bar-but {
+  color: rgb(75, 39, 39);
+  text-shadow: 0 0 0.05rem #ffffff;
+}
+.bar-but:hover {
+  padding: 5px;
+  background-color: rgb(255, 0, 51);
+  color: rgb(240, 217, 217);
+}
+.img-box {
+  background-color: rgb(255, 238, 0);
+  opacity: 0.4;
 }
