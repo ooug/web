@@ -1,59 +1,96 @@
-<div style="padding-top: 15%;"></div>
-
-<div style="margin-top: 10%; background-color: rgb(119, 96, 80);">
+<div style="margin-top: 60px;"></div>
+<div class="container-fluid" id="menu">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="navbar-collapse text-center" id="navbarSupportedContent">
       <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="navbar-nav ml-auto">
         <li [ngbNavItem]="1" class="but">
           <a class="nav-link" ngbNavLink>President</a>
-          <ng-template ngbNavContent>
+          <ng-template ngbNavContent
+            ><br /><br /><br />
             <div class="founder">
-              <div class="row">
-                <div class="col-md-5">
+              <div>
+                <div
+                  style="align-items: center; background-color: transparent;"
+                >
                   <div class="card card-block text-light my-1">
-                    <img
-                      class="image card-img-top"
-                      src="./assets/images/gray.jpg"
-                      alt=""
-                    />
+                    <!-- flip box code----------------------------------------------------- -->
+                    <div class="flip-box">
+                      <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                          <img
+                            class="image card-img-top"
+                            src="./assets/images/president.jpg"
+                            alt=""
+                            class="avatar"
+                          />
+                        </div>
+                        <div class="flip-box-back">
+                          <h2>
+                            <br />
+                            Lorem ipsum, d
+                          </h2>
+                          <br />
+                          <h2>sit amet consectet</h2>
+                          <br />
+                          <h2>ur adipisicing elit. Facere</h2>
+                          <br />
+                          <h2>, atque at rem nobis aliquam numqua</h2>
+                          <br />
+                          <h2>m nisi cum qu</h2>
+                          <br />
+                          <h2>isquam quos. Tota</h2>
+                          <br />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="details">
-                    <b>name</b><br />
-                    <b class="msg">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Eius excepturi, quas vel ad quia totam dolor sit amet
-                      consectetur adipisicing eli. </b
-                    ><br />
-                    <img src="./assets/images/social/mail.svg" alt="" /><b
-                      class="msg"
-                      >amiyaksahoo@gmail.com</b
-                    >
-                  </div>
+                  <!-- flip box code ends here----------------------------------------------------- -->
                 </div>
 
-                <p>
-                  description:wjhfjwhjhe j dsjwefw ejhfvejf ajhve ghv jhvfe3
-                  jhevf gecf gavefh ge vef khewf kjbef hwjf jhevf jwhevvf we kaf
-                  jhvj jhqvw qwgvw gwhcvw qgv nagwvd nwvdh mhwef hevf hevf
-                  nwhevf jwb
-                </p>
+                <div class="nme" style="text-align: center;">
+                  <h1>
+                    Amiya Kumar Sahoo
+                  </h1>
+                  <hr style="margin: 0em;" />
+
+                  <b class="msg2">somthing somthing</b>
+
+                  <br /><br />
+                  <p class="msg1" style="text-align: left;">
+                    Message From The President:
+                  </p>
+                  <p class="msg2">
+                    j dsjwefw ejhfvejf ajhve ghv jhvfe3 jhevf gecf gavefh ge vef
+                    khewf kjbef hwjf jhevf jwhevvf we kaf jhvj jhqvw qwgvw
+                    gwhcvw qgv nagwvd nwvdh mhwef hevf hevf nwhevf jwb Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Non a
+                    nulla ipsum sed maxime? Illo dicta ad maiores! Harum
+                    cupiditate aspernatur voluptatem assumenda doloribus itaque
+                    libero corporis ipsam esse maxime. lorem Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Ratione laudantium
+                    unde ex, minus facere molestias odit quis veniam aut
+                    reprehenderit quia recusandae, cupiditate dolore id, animi
+                    distinctio exercitationem eligendi eveniet?
+                  </p>
+                </div>
                 <div class="text-center">
                   <a href="#" class="icons btn btn-sm mx-1">
-                    <img src="./assets/images/social/twitter.svg" alt="" />
+                    <img src="./assets/images/social/twitter.png" alt="" />
                   </a>
                   <a href="#" class="icons btn btn-sm mx-1">
-                    <img src="./assets/images/social/facebook.svg" alt="" />
+                    <img src="./assets/images/social/mail.png" alt="" />
                   </a>
                   <a href="#" class="icons btn btn-sm mx-1">
-                    <img src="./assets/images/social/instagram.svg" alt="" />
+                    <img src="./assets/images/social/facebook.png" alt="" />
                   </a>
                   <a href="#" class="icons btn btn-sm mx-1">
-                    <img src="./assets/images/social/github.svg" alt="" />
+                    <img src="./assets/images/social/instagram.png" alt="" />
                   </a>
                   <a href="#" class="icons btn btn-sm mx-1">
-                    <img src="./assets/images/social/linkedin.svg" alt="" />
+                    <img src="./assets/images/social/github.png" alt="" />
+                  </a>
+                  <a href="#" class="icons btn btn-sm mx-1">
+                    <img src="./assets/images/social/linkedin.png" alt="" />
                   </a>
                 </div>
               </div>
@@ -63,7 +100,8 @@
 
         <li [ngbNavItem]="2" class="but">
           <a ngbNavLink>Corporate Members</a>
-          <ng-template ngbNavContent>
+          <ng-template ngbNavContent
+            ><br /><br /><br />
             <div
               class="container"
               style="margin-top: 30px; margin-bottom: 30px;"
@@ -75,47 +113,80 @@
                 >
                   <div class="container">
                     <div class="det-box row" style="margin: auto;">
-                      <div class="col-md-5">
-                        <img
-                          src="{{ member.Image.host + member.Image.path }}"
-                          alt="Avatar1"
-                          height="100%"
-                          width="100%"
-                        />
+                      <div class="col-md-4">
+                        <!-- flip box code----------------------------------------------------- -->
+                        <div class="flip-box-member">
+                          <div class="flip-box-inner-member">
+                            <div class="flip-box-front-member">
+                              <img
+                                src="./assets/images/aa.jpg"
+                                alt="Avatar1"
+                                height="100%"
+                                width="100%"
+                                class="dp"
+                              />
+                            </div>
+                            <div class="flip-box-back-member">
+                              <h5>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Laudantium nesciunt dicta?
+                              </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- flip box code ends here----------------------------------------------------- -->
                       </div>
-                      <div class="col-md-7">
+                      <div class="col-md-8">
                         <div class="details">
-                          <b>name of the member</b><br />
-                          <b class="msg">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Eius excepturi, quas vel ad quia totam dolor
-                            sit amet consectetur adipisicing eli.
-                          </b>
+                          <b class="name">Name Of The Member</b>
+                          <hr style="margin: 0em;" />
+                          <b class="msg">Date of joining</b><br />
+                          <b class="msg">Current Organization</b><br />
+                          <b class="msg">sth sth</b>
+
                           <div class="text-center">
                             <a
-                              href="{{ member.Links.insta }}"
-                              class="icons btn btn-sm mx-1"
+                              href="{{ member.Links.mail }}"
+                              class="icons btn btn-sm mx-2"
                             >
                               <img
-                                src="./assets/images/social/instagram.svg"
+                                src="./assets/images/social/mail.png"
+                                alt=""
+                              />
+                            </a>
+                            <a
+                              href="{{ member.Links.fb }}"
+                              class="icons btn btn-sm mx-2"
+                            >
+                              <img
+                                src="./assets/images/social/facebook.png"
                                 alt=""
                               />
                             </a>
                             <a
                               href="{{ member.Links.github }}"
-                              class="icons btn btn-sm mx-1"
+                              class="icons btn btn-sm mx-2"
                             >
                               <img
-                                src="./assets/images/social/github.svg"
+                                src="./assets/images/social/github.png"
                                 alt=""
                               />
                             </a>
                             <a
                               href="{{ member.Links.linkedin }}"
-                              class="icons btn btn-sm mx-1"
+                              class="icons btn btn-sm mx-2"
                             >
                               <img
-                                src="./assets/images/social/linkedin.svg"
+                                src="./assets/images/social/linkedin.png"
+                                alt=""
+                              />
+                            </a>
+                            <a
+                              href="{{ member.Links.insta }}"
+                              class="icons btn btn-sm mx-2"
+                            >
+                              <img
+                                src="./assets/images/social/instagram.png"
                                 alt=""
                               />
                             </a>
@@ -139,12 +210,13 @@
           <div
             ngbDropdownMenu
             aria-labelledby="dropdownBasic1"
-            style="background-color: rgb(119, 96, 80);"
+            style="background-color: rgb(52, 176, 224);"
           >
             <ul ngbNav #nav2="ngbNav" [(activeId)]="active">
               <li [ngbNavItem]="3" class="but">
                 <a class="nav-link" ngbNavLink>2nd year Members</a>
-                <ng-template ngbNavContent>
+                <ng-template ngbNavContent
+                  ><br /><br /><br />
                   <div
                     class="container"
                     style="margin-top: 30px; margin-bottom: 30px;"
@@ -159,50 +231,82 @@
                       >
                         <div class="container">
                           <div class="det-box row" style="margin: auto;">
-                            <div class="col-md-5">
-                              <img
-                                src="{{
-                                  member.Image.host + member.Image.path
-                                }}"
-                                alt="Avatar1"
-                                height="100%"
-                                width="100%"
-                              />
+                            <div class="col-md-4">
+                              <div class="flip-box-member">
+                                <div class="flip-box-inner-member">
+                                  <div class="flip-box-front-member">
+                                    <img
+                                      src="./assets/images/bb.jpg"
+                                      alt="Avatar1"
+                                      height="100%"
+                                      width="100%"
+                                      class="dp"
+                                    />
+                                  </div>
+                                  <div class="flip-box-back-member">
+                                    <h5>
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipisicing elit. Laudantium nesciunt
+                                      dignissimos aut beatae reprehenderit
+                                      deserunt distinctio maxime, illum omnis
+                                      laborum? Ipsam quis, ratione omnis beatae
+                                      qui aperiam fuga non dicta?
+                                    </h5>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-8">
                               <div class="details">
-                                <b>name of the member</b><br />
-                                <b class="msg">
-                                  Lorem ipsum, dolor sit amet consectetur
-                                  adipisicing elit. Eius excepturi, quas vel ad
-                                  quia totam dolor sit amet consectetur
-                                  adipisicing eli.
-                                </b>
+                                <b class="name">Name Of The Member</b>
+                                <hr style="margin: 0em;" />
+                                <b class="msg">Date of joining</b><br />
+                                <b class="msg">Current Organization</b><br />
+                                <b class="msg">sth sth</b>
+
                                 <div class="text-center">
                                   <a
-                                    href="{{ member.Links.insta }}"
-                                    class="icons btn btn-sm mx-1"
+                                    href="{{ member.Links.mail }}"
+                                    class="icons btn btn-sm mx-2"
                                   >
                                     <img
-                                      src="./assets/images/social/instagram.svg"
+                                      src="./assets/images/social/mail.png"
+                                      alt=""
+                                    />
+                                  </a>
+                                  <a
+                                    href="{{ member.Links.fb }}"
+                                    class="icons btn btn-sm mx-2"
+                                  >
+                                    <img
+                                      src="./assets/images/social/facebook.png"
                                       alt=""
                                     />
                                   </a>
                                   <a
                                     href="{{ member.Links.github }}"
-                                    class="icons btn btn-sm mx-1"
+                                    class="icons btn btn-sm mx-2"
                                   >
                                     <img
-                                      src="./assets/images/social/github.svg"
+                                      src="./assets/images/social/github.png"
                                       alt=""
                                     />
                                   </a>
                                   <a
                                     href="{{ member.Links.linkedin }}"
-                                    class="icons btn btn-sm mx-1"
+                                    class="icons btn btn-sm mx-2"
                                   >
                                     <img
-                                      src="./assets/images/social/linkedin.svg"
+                                      src="./assets/images/social/linkedin.png"
+                                      alt=""
+                                    />
+                                  </a>
+                                  <a
+                                    href="{{ member.Links.insta }}"
+                                    class="icons btn btn-sm mx-2"
+                                  >
+                                    <img
+                                      src="./assets/images/social/instagram.png"
                                       alt=""
                                     />
                                   </a>
@@ -220,7 +324,8 @@
               </li>
               <li [ngbNavItem]="4" class="but">
                 <a ngbNavLink>3rd year Members</a>
-                <ng-template ngbNavContent>
+                <ng-template ngbNavContent
+                  ><br /><br /><br />
                   <div
                     class="container"
                     style="margin-top: 30px; margin-bottom: 30px;"
@@ -235,50 +340,82 @@
                       >
                         <div class="container">
                           <div class="det-box row" style="margin: auto;">
-                            <div class="col-md-5">
-                              <img
-                                src="{{
-                                  member.Image.host + member.Image.path
-                                }}"
-                                alt="Avatar1"
-                                height="100%"
-                                width="100%"
-                              />
+                            <div class="col-md-4">
+                              <div class="flip-box-member">
+                                <div class="flip-box-inner-member">
+                                  <div class="flip-box-front-member">
+                                    <img
+                                      src="./assets/images/gallery.jpg"
+                                      alt="Avatar1"
+                                      height="100%"
+                                      width="100%"
+                                      class="dp"
+                                    />
+                                  </div>
+                                  <div class="flip-box-back-member">
+                                    <h5>
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipisicing elit. Laudantium nesciunt
+                                      dignissimos aut beatae reprehenderit
+                                      deserunt distinctio maxime, illum omnis
+                                      laborum? Ipsam quis, ratione omnis beatae
+                                      qui aperiam fuga non dicta?
+                                    </h5>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-8">
                               <div class="details">
-                                <b>name of the member</b><br />
-                                <b class="msg">
-                                  Lorem ipsum, dolor sit amet consectetur
-                                  adipisicing elit. Eius excepturi, quas vel ad
-                                  quia totam dolor sit amet consectetur
-                                  adipisicing eli.
-                                </b>
+                                <b class="name">Name Of The Member</b>
+                                <hr style="margin: 0em;" />
+                                <b class="msg">Date of joining</b><br />
+                                <b class="msg">Current Organization</b><br />
+                                <b class="msg">sth sth</b>
+
                                 <div class="text-center">
                                   <a
-                                    href="{{ member.Links.insta }}"
-                                    class="icons btn btn-sm mx-1"
+                                    href="{{ member.Links.mail }}"
+                                    class="icons btn btn-sm mx-2"
                                   >
                                     <img
-                                      src="./assets/images/social/instagram.svg"
+                                      src="./assets/images/social/mail.png"
+                                      alt=""
+                                    />
+                                  </a>
+                                  <a
+                                    href="{{ member.Links.fb }}"
+                                    class="icons btn btn-sm mx-2"
+                                  >
+                                    <img
+                                      src="./assets/images/social/facebook.png"
                                       alt=""
                                     />
                                   </a>
                                   <a
                                     href="{{ member.Links.github }}"
-                                    class="icons btn btn-sm mx-1"
+                                    class="icons btn btn-sm mx-2"
                                   >
                                     <img
-                                      src="./assets/images/social/github.svg"
+                                      src="./assets/images/social/github.png"
                                       alt=""
                                     />
                                   </a>
                                   <a
                                     href="{{ member.Links.linkedin }}"
-                                    class="icons btn btn-sm mx-1"
+                                    class="icons btn btn-sm mx-2"
                                   >
                                     <img
-                                      src="./assets/images/social/linkedin.svg"
+                                      src="./assets/images/social/linkedin.png"
+                                      alt=""
+                                    />
+                                  </a>
+                                  <a
+                                    href="{{ member.Links.insta }}"
+                                    class="icons btn btn-sm mx-2"
+                                  >
+                                    <img
+                                      src="./assets/images/social/instagram.png"
                                       alt=""
                                     />
                                   </a>
@@ -296,7 +433,8 @@
               </li>
               <li [ngbNavItem]="5" class="but">
                 <a ngbNavLink>4th year Members</a>
-                <ng-template ngbNavContent>
+                <ng-template ngbNavContent
+                  ><br /><br /><br />
                   <div
                     class="container"
                     style="margin-top: 30px; margin-bottom: 30px;"
@@ -311,50 +449,82 @@
                       >
                         <div class="container">
                           <div class="det-box row" style="margin: auto;">
-                            <div class="col-md-5">
-                              <img
-                                src="{{
-                                  member.Image.host + member.Image.path
-                                }}"
-                                alt="Avatar1"
-                                height="100%"
-                                width="100%"
-                              />
+                            <div class="col-md-4">
+                              <div class="flip-box-member">
+                                <div class="flip-box-inner-member">
+                                  <div class="flip-box-front-member">
+                                    <img
+                                      src="./assets/images/bg.jpg"
+                                      alt="Avatar1"
+                                      height="100%"
+                                      width="100%"
+                                      class="dp"
+                                    />
+                                  </div>
+                                  <div class="flip-box-back-member">
+                                    <h5>
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipisicing elit. Laudantium nesciunt
+                                      dignissimos aut beatae reprehenderit
+                                      deserunt distinctio maxime, illum omnis
+                                      laborum? Ipsam quis, ratione omnis beatae
+                                      qui aperiam fuga non dicta?
+                                    </h5>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-8">
                               <div class="details">
-                                <b>name of the member</b><br />
-                                <b class="msg">
-                                  Lorem ipsum, dolor sit amet consectetur
-                                  adipisicing elit. Eius excepturi, quas vel ad
-                                  quia totam dolor sit amet consectetur
-                                  adipisicing eli.
-                                </b>
+                                <b class="name">Name Of The Member</b>
+                                <hr style="margin: 0em;" />
+                                <b class="msg">Date of joining</b><br />
+                                <b class="msg">Current Organization</b><br />
+                                <b class="msg">sth sth</b>
+
                                 <div class="text-center">
                                   <a
-                                    href="{{ member.Links.insta }}"
-                                    class="icons btn btn-sm mx-1"
+                                    href="{{ member.Links.mail }}"
+                                    class="icons btn btn-sm mx-2"
                                   >
                                     <img
-                                      src="./assets/images/social/instagram.svg"
+                                      src="./assets/images/social/mail.png"
+                                      alt=""
+                                    />
+                                  </a>
+                                  <a
+                                    href="{{ member.Links.fb }}"
+                                    class="icons btn btn-sm mx-2"
+                                  >
+                                    <img
+                                      src="./assets/images/social/facebook.png"
                                       alt=""
                                     />
                                   </a>
                                   <a
                                     href="{{ member.Links.github }}"
-                                    class="icons btn btn-sm mx-1"
+                                    class="icons btn btn-sm mx-2"
                                   >
                                     <img
-                                      src="./assets/images/social/github.svg"
+                                      src="./assets/images/social/github.png"
                                       alt=""
                                     />
                                   </a>
                                   <a
                                     href="{{ member.Links.linkedin }}"
-                                    class="icons btn btn-sm mx-1"
+                                    class="icons btn btn-sm mx-2"
                                   >
                                     <img
-                                      src="./assets/images/social/linkedin.svg"
+                                      src="./assets/images/social/linkedin.png"
+                                      alt=""
+                                    />
+                                  </a>
+                                  <a
+                                    href="{{ member.Links.insta }}"
+                                    class="icons btn btn-sm mx-2"
+                                  >
+                                    <img
+                                      src="./assets/images/social/instagram.png"
                                       alt=""
                                     />
                                   </a>
