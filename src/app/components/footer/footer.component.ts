@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   constructor() {}
+
+  subscribeForm = new FormGroup({
+    email: new FormControl(''),
+  });
+
+  subscribe() {
+    if (this.subscribeForm.invalid) {
+      return;
+    }
+    // send to the server
+    alert(this.subscribeForm.value.email + ' have subscribed!');
+    this.subscribeForm.reset();
+  }
 
   ngOnInit(): void {}
 }
