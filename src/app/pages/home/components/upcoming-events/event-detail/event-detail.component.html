@@ -22,8 +22,12 @@
     <div class="col">
       <h2 class="text-left">{{ event.title }}</h2>
       <p>
-        Date: <span class="text-info">{{ event.date }}</span> at
-        <span class="text-info">{{ event.time }}</span
+        Date:
+        <span class="text-info"
+          >{{ event.Date.day }} {{ event.Date.month }}
+          {{ event.Date.year }}</span
+        >
+        at <span class="text-info">{{ event.time }}</span
         >&nbsp;&nbsp;&nbsp;&nbsp; Venue:
         <span class="text-info">{{ event.venue }}</span>
       </p>
@@ -46,6 +50,7 @@
       />
     </div>
   </div>
+
   <!-- registration form if enabled -->
   <div
     class="row mt-4"
