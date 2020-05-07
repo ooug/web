@@ -84,7 +84,7 @@ export class ActivitiesComponent implements OnInit {
   ];
   public workshop = [
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/2.jpg' },
       name: 'Activity 1',
       place: 'Some Place',
       date: '24/04/2020',
@@ -98,7 +98,7 @@ export class ActivitiesComponent implements OnInit {
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/1.jpg' },
       name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
@@ -112,15 +112,36 @@ export class ActivitiesComponent implements OnInit {
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/3.jpg' },
       name: 'Activity 5',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/4.jpg' },
       name: 'Activity 6',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/2.jpg' },
+      name: 'Activity 1',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/3.jpg' },
+      name: 'Activity 2',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
@@ -129,14 +150,14 @@ export class ActivitiesComponent implements OnInit {
 
   public techbhukkads = [
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/1.jpg' },
       name: 'Activity 1',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/4.jpg' },
       name: 'Activity 2',
       place: 'Some Place',
       date: '24/04/2020',
@@ -150,7 +171,7 @@ export class ActivitiesComponent implements OnInit {
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/2.jpg' },
       name: 'Activity 4',
       place: 'Some Place',
       date: '24/04/2020',
@@ -164,8 +185,29 @@ export class ActivitiesComponent implements OnInit {
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/4.jpg' },
       name: 'Activity 6',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/1.jpg' },
+      name: 'Activity 1',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/3.jpg' },
+      name: 'Activity 2',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
@@ -174,14 +216,14 @@ export class ActivitiesComponent implements OnInit {
 
   public farewell = [
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/1.jpg' },
       name: 'Activity 1',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/2.jpg' },
       name: 'Activity 2',
       place: 'Some Place',
       date: '24/04/2020',
@@ -195,7 +237,7 @@ export class ActivitiesComponent implements OnInit {
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/3.jpg' },
       name: 'Activity 4',
       place: 'Some Place',
       date: '24/04/2020',
@@ -209,8 +251,29 @@ export class ActivitiesComponent implements OnInit {
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/4.jpg' },
       name: 'Activity 6',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/1.jpg' },
+      name: 'Activity 1',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/2.jpg' },
+      name: 'Activity 2',
+      place: 'Some Place',
+      date: '24/04/2020',
+      description: 'Some Description',
+    },
+    {
+      Image: { host: '', path: './assets/images/gray.jpg' },
+      name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',

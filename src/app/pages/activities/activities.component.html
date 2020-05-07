@@ -24,7 +24,8 @@
             </li>
           </ul>
         </nav>
-        <p style="font-family: cursive; color: rgb(46, 27, 114);">{{ slidertitle[i] }}</p>
+        <p style="font-family: cursive; color: rgb(255, 217, 0);text-shadow: 0 0 0.2rem rgb(0, 0, 0);">
+          {{ slidertitle[i] }}</p>
       </div>
       <a href="#" target="_blank" rel="nofollow noopener noreferrer">
         <div class="picsum-img-wrapper img-box">
@@ -79,23 +80,10 @@
   </div>
 
   <div class="container" *ngIf="active === 'farewell'">
-    <div class="card activity-box" *ngFor="let item of farewell; let i = index">
-      <div class="row">
-        <div class="col-md-5 my-1">
-          <div class="card card-block text-light my-1">
-            <img class="card-img-top" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" />
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title" style="line-height: 0.7rem;">
-            {{ item.name }}
-          </h5>
-          <p class="card-text text-light">At: {{ item.place }}</p>
-          <p class="card-text text-light">On: {{ item.date }}</p>
-          <p class="card-text">{{ item.description }}</p>
-        </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6" *ngFor="let item of farewell;">
+        <img src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px" width="100%" />
       </div>
     </div>
   </div>
-
 </div>
