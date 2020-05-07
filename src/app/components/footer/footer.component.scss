@@ -6,3 +6,7 @@ footer {
 p {
   font-family: 'Roboto';
 }
+
+.btn:disabled {
+  cursor: not-allowed;
+}

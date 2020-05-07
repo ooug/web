@@ -1,20 +1,121 @@
-.container {
-  padding-top: 5rem;
-  min-height: 85vh;
+// for circular display pictures
+.avatar {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50%;
 }
+// .avatar:hover {
+//   transform: scale(120%);
+//   z-index: 2;
+//   border-radius: 50%;
+//   box-shadow: 0 0 1rem #ffffffe8;
+//   transition: box-shadow(0.5s);
+// }
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  .avatar {
+    width: 100%;
+  }
+}
+// display picture
+// .dp:hover {
+//   transform: scale(140%);
+//   z-index: 2;
+//   border-radius: 50%;
+//   box-shadow: 0 0 1rem #ffffffe8;
+//   transition: box-shadow(0.5s);
+// }
 
+// different text formats
+.nme {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: xx-large;
+  color: rgba(0, 0, 0, 0.514);
+}
+.msg {
+  // font-family: cursive;
+  color: rgb(0, 0, 0);
+  font-size: medium;
+  font-weight: lighter;
+}
+.name {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: rgba(0, 0, 0, 0.514);
+  font-size: x-large;
+  font-weight: lighter;
+}
+.msg1 {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
+}
+.msg2 {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: rgb(0, 0, 0);
+  font-size: x-large;
+
+  padding-left: 10%;
+  padding-right: 10%;
+}
 #title {
   font-family: Roboto;
 }
 
-.card {
-  transition: box-shadow 0.3s;
-  background-color: #652e90;
+.but {
+  border: none;
+  background-color: rgb(52, 176, 224);
+  color: #fdfbf9;
+}
+.but:hover {
+  border: none;
+  background-color: rgb(52, 176, 224);
 }
 
-.card:hover {
-  box-shadow: 0 0 2rem #652e90;
+.det-box {
+  background-color: #b4b4ff41;
+  border-radius: 10%;
+  box-shadow: 0 0 1rem #ffffffe8;
+
+  border-radius: 2%;
 }
+.det-box:hover {
+  box-shadow: inset 0 0 36px rgba(255, 255, 255, 0.884);
+  transition: box-shadow 0.3s;
+  // background-color: rgb(199, 195, 189);
+}
+.col-md-4 {
+  padding: 0;
+  margin: 0;
+}
+.col-md-6 {
+  padding: 0;
+}
+
+.view {
+  background-image: url('../../../assets/images/gray.jpg');
+  transition: abs;
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+//--------------------------------
+
+.card {
+  transition: box-shadow 0.3s;
+  border: 0px;
+  background-color: transparent;
+}
+
+// .card:hover {
+//   box-shadow: 0 0 2rem #652e90;
+// }
 //-------------------------
 //-------------------------
 .image {
@@ -23,17 +124,127 @@
 }
 
 .founder {
-  background-color: #b4b4ff;
+  background-color: #b4b4ff41;
   margin: 3%;
   padding: 3%;
-  border-radius: 10px;
-  box-shadow: inset 0 0 16px rgb(68, 3, 3);
+  border-radius: 1px;
+  box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+  border-radius: 2%;
 }
 
-.image:hover {
-  transform: scale(1.1);
-  z-index: 2;
-}
+// .image:hover {
+//   transform: scale(1.1);
+//   z-index: 2;
+// }
+
 .icons:hover {
-  background-color: rgb(70, 1, 1);
+  filter: brightness(150%);
+}
+
+.members-text {
+  font: bold 3rem 'Montserrat';
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a7d5, #23d5ab);
+  background-size: 300%;
+  animation: animate 3s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+.flip-box {
+  background-image: url('../../../assets/images/ooug.png');
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: transparent;
+  color: black;
+}
+
+.flip-box-back {
+  border-radius: 50%;
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-box-member {
+  background-image: url('../../../assets/images/ooug.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner-member {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box-member:hover .flip-box-inner-member {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front-member,
+.flip-box-back-member {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front-member {
+  background-color: transparent;
+  color: black;
+}
+
+.flip-box-back-member {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+@media only screen and (max-width: 500px) {
+  .flip-box {
+    width: 300px;
+    height: 300px;
+  }
 }

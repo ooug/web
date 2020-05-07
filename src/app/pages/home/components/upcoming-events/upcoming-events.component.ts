@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-upcoming-events',
@@ -6,29 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upcoming-events.component.scss'],
 })
 export class UpcomingEventsComponent implements OnInit {
-  private readonly HOST = '';
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  public upcomingEvents = [
-    {
-      Image: { host: this.HOST, path: './assets/images/gray.jpg' },
-      title: 'Upcoming Event 1',
-      description: 'Some data about the event. Not more than 2 lines.',
-      link: '#',
-    },
-    {
-      Image: { host: this.HOST, path: './assets/images/gray.jpg' },
-      title: 'Upcoming Event 2',
-      description: 'Some data about the event. Not more than 2 lines.',
-      link: '#',
-    },
-    {
-      Image: { host: this.HOST, path: './assets/images/gray.jpg' },
-      title: 'Upcoming Event 3',
-      description: 'Some data about the event. Not more than 2 lines.',
-      link: '#',
-    },
-  ];
+  public upcomingEvents = null;
+  public isLoading = true;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // getting data from json file
+    this.isLoading = true;
+    this.http.get('./assets/api/upcomingEvent.json').subscribe((events) => {
+      this.upcomingEvents = events;
+      this.isLoading = false;
+    });
+  }
 }
