@@ -11,7 +11,6 @@ export class BlogService {
   private allBlogs = null;
 
   constructor(private http: HttpClient) {
-    console.log('Blog Service activated');
     this.http.get('./assets/api/blogs.json').subscribe((blogs) => {
       this.allBlogs = blogs;
       this.blogNotifier.next(this.allBlogs);
