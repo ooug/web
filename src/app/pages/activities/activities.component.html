@@ -71,21 +71,9 @@
 
 
   <div class="container" *ngIf="active === 'techbhukkads'">
-    <div class="card activity-box" *ngFor="let item of techbhukkads; let i = index">
-      <div class="row">
-        <div class="col-md-5 my-1">
-          <div class="card card-block text-light my-1">
-            <img class="card-img-top" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" />
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title" style="line-height: 0.7rem;">
-            {{ item.name }}
-          </h5>
-          <p class="card-text text-light">At: {{ item.place }}</p>
-          <p class="card-text text-light">On: {{ item.date }}</p>
-          <p class="card-text">{{ item.description }}</p>
-        </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6" *ngFor="let item of techbhukkads;">
+        <img src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px" width="100%" />
       </div>
     </div>
   </div>
