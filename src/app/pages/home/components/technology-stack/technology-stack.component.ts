@@ -15,8 +15,8 @@ export class TechnologyStackComponent implements OnInit {
   ngOnInit(): void {
     this.isLoading = true;
     this.http.get('./assets/api/blogs.json').subscribe((blogs) => {
-      // only 9 recent blogs on home page
-      this.articles = JSON.parse(JSON.stringify(blogs)).slice(0, 9);
+      // only 6 recent blogs on home page
+      this.articles = JSON.parse(JSON.stringify(blogs)).slice(0, 6);
       this.isLoading = false;
     });
   }
