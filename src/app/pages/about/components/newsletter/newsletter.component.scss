@@ -7,7 +7,10 @@
 .border-1 {
   width: 160px;
   height: 5px;
-  background: #108d6f;
+
+  background: black;
+  margin-bottom: 20px;
+
 }
 .btn-primary:hover,
 .btn-primary:focus {
@@ -24,13 +27,19 @@
 }
 
 section {
-  padding: 60px 0;
+
+  padding: 50px 0;
+
 }
 
 section .section-title {
   text-align: center;
+
   color: #007b5e;
   margin-bottom: 40px;
+
+  font-size: 35px;
+
   text-transform: uppercase;
 }
 

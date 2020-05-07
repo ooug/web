@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <div class="activity-page">
   <div class="container">
     <div class="row">
@@ -30,6 +30,7 @@
                       <p class="card-text text-light">On: {{ item.date }}</p>
                       <p class="card-text">{{ item.description }}</p>
                     </div>
+
                   </div>
                 </div>
 
@@ -93,7 +94,7 @@
             </ngb-tab>
           </ngb-tabset>
         </div>
-=======
+
 <div class="container">
   <div class="row">
     <div class="col-md-12 col-12">
@@ -111,60 +112,61 @@
                     <img class="card-img-top" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" />
                   </div>
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title" style="line-height: 0.7rem;">
-                    {{ item.name }}
-                  </h5>
-                  <p class="card-text text-light">At: {{ item.place }}</p>
-                  <p class="card-text text-light">On: {{ item.date }}</p>
-                  <p class="card-text">{{ item.description }}</p>
-                </div>
 
-                <hr />
-                <hr />
-              </div>
-            </ng-template>
-          </ngb-tab>
-          <ngb-tab>
-            <ng-template ngbTabTitle>techbhukkads</ng-template>
-            <ng-template ngbTabContent>
-              <div class="row" *ngFor="let item of techbhukkads; let i = index">
-                <div class="col-md-5 my-1">
-                  <div class="card card-block text-light my-1">
-                    <img class="card-img-top" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" />
+
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab>
+              <ng-template ngbTabTitle>techbhukkads</ng-template>
+              <ng-template ngbTabContent>
+
+
+
+                <div class="card activity-box" *ngFor="let item of techbhukkads; let i = index">
+                  <div class="row">
+                    <div class="col-md-5 my-1">
+                      <div class="card card-block text-light my-1">
+                        <img class="card-img-top" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" />
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title" style="line-height: 0.7rem;">
+                        {{ item.name }}
+                      </h5>
+                      <p class="card-text text-light">At: {{ item.place }}</p>
+                      <p class="card-text text-light">On: {{ item.date }}</p>
+                      <p class="card-text">{{ item.description }}</p>
+                    </div>
                   </div>
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title" style="line-height: 0.7rem;">
-                    {{ item.name }}
-                  </h5>
-                  <p class="card-text text-light">At: {{ item.place }}</p>
-                  <p class="card-text text-light">On: {{ item.date }}</p>
-                  <p class="card-text">{{ item.description }}</p>
-                </div>
 
-                <hr />
-                <hr />
-              </div>
-            </ng-template>
-          </ngb-tab>
-          <ngb-tab>
-            <ng-template ngbTabTitle>Farewell Celebration</ng-template>
-            <ng-template ngbTabContent>
-              <div class="row" *ngFor="let item of farewell; let i = index">
-                <div class="col-md-5 my-1">
-                  <div class="card card-block text-light my-1">
-                    <img class="card-img-top" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" />
+
+
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab>
+              <ng-template ngbTabTitle>Farewell Celebration</ng-template>
+              <ng-template ngbTabContent>
+
+
+                <div class="card activity-box" *ngFor="let item of farewell; let i = index">
+                  <div class="row">
+                    <div class="col-md-5 my-1">
+                      <div class="card card-block text-light my-1">
+                        <img class="card-img-top" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" />
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title" style="line-height: 0.7rem;">
+                        {{ item.name }}
+                      </h5>
+                      <p class="card-text text-light">At: {{ item.place }}</p>
+                      <p class="card-text text-light">On: {{ item.date }}</p>
+                      <p class="card-text">{{ item.description }}</p>
+                    </div>
                   </div>
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title" style="line-height: 0.7rem;">
-                    {{ item.name }}
-                  </h5>
-                  <p class="card-text text-light">At: {{ item.place }}</p>
-                  <p class="card-text text-light">On: {{ item.date }}</p>
-                  <p class="card-text">{{ item.description }}</p>
-                </div>
+
 
                 <hr />
                 <hr />
@@ -172,7 +174,11 @@
             </ng-template>
           </ngb-tab>
         </ngb-tabset>
->>>>>>> 912591bae239497aadb44997be08e5a5456dcc93
+
+
+
+
+   
       </div>
     </div>
   </div>

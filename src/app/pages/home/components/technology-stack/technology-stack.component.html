@@ -2,23 +2,79 @@
 <section class="container">
   <div class="row mt-5">
     <div class="col-md-12 col-12 text-center">
-      <h2 id="heading">ARTICLES/BLOGS</h2>
+      <h2 id="heading">BLOGS</h2>
       <hr />
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12 col-12">
-      <div *ngFor="let article of articles">
-        <div class="card card-block my-1">
-          <div class="card-body m-0">
-            {{ article.title }}
-            <span class="text-secondary"> By: {{ article.author }}</span>
-            <a href="{{ article.link }}" class="card-link float-right"
-              >View Full Article</a
-            >
-          </div>
-        </div>
-      </div>
+
+  <!-- loading icon-->
+  <div class="row" *ngIf="isLoading">
+    <div class="col text-center mt-2">
+      <img
+        src="./assets/images/loading-blue.gif"
+        width="50px"
+        alt="Loading.."
+      />
     </div>
   </div>
+
+  <!-- Main Wrapper -->
+  <div class="fbt-main-wrapper col-xl-12" *ngIf="!isLoading">
+    <div id="main-wrapper">
+      <div class="main-section" id="main_content">
+        <!-- blogs wrapper -->
+        <div class="blog-posts fbt-index-post-wrap card-columns">
+          <!-- blog card -->
+          <div
+            class="blog-post hentry fbt-index-post card radius-10"
+            *ngFor="let article of articles"
+          >
+            <div class="fbt-post-thumbnail">
+              <a routerLink="{{ article.link }}">
+                <img
+                  alt=""
+                  class="post-thumbnail lazyloaded"
+                  src="{{ article.Image.host + article.Image.path }}"
+                />
+              </a>
+            </div>
+            <div class="fbt-post-caption card-body">
+              <h3 class="post-title h4 card-title">
+                <a routerLink="{{ article.link }}">
+                  {{ article.title }}
+                </a>
+              </h3>
+              <div class="post-meta">
+                <span class="post-author">{{ article.author }}</span>
+                <span class="post-date published">{{ article.date }}</span>
+              </div>
+              <p class="post-excerpt card-text">
+                {{
+                  article.paragraph.split(' ').slice(0, 28).join(' ') + '...'
+                }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- more blog btn -->
+        <div class="blog-pager" id="blog-pager">
+          <div class="list-inline">
+            <a
+              class="blog-pager-older-link list-inline-item"
+              routerLink="/blog"
+              title="More Blogs"
+            >
+              <div class="fbt-bp-message text-uppercase font-weight-bold">
+                More Blogs
+              </div>
+              <span aria-hidden="true" class="fa fa-angle-down"></span>
+            </a>
+          </div>
+        </div>
+        <!-- #blog-pager -->
+      </div>
+    </div>
+    <!-- #main-wrapper -->
+  </div>
+  <!-- .fbt-main-wrapper -->
 </section>

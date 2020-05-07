@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-auth',
@@ -6,8 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent implements OnInit {
-  constructor() {}
-  ngOnInit(): void {}
+  constructor(private titleService: Title, private metaService: Meta) {}
+  ngOnInit(): void {
+    this.updateMetaTags();
+  }
+
+  updateMetaTags() {
+    this.titleService.setTitle('Login | OOUG');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Login To OOUG',
+    });
+    this.metaService.updateTag({
+      property: 'og:url',
+      content: 'https://odishaoug.in/auth',
+    });
+    this.metaService.updateTag({
+      property: 'og:title',
+      content: 'Login | OOUG',
+    });
+    this.metaService.updateTag({
+      property: 'og:description',
+      content: 'Login To OOUG',
+    });
+  }
 
   /**
    * * do login using email and password
