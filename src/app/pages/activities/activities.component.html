@@ -1,10 +1,10 @@
-<div style="background-color: rgb(5, 3, 0);">
+<div style="background-color: rgb(197, 192, 185);">
   <ngb-carousel #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" style="background-color: rgb(133, 126, 126);">
     <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 10000">
 
       <div class="carousel-caption">
         <h2 style="color: rgb(196, 192, 192);">Join Our Events</h2>
-        <nav class="navbar navbar-expand-md navbar-expand-lg navbar-expand-sm navbar-expand-xl navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-dark">
           <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
             <li [ngbNavItem]="1" class="but">
               <a class="nav-link" (click)="activateTab('all')" ngbNavLink><span class="bar-but"><b>ALL</b></span></a>
@@ -42,8 +42,15 @@
     <div class="image-deck row">
       <div class="box col-md-4 col-sm-6" *ngFor="let item of all;">
         <div class="front">
-          <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
-            width="100%" />
+          <!--------------------------------------------------------------------------------->
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px" />
+          </div>
+          <div class="contents">
+            jlvljdf dfk dfj dfj dfj welkf 32 ljrtbek ls dvlj fv jlvljdf dfk dfj dfj dfj welkf 32 ljrtbek ls dvlj fv
+            jlvljdf dfk dfj dfj dfj welkf 32 ljrtbek ls dvlj fv
+          </div>
+          <!------------------------------------------------------------------------------------->
         </div>
       </div>
       <div class="back middle">
@@ -61,6 +68,7 @@
       </div>
     </div>
   </div>
+
 
   <div class="container" *ngIf="active === 'techbhukkads'">
     <div class="card activity-box" *ngFor="let item of techbhukkads; let i = index">

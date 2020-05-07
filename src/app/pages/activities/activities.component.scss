@@ -26,6 +26,17 @@
   padding: 0;
   margin: 0;
 }
+
+.banner {
+  position: relative;
+  margin: auto;
+}
+.banner img {
+  width: 100%;
+}
+.contents {
+  position: absolute;
+}
 //-----------------flip-----------------------
 .middle {
   position: relative;
