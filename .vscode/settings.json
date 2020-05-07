@@ -10,6 +10,11 @@
     "Seach",
     "Techbhookads",
     "Zilla",
+
+    "allowfullscreen",
+    "cufonfonts",
+    "frontside",
+
     "behance",
     "childs",
     "closebtn",
@@ -19,13 +24,18 @@
     "frss",
     "fullwidth",
     "hentry",
+
     "imgs",
     "instg",
     "lazyloaded",
     "linkedin",
+
+    "mainflip",
+
     "megamenu",
     "pagenav",
     "pinterest",
+
     "prebuild",
     "scrollbar",
     "showpage",
@@ -35,7 +45,14 @@
     "toogle",
     "unstyled",
     "webfont",
+
+    "woff"
+  ],
+  "cSpell.ignoreWords": [
+    "prefered"
+
     "woff",
     "youtube"
+
   ]
 }
