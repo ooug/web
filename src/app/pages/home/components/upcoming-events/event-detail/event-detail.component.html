@@ -1,0 +1,131 @@
+<section class="container">
+  <!-- loading icon-->
+  <div class="row" *ngIf="flags.isLoading">
+    <div class="col text-center mt-2">
+      <img
+        src="./assets/images/loading-blue.gif"
+        width="50px"
+        alt="Loading.."
+      />
+    </div>
+  </div>
+
+  <!-- if event not found -->
+  <div class="row" *ngIf="!flags.isLoading && flags.notFound">
+    <div class="col text-center">
+      <h2>EVENT NOT FOUND!</h2>
+    </div>
+  </div>
+
+  <!-- event title date time and venue -->
+  <div class="row" *ngIf="!flags.isLoading && !flags.notFound">
+    <div class="col">
+      <h2 class="text-left">{{ event.title }}</h2>
+      <p>
+        Date: <span class="text-info">{{ event.date }}</span> at
+        <span class="text-info">{{ event.time }}</span
+        >&nbsp;&nbsp;&nbsp;&nbsp; Venue:
+        <span class="text-info">{{ event.venue }}</span>
+      </p>
+      <hr class="my-3" />
+    </div>
+  </div>
+  <!-- event long description and image-->
+  <div class="row" *ngIf="!flags.isLoading && !flags.notFound">
+    <div class="col-md-8 col-12 m-0">
+      <p class="text-secondary text-justify my-2">
+        {{ event.longDescription }}
+      </p>
+    </div>
+    <div class="col-md-4 col-12 m-0">
+      <img
+        src="{{ event.Image.host + event.Image.path }}"
+        alt="Image.."
+        class="img-responsive my-2"
+        width="100%"
+      />
+    </div>
+  </div>
+  <!-- registration form if enabled -->
+  <div
+    class="row mt-4"
+    *ngIf="!flags.isLoading && !flags.notFound && event.enableRegistration"
+  >
+    <div class="col-md-12 col-12 my-3">
+      <div
+        class="container-fluid p-3 text-white"
+        style="background-color: #652e90;"
+      >
+        <h4 class="text-center">Register for this event</h4>
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+          <div class="row my-3">
+            <div class="col-md-3 m-0">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  required
+                  name="name"
+                  class="form-control"
+                  placeholder="Name"
+                  formControlName="userName"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 m-0">
+              <div class="form-group">
+                <label for="name">Roll No</label>
+                <input
+                  type="text"
+                  required
+                  name="roll"
+                  class="form-control"
+                  placeholder="Roll Number"
+                  formControlName="roll"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 m-0">
+              <div class="form-group">
+                <label for="name">Email</label>
+                <input
+                  type="email"
+                  required
+                  email
+                  name="email"
+                  class="form-control"
+                  placeholder="Email"
+                  formControlName="email"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 m-0">
+              <div class="form-group">
+                <label for="name">Mobile No</label>
+                <input
+                  type="tel"
+                  required
+                  name="mobile"
+                  class="form-control"
+                  placeholder="mobile"
+                  formControlName="mobile"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                [disabled]="registerForm.invalid"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

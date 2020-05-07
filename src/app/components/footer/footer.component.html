@@ -23,7 +23,7 @@
       <!-- subscribe to newsletter -->
       <div class="col-md-4 col-12 my-auto">
         <h5>Subscribe to newsletter</h5>
-        <form class="form">
+        <form class="form" [formGroup]="subscribeForm" (ngSubmit)="subscribe()">
           <div class="form-group">
             <input
               type="email"
@@ -31,9 +31,18 @@
               name="email"
               id="email"
               class="form-control"
+              formControlName="email"
+              required
+              email
             />
           </div>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="subscribeForm.invalid"
+          >
+            Subscribe
+          </button>
         </form>
       </div>
     </div>
@@ -52,13 +61,13 @@
       </div>
       <div class="col-md-4 col-12">
         <span>
-          <a href="#" class="text-white"
+          <a href="#" title="Facebook" class="text-white"
             ><img src="./assets/svgs/social/facebook.svg" alt="facebook" /></a
           >&nbsp;
-          <a href="#" class="text-white"
+          <a href="#" title="Twitter" class="text-white"
             ><img src="./assets/svgs/social/twitter.svg" alt="twitter" /></a
           >&nbsp;
-          <a href="#" class="text-white"
+          <a href="#" title="Instagram" class="text-white"
             ><img src="./assets/svgs/social/instagram.svg" alt="instagram" /></a
           >&nbsp;
         </span>

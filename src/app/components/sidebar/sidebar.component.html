@@ -1,7 +1,7 @@
 <div [ngClass]="{ toggled: !isSideBarCollapse }" id="wrapper">
   <!-- Sidebar -->
   <div id="sidebar-wrapper">
-    <div class="sidebar-heading"><strong>Navigation</strong></div>
+    <!-- <div class="sidebar-heading"><strong>Navigation</strong></div> -->
     <div class="list-group list-group-flush">
       <a
         routerLink="/"
@@ -11,6 +11,15 @@
         (click)="helperService.toggleSideBar()"
       >
         Home
+      </a>
+      <a
+        routerLink="/blog"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="helperService.toggleSideBar()"
+      >
+        Blog
       </a>
       <a
         routerLink="/about"
