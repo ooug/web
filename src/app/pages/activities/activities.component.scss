@@ -1,3 +1,68 @@
+//--------------------nav------------
+a {
+  margin: 0;
+}
+ul {
+  padding: 0;
+}
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+//----------------search--------------------------
+.search-bar {
+  justify-content: center;
+  align-items: center;
+  padding: 2% 2% 0 2%;
+}
+
+.form-control {
+  position: absolute;
+  border-radius: 20px;
+  width: 240px;
+  color: #fff;
+  background-color: #333;
+}
+
+.btn {
+  position: relative;
+  border-radius: 50%;
+  left: 7%;
+  height: 35px;
+  width: 35px;
+  color: #fff;
+  background-color: #333;
+}
+
+.btn:focus,
+.btn:active,
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+@media (max-width: 500px) {
+  a.nav-link b {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .btn {
+    left: 27%;
+  }
+}
+
+@media (width: 768px) {
+  .btn {
+    left: 13%;
+  }
+}
 //-----------------slide bar------------------------
 ngb-carousel {
   z-index: 1;
@@ -5,6 +70,7 @@ ngb-carousel {
 
 .bar-but {
   color: rgb(75, 39, 39);
+  font-size: 13px;
   text-shadow: 0 0 0.05rem #ffffff;
 }
 .bar-but:hover {
@@ -27,22 +93,43 @@ ngb-carousel {
   margin: 0;
 }
 .col-md-4 {
-  padding: 0;
+  padding: 2px;
+  margin: 0;
+}
+
+.col-sm-6 {
+  padding: 2px;
   margin: 0;
 }
 
 .banner {
   position: relative;
-  margin: auto;
+  margin: 0 auto;
 }
-.banner img {
+.image {
   width: 100%;
-  border-radius: 3px;
-  border: 1px solid rgb(77, 2, 2);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
-.contents {
+.date-cor {
   position: absolute;
-  margin: 0;
+  background-size: cover;
+  width: 99%;
+  top: 0;
+  text-align: right;
+  font-size: 10px;
+  color: white;
+}
+.heading {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  background-size: cover;
+  background-color: black;
+  height: 100%;
+  opacity: 0.5;
+  text-align: left;
+  border-top: 2px solid white;
 }
 //-----------------flip-----------------------
 .middle {
