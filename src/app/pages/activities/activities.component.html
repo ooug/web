@@ -71,35 +71,81 @@
           </div>
         </div>
         <!------------------------------------------------------------------------------------->
-
       </div>
     </div>
   </div>
 
-
-
   <div class="container" *ngIf="active === 'workshop'">
-    <div class="row">
-      <div class="col-md-4 col-sm-6" *ngFor="let item of workshop;">
-        <img src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px" width="100%" />
+    <div class="image-deck row">
+      <div class="box col-md-4 col-sm-6" *ngFor="let item of workshop;">
+        <!--------------------------------------------------------------------------------->
+        <div class="front">
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+              width="100%" />
+            <div class="date-cor">
+              <b>01-02-2020</b>
+            </div>
+            <div class="heading">
+              <div style="margin-left:5px;">
+                <b style="color:rgb(255, 255, 255);">Event name</b><br>
+                <b style="color: rgb(204, 198, 187);">Organized by</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>
 
 
   <div class="container" *ngIf="active === 'techbhukkads'">
-    <div class="row">
-      <div class="col-md-4 col-sm-6" *ngFor="let item of techbhukkads;">
-        <img src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px" width="100%" />
+    <div class="image-deck row">
+      <div class="box col-md-4 col-sm-6" *ngFor="let item of techbhukkads;">
+        <!--------------------------------------------------------------------------------->
+        <div class="front">
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+              width="100%" />
+            <div class="date-cor">
+              <b>01-02-2020</b>
+            </div>
+            <div class="heading">
+              <div style="margin-left:5px;">
+                <b style="color:rgb(255, 255, 255);">Event name</b><br>
+                <b style="color: rgb(204, 198, 187);">Organized by</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>
 
+
+
   <div class="container" *ngIf="active === 'farewell'">
-    <div class="row">
-      <div class="col-md-4 col-sm-6" *ngFor="let item of farewell;">
-        <img src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px" width="100%" />
+    <div class="image-deck row">
+      <div class="box col-md-4 col-sm-6" *ngFor="let item of farewell;">
+        <!--------------------------------------------------------------------------------->
+        <div class="front">
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+              width="100%" />
+            <div class="date-cor">
+              <b>01-02-2020</b>
+            </div>
+            <div class="heading">
+              <div style="margin-left:5px;">
+                <b style="color:rgb(255, 255, 255);">Event name</b><br>
+                <b style="color: rgb(204, 198, 187);">Organized by</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>
-</div>
