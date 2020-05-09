@@ -1,7 +1,7 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="background-color: rgb(197, 192, 185);">
   <ngb-carousel #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" style="background-color: rgb(133, 126, 126);">
-    <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 10000">
-
+    <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 200000">
       <div class="carousel-caption">
         <h2 style="color: rgb(196, 192, 192);">Join Our Events</h2>
         <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-dark">
@@ -29,61 +29,123 @@
       </div>
       <a href="#" target="_blank" rel="nofollow noopener noreferrer">
         <div class="picsum-img-wrapper img-box">
-          <img style="opacity: 0.8;" [src]="img" alt="image not found!!" height="450px" width="100%"> </div>
+          <img style="opacity: 0.4;" [src]="img" alt="image not found!!" height="450px" width="100%"> </div>
       </a>
     </ng-template>
   </ngb-carousel>
 
 
   <!--------------------------------------------------------------------------->
+  <form class="search-bar form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Type to Search" aria-label="Search">
+    <button class="btn my-2 my-sm-0" type="submit">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </button>
+  </form>
   <!--------------------------------------------------------------------------->
+
+
+
+
+
+
 
 
   <div class="container" *ngIf="active === 'all'">
     <div class="image-deck row">
       <div class="box col-md-4 col-sm-6" *ngFor="let item of all;">
+        <!--------------------------------------------------------------------------------->
         <div class="front">
-          <!--------------------------------------------------------------------------------->
           <div class="banner">
-            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px" />
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+              width="100%" />
+            <div class="date-cor">
+              <b>01-02-2020</b>
+            </div>
+            <div class="heading">
+              <div style="margin-left:5px;">
+                <b style="color:rgb(255, 255, 255);">Event name</b><br>
+                <b style="color: rgb(204, 198, 187);">Organized by</b>
+              </div>
+            </div>
           </div>
-          <div class="contents">
-            jlvljdf dfk dfj dfj dfj welkf 32 ljrtbek ls dvlj fv jlvljdf dfk dfj dfj dfj welkf 32 ljrtbek ls dvlj fv
-            jlvljdf dfk dfj dfj dfj
-          </div>
-          <!------------------------------------------------------------------------------------->
         </div>
-      </div>
-      <div class="back middle">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua.</p>
+        <!------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>
 
-
   <div class="container" *ngIf="active === 'workshop'">
-    <div class="row">
-      <div class="col-md-4 col-sm-6" *ngFor="let item of workshop;">
-        <img src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px" width="100%" />
+    <div class="image-deck row">
+      <div class="box col-md-4 col-sm-6" *ngFor="let item of workshop;">
+        <!--------------------------------------------------------------------------------->
+        <div class="front">
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+              width="100%" />
+            <div class="date-cor">
+              <b>01-02-2020</b>
+            </div>
+            <div class="heading">
+              <div style="margin-left:5px;">
+                <b style="color:rgb(255, 255, 255);">Event name</b><br>
+                <b style="color: rgb(204, 198, 187);">Organized by</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>
 
 
   <div class="container" *ngIf="active === 'techbhukkads'">
-    <div class="row">
-      <div class="col-md-4 col-sm-6" *ngFor="let item of techbhukkads;">
-        <img src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px" width="100%" />
+    <div class="image-deck row">
+      <div class="box col-md-4 col-sm-6" *ngFor="let item of techbhukkads;">
+        <!--------------------------------------------------------------------------------->
+        <div class="front">
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+              width="100%" />
+            <div class="date-cor">
+              <b>01-02-2020</b>
+            </div>
+            <div class="heading">
+              <div style="margin-left:5px;">
+                <b style="color:rgb(255, 255, 255);">Event name</b><br>
+                <b style="color: rgb(204, 198, 187);">Organized by</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>
 
+
+
   <div class="container" *ngIf="active === 'farewell'">
-    <div class="row">
-      <div class="col-md-4 col-sm-6" *ngFor="let item of farewell;">
-        <img src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px" width="100%" />
+    <div class="image-deck row">
+      <div class="box col-md-4 col-sm-6" *ngFor="let item of farewell;">
+        <!--------------------------------------------------------------------------------->
+        <div class="front">
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+              width="100%" />
+            <div class="date-cor">
+              <b>01-02-2020</b>
+            </div>
+            <div class="heading">
+              <div style="margin-left:5px;">
+                <b style="color:rgb(255, 255, 255);">Event name</b><br>
+                <b style="color: rgb(204, 198, 187);">Organized by</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>
-</div>
