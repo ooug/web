@@ -8,18 +8,16 @@
       <strong class="d-none d-md-inline"> &nbsp;Filter</strong>
     </div>
     <!-- search bar -->
-    <div class="col-md-12 d-none d-md-block my-3">
-      <div class="input-group">
-        <form [formGroup]="searchForm">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="searchBox"
-            placeholder="Search"
-            (keyup)="searchBlog()"
-          />
-        </form>
-      </div>
+    <div class="col-md-12 d-none d-md-block my-3 px-0">
+      <form [formGroup]="searchForm">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="searchBox"
+          placeholder="Search"
+          (keyup)="searchBlog()"
+        />
+      </form>
     </div>
     <!-- Categories -->
     <div class="col-md-12 col-4" style="padding-right: 0;">
