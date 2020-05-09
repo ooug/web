@@ -1,16 +1,3 @@
-//--------------------nav------------
-a {
-  margin: 0;
-}
-ul {
-  padding: 0;
-}
-li {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-
 //----------------search--------------------------
 .search-bar {
   justify-content: center;
@@ -69,18 +56,25 @@ ngb-carousel {
 }
 
 .bar-but {
-  color: rgb(75, 39, 39);
-  font-size: 13px;
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 0.05rem #ffffff;
+  font-size: 14px;
+  margin: 20px;
+  padding: 7px;
+  border-radius: 50px;
 }
 .bar-but:hover {
-  padding: 5px;
-  background-color: rgb(255, 0, 51);
-  color: rgb(240, 217, 217);
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 .img-box {
-  background-color: rgb(0, 195, 255);
-  opacity: 0.6;
+  background-color: rgb(68, 0, 255);
+  opacity: 1;
+}
+.buts {
+  padding: 3px;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
 }
 //-----------------cards-----------------------------
 .container {
@@ -129,12 +123,25 @@ ngb-carousel {
   height: 100%;
   opacity: 0.5;
   text-align: left;
-  border-top: 2px solid white;
+  border-top: 2px solid rgb(0, 238, 255);
+}
+.box {
+  height: 250px;
+}
+.heading-back {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-size: cover;
+  background-color: black;
+  height: 100%;
+  opacity: 0.6;
 }
 //-----------------flip-----------------------
 .middle {
   position: relative;
-  z-index: -1;
+  top: -100%;
+  z-index: 1;
 }
 
 .box {
@@ -143,9 +150,12 @@ ngb-carousel {
 
 .front,
 .back {
+  height: 100%;
   overflow: hidden;
   backface-visibility: hidden;
   transition: transform 0.6s linear;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .front {
