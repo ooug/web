@@ -1,0 +1,352 @@
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #9adca1;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f1f4f9;
+  --dark: #343a40;
+  --white: #ffffff;
+  --black: #000;
+  --rand: random(3);
+}
+
+/* Typography
+===================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: #393939;
+  font-weight: 700;
+  margin: 0;
+}
+
+h1,
+.h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0.3px;
+}
+
+h2,
+.h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 25px;
+  line-height: 27px;
+}
+
+h3,
+.h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h4,
+.h4 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h5,
+.h5 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+h6,
+.h6 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* General
+===================================== */
+
+.card {
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 15px 15px -10px rgba(23, 16, 159, 0.15);
+  box-shadow: 0 15px 15px -10px rgba(23, 16, 159, 0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 2rem gray;
+}
+
+a {
+  color: #007bff;
+}
+
+a .fa,
+a .fab,
+a .fad,
+a .fal,
+a .far,
+a .fas {
+  font-size: calc(14px + 5px);
+}
+
+a:hover {
+  color: #47c3fb;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+.radius-0 {
+  border-radius: 0;
+}
+
+.radius-10 {
+  border-radius: 15px !important;
+  overflow: hidden !important;
+}
+
+.radius-25 {
+  border-radius: 25px !important;
+  overflow: hidden !important;
+}
+
+/* Page Settings
+===================================== */
+
+/* Posts
+===================================== */
+.tooltip {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.feed-view .card-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.feed-view .blog-post {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.item-view .card-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.item-view .post-body {
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 34px !important;
+  letter-spacing: 0.3px !important;
+  color: #222222;
+}
+
+.item-view .fbt-post-thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.post-meta {
+  font-family: 'Nunito', sans-serif;
+  font-size: calc(14px - 2px);
+  font-weight: 400;
+}
+
+.post-meta span:not(:last-child):after {
+  content: '/';
+  margin: 0 3px 0 7px;
+}
+
+.post-meta a {
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.post-meta a:hover {
+  color: #47c3fb;
+}
+
+.post-meta .post-author {
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.post-title {
+  margin-bottom: 12px;
+}
+
+.post-excerpt {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.fbt-post-thumbnail {
+  width: 100%;
+  height: 242px;
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-post:nth-child(3n) .fbt-post-thumbnail {
+  height: 250px;
+}
+
+.blog-post:nth-child(3n) .card-body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.25rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+.blog-post:nth-child(2n + 2):hover h3 {
+  text-decoration: underline;
+}
+
+.blog-post:nth-child(2n + 2):hover h3 a {
+  text-decoration: underline;
+}
+
+.blog-post:nth-child(2n + 2) h3 {
+  color: #fff !important;
+}
+
+.blog-post:nth-child(2n + 2) h3 a {
+  color: #fff !important;
+}
+
+.blog-post:nth-child(2n + 2) .post-meta {
+  color: #fff !important;
+}
+
+.blog-post:nth-child(2n + 2) .post-meta a {
+  color: #fff !important;
+}
+
+.blog-post:nth-child(2n + 2) .post-meta .post-author {
+  color: #fff !important;
+}
+
+.blog-post:nth-child(2n + 2) .card-text {
+  color: #fff !important;
+}
+
+.fbt-item-post .post-body img {
+  max-width: 100%;
+}
+
+.post-thumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.fbt-index-post.card {
+  background-color: #4a42ec;
+}
+
+.fbt-index-post.card:nth-child(2n) {
+  background-color: #ff4274;
+}
+
+.fbt-index-post.card:nth-child(5n) {
+  background-color: #0099cc;
+}
+
+.fbt-index-post.card:nth-child(7n) {
+  background-color: #ff9900;
+}
+
+.fbt-index-post.card:nth-child(11n) {
+  background-color: #939ead;
+}
+
+.fbt-index-post.card h3 {
+  color: #ffffff !important;
+}
+
+.fbt-index-post.card h3 a {
+  color: #ffffff !important;
+}
+
+.fbt-index-post.card h3 a:hover {
+  text-decoration: underline;
+}
+
+.fbt-index-post.card h3:hover {
+  text-decoration: underline;
+}
+
+.fbt-index-post.card .post-meta {
+  color: #ffffff !important;
+}
+
+.fbt-index-post.card .post-meta a {
+  color: #ffffff !important;
+}
+
+.fbt-index-post.card .post-meta .post-author {
+  color: #ffffff !important;
+}
+
+.fbt-index-post.card .card-text {
+  color: #ffffff !important;
+}
+
+.card-columns .fbt-index-post.card {
+  margin-bottom: calc(35px - 5px);
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    -webkit-column-count: 1;
+    column-count: 1;
+    -webkit-column-gap: 35px;
+    column-gap: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}

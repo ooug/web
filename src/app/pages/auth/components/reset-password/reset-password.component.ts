@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-reset-password',
@@ -7,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./reset-password.component.scss'],
 })
 export class ResetPasswordComponent implements OnInit {
-  constructor() {}
+  constructor(private titleService: Title, private metaService: Meta) {}
 
   public usernameClass = ['input-div']; // classes used for username field
   public user = {
@@ -38,5 +39,27 @@ export class ResetPasswordComponent implements OnInit {
     console.log(loginForm);
   }
 
-  ngOnInit(): void {}
+  updateMetaTags() {
+    this.titleService.setTitle('Reset Password | OOUG');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Reset Password',
+    });
+    this.metaService.updateTag({
+      property: 'og:url',
+      content: 'https://odishaoug.in/auth/reset-password',
+    });
+    this.metaService.updateTag({
+      property: 'og:title',
+      content: 'Reset Password | OOUG',
+    });
+    this.metaService.updateTag({
+      property: 'og:description',
+      content: 'Reset Password',
+    });
+  }
+
+  ngOnInit(): void {
+    this.updateMetaTags();
+  }
 }

@@ -1,6 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+
 // For MDB Angular Pro
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,6 +37,7 @@ import { environment } from '../environments/environment';
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
