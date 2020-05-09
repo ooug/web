@@ -13,9 +13,11 @@ export class BlogListComponent implements OnInit, OnDestroy {
   constructor(private blogService: BlogService) {}
 
   ngOnInit(): void {
-    this.blogNotifier = this.blogService.getNotifier().subscribe((blogs) => {
-      this.blogs = blogs;
-    });
+    this.blogNotifier = this.blogService
+      .getBlogNotifier()
+      .subscribe((blogs) => {
+        this.blogs = blogs;
+      });
     this.blogService.fetchBlogs();
   }
 
