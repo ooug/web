@@ -1,30 +1,31 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="background-color: rgb(197, 192, 185);">
-  <ngb-carousel #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" style="background-color: rgb(133, 126, 126);">
-    <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 200000">
+  <ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" style="background-color: rgb(133, 126, 126);">
+    <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 10000">
       <div class="carousel-caption">
-        <h2 style="color: rgb(196, 192, 192);">Join Our Events</h2>
+        <h2 style="color: rgb(44, 5, 5);">Join Our Events</h2>
+        <div style="height: 0.5px; background-color: black;"></div>
         <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-dark">
+
           <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
             <li [ngbNavItem]="1" class="but">
-              <a class="nav-link" (click)="activateTab('all')" ngbNavLink><span class="bar-but"><b>ALL</b></span></a>
+              <a (click)="activateTab('all')"><span class="bar-but"><b>All</b><br></span></a>
             </li>
             <li [ngbNavItem]="2" class="but">
-              <a class="nav-link" (click)="activateTab('workshop')" ngbNavLink><span
-                  class="bar-but"><b>WORKSHOP</b></span></a>
+              <a (click)="activateTab('workshop')"><span class="bar-but"><b>Workshop</b><br></span></a>
             </li>
             <li [ngbNavItem]="3" class="but">
-              <a class="nav-link" (click)="activateTab('techbhukkads')" ngbNavLink><span
-                  class="bar-but"><b>TECHBHUKKADS</b></span></a>
+              <a (click)="activateTab('techbhukkads')"><span class="bar-but"><b>Techbhukkads</b><br></span></a>
             </li>
             <li [ngbNavItem]="4" class="but">
-              <a class="nav-link" (click)="activateTab('farewell')" ngbNavLink>
-                <span class="bar-but"><b>FAREWELL CELIBRATION</b></span>
+              <a (click)="activateTab('farewell')">
+                <span class="bar-but"><b>Farewell Celibration</b><br></span>
               </a>
             </li>
           </ul>
         </nav>
-        <p style="font-family: cursive; color: rgb(255, 217, 0);text-shadow: 0 0 0.1rem rgb(0, 0, 0);">
+        <div style="height: 1px; background-color: black;"></div>
+        <p style="font-family: cursive; color: rgb(255, 217, 0);text-shadow: 0 0 0.1rem rgb(0, 0, 0);font-size: 13px;">
           {{ slidertitle[i] }}</p>
       </div>
       <a href="#" target="_blank" rel="nofollow noopener noreferrer">
@@ -45,19 +46,20 @@
   <!--------------------------------------------------------------------------->
 
 
+  <!-----------------OOUGian of the year---------------------->
 
 
 
+  <!---------------------------------------------------------------->
 
 
 
   <div class="container" *ngIf="active === 'all'">
     <div class="image-deck row">
       <div class="box col-md-4 col-sm-6" *ngFor="let item of all;">
-        <!--------------------------------------------------------------------------------->
         <div class="front">
           <div class="banner">
-            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
               width="100%" />
             <div class="date-cor">
               <b>01-02-2020</b>
@@ -70,7 +72,18 @@
             </div>
           </div>
         </div>
-        <!------------------------------------------------------------------------------------->
+        <div class="back middle">
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
+              width="100%" />
+            <div class="heading-back">
+              <div style="margin: 10px; color: white;margin-top: 40px;">
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -78,10 +91,9 @@
   <div class="container" *ngIf="active === 'workshop'">
     <div class="image-deck row">
       <div class="box col-md-4 col-sm-6" *ngFor="let item of workshop;">
-        <!--------------------------------------------------------------------------------->
         <div class="front">
           <div class="banner">
-            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
               width="100%" />
             <div class="date-cor">
               <b>01-02-2020</b>
@@ -94,7 +106,18 @@
             </div>
           </div>
         </div>
-        <!------------------------------------------------------------------------------------->
+        <div class="back middle">
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
+              width="100%" />
+            <div class="heading-back">
+              <div style="margin: 10px; color: white;margin-top: 40px;">
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -103,10 +126,9 @@
   <div class="container" *ngIf="active === 'techbhukkads'">
     <div class="image-deck row">
       <div class="box col-md-4 col-sm-6" *ngFor="let item of techbhukkads;">
-        <!--------------------------------------------------------------------------------->
         <div class="front">
           <div class="banner">
-            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
               width="100%" />
             <div class="date-cor">
               <b>01-02-2020</b>
@@ -119,20 +141,29 @@
             </div>
           </div>
         </div>
-        <!------------------------------------------------------------------------------------->
+        <div class="back middle">
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
+              width="100%" />
+            <div class="heading-back">
+              <div style="margin: 10px; color: white;margin-top: 40px;">
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
 
-
   <div class="container" *ngIf="active === 'farewell'">
     <div class="image-deck row">
       <div class="box col-md-4 col-sm-6" *ngFor="let item of farewell;">
-        <!--------------------------------------------------------------------------------->
         <div class="front">
           <div class="banner">
-            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="300px"
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
               width="100%" />
             <div class="date-cor">
               <b>01-02-2020</b>
@@ -145,7 +176,18 @@
             </div>
           </div>
         </div>
-        <!------------------------------------------------------------------------------------->
+        <div class="back middle">
+          <div class="banner">
+            <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
+              width="100%" />
+            <div class="heading-back">
+              <div style="margin: 10px; color: white;margin-top: 40px;">
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
