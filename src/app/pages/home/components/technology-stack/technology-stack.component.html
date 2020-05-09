@@ -30,7 +30,7 @@
             *ngFor="let article of articles"
           >
             <div class="fbt-post-thumbnail">
-              <a routerLink="{{ article.link }}">
+              <a [routerLink]="['/blog', article.id]">
                 <img
                   alt=""
                   class="post-thumbnail lazyloaded"
@@ -40,7 +40,7 @@
             </div>
             <div class="fbt-post-caption card-body">
               <h3 class="post-title h4 card-title">
-                <a routerLink="{{ article.link }}">
+                <a [routerLink]="['/blog', article.id]">
                   {{ article.title }}
                 </a>
               </h3>
