@@ -1,0 +1,60 @@
+{
+  "status": true,
+  "data": [
+    {
+      "details": "Main content at the top",
+      "services": [
+        {
+          "service_type": "",
+          "service_details": ""
+        },
+        {
+          "service_type": "",
+          "service_details": ""
+        },
+        {
+          "service_type": "",
+          "service_details": ""
+        },
+        {
+          "service_type": "",
+          "service_details": ""
+        },
+        {
+          "service_type": "",
+          "service_details": ""
+        },
+        {
+          "service_type": "",
+          "service_details": ""
+        }
+      ],
+      "our-team": [
+        {
+          "name": "",
+          "message": "",
+          "image": "",
+          "facebook-link": "",
+          "instagram-link": ""
+        },
+        {
+          "name": "",
+          "message": "",
+          "image": "",
+          "facebook-link": "",
+          "instagram-link": ""
+        },
+        {
+          "name": "",
+          "message": "",
+          "image": "",
+          "facebook-link": "",
+          "instagram-link": ""
+        }
+      ],
+      "website": "xyz@gmail.com",
+      "mobile": "1234567815",
+      "location": "xyz"
+    }
+  ]
+}
