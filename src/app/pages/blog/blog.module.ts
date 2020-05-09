@@ -6,17 +6,35 @@ import { BlogComponent } from './blog.component';
 import { FilterComponent } from './component/filter/filter.component';
 import { BlogListComponent } from './component/blog-list/blog-list.component';
 import { BlogService } from './blog.service';
+import { BlogPageComponent } from './component/blog-page/blog-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
     path: '',
     component: BlogComponent,
   },
+  {
+    path: ':blogId',
+    component: BlogPageComponent,
+  },
 ];
 
 @NgModule({
-  declarations: [BlogComponent, FilterComponent, BlogListComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), HttpClientModule],
+  declarations: [
+    BlogComponent,
+    FilterComponent,
+    BlogListComponent,
+    BlogPageComponent,
+  ],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    HttpClientModule,
+    NgbModule,
+    ReactiveFormsModule,
+  ],
   providers: [BlogService],
 })
 export class BlogModule {}
