@@ -20,7 +20,7 @@
 .stud-button {
   background-color: black;
   color: white;
-  padding: 5px;
+  padding: 3px;
 }
 .student-button {
   border: none;
@@ -43,3 +43,65 @@
   border-radius: 50%;
 }
 //-------------------------------------------------------------------
+
+//-------------------------------------adarsh -------------start-------------------------------------------------------------------
+//==================================================================================================================================
+
+//------------president------------------
+//display picture
+.avatar {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin: auto;
+  border-color: white;
+  border-width: thick;
+}
+//text formats
+.nme {
+  font-family: cursive;
+  font-size: xx-large;
+  color: rgba(0, 0, 0, 0.514);
+}
+.msg1 {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
+}
+//president container
+#founder {
+  background-color: #b4b4ff41;
+  margin: 3%;
+  padding: 3%;
+  border-radius: 1px;
+  box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+  border-radius: 2%;
+}
+//president name plate
+#nameplate {
+  z-index: 1;
+  border-radius: 30px;
+  background-color: blueviolet;
+  width: 130%;
+  margin-left: -30%;
+  padding: 5px;
+  text-align: center;
+  font-size: xx-large;
+  font-family: Brush Script MT, Brush Script Std;
+}
+//social media links
+.icons:hover {
+  filter: brightness(150%);
+}
+
+@media only screen and (max-width: 800px) {
+  .avatar {
+    width: max-width;
+    height: auto;
+  }
+  #nameplate {
+    text-align: end;
+  }
+}
+//===============================================================================================================================
+// -- --------------------------------------------------------------adarsh------end----------------------------------------------

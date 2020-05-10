@@ -1,5 +1,59 @@
-<div style="height: 100%; width: 100%; background-color: black;position: relative;"></div>
-<br><br><br>
+<!-- -------------------------------------adarsh -------------start--------------------------------------------------------------- -->
+
+<div class="container-fluid" style="margin-top: 60px; margin-left: none;">
+  <div style="align-text: centre;">
+    <h1>OUR MEMBERS</h1>
+  </div>
+  <div class="container-fluid" style="
+        background-color: rgba(140, 106, 172, 0.425);
+        color: white;
+        text-align: center;
+        margin-left: none;
+      ">
+    <p class="nme">President</p>
+  </div>
+  <div class="row" style="align-items: center; align-content: center;" id="founder">
+    <div class="col-md-4" style="z-index: 2;">
+      <img src="./assets/images/president.jpg" alt="" srcset="" class="avatar" />
+    </div>
+    <div class="col-md-8">
+      <div class="container" id="nameplate">
+        Prof. Amiya Kumar Sahoo &nbsp;
+      </div>
+      <hr />
+      <h3 class="msg1">
+        <p style="font-size: larger;">Message from the President:</p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus
+        nulla dolorem perspiciatis eos officia molestias quam qui?
+        Exercitationem, accusamus sint inventore expedita explicabo facilis?
+        Sunt itaque voluptatem nihil id!
+      </h3>
+      <hr />
+      <div class="text-center" style="align-self: baseline;">
+        <a href="#" class="icons btn btn-sm mx-1">
+          <img src="./assets/images/social/twitter.png" alt="" />
+        </a>
+        <a href="#" class="icons btn btn-sm mx-1">
+          <img src="./assets/images/social/mail.png" alt="" />
+        </a>
+        <a href="#" class="icons btn btn-sm mx-1">
+          <img src="./assets/images/social/facebook.png" alt="" />
+        </a>
+        <a href="#" class="icons btn btn-sm mx-1">
+          <img src="./assets/images/social/instagram.png" alt="" />
+        </a>
+        <a href="#" class="icons btn btn-sm mx-1">
+          <img src="./assets/images/social/github.png" alt="" />
+        </a>
+        <a href="#" class="icons btn btn-sm mx-1">
+          <img src="./assets/images/social/linkedin.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -------------------------------------------------------------adarsh------end-------------------------------------------------------  -->
+
 <!------------Student Members------------------------------->
 <a class="student-button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
   <button type="button" class="close">
@@ -17,11 +71,17 @@
         <nav class="navbar navbar-expand">
           <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
             <li [ngbNavItem]="1" class="bar-but"><a class="nav-link" (click)="student('2ndyear')"><b>2nd
-                  year</b></a></li>
+                  year</b>
+                <div style="background-color: blue; height: 1px;"></div>
+              </a></li>
             <li [ngbNavItem]="2" class="bar-but"><a class="nav-link" (click)="student('3rdyear')"><b>3rd
-                  year</b></a></li>
+                  year</b>
+                <div style="background-color: blue; height: 1px;"></div>
+              </a></li>
             <li [ngbNavItem]="3" class="bar-but"><a class="nav-link" (click)="student('4thyear')"><b>4th
-                  year</b></a></li>
+                  year</b>
+                <div style="background-color: blue; height: 1px;"></div>
+              </a></li>
           </ul>
         </nav>
       </div>
