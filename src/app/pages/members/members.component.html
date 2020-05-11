@@ -1,31 +1,20 @@
 <!-- -------------------------------------adarsh -------------start--------------------------------------------------------------- -->
-<!-- ============================================================================================================================  -->
 
 <div class="container-fluid" style="margin-top: 60px; margin-left: none;">
-  <div style="align-text: centre;"><h1>OUR MEMBERS</h1></div>
-  <div
-    class="container-fluid"
-    style="
-      background-color: rgba(140, 106, 172, 0.425);
-      color: white;
-      text-align: center;
-      margin-left: none;
-    "
-  >
+  <div style="align-text: centre;">
+    <h1>OUR MEMBERS</h1>
+  </div>
+  <div class="container-fluid" style="
+        background-color: rgba(140, 106, 172, 0.425);
+        color: white;
+        text-align: center;
+        margin-left: none;
+      ">
     <p class="nme">President</p>
   </div>
-  <div
-    class="row"
-    style="align-items: center; align-content: center;"
-    id="founder"
-  >
+  <div class="row" style="align-items: center; align-content: center;" id="founder">
     <div class="col-md-4" style="z-index: 2;">
-      <img
-        src="./assets/images/president.jpg"
-        alt=""
-        srcset=""
-        class="avatar"
-      />
+      <img src="./assets/images/president.jpg" alt="" srcset="" class="avatar" />
     </div>
     <div class="col-md-8"><hr>
       <div class="container" id="nameplate">
@@ -63,5 +52,118 @@
     </div>
   </div>
 </div>
-<!-- =========================================================================================================================== -->
 <!-- -------------------------------------------------------------adarsh------end-------------------------------------------------------  -->
+
+<!------------Student Members------------------------------->
+<a class="student-button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
+  <button type="button" class="close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div class="stud-button" align="center">
+    Students Members
+  </div>
+</a>
+
+<div id="collapseExample" [ngbCollapse]="isCollapsed">
+  <div class="card">
+    <div class="card-body">
+      <div class="col-12">
+        <nav class="navbar navbar-expand">
+          <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
+            <li [ngbNavItem]="1" class="bar-but"><a class="nav-link" (click)="student('2ndyear')"><b>2nd
+                  year</b>
+                <div style="background-color: blue; height: 1px;"></div>
+              </a></li>
+            <li [ngbNavItem]="2" class="bar-but"><a class="nav-link" (click)="student('3rdyear')"><b>3rd
+                  year</b>
+                <div style="background-color: blue; height: 1px;"></div>
+              </a></li>
+            <li [ngbNavItem]="3" class="bar-but"><a class="nav-link" (click)="student('4thyear')"><b>4th
+                  year</b>
+                <div style="background-color: blue; height: 1px;"></div>
+              </a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container">
+        <div class="row" *ngIf="year ==='2ndyear'">
+          <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers2ndyear">
+            <a class="btn-outline-primary" (click)="open(id)">
+              <div class="member-img">
+                <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
+              </div>
+              <div>
+                <b>{{ member.name }}</b>
+                <p>{{ member.branch }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="row" *ngIf="year ==='3rdyear'">
+          <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers3rdyear">
+            <a class="btn-outline-primary" (click)="open(id)">
+              <div class="member-img">
+                <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
+              </div>
+              <div>
+                <b>{{ member.name }}</b>
+                <p>{{ member.branch }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="row" *ngIf="year ==='4thyear'">
+          <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers4thyear">
+            <a class="btn-outline-primary" (click)="open(id)">
+              <div class="member-img">
+                <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
+              </div>
+              <div>
+                <b>{{ member.name }}</b>
+                <p>{{ member.branch }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<ng-template #id let-modal>
+  <div class="modal-body" style="width: 100%;background-color: black;">
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="modal-img">
+      <img class="modal-img" src="./assets/images/ur.jpg" height="100%" width="100%">
+    </div>
+    <div align="center">
+      <b>name</b><br>
+      <span>Computer Science</span><br>
+      <span>GIET University, Gunupur</span>
+      <br>
+      <a href="#" class="iconsp btn btn-sm mx-1">
+        <img src="./assets/images/social/twitter.svg" alt="" />
+      </a>
+      <a href="$" class="iconsp btn btn-sm mx-1">
+        <img src="./assets/images/social/instagram.svg" alt="" />
+      </a>
+      <a href="#" class="iconsp btn btn-sm mx-1">
+        <img src="./assets/images/social/github.svg" alt="" />
+      </a>
+      <a href="#" class="iconsp btn btn-sm mx-1">
+        <img src="./assets/images/social/linkedin.svg" alt="" />
+      </a>
+    </div>
+    <div style="margin: 7px; text-align: center;">klwec wlec lewc lkwec lkweckjewv lkjwec kje cjweckj wejc wjke
+      cjjwelkwerv we we sd fjh
+      kerhc kher jr</div>
+  </div>
+
+
+</ng-template>
+<!------------------------------------------------------------------------------------>
