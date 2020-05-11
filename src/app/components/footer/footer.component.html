@@ -22,9 +22,9 @@
       </div>
       <!-- subscribe to newsletter -->
       <div class="col-md-4 col-12 my-auto">
-        <h5 class="text-center">Subscribe to newsletter</h5>
-        <form class="form" [formGroup]="subscribeForm" (ngSubmit)="subscribe()">
-          <div class="form-group col">
+        <h5 class="text-center text-md-left">Subscribe to newsletter</h5>
+        <form class="form mt-2" [formGroup]="subscribeForm">
+          <div class="form-group">
             <input
               type="email"
               placeholder="Email Address"
@@ -33,16 +33,25 @@
               class="form-control"
               width="60%"
               formControlName="email"
-              required
-              email
             />
-          </div>
-          <div class="text-center">
-            <button
-              type="submit"
-              class="btn btn-warning"
-              [disabled]="subscribeForm.invalid"
+            <div
+              class="text-light"
+              *ngIf="
+                formSubmitted &&
+                (subscribeForm.controls.email.invalid ||
+                  subscribeForm.controls.email.pristine)
+              "
             >
+              <div *ngIf="subscribeForm.controls.email.errors.required">
+                Email required!
+              </div>
+              <div *ngIf="!subscribeForm.controls.email.errors.required">
+                Invalid Email!
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-md-left">
+            <button type="submit" class="btn btn-primary" (click)="subscribe()">
               Subscribe
             </button>
           </div>
@@ -58,17 +67,16 @@
     <!-- copyright and social icons -->
     <div class="row pb-3">
       <div class="col-md-8 col-12 my-auto">
-        <div class="text-center text-md-left">Copyright &copy;</div>
         <div class="text-center text-md-left">
-          2011-2020 &nbsp;&nbsp;All Rights Reserved
+          Copyright &copy; 2011-2020 All Rights Reserved
         </div>
         <div class="text-center text-md-left">
           Designed With
           <img src="./assets/svgs/social/heart.svg" alt="Heart" /> By Team OOUG
         </div>
       </div>
-      <div class="col-md-4 col-4">
-        <span class="float-md-right">
+      <div class="col-md-4 col-12 text-center text-md-left px-0 my-2">
+        <span>
           <a href="#" title="Facebook" class="text-white"
             ><img src="./assets/svgs/social/facebook.svg" alt="facebook" /></a
           >&nbsp;
