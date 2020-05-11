@@ -45,7 +45,7 @@
 //-------------------------------------------------------------------
 
 //-------------------------------------adarsh -------------start-------------------------------------------------------------------
-//==================================================================================================================================
+//===============================================================================origin ===================================================
 
 //------------president------------------
 //display picture
@@ -53,55 +53,251 @@
   width: 100%;
   height: auto;
   border-radius: 50%;
-  margin: auto;
-  border-color: white;
-  border-width: thick;
+  margin: none;
+z-index: 2;
+
 }
 //text formats
 .nme {
-  font-family: cursive;
-  font-size: xx-large;
+
   color: rgba(0, 0, 0, 0.514);
 }
 .msg1 {
-  font-family: Brush Script MT, Brush Script Std, cursive;
+
   color: rgb(0, 0, 0);
-  font-size: xx-large;
 }
 //president container
-#founder {
+#outer{
   background-color: #b4b4ff41;
-  margin: 3%;
-  padding: 3%;
-  border-radius: 1px;
   box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
-  border-radius: 2%;
+  border-radius: 20px;
+  margin: 0em;
+}
+#founder {
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20%;
+  width: 60%;
+  padding: .5%;
+
 }
 //president name plate
 #nameplate {
   z-index: 1;
   border-radius: 30px;
   background-color: blueviolet;
-  width: 130%;
-  margin-left: -30%;
+  width: 100%;
+  margin-left: -20%;
   padding: 5px;
   text-align: center;
-  font-size: xx-large;
-  font-family: Brush Script MT, Brush Script Std;
+  font-size: 18px;
+
+}
+hr{
+  margin: 10px;
 }
 //social media links
 .icons:hover {
   filter: brightness(150%);
 }
-
+#det{
+  padding-top: 20px;
+}
+#img{
+  z-index: 2;
+  margin: 0em;
+  padding: 0em;
+}
+.social2{
+  height: 0em;
+}
+.icons2{
+  visibility: hidden;
+}
 @media only screen and (max-width: 800px) {
-  .avatar {
-    width: max-width;
-    height: auto;
-  }
-  #nameplate {
-    text-align: end;
-  }
+
+  #founder{
+  width: 100%;
+  height: min-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0%;
+  padding: .5%;
+  border-radius: 1px;
+  box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+  border-radius: 2%;
+}
+#nameplate{
+  font-size: 12px;
+  text-align: right;
+}
+.social1{
+display: none;
+}
+.icons1{
+display: none;
+}
+.social2{
+  height: auto;
+}
+.icons2{
+  visibility: visible;;
+}
+.msg1 {
+font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+hr{
+  margin: 0px;
+  display: none;
+}
+#img{
+  padding: 0em;
+
+}
+#det{
+  padding-top: 7px;
+}
+.avatar{
+  margin: 0;
+  padding: 0;
+}
 }
 //===============================================================================================================================
 // -- --------------------------------------------------------------adarsh------end----------------------------------------------
+
+// --------------------------------CSS of Corporate members--------------------------------------
+body{
+  margin: 0;
+  padding: 0;
+  background: #333;
+  font-family: "Montserrat",Arial, Helvetica, sans-serif;
+}
+.accordian,.card-header:after{
+  font-family: 'FontAwesome';
+  content: "\f068";
+  float:right;
+}
+
+.accordian,.card-header,.collapsed:after{
+  content: "\f067";
+}
+
+.card-header,.card{
+  background:#120136;
+  text-align: center;
+  color:#fff;
+  width:100%;
+}
+
+.card-title{
+  font:2rem "Montserrat";
+}
+
+.image{
+border-radius: 50%;
+height:145px;
+width:145px;
+margin: 2%;
+}
+
+.box-container{
+position: absolute;
+text-align: center;
+padding: 3%;
+}
+
+.row{
+margin: 2rem;
+}
+
+.box{
+padding: 5px;;
+}
+
+.modal-header,.close{
+background:url('../../../assets/images/background.jpg');
+color:#fff;
+}
+
+.modal-body{
+  color:#000;
+}
+
+.close{
+background: none;
+}
+
+.close:hover{
+color:#fff;
+outline: none;
+background: none;
+}
+
+.info-body{
+margin: 10px;
+color: #fff;
+}
+
+.information{
+line-height: 20px;
+font-family: "poppins",Arial, Helvetica, sans-serif;
+}
+
+h3.information{
+font-size: 21px;
+}
+
+h4.information{
+font-size: 21px;
+}
+
+@media (min-width:768px) and (max-width:1024px){
+.image{
+width:180px;
+height: 180px;
+}
+
+.row{
+  margin: 5px;
+}
+
+h3.information{
+font-size: 25px;
+}
+
+h4.information{
+font-size: 24px;
+}
+}
+
+@media (max-width:767px){
+.image{
+width:120px;
+height: 120px;
+}
+
+.card-title{
+  font-size: 20px;
+}
+
+.row{
+  margin: 10px;
+}
+
+.information{
+  line-height: 18px;
+}
+
+h3.information{
+font-size: 18px;
+}
+
+h4.information{
+font-size: 17px;
+}
+}
+
+
+//=============================================================================================
