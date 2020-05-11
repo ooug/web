@@ -1,146 +1,242 @@
-//-----------------flip----------
-
-.midd {
-  position: inherit;
-  top: -100%;
-}
-
-.box {
-  text-align: center;
-  border-radius: 5%;
-}
-
-.front,
-.back {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  backface-visibility: hidden;
-  transition: transform 0.6s linear;
-}
-
-.front {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-.back {
-  background: #fff;
-  transform: perspective(600px) rotateY(180deg);
-}
-
-.box:hover .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-
-.box:hover .back {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-//--------------------------------------------------
-.inp {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  background-color: rgb(119, 96, 80);
-  border-bottom-color: white;
-}
-.but {
-  border: none;
-  background-color: rgb(119, 96, 80);
-  color: #fdfbf9;
-}
-.but:hover {
-  border: none;
-}
-
-.det-box {
-  background-color: rgb(240, 238, 236);
-  border-radius: 5px;
-}
-.det-box:hover {
-  position: relative;
-  box-shadow: 0 0 1rem #000000;
-  transition: box-shadow 0.3s;
-  background-color: rgb(199, 195, 189);
-}
-.name {
-  font-family: cursive;
-  color: black;
-}
-.msg {
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  color: rgb(0, 0, 0);
-}
-
-.col-md-5 {
+//---------------Students members---------------------------------
+.container {
   padding: 0;
   margin: 0;
 }
-.col-md-6 {
+.row {
   padding: 0;
+  margin: 0;
 }
+.navbar {
+  align-content: right;
+}
+.bar-but {
+  color: rgb(66, 5, 5);
+}
+.bar-but:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+.stud-button {
+  background-color: black;
+  color: white;
+  padding: 3px;
+}
+.student-button {
+  border: none;
+}
+.member-img {
+  width: 110px;
+  height: 110px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+.modal-body {
+  padding: 0;
+  color: white;
+}
+.modal-img {
+  margin-top: 7px;
+  margin-bottom: 12px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+//-------------------------------------------------------------------
 
-.view {
-  background-image: url('../../../assets/images/gray.jpg');
-  transition: abs;
-  background-size: cover !important;
-  background-position: center;
-  background-repeat: no-repeat;
+//-------------------------------------adarsh -------------start-------------------------------------------------------------------
+//==================================================================================================================================
+
+//------------president------------------
+//display picture
+.avatar {
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: auto;
+  border-radius: 50%;
+  margin: auto;
+  border-color: white;
+  border-width: thick;
 }
-
-//--------------------------------
-
-#title {
-  font-family: Roboto;
+//text formats
+.nme {
+  font-size: xx-large;
+  color: rgba(0, 0, 0, 0.514);
 }
-
-.card {
-  transition: box-shadow 0.3s;
-  background-color: #652e90;
+.msg1 {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
 }
-
-.card:hover {
-  box-shadow: 0 0 2rem #652e90;
-}
-//-------------------------
-//-------------------------
-.image {
-  transition: 1s;
-  border-radius: 2%;
-}
-
-.founder {
-  background-color: #b4b4ff;
+//president container
+#founder {
+  background-color: #b4b4ff41;
   margin: 3%;
   padding: 3%;
-  border-radius: 10px;
-  box-shadow: inset 0 0 16px rgb(68, 3, 3);
+  border-radius: 1px;
+  box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+  border-radius: 2%;
 }
-
-.image:hover {
-  transform: scale(1.1);
-  z-index: 2;
+//president name plate
+#nameplate {
+  z-index: 1;
+  border-radius: 30px;
+  background-color: blueviolet;
+  width: 130%;
+  margin-left: -30%;
+  padding: 5px;
+  text-align: center;
+  font-size: xx-large;
+  font-family: cursive;
 }
+//social media links
 .icons:hover {
-  background-color: rgb(70, 1, 1);
+  filter: brightness(150%);
 }
 
-.members-text {
-  font: bold 3rem 'Montserrat';
-  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a7d5, #23d5ab);
-  background-size: 300%;
-  animation: animate 3s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-@keyframes animate {
-  0% {
-    background-position: 0 0;
+@media only screen and (max-width: 800px) {
+  .avatar {
+    width: max-width;
+    height: auto;
   }
-  100% {
-    background-position: 300% 0;
+  #nameplate {
+    text-align: right;
+    font-size: larger;
   }
 }
+//===============================================================================================================================
+// -- --------------------------------------------------------------adarsh------end----------------------------------------------
+
+// --------------------------------CSS of Corporate members--------------------------------------
+body{
+  margin: 0;
+  padding: 0;
+  background: #333;
+  font-family: "Montserrat",Arial, Helvetica, sans-serif;
+}
+.accordian,.card-header:after{
+  font-family: 'FontAwesome';
+  content: "\f068";
+  float:right;
+}
+
+.accordian,.card-header,.collapsed:after{
+  content: "\f067";
+}
+
+.card-header,.card{
+  background:#120136;
+  text-align: center;
+  color:#fff;
+  width:100%;
+}
+
+.card-title{
+  font:2rem "Montserrat";
+}
+
+.image{
+border-radius: 50%;
+height:145px;
+width:145px;
+margin: 2%;
+}
+
+.box-container{
+position: absolute;
+text-align: center;
+padding: 3%;
+}
+
+.row{
+margin: 2rem;
+}
+
+.box{
+padding: 5px;;
+}
+
+.modal-header,.close{
+background:url('../../../assets/images/background.jpg');
+color:#fff;
+}
+
+.modal-body{
+  color:#000;
+}
+
+.close{
+background: none;
+}
+
+.close:hover{
+color:#fff;
+outline: none;
+background: none;
+}
+
+.info-body{
+margin: 10px;
+color: #fff;
+}
+
+.information{
+line-height: 20px;
+font-family: "poppins",Arial, Helvetica, sans-serif;
+}
+
+h3.information{
+font-size: 21px;
+}
+
+h4.information{
+font-size: 21px;
+}
+
+@media (min-width:768px) and (max-width:1024px){
+.image{
+width:180px;
+height: 180px;
+}
+
+.row{
+  margin: 5px;
+}
+
+h3.information{
+font-size: 25px;
+}
+
+h4.information{
+font-size: 24px;
+}
+}
+
+@media (max-width:767px){
+.image{
+width:120px;
+height: 120px;
+}
+
+.card-title{
+  font-size: 20px;
+}
+
+.row{
+  margin: 10px;
+}
+
+.information{
+  line-height: 18px;
+}
+
+h3.information{
+font-size: 18px;
+}
+
+h4.information{
+font-size: 17px;
+}
+}
+
+
+//=============================================================================================

@@ -13,6 +13,15 @@
         Home
       </a>
       <a
+        routerLink="/blog"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item list-group-item-action"
+        (click)="helperService.toggleSideBar()"
+      >
+        Blog
+      </a>
+      <a
         routerLink="/about"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"

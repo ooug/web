@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-technology-stack',
@@ -6,35 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./technology-stack.component.scss'],
 })
 export class TechnologyStackComponent implements OnInit {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  public articles = [
-    {
-      title: 'Title 1',
-      author: 'Author 1',
-      link: 'Link 1',
-    },
-    {
-      title: 'Title 2',
-      author: 'Author 2',
-      link: 'Link 2',
-    },
-    {
-      title: 'Title 3',
-      author: 'Author 3',
-      link: 'Link 3',
-    },
-    {
-      title: 'Title 4',
-      author: 'Author 4',
-      link: 'Link 4',
-    },
-    {
-      title: 'Title 5',
-      author: 'Author 5',
-      link: 'Link 5',
-    },
-  ];
+  public isLoading = false;
+  public articles = null;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isLoading = true;
+    this.http.get('./assets/api/blogs.json').subscribe((blogs) => {
+      // only 6 recent blogs on home page
+      this.articles = JSON.parse(JSON.stringify(blogs)).slice(0, 6);
+      this.isLoading = false;
+    });
+  }
 }

@@ -14,16 +14,12 @@
 h2 {
   font-size: 30px;
   text-align: center;
-
   color: black;
-  color: white;
-
 
   padding-top: 10px;
   text-shadow: tan;
 }
 .container-fluid {
-
   background: rgb(233, 229, 229);
 }
 .card {
@@ -33,43 +29,18 @@ h2 {
   opacity: 95%;
 }
 
-
-
-.card {
-  background: black;
-  padding: 6px;
-  border-radius: 10px;
-  opacity: 50%;
-}
-.card:hover {
-  background: rgb(107, 14, 119);
-  padding: 6px;
-  border-radius: 10px;
-  opacity: 100%;
-  transition: 1.4s;
-}
-
 .md-form {
   margin-top: 10px;
 }
 .border {
   width: 160px;
-
   height: 5px;
   background: black;
-
-  height: 2px;
-  background: white;
-
   margin: 10px auto;
   margin-bottom: 30px;
 }
 p {
-
   color: black;
-
-  color: white;
-
   font-weight: bold;
 }
 a {
@@ -78,7 +49,6 @@ a {
 .col-lg-7 {
   margin-top: 5px;
 }
-
 .form-control {
   background: white;
 }
@@ -88,12 +58,4 @@ img {
   width: 25px;
   height: 25px;
   padding: 4px;
-
-}
-.btn {
-  border-radius: 20px;
-  background: rgb(247, 245, 248);
-  color: black;
-  font-weight: bold;
-
 }

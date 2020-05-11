@@ -1,59 +1,73 @@
-.activity-page {
-  background: linear-gradient(25deg, #f16c1f, #4b2172, #206b3f, #44a098);
-  background-size: 500%;
-  animation: animate 5s linear infinite;
-  background-clip: content-box;
+//-----------------slide bar------------------------
+.bar-but {
+  color: rgb(75, 39, 39);
+  text-shadow: 0 0 0.05rem #ffffff;
 }
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 500% 0;
-  }
+.bar-but:hover {
+  padding: 5px;
+  background-color: rgb(255, 0, 51);
+  color: rgb(240, 217, 217);
 }
-
-.button {
-  background: green;
+.img-box {
+  background-color: rgb(0, 217, 255);
+  opacity: 0.6;
 }
+//-----------------cards-----------------------------
 .container {
-  padding-top: 5rem;
-  min-height: 85vh;
-  background-color: red($color: #ff0000);
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.row {
+  padding: 0;
+  margin: 0;
+}
+.col-md-4 {
+  padding: 0;
+  margin: 0;
 }
 
-#title {
-  font-family: Roboto;
+.banner {
+  position: relative;
+  margin: auto;
+}
+.banner img {
+  width: 100%;
+}
+.contents {
+  position: absolute;
+}
+//-----------------flip-----------------------
+.middle {
+  position: relative;
+
+  z-index: -1;
 }
 
-.card {
-  transition: box-shadow 0.3s;
-  background-color: #f59157;
-  margin: 10px;
-  margin-left: 20px;
+.box {
+  text-align: center;
 }
 
-.card:hover {
-  box-shadow: 0 0 1rem #ffffff;
+.front,
+.back {
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.6s linear;
 }
 
-.card-body {
-  margin: 10px;
+.front {
+  transform: perspective(600px) rotateY(0deg);
 }
 
-.activity-text {
-  font: bold 3rem 'Montserrat';
-  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a7d5, #23d5ab);
-  background-size: 300%;
-  animation: animate 3s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.back {
+  background: #fff;
+  transform: perspective(600px) rotateY(180deg);
 }
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 300% 0;
-  }
+
+.box:hover .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.box:hover .back {
+  transform: perspective(600px) rotateY(0deg);
 }

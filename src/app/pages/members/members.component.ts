@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,10 +8,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./members.component.scss'],
 })
 export class MembersComponent implements OnInit {
-  constructor() {}
-
-  active = 1;
-  active2 = 0;
+  public isCollapsed = false;
+  year = '2ndyear';
 
   public corporateMembers = [
     {
@@ -82,9 +81,12 @@ export class MembersComponent implements OnInit {
   ];
   public studentMembers2ndyear = [
     {
+      id: 'a1',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 1',
+      branch: 'Computer Science',
       description: 'Some Description',
+
       Links: {
         github: 'github',
         linkedin: 'linkedin',
@@ -92,8 +94,10 @@ export class MembersComponent implements OnInit {
       },
     },
     {
+      id: 'a2',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 2',
+      branch: 'Computer Science',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -102,8 +106,10 @@ export class MembersComponent implements OnInit {
       },
     },
     {
+      id: 'a3',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 3',
+      branch: 'Computer Science',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -112,8 +118,10 @@ export class MembersComponent implements OnInit {
       },
     },
     {
+      id: 'a4',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 4',
+      branch: 'Electronics & Communication',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -122,8 +130,10 @@ export class MembersComponent implements OnInit {
       },
     },
     {
+      id: 'a5',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
+      branch: 'Computer Science',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -132,8 +142,34 @@ export class MembersComponent implements OnInit {
       },
     },
     {
+      id: 'a6',
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 5',
+      branch: 'Computer Science',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      id: 'a7',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
+      branch: 'Electronics & Communication',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      id: 'a8',
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
+      branch: 'Electronics & Communication',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -145,9 +181,11 @@ export class MembersComponent implements OnInit {
 
   public studentMembers3rdyear = [
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 1',
+      branch: 'Computer Science',
       description: 'Some Description',
+
       Links: {
         github: 'github',
         linkedin: 'linkedin',
@@ -155,8 +193,9 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 2',
+      branch: 'Computer Science',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -165,8 +204,9 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 3',
+      branch: 'Computer Science',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -175,8 +215,9 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 4',
+      branch: 'Electronics & Communication',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -185,8 +226,9 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
+      branch: 'Computer Science',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -195,8 +237,31 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 5',
+      branch: 'Computer Science',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
+      branch: 'Electronics & Communication',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
+      branch: 'Electronics & Communication',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -208,9 +273,11 @@ export class MembersComponent implements OnInit {
 
   public studentMembers4thyear = [
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 1',
+      branch: 'Computer Science',
       description: 'Some Description',
+
       Links: {
         github: 'github',
         linkedin: 'linkedin',
@@ -218,8 +285,9 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 2',
+      branch: 'Computer Science',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -228,8 +296,9 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 3',
+      branch: 'Computer Science',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -238,8 +307,9 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 4',
+      branch: 'Electronics & Communication',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -248,8 +318,9 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
+      branch: 'Computer Science',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -258,8 +329,31 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 5',
+      branch: 'Computer Science',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
+      branch: 'Electronics & Communication',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
+      branch: 'Electronics & Communication',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -269,5 +363,30 @@ export class MembersComponent implements OnInit {
     },
   ];
 
+  closeResult = '';
+
+  constructor(private modalService: NgbModal) {}
+
+  open(content) {
+    this.modalService.open(content, {
+      size: 'sm',
+      backdropClass: 'red-backdrop',
+      windowClass: 'dark-modal',
+      centered: true,
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
+  student(y: string) {
+    this.year = y;
+  }
   ngOnInit(): void {}
 }
