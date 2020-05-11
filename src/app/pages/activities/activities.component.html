@@ -5,11 +5,9 @@
       <div class="carousel-caption">
         <h2 style="color: rgb(44, 5, 5);">Join Our Events</h2>
         <div style="height: 0.5px; background-color: black;"></div>
-        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-dark">
+        <nav class="navbar navbar-expand navbar-dark">
           <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
-            <li [ngbNavItem]="1" class="but">
-              <a (click)="activateTab('all')"><span class="bar-but"><b>All</b><br></span></a>
-            </li>
+
             <li [ngbNavItem]="2" class="but">
               <a (click)="activateTab('workshop')"><span class="bar-but"><b>Workshop</b><br></span></a>
             </li>
@@ -18,7 +16,7 @@
             </li>
             <li [ngbNavItem]="4" class="but">
               <a (click)="activateTab('farewell')">
-                <span class="bar-but"><b>Farewell Celibration</b><br></span>
+                <span class="bar-but"><b>Farewell</b><br></span>
               </a>
             </li>
           </ul>

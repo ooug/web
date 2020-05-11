@@ -53,26 +53,28 @@
 //-----------------slide bar------------------------
 ngb-carousel {
   z-index: 1;
+  padding: 0;
+}
+.carousel-caption {
+  padding: 0;
 }
 
 .bar-but {
-  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color: black;
   text-shadow: 0 0 0.05rem #ffffff;
-  font-size: 14px;
-  margin: 20px;
-  padding: 7px;
+  font-size: 12px;
+  padding: 5px;
   border-radius: 50px;
 }
 .bar-but:hover {
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: rgb(255, 0, 0);
 }
 .img-box {
   background-color: rgb(68, 0, 255);
   opacity: 1;
 }
 .buts {
-  padding: 3px;
   border-radius: 50px;
   color: rgb(255, 255, 255);
 }
