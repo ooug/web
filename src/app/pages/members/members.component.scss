@@ -13,7 +13,6 @@
 }
 //text formats
 .nme {
-  font-family: cursive;
   font-size: xx-large;
   color: rgba(0, 0, 0, 0.514);
 }
@@ -41,7 +40,7 @@
   padding: 5px;
   text-align: center;
   font-size: xx-large;
-  font-family: Brush Script MT, Brush Script Std;
+  font-family: cursive;
 }
 //social media links
 .icons:hover {
@@ -54,7 +53,8 @@
     height: auto;
   }
   #nameplate {
-    text-align: end;
+    text-align: right;
+    font-size: larger;
   }
 }
 //===============================================================================================================================
