@@ -1,7 +1,7 @@
 <!-- -------------------------------------adarsh -------------start--------------------------------------------------------------- -->
 
 <div class="container-fluid" style="margin-top: 60px; margin-left: none;">
-  <div style="align-text: centre;">
+  <div style="text-align: centre;">
     <h1>OUR MEMBERS</h1>
   </div>
   <div class="container-fluid" style="
@@ -12,49 +12,162 @@
       ">
     <p class="nme">President</p>
   </div>
-  <div class="row" style="align-items: center; align-content: center;" id="founder">
-    <div class="col-md-4" style="z-index: 2;">
-      <img src="./assets/images/president.jpg" alt="" srcset="" class="avatar" />
-    </div>
-    <div class="col-md-8">
-      <div class="container" id="nameplate">
-        Prof. Amiya Kumar Sahoo &nbsp;
+  <div class="container-fluid" id="outer">
+    <div class="row" id="founder">
+      <div class="col-3" id="img">
+        <img src="./assets/images/president.jpg" alt="" srcset="" class="avatar" (click)="open(presidentid)" />
       </div>
-      <hr />
-      <h3 class="msg1">
-        <p style="font-size: larger;">Message from the President:</p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus
-        nulla dolorem perspiciatis eos officia molestias quam qui?
-        Exercitationem, accusamus sint inventore expedita explicabo facilis?
-        Sunt itaque voluptatem nihil id!
-      </h3>
-      <hr />
-      <div class="text-center" style="align-self: baseline;">
-        <a href="#" class="icons btn btn-sm mx-1">
-          <img src="./assets/images/social/twitter.png" alt="" />
-        </a>
-        <a href="#" class="icons btn btn-sm mx-1">
-          <img src="./assets/images/social/mail.png" alt="" />
-        </a>
-        <a href="#" class="icons btn btn-sm mx-1">
-          <img src="./assets/images/social/facebook.png" alt="" />
-        </a>
-        <a href="#" class="icons btn btn-sm mx-1">
-          <img src="./assets/images/social/instagram.png" alt="" />
-        </a>
-        <a href="#" class="icons btn btn-sm mx-1">
-          <img src="./assets/images/social/github.png" alt="" />
-        </a>
-        <a href="#" class="icons btn btn-sm mx-1">
-          <img src="./assets/images/social/linkedin.png" alt="" />
-        </a>
+      <div class="col-9" id="det">
+        <div class="container" id="nameplate">
+          Prof. Amiya Kumar Sahoo &nbsp;
+        </div>
+        <hr />
+        <p class="msg1">
+          <span>Message from the President:</span><span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus
+            nulla dolorem perspiciatis eos
+          </span></p>
+        <hr />
+        <div class="text-center" id="social1">
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/twitter.png" alt="" />
+          </a>
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/mail.png" alt="" />
+          </a>
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/facebook.png" alt="" />
+          </a>
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/instagram.png" alt="" />
+          </a>
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/github.png" alt="" />
+          </a>
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/linkedin.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center" id="social2" style="align-self: baseline;">
+    <a href="#" class="icons2 btn btn-sm mx-1">
+      <img src="./assets/images/social/twitter.png" alt="" />
+    </a>
+    <a href="#" class="icons2 btn btn-sm mx-1">
+      <img src="./assets/images/social/mail.png" alt="" />
+    </a>
+    <a href="#" class="icons2 btn btn-sm mx-1">
+      <img src="./assets/images/social/facebook.png" alt="" />
+    </a>
+    <a href="#" class="icons2 btn btn-sm mx-1">
+      <img src="./assets/images/social/instagram.png" alt="" />
+    </a>
+    <a href="#" class="icons2 btn btn-sm mx-1">
+      <img src="./assets/images/social/github.png" alt="" />
+    </a>
+    <a href="#" class="icons2 btn btn-sm mx-1">
+      <img src="./assets/images/social/linkedin.png" alt="" />
+    </a>
+  </div>
+</div>
+
+
+<ng-template #presidentid let-modal>
+  <div class="modal-body" style="width: 100%;background-color: black;">
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="modal-img">
+      <img class="modal-img" src="./assets/images/president.jpg" height="100%" width="100%">
+    </div>
+    <div align="center">
+      <b>Prof. Amiya Kumar Sahoo</b><br>
+      <span>Computer Science</span><br>
+      <span>GIET University, Gunupur</span>
+      <br>
+      <a href="#" class="icon sp btn btn-sm mx-1">
+        <img src="./assets/images/social/twitter.png" alt="" />
+      </a>
+      <a href="$" class="icon sp btn btn-sm mx-1">
+        <img src="./assets/images/social/instagram.png" alt="" />
+      </a>
+      <a href="#" class="icon sp btn btn-sm mx-1">
+        <img src="./assets/images/social/github.png" alt="" />
+      </a>
+      <a href="#" class="icon sp btn btn-sm mx-1">
+        <img src="./assets/images/social/linkedin.png" alt="" />
+      </a>
+    </div>
+    <div style="margin: 7px; text-align: center;">klwec wlec lewc lkwec lkweckjewv lkjwec kje cjweckj wejc wjke
+      cjjwelkwerv we we sd fjh
+      kerhc kher jr</div>
+  </div>
+
+
+</ng-template>
+<!-- -------------------------------------------------------------adarsh------end-------------------------------------------------------  -->
+
+<!----------------------------- Corporate members code by Hrushikesh Das -->
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<a class="card-title" (click)="collap(wind)">
+  <div class="row">
+    <div class="col-12">
+      <div class="card-header collapsed" data-toggle="collapsed" data-parent="#accordion" href="#collapse">
+        Corporate Members
+      </div>
+    </div>
+  </div>
+</a>
+
+<div class="card-block collapse show" id="collapsed" *ngIf="wind==='yes'">
+  <div class="row">
+    <div class="box col-lg-3 col-md-4 col-6" *ngFor="let member of corporateMembers">
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1>Loren Ipsum</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" data-toggle="modal" data-target="#myModal"><img class="image" src="./assets/images/demo1.jpg"
+          alt=""></a>
+      <div class="info-body">
+        <h3 class="information">Name</h3>
+        <h4 class="information">Organization</h4>
       </div>
     </div>
   </div>
 </div>
-<!-- -------------------------------------------------------------adarsh------end-------------------------------------------------------  -->
 
-<!--------------------------------------------------------Student Members------------------------------->
+
+<!-- ========================================================================= -->
+
+
+<!------------Student Members------------------------------->
 <a class="student-button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
   <button type="button" class="close">
     <span aria-hidden="true">&times;</span>
@@ -129,6 +242,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 <ng-template #id let-modal>

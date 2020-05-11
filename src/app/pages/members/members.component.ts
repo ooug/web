@@ -10,8 +10,30 @@ import { NgForm } from '@angular/forms';
 export class MembersComponent implements OnInit {
   public isCollapsed = false;
   year = '2ndyear';
-
+  wind = 'yes';
   public corporateMembers = [
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 1',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 1',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 1',
@@ -366,6 +388,14 @@ export class MembersComponent implements OnInit {
   closeResult = '';
 
   constructor(private modalService: NgbModal) {}
+
+  collap(wind: string) {
+    if (wind === 'yes') {
+      this.wind = 'no';
+    } else {
+      this.wind = 'yes';
+    }
+  }
 
   open(content) {
     this.modalService.open(content, {
