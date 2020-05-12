@@ -120,12 +120,12 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <a class="card-title" (click)="collap(wind)">
-  <div class="card-header collapsed" data-toggle="collapsed" href="#collapse">
+  <div class="card-header collapsed">
     Corporate Members
   </div>
 </a>
 
-<div class="card collapse show" id="collapsed" *ngIf="wind==='yes'">
+<div class="card collapse show" *ngIf="wind==='yes'">
   <div class="row">
     <div class="box col-lg-3 col-md-4 col-6" *ngFor="let member of corporateMembers">
 
@@ -176,10 +176,7 @@
 
 <!------------Student Members------------------------------->
 <a class="student-button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
-  <button type="button" class="close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-  <div class="stud-button" align="center">
+  <div class="card-header" align="center">
     Students Members
   </div>
 </a>
@@ -190,18 +187,32 @@
       <div class="col-12">
         <nav class="navbar navbar-expand">
           <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
-            <li [ngbNavItem]="1" class="bar-but"><a class="nav-link" (click)="student('2ndyear')"><b>2nd
-                  year</b>
-                <div style="background-color: blue; height: 1px;"></div>
-              </a></li>
-            <li [ngbNavItem]="2" class="bar-but"><a class="nav-link" (click)="student('3rdyear')"><b>3rd
-                  year</b>
-                <div style="background-color: blue; height: 1px;"></div>
-              </a></li>
-            <li [ngbNavItem]="3" class="bar-but"><a class="nav-link" (click)="student('4thyear')"><b>4th
-                  year</b>
-                <div style="background-color: blue; height: 1px;"></div>
-              </a></li>
+            <li [ngbNavItem]="1">
+              <a class="bar-but nav-link" (click)="student('2ndyear')" *ngIf="year==='2ndyear'"><b>2nd year</b>
+                <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+              </a>
+              <a class="bar-but nav-link" (click)="student('2ndyear')" *ngIf="year!=='2ndyear'"><b>2nd year</b>
+                <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+              </a>
+
+            </li>
+            <li [ngbNavItem]="2">
+              <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year==='3rdyear'"><b>3rd year</b>
+                <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+              </a>
+              <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year!=='3rdyear'"><b>3rd year</b>
+                <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+              </a>
+            </li>
+            <li [ngbNavItem]="3">
+              <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year==='4thyear'"><b>4th year</b>
+                <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+              </a>
+              <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year!=='4thyear'"><b>4th year</b>
+                <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+              </a>
+
+            </li>
           </ul>
         </nav>
       </div>

@@ -11,7 +11,7 @@
   align-content: right;
 }
 .bar-but {
-  color: rgb(66, 5, 5);
+  color: rgb(238, 238, 238);
 }
 .bar-but:hover {
   background-color: rgb(255, 0, 0);
@@ -166,7 +166,7 @@ hr {
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  margin-left:37%;
+  margin-left: 37%;
 }
 
 .card-header:after {
@@ -175,7 +175,8 @@ hr {
   float: right;
 }
 
-.card,.card-header{
+.card,
+.card-header {
   text-align: center;
   color: #fff;
   width: 100%;
@@ -185,12 +186,13 @@ hr {
   background: #120136;
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
-  border-radius: 0px !important; 
+  border-radius: 0px !important;
 }
 
 .card-header {
   font: 20px 'Montserrat';
   background: #6a097d;
+  cursor: pointer;
 }
 
 .image {
@@ -208,8 +210,8 @@ hr {
   padding: 5px;
 }
 
-.modal-header{
-  width:100%;
+.modal-header {
+  width: 100%;
   border-bottom: 0;
 }
 
@@ -219,18 +221,18 @@ hr {
   color: #dbdbdd;
 }
 
-.modal-content{
+.modal-content {
   color: #fff;
-  padding:5%;
-  background: #000;  
+  padding: 5%;
+  background: #000;
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
-  border-radius: 0px !important; 
+  border-radius: 0px !important;
 }
 
-.modal-content p{
-   font:17px "Montserrat";
-   margin-top: 5px;
+.modal-content p {
+  font: 17px 'Montserrat';
+  margin-top: 5px;
 }
 
 .close {
@@ -281,10 +283,10 @@ h4.information {
 }
 
 @media (max-width: 767px) {
-  .modal-image{
-    margin-left:31%;
+  .modal-image {
+    margin-left: 31%;
   }
-  
+
   .image {
     width: 120px;
     height: 120px;
