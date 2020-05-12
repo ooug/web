@@ -4,20 +4,15 @@
   <div style="text-align: centre;">
     <h1>OUR MEMBERS</h1>
   </div>
-  <div class="container-fluid" style="
-        background-color: rgba(140, 106, 172, 0.425);
-        color: white;
-        text-align: center;
-        margin-left: none;
-      ">
+  <div class="container-fluid pres-head">
     <p class="nme">President</p>
   </div>
   <div class="container-fluid" id="outer">
     <div class="row" id="founder">
-      <div class="col-3" id="img">
-        <img src="./assets/images/president.jpg" alt="" srcset="" class="avatar" (click)="open(presidentid)" />
+      <div class="col-4" id="img">
+        <img src="./assets/images/president.jpg" alt="" class="avatar" (click)="open(presidentid)" />
       </div>
-      <div class="col-9" id="det">
+      <div class="col-8" id="det">
         <div class="container" id="nameplate">
           Prof. Amiya Kumar Sahoo &nbsp;
         </div>
@@ -27,7 +22,6 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus
             nulla dolorem perspiciatis eos
           </span></p>
-        <hr />
         <div class="text-center" id="social1">
           <a href="#" class="icons1  btn btn-sm  mx-1">
             <img src="./assets/images/social/twitter.png" alt="" />
@@ -183,83 +177,83 @@
 
 <div id="collapseExample" [ngbCollapse]="isCollapsed">
   <div class="card">
-    <div class="card-body">
-      <div class="col-12">
-        <nav class="navbar navbar-expand">
-          <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
-            <li [ngbNavItem]="1">
-              <a class="bar-but nav-link" (click)="student('2ndyear')" *ngIf="year==='2ndyear'"><b>2nd year</b>
-                <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
-              </a>
-              <a class="bar-but nav-link" (click)="student('2ndyear')" *ngIf="year!=='2ndyear'"><b>2nd year</b>
-                <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
-              </a>
 
-            </li>
-            <li [ngbNavItem]="2">
-              <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year==='3rdyear'"><b>3rd year</b>
-                <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
-              </a>
-              <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year!=='3rdyear'"><b>3rd year</b>
-                <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
-              </a>
-            </li>
-            <li [ngbNavItem]="3">
-              <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year==='4thyear'"><b>4th year</b>
-                <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
-              </a>
-              <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year!=='4thyear'"><b>4th year</b>
-                <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
-              </a>
+    <div class="col-12">
+      <nav class="navbar navbar-expand">
+        <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
+          <li [ngbNavItem]="1">
+            <a class="bar-but nav-link" (click)="student('2ndyear')" *ngIf="year==='2ndyear'"><b>2nd year</b>
+              <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+            </a>
+            <a class="bar-but nav-link" (click)="student('2ndyear')" *ngIf="year!=='2ndyear'"><b>2nd year</b>
+              <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+            </a>
 
-            </li>
-          </ul>
-        </nav>
+          </li>
+          <li [ngbNavItem]="2">
+            <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year==='3rdyear'"><b>3rd year</b>
+              <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+            </a>
+            <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year!=='3rdyear'"><b>3rd year</b>
+              <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+            </a>
+          </li>
+          <li [ngbNavItem]="3">
+            <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year==='4thyear'"><b>4th year</b>
+              <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+            </a>
+            <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year!=='4thyear'"><b>4th year</b>
+              <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+            </a>
+
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="row" *ngIf="year ==='2ndyear'">
+      <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers2ndyear">
+        <a (click)="open(id)">
+          <div class="member-img">
+            <img class="member-img" src="{{ member.Image.host + member.Image.path }}">
+          </div>
+          <div>
+            <b>{{ member.name }}</b>
+            <p>{{ member.branch }}</p>
+          </div>
+        </a>
       </div>
-      <div class="container">
-        <div class="row" *ngIf="year ==='2ndyear'">
-          <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers2ndyear">
-            <a class="btn-outline-primary" (click)="open(id)">
-              <div class="member-img">
-                <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
-              </div>
-              <div>
-                <b>{{ member.name }}</b>
-                <p>{{ member.branch }}</p>
-              </div>
-            </a>
+    </div>
+    <div class="row" *ngIf="year ==='3rdyear'">
+      <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers3rdyear">
+        <a class="btn-outline-primary" (click)="open(id)">
+          <div class="member-img">
+            <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
           </div>
-        </div>
-        <div class="row" *ngIf="year ==='3rdyear'">
-          <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers3rdyear">
-            <a class="btn-outline-primary" (click)="open(id)">
-              <div class="member-img">
-                <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
-              </div>
-              <div>
-                <b>{{ member.name }}</b>
-                <p>{{ member.branch }}</p>
-              </div>
-            </a>
+          <div>
+            <b>{{ member.name }}</b>
+            <p>{{ member.branch }}</p>
           </div>
-        </div>
-        <div class="row" *ngIf="year ==='4thyear'">
-          <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers4thyear">
-            <a class="btn-outline-primary" (click)="open(id)">
-              <div class="member-img">
-                <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
-              </div>
-              <div>
-                <b>{{ member.name }}</b>
-                <p>{{ member.branch }}</p>
-              </div>
-            </a>
+        </a>
+      </div>
+    </div>
+    <div class="row" *ngIf="year ==='4thyear'">
+      <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers4thyear">
+        <a class="btn-outline-primary" (click)="open(id)">
+          <div class="member-img">
+            <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
           </div>
-        </div>
+          <div>
+            <b>{{ member.name }}</b>
+            <p>{{ member.branch }}</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </div>
+
+
 
 
 
@@ -269,30 +263,66 @@
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
-    <div class="modal-img">
-      <img class="modal-img" src="./assets/images/ur.jpg" height="100%" width="100%">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="modal-img">
+          <img class="modal-img" src="./assets/images/ur.jpg">
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="member-det">
+          <b>name</b><br>
+          <span>Computer Science</span><br>
+
+          <a href="#" class="iconsp btn btn-sm mx-1">
+            <img src="./assets/images/social/twitter.svg" alt="" />
+          </a>
+          <a href="$" class="iconsp btn btn-sm mx-1">
+            <img src="./assets/images/social/instagram.svg" alt="" />
+          </a>
+          <a href="#" class="iconsp btn btn-sm mx-1">
+            <img src="./assets/images/social/github.svg" alt="" />
+          </a>
+          <a href="#" class="iconsp btn btn-sm mx-1">
+            <img src="./assets/images/social/linkedin.svg" alt="" />
+          </a>
+        </div>
+      </div>
     </div>
-    <div align="center">
-      <b>name</b><br>
-      <span>Computer Science</span><br>
-      <span>GIET University, Gunupur</span>
-      <br>
-      <a href="#" class="iconsp btn btn-sm mx-1">
-        <img src="./assets/images/social/twitter.svg" alt="" />
-      </a>
-      <a href="$" class="iconsp btn btn-sm mx-1">
-        <img src="./assets/images/social/instagram.svg" alt="" />
-      </a>
-      <a href="#" class="iconsp btn btn-sm mx-1">
-        <img src="./assets/images/social/github.svg" alt="" />
-      </a>
-      <a href="#" class="iconsp btn btn-sm mx-1">
-        <img src="./assets/images/social/linkedin.svg" alt="" />
-      </a>
+    <div style="background-color: bisque; height:1px;"></div>
+
+    <div style="margin: 7px; ">
+      <div class="row">
+        <div class="col-2">
+          <img src="./assets/images/z.png" width="100%" height="100%">
+        </div>
+        <div class="col-10">
+          <b>project 1</b><br>
+          <span>project details</span><br>
+          <span>link</span><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="./assets/images/z.png" width="100%" height="100%">
+        </div>
+        <div class="col-10">
+          <b>project 1</b><br>
+          <span>project details</span><br>
+          <span>link</span><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="./assets/images/z.png" width="100%" height="100%">
+        </div>
+        <div class="col-10">
+          <b>project 1</b><br>
+          <span>project details</span><br>
+          <span>link</span><br>
+        </div>
+      </div>
     </div>
-    <div style="margin: 7px; text-align: center;">klwec wlec lewc lkwec lkweckjewv lkjwec kje cjweckj wejc wjke
-      cjjwelkwerv we we sd fjh
-      kerhc kher jr</div>
   </div>
 
 

@@ -7,9 +7,14 @@
   padding: 0;
   margin: 0;
 }
-.navbar {
-  align-content: right;
+col-6 {
+  padding: 0;
 }
+col-md-3 {
+  padding: 0;
+  margin: 0;
+}
+
 .bar-but {
   color: rgb(238, 238, 238);
 }
@@ -26,11 +31,27 @@
   border: none;
 }
 .member-img {
-  width: 110px;
-  height: 110px;
-  background-color: yellow;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
 }
+.col-md-4 {
+  padding: 0;
+  margin: 0;
+}
+.col-md-8 {
+  padding: 0;
+  margin: 0;
+}
+.col-2 {
+  padding: 0;
+  margin: 0;
+}
+.col-10 {
+  padding: 0;
+  margin: 0;
+}
+
 .modal-body {
   padding: 0;
   color: white;
@@ -38,52 +59,63 @@
 .modal-img {
   margin-top: 7px;
   margin-bottom: 12px;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+}
+.member-det {
+  margin-top: 10px;
+}
+@media (max-width: 900px) {
+  .modal-img {
+    margin-top: 7px;
+    margin-bottom: 12px;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+  }
+  .member-det {
+    text-align: center;
+  }
 }
 //-------------------------------------------------------------------
 
 //-------------------------------------adarsh -------------start-------------------------------------------------------------------
-//===============================================================================origin ===================================================
 
-//------------president------------------
-//display picture
 .avatar {
-  width: 100%;
-  height: auto;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  margin: none;
   z-index: 2;
 }
-//text formats
 .nme {
   color: rgba(0, 0, 0, 0.514);
 }
 .msg1 {
   color: rgb(0, 0, 0);
 }
-//president container
+
 #outer {
-  background-color: #b4b4ff41;
-  box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
   border-radius: 20px;
   margin: 0em;
 }
 #founder {
-  background-color: transparent;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 10px;
-  margin-left: 20%;
-  width: 60%;
+  margin-left: 27.5%;
+  width: 45%;
   padding: 0.5%;
 }
-//president name plate
+.pres-head {
+  background-color: rgba(140, 106, 172, 0.425);
+  color: white;
+  text-align: center;
+  margin-left: none;
+}
 #nameplate {
   z-index: 1;
   border-radius: 30px;
   background-color: blueviolet;
-  width: 100%;
+  width: 120%;
   margin-left: -20%;
   padding: 5px;
   text-align: center;
@@ -92,20 +124,18 @@
 hr {
   margin: 10px;
 }
-//social media links
 .icons:hover {
   filter: brightness(150%);
 }
 #det {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 #img {
   z-index: 2;
-  margin: 0em;
   padding: 0em;
 }
 .social2 {
-  height: 0em;
+  display: none;
 }
 .icons2 {
   visibility: hidden;

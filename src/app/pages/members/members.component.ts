@@ -150,7 +150,7 @@ export class MembersComponent implements OnInit {
       id: 'a1',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 1',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
 
       Links: {
@@ -163,7 +163,7 @@ export class MembersComponent implements OnInit {
       id: 'a2',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 2',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -175,7 +175,7 @@ export class MembersComponent implements OnInit {
       id: 'a3',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 3',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -187,7 +187,7 @@ export class MembersComponent implements OnInit {
       id: 'a4',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 4',
-      branch: 'Electronics & Communication',
+      branch: 'ECE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -199,7 +199,7 @@ export class MembersComponent implements OnInit {
       id: 'a5',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -211,7 +211,7 @@ export class MembersComponent implements OnInit {
       id: 'a6',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -223,7 +223,7 @@ export class MembersComponent implements OnInit {
       id: 'a7',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
-      branch: 'Electronics & Communication',
+      branch: 'ECE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -235,7 +235,7 @@ export class MembersComponent implements OnInit {
       id: 'a8',
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
-      branch: 'Electronics & Communication',
+      branch: 'ECE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -249,7 +249,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 1',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
 
       Links: {
@@ -261,7 +261,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 2',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -272,7 +272,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 3',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -283,7 +283,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 4',
-      branch: 'Electronics & Communication',
+      branch: 'ECE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -294,7 +294,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -305,7 +305,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -316,7 +316,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
-      branch: 'Electronics & Communication',
+      branch: 'ECE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -327,7 +327,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
-      branch: 'Electronics & Communication',
+      branch: 'ECE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -341,7 +341,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 1',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
 
       Links: {
@@ -353,7 +353,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 2',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -364,7 +364,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 3',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -375,7 +375,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 4',
-      branch: 'Electronics & Communication',
+      branch: 'ECE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -386,7 +386,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -397,7 +397,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
-      branch: 'Computer Science',
+      branch: 'CSE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -408,7 +408,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
-      branch: 'Electronics & Communication',
+      branch: 'ECE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -419,7 +419,7 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 6',
-      branch: 'Electronics & Communication',
+      branch: 'ECE',
       description: 'Some Description',
       Links: {
         github: 'github',
@@ -447,7 +447,6 @@ export class MembersComponent implements OnInit {
 
   open(content) {
     this.modalService.open(content, {
-      size: 'sm',
       backdropClass: 'red-backdrop',
       windowClass: 'dark-modal',
       centered: true,
@@ -468,5 +467,3 @@ export class MembersComponent implements OnInit {
   }
   ngOnInit(): void {}
 }
-
-
