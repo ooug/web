@@ -7,12 +7,22 @@
   padding: 0;
   margin: 0;
 }
-.navbar {
-  align-content: right;
+col-6 {
+  padding: 0;
 }
+<<<<<<< HEAD
 
 .bar-but {
   color: #00909e;
+=======
+col-md-3 {
+  padding: 0;
+  margin: 0;
+}
+
+.bar-but {
+  color: rgb(238, 238, 238);
+>>>>>>> 1b17efabd0c947a9d6e98b620c96a6686d59a51e
 }
 .bar-but:hover {
   background-color: rgb(255, 0, 0);
@@ -28,11 +38,27 @@
   border: none;
 }
 .member-img {
-  width: 110px;
-  height: 110px;
-  background-color: yellow;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
 }
+.col-md-4 {
+  padding: 0;
+  margin: 0;
+}
+.col-md-8 {
+  padding: 0;
+  margin: 0;
+}
+.col-2 {
+  padding: 0;
+  margin: 0;
+}
+.col-10 {
+  padding: 0;
+  margin: 0;
+}
+
 .modal-body {
   padding: 0;
   color: white;
@@ -42,16 +68,30 @@
 .modal-img {
   margin-top: 7px;
   margin-bottom: 12px;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+}
+.member-det {
+  margin-top: 10px;
+}
+@media (max-width: 900px) {
+  .modal-img {
+    margin-top: 7px;
+    margin-bottom: 12px;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+  }
+  .member-det {
+    text-align: center;
+  }
 }
 
 //-------------------------------------------------------------------
 
 //-------------------------------------adarsh -------------start-------------------------------------------------------------------
-//===============================================================================origin ===================================================
 
+<<<<<<< HEAD
 //------------president------------------
 //display picture
 .heading{
@@ -69,40 +109,53 @@
   font:25px "Montserrat";
   padding: 0.5%;
 }
+=======
+>>>>>>> 1b17efabd0c947a9d6e98b620c96a6686d59a51e
 .avatar {
-  width: 100%;
-  height: auto;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
+<<<<<<< HEAD
   margin: none;
   z-index: 2;
 
+=======
+  z-index: 2;
+>>>>>>> 1b17efabd0c947a9d6e98b620c96a6686d59a51e
 }
-//text formats
 .nme {
+<<<<<<< HEAD
 
   color: #fff;
 }
 .msg1 {
   font:1rem "poppins";
+=======
+  color: rgba(0, 0, 0, 0.514);
+}
+.msg1 {
+>>>>>>> 1b17efabd0c947a9d6e98b620c96a6686d59a51e
   color: rgb(0, 0, 0);
 }
-//president container
-#outer{
 
+#outer {
   border-radius: 20px;
   margin: 0em;
   margin:3%;
 }
 #founder {
-  background-color: transparent;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 10px;
   margin-left: 27.5%;
   width: 45%;
-  padding: .5%;
-
+  padding: 0.5%;
 }
-//president name plate
+.pres-head {
+  background-color: rgba(140, 106, 172, 0.425);
+  color: white;
+  text-align: center;
+  margin-left: none;
+}
 #nameplate {
   z-index: 1;
   border-radius: 30px;
@@ -112,83 +165,85 @@
   padding: 5px;
   text-align: center;
   font-size: 18px;
+<<<<<<< HEAD
   color:#fff;
   font-family:"Montserrat";
+=======
+>>>>>>> 1b17efabd0c947a9d6e98b620c96a6686d59a51e
 }
-hr{
+hr {
   margin: 10px;
 }
-//social media links
 .icons:hover {
   filter: brightness(150%);
 }
-#det{
-  padding-top: 20px;
+#det {
+  padding-top: 30px;
 }
-#img{
+#img {
   z-index: 2;
-  margin: 0em;
   padding: 0em;
 }
-.social2{
+.social2 {
   display: none;
 }
+<<<<<<< HEAD
 
 .icons2{
+=======
+.icons2 {
+>>>>>>> 1b17efabd0c947a9d6e98b620c96a6686d59a51e
   visibility: hidden;
 }
 @media only screen and (max-width: 800px) {
-
-  #founder{
-  width: 100%;
-  height: min-content;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 0%;
-  padding: .5%;
-  border-radius: 1px;
-  box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
-  border-radius: 2%;
-}
-#nameplate{
-  font-size: 12px;
-  text-align: right;
-}
-.social1{
-display: none;
-}
-.icons1{
-display: none;
-}
-.social2{
-  height: auto;
-}
-.icons2{
-  visibility: visible;;
-}
-.msg1 {
-font-size: 12px;
-  color: rgb(0, 0, 0);
-}
-hr{
-  margin: 0px;
-  display: none;
-}
-#img{
-  padding: 0em;
-
-}
-#det{
-  padding-top: 7px;
-}
-.avatar{
-  margin: 0;
-  padding: 0;
-}
+  #founder {
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0%;
+    padding: 0.5%;
+    border-radius: 1px;
+    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+    border-radius: 2%;
+  }
+  #nameplate {
+    font-size: 12px;
+    text-align: right;
+  }
+  .social1 {
+    display: none;
+  }
+  .icons1 {
+    display: none;
+  }
+  .social2 {
+    height: auto;
+  }
+  .icons2 {
+    visibility: visible;
+  }
+  .msg1 {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+  }
+  hr {
+    margin: 0px;
+    display: none;
+  }
+  #img {
+    padding: 0em;
+  }
+  #det {
+    padding-top: 7px;
+  }
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
 }
 //===============================================================================================================================
 // -- --------------------------------------------------------------adarsh------end----------------------------------------------
-
 
 // --------------------------------CSS of Corporate members--------------------------------------
 
@@ -196,7 +251,7 @@ hr{
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  margin-left:37%;
+  margin-left: 37%;
 }
 
 .card-header:after {
@@ -205,7 +260,8 @@ hr{
   float: right;
 }
 
-.card,.card-header{
+.card,
+.card-header {
   text-align: center;
   color: #fff;
   width: 100%;
@@ -221,6 +277,7 @@ hr{
 .card-header {
   font: 20px 'Montserrat';
   background: #6a097d;
+  cursor: pointer;
 }
 
 .image {
@@ -238,8 +295,8 @@ hr{
   padding: 5px;
 }
 
-.modal-header{
-  width:100%;
+.modal-header {
+  width: 100%;
   border-bottom: 0;
 }
 
@@ -249,18 +306,18 @@ hr{
   color: #dbdbdd;
 }
 
-.modal-content{
+.modal-content {
   color: #fff;
-  padding:5%;
+  padding: 5%;
   background: #000;
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
   border-radius: 0px !important;
 }
 
-.modal-content p{
-   font:17px "Montserrat";
-   margin-top: 5px;
+.modal-content p {
+  font: 17px 'Montserrat';
+  margin-top: 5px;
 }
 
 .close {
@@ -324,8 +381,8 @@ h4.information {
 }
 
 @media (max-width: 767px) {
-  .modal-image{
-    margin-left:31%;
+  .modal-image {
+    margin-left: 31%;
   }
 
   .image {

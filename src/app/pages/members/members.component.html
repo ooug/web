@@ -4,6 +4,7 @@
   <div class="heading" style="text-align: center;">
     <h1>OUR MEMBERS</h1>
   </div>
+<<<<<<< HEAD
   <div class="upper-container">
     <p class="nme">President</p>
   </div>
@@ -45,6 +46,49 @@
     </div>
   </div>
 </div>
+=======
+  <div class="container-fluid pres-head">
+    <p class="nme">President</p>
+  </div>
+  <div class="container-fluid" id="outer">
+    <div class="row" id="founder">
+      <div class="col-4" id="img">
+        <img src="./assets/images/president.jpg" alt="" class="avatar" (click)="open(presidentid)" />
+      </div>
+      <div class="col-8" id="det">
+        <div class="container" id="nameplate">
+          Prof. Amiya Kumar Sahoo &nbsp;
+        </div>
+        <hr />
+        <p class="msg1">
+          <span>Message from the President:</span><span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus
+            nulla dolorem perspiciatis eos
+          </span></p>
+        <div class="text-center" id="social1">
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/twitter.png" alt="" />
+          </a>
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/mail.png" alt="" />
+          </a>
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/facebook.png" alt="" />
+          </a>
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/instagram.png" alt="" />
+          </a>
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/github.png" alt="" />
+          </a>
+          <a href="#" class="icons1  btn btn-sm  mx-1">
+            <img src="./assets/images/social/linkedin.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+>>>>>>> 1b17efabd0c947a9d6e98b620c96a6686d59a51e
   <div class="text-center" id="social2" style="align-self: baseline;">
     <a href="#" class="icons2 btn btn-sm mx-1">
       <img src="./assets/images/social/twitter.png" alt="" />
@@ -102,56 +146,59 @@
 </ng-template>
 <!-- -------------------------------------------------------------adarsh------end-------------------------------------------------------  -->
 
+
+
+
+
+
 <!----------------------------- Corporate members code by Hrushikesh Das -->
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
 <a class="card-title" (click)="collap(wind)">
-  <div class="card-header collapsed" data-toggle="collapsed"  href="#collapse">
+  <div class="card-header collapsed">
     Corporate Members
   </div>
 </a>
 
-<div class="card collapse show" id="collapsed" *ngIf="wind==='yes'">
+<div class="card collapse show" *ngIf="wind==='yes'">
   <div class="row">
     <div class="box col-lg-3 col-md-4 col-6" *ngFor="let member of corporateMembers">
 
-    <ng-template #content let-modal>
-          <div class="modal-header">
-            <img class="modal-image" src="./assets/images/demo1.jpg" alt="">
-            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-              <span aria-hidden="true">&times;</span>
-            </button>
+      <ng-template #content let-modal>
+        <div class="modal-header">
+          <img class="modal-image" src="./assets/images/demo1.jpg" alt="">
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-content">
+          <div align="center">
+            <span style="font:17px 'Montserrat';">Name</span><br>
+            <span style="font:16px 'Montserrat';">Organization</span><br>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Delectus harum nulla, quam vel aliquid voluptatum repellat accusamus velit illum dicta nam fugit
+              repellendus provident.
+            </p>
+            <a href="#" class="iconsp btn btn-sm mx-1">
+              <img src="./assets/images/social/twitter.svg" alt="" />
+            </a>
+            <a href="$" class="iconsp btn btn-sm mx-1">
+              <img src="./assets/images/social/instagram.svg" alt="" />
+            </a>
+            <a href="#" class="iconsp btn btn-sm mx-1">
+              <img src="./assets/images/social/github.svg" alt="" />
+            </a>
+            <a href="#" class="iconsp btn btn-sm mx-1">
+              <img src="./assets/images/social/linkedin.svg" alt="" />
+            </a>
           </div>
-          <div class="modal-content">
-            <div align="center">
-              <span style="font:17px 'Montserrat';">Name</span><br>
-              <span style="font:16px 'Montserrat';">Organization</span><br>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Delectus harum nulla, quam vel aliquid voluptatum repellat accusamus velit illum dicta nam fugit repellendus provident.
-              </p>
-              <a href="#" class="iconsp btn btn-sm mx-1">
-                <img  src="./assets/images/social/twitter.svg" alt="" />
-              </a>
-              <a href="$" class="iconsp btn btn-sm mx-1">
-                <img  src="./assets/images/social/instagram.svg" alt="" />
-              </a>
-              <a href="#" class="iconsp btn btn-sm mx-1">
-                <img  src="./assets/images/social/github.svg" alt="" />
-              </a>
-              <a href="#" class="iconsp btn btn-sm mx-1">
-                <img  src="./assets/images/social/linkedin.svg" alt="" />
-              </a>
-            </div>
-          </div>
+        </div>
       </ng-template>
 
-      <a (click)="openVerticallyCentered(content)"><img class="image" src="./assets/images/demo1.jpg"
-        alt=""></a>
+      <a (click)="openVerticallyCentered(content)"><img class="image" src="./assets/images/demo1.jpg" alt=""></a>
       <div class="info-body">
         <h3 class="information">Name</h3>
         <h4 class="information">Organization</h4>
@@ -166,79 +213,90 @@
 
 <!------------Student Members------------------------------->
 <a class="student-button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
-  <button type="button" class="close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-  <div class="stud-button" align="center">
+  <div class="card-header" align="center">
     Students Members
   </div>
 </a>
 
 <div id="collapseExample" [ngbCollapse]="isCollapsed">
   <div class="card">
-    <div class="card-body">
-      <div class="col-12">
-        <nav class="navbar navbar-expand">
-          <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
-            <li [ngbNavItem]="1" class="bar-but"><a class="nav-link" (click)="student('2ndyear')"><b>2nd
-                  year</b>
-                <div style="background-color: blue; height: 1px;"></div>
-              </a></li>
-            <li [ngbNavItem]="2" class="bar-but"><a class="nav-link" (click)="student('3rdyear')"><b>3rd
-                  year</b>
-                <div style="background-color: blue; height: 1px;"></div>
-              </a></li>
-            <li [ngbNavItem]="3" class="bar-but"><a class="nav-link" (click)="student('4thyear')"><b>4th
-                  year</b>
-                <div style="background-color: blue; height: 1px;"></div>
-              </a></li>
-          </ul>
-        </nav>
+
+    <div class="col-12">
+      <nav class="navbar navbar-expand">
+        <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
+          <li [ngbNavItem]="1">
+            <a class="bar-but nav-link" (click)="student('2ndyear')" *ngIf="year==='2ndyear'"><b>2nd year</b>
+              <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+            </a>
+            <a class="bar-but nav-link" (click)="student('2ndyear')" *ngIf="year!=='2ndyear'"><b>2nd year</b>
+              <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+            </a>
+
+          </li>
+          <li [ngbNavItem]="2">
+            <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year==='3rdyear'"><b>3rd year</b>
+              <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+            </a>
+            <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year!=='3rdyear'"><b>3rd year</b>
+              <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+            </a>
+          </li>
+          <li [ngbNavItem]="3">
+            <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year==='4thyear'"><b>4th year</b>
+              <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+            </a>
+            <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year!=='4thyear'"><b>4th year</b>
+              <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+            </a>
+
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="row" *ngIf="year ==='2ndyear'">
+      <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers2ndyear">
+        <a (click)="open(id)">
+          <div class="member-img">
+            <img class="member-img" src="{{ member.Image.host + member.Image.path }}">
+          </div>
+          <div>
+            <b>{{ member.name }}</b>
+            <p>{{ member.branch }}</p>
+          </div>
+        </a>
       </div>
-      <div class="container">
-        <div class="row" *ngIf="year ==='2ndyear'">
-          <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers2ndyear">
-            <a class="btn-outline-primary" (click)="open(id)">
-              <div class="member-img">
-                <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
-              </div>
-              <div>
-                <b>{{ member.name }}</b>
-                <p>{{ member.branch }}</p>
-              </div>
-            </a>
+    </div>
+    <div class="row" *ngIf="year ==='3rdyear'">
+      <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers3rdyear">
+        <a class="btn-outline-primary" (click)="open(id)">
+          <div class="member-img">
+            <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
           </div>
-        </div>
-        <div class="row" *ngIf="year ==='3rdyear'">
-          <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers3rdyear">
-            <a class="btn-outline-primary" (click)="open(id)">
-              <div class="member-img">
-                <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
-              </div>
-              <div>
-                <b>{{ member.name }}</b>
-                <p>{{ member.branch }}</p>
-              </div>
-            </a>
+          <div>
+            <b>{{ member.name }}</b>
+            <p>{{ member.branch }}</p>
           </div>
-        </div>
-        <div class="row" *ngIf="year ==='4thyear'">
-          <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers4thyear">
-            <a class="btn-outline-primary" (click)="open(id)">
-              <div class="member-img">
-                <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
-              </div>
-              <div>
-                <b>{{ member.name }}</b>
-                <p>{{ member.branch }}</p>
-              </div>
-            </a>
+        </a>
+      </div>
+    </div>
+    <div class="row" *ngIf="year ==='4thyear'">
+      <div class="col-md-3 col-6" align="center" *ngFor="let member of studentMembers4thyear">
+        <a class="btn-outline-primary" (click)="open(id)">
+          <div class="member-img">
+            <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%">
           </div>
-        </div>
+          <div>
+            <b>{{ member.name }}</b>
+            <p>{{ member.branch }}</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </div>
+
+
 
 
 
@@ -248,30 +306,66 @@
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
-    <div class="modal-img">
-      <img class="modal-img" src="./assets/images/ur.jpg" height="100%" width="100%">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="modal-img">
+          <img class="modal-img" src="./assets/images/ur.jpg">
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="member-det">
+          <b>name</b><br>
+          <span>Computer Science</span><br>
+
+          <a href="#" class="iconsp btn btn-sm mx-1">
+            <img src="./assets/images/social/twitter.svg" alt="" />
+          </a>
+          <a href="$" class="iconsp btn btn-sm mx-1">
+            <img src="./assets/images/social/instagram.svg" alt="" />
+          </a>
+          <a href="#" class="iconsp btn btn-sm mx-1">
+            <img src="./assets/images/social/github.svg" alt="" />
+          </a>
+          <a href="#" class="iconsp btn btn-sm mx-1">
+            <img src="./assets/images/social/linkedin.svg" alt="" />
+          </a>
+        </div>
+      </div>
     </div>
-    <div align="center">
-      <b>name</b><br>
-      <span>Computer Science</span><br>
-      <span>GIET University, Gunupur</span>
-      <br>
-      <a href="#" class="iconsp btn btn-sm mx-1">
-        <img src="./assets/images/social/twitter.svg" alt="" />
-      </a>
-      <a href="$" class="iconsp btn btn-sm mx-1">
-        <img src="./assets/images/social/instagram.svg" alt="" />
-      </a>
-      <a href="#" class="iconsp btn btn-sm mx-1">
-        <img src="./assets/images/social/github.svg" alt="" />
-      </a>
-      <a href="#" class="iconsp btn btn-sm mx-1">
-        <img src="./assets/images/social/linkedin.svg" alt="" />
-      </a>
+    <div style="background-color: bisque; height:1px;"></div>
+
+    <div style="margin: 7px; ">
+      <div class="row">
+        <div class="col-2">
+          <img src="./assets/images/z.png" width="100%" height="100%">
+        </div>
+        <div class="col-10">
+          <b>project 1</b><br>
+          <span>project details</span><br>
+          <span>link</span><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="./assets/images/z.png" width="100%" height="100%">
+        </div>
+        <div class="col-10">
+          <b>project 1</b><br>
+          <span>project details</span><br>
+          <span>link</span><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="./assets/images/z.png" width="100%" height="100%">
+        </div>
+        <div class="col-10">
+          <b>project 1</b><br>
+          <span>project details</span><br>
+          <span>link</span><br>
+        </div>
+      </div>
     </div>
-    <div style="margin: 7px; text-align: center;">klwec wlec lewc lkwec lkweckjewv lkjwec kje cjweckj wejc wjke
-      cjjwelkwerv we we sd fjh
-      kerhc kher jr</div>
   </div>
 
 
