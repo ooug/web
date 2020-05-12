@@ -10,17 +10,19 @@
 .navbar {
   align-content: right;
 }
+
 .bar-but {
-  color: rgb(66, 5, 5);
+  color: #00909e;
 }
 .bar-but:hover {
   background-color: rgb(255, 0, 0);
   color: white;
 }
 .stud-button {
-  background-color: black;
+  background-color: #6a097d;
   color: white;
   padding: 3px;
+  font:20px "Montserrat";
 }
 .student-button {
   border: none;
@@ -34,6 +36,8 @@
 .modal-body {
   padding: 0;
   color: white;
+  width:100%;
+  background: #000;
 }
 .modal-img {
   margin-top: 7px;
@@ -42,6 +46,7 @@
   width: 100px;
   border-radius: 50%;
 }
+
 //-------------------------------------------------------------------
 
 //-------------------------------------adarsh -------------start-------------------------------------------------------------------
@@ -49,21 +54,36 @@
 
 //------------president------------------
 //display picture
+.heading{
+  font-family:"Montserrat";
+  margin:6% 2% 1%;
+}
+.upper-container{
+  width:100%;
+  background-color: #6a097d;
+  color: white;
+  text-align: center;
+}
+
+.upper-container p.nme{
+  font:25px "Montserrat";
+  padding: 0.5%;
+}
 .avatar {
   width: 100%;
   height: auto;
   border-radius: 50%;
   margin: none;
-z-index: 2;
+  z-index: 2;
 
 }
 //text formats
 .nme {
 
-  color: rgba(0, 0, 0, 0.514);
+  color: #fff;
 }
 .msg1 {
-
+  font:1rem "poppins";
   color: rgb(0, 0, 0);
 }
 //president container
@@ -71,6 +91,7 @@ z-index: 2;
 
   border-radius: 20px;
   margin: 0em;
+  margin:3%;
 }
 #founder {
   background-color: transparent;
@@ -91,7 +112,8 @@ z-index: 2;
   padding: 5px;
   text-align: center;
   font-size: 18px;
-
+  color:#fff;
+  font-family:"Montserrat";
 }
 hr{
   margin: 10px;
@@ -111,6 +133,7 @@ hr{
 .social2{
   display: none;
 }
+
 .icons2{
   visibility: hidden;
 }
@@ -178,7 +201,7 @@ hr{
 
 .card-header:after {
   font-family: 'FontAwesome';
-  content: '\f078';
+  content: '\f00d';
   float: right;
 }
 
@@ -285,6 +308,19 @@ h4.information {
   h4.information {
     font-size: 24px;
   }
+
+  #nameplate{
+    text-align: center;
+  }
+
+  #founder{
+    width:50%;
+  }
+
+  #social1{
+    width:105%;
+  }
+  
 }
 
 @media (max-width: 767px) {
@@ -315,6 +351,10 @@ h4.information {
 
   h4.information {
     font-size: 17px;
+  }
+
+  #nameplate{
+    text-align: center;
   }
 }
 
