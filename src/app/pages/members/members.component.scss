@@ -171,13 +171,8 @@ hr {
 
 .card-header:after {
   font-family: 'FontAwesome';
-  content: '\f068';
+  content: '\f078';
   float: right;
-}
-
-.card-header,
-.collapsed:after {
-  content: '\f067';
 }
 
 .card,.card-header{
