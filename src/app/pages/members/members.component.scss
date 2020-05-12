@@ -10,22 +10,24 @@
 col-6 {
   padding: 0;
 }
+
+.bar-but {
+  color: #00909e;
+}
 col-md-3 {
   padding: 0;
   margin: 0;
 }
 
-.bar-but {
-  color: rgb(238, 238, 238);
-}
 .bar-but:hover {
   background-color: rgb(255, 0, 0);
   color: white;
 }
 .stud-button {
-  background-color: black;
+  background-color: #6a097d;
   color: white;
   padding: 3px;
+  font:20px "Montserrat";
 }
 .student-button {
   border: none;
@@ -55,6 +57,8 @@ col-md-3 {
 .modal-body {
   padding: 0;
   color: white;
+  width:100%;
+  background: #000;
 }
 .modal-img {
   margin-top: 7px;
@@ -78,40 +82,60 @@ col-md-3 {
     text-align: center;
   }
 }
+
 //-------------------------------------------------------------------
 
 //-------------------------------------adarsh -------------start-------------------------------------------------------------------
 
-.avatar {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  z-index: 2;
+//------------president------------------
+//display picture
+.heading{
+  font-family:"Montserrat";
+  margin:6% 2% 1%;
 }
-.nme {
-  color: rgba(0, 0, 0, 0.514);
-}
-.msg1 {
-  color: rgb(0, 0, 0);
+.upper-container{
+  width:100%;
+  background-color: #6a097d;
+  color: white;
+  text-align: center;
 }
 
-#outer {
+.upper-container p.nme{
+  font:25px "Montserrat";
+  padding: 0.5%;
+}
+.avatar {
+  width: 110%;
+  height: auto;
+  border-radius: 50%;
+  margin: none;
+  z-index: 2;
+
+}
+//text formats
+.nme {
+
+  color: #fff;
+}
+.msg1 {
+  font:1rem "poppins";
+  color: rgb(0, 0, 0);
+}
+//president container
+#outer{
   border-radius: 20px;
-  margin: 0em;
+  margin:3%;
 }
 #founder {
-  margin-top: 5px;
+  background-color: transparent;
+  margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 27.5%;
   width: 45%;
-  padding: 0.5%;
+  padding: .5%;
+
 }
-.pres-head {
-  background-color: rgba(140, 106, 172, 0.425);
-  color: white;
-  text-align: center;
-  margin-left: none;
-}
+//president name plate
 #nameplate {
   z-index: 1;
   border-radius: 30px;
@@ -121,72 +145,79 @@ col-md-3 {
   padding: 5px;
   text-align: center;
   font-size: 18px;
+  color:#fff;
+  font-family:"Montserrat";
 }
-hr {
+hr{
   margin: 10px;
 }
+//social media links
 .icons:hover {
   filter: brightness(150%);
 }
-#det {
-  padding-top: 30px;
+#det{
+  padding-top: 20px;
 }
-#img {
+#img{
   z-index: 2;
+  margin: 0em;
   padding: 0em;
 }
-.social2 {
+.social2{
   display: none;
 }
-.icons2 {
+
+.icons2{
   visibility: hidden;
 }
 @media only screen and (max-width: 800px) {
-  #founder {
-    width: 100%;
-    height: min-content;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 0%;
-    padding: 0.5%;
-    border-radius: 1px;
-    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
-    border-radius: 2%;
-  }
-  #nameplate {
-    font-size: 12px;
-    text-align: right;
-  }
-  .social1 {
-    display: none;
-  }
-  .icons1 {
-    display: none;
-  }
-  .social2 {
-    height: auto;
-  }
-  .icons2 {
-    visibility: visible;
-  }
-  .msg1 {
-    font-size: 12px;
-    color: rgb(0, 0, 0);
-  }
-  hr {
-    margin: 0px;
-    display: none;
-  }
-  #img {
-    padding: 0em;
-  }
-  #det {
-    padding-top: 7px;
-  }
-  .avatar {
-    margin: 0;
-    padding: 0;
-  }
+
+  #founder{
+  width: 100%;
+  height: min-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0%;
+  padding: .5%;
+  border-radius: 1px;
+  box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+  border-radius: 2%;
+}
+#nameplate{
+  font-size: 12px;
+  text-align: right;
+}
+.social1{
+display: none;
+}
+.icons1{
+display: none;
+}
+.social2{
+  height: auto;
+}
+.icons2{
+  visibility: visible;;
+}
+.msg1 {
+font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+hr{
+  margin: 0px;
+  display: none;
+}
+#img{
+  padding: 0em;
+
+}
+#det{
+  padding-top: 7px;
+}
+.avatar{
+  margin: 0;
+  padding: 0;
+}
 }
 //===============================================================================================================================
 // -- --------------------------------------------------------------adarsh------end----------------------------------------------
@@ -202,7 +233,7 @@ hr {
 
 .card-header:after {
   font-family: 'FontAwesome';
-  content: '\f078';
+  content: '\f00d';
   float: right;
 }
 
@@ -311,6 +342,25 @@ h4.information {
   h4.information {
     font-size: 24px;
   }
+
+  #nameplate{
+    text-align: center;
+  }
+
+  #founder{
+    width:50%;
+  }
+
+  #social1{
+    width:105%;
+  }
+
+  #outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 }
 
 @media (max-width: 767px) {
@@ -342,6 +392,17 @@ h4.information {
   h4.information {
     font-size: 17px;
   }
-}
 
+  .avatar{
+    width:140%;
+  }
+
+  .msg1{
+    margin-left:2rem;
+  }
+
+  #social2{
+    width:105%;
+  }
+}
 //=============================================================================================
