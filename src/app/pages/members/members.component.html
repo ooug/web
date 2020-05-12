@@ -109,13 +109,18 @@
 </ng-template>
 <!-- -------------------------------------------------------------adarsh------end-------------------------------------------------------  -->
 
+
+
+
+
+
 <!----------------------------- Corporate members code by Hrushikesh Das -->
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <a class="card-title" (click)="collap(wind)">
-  <div class="card-header collapsed" data-toggle="collapsed"  href="#collapse">
+  <div class="card-header collapsed" data-toggle="collapsed" href="#collapse">
     Corporate Members
   </div>
 </a>
@@ -124,39 +129,39 @@
   <div class="row">
     <div class="box col-lg-3 col-md-4 col-6" *ngFor="let member of corporateMembers">
 
-    <ng-template #content let-modal>
-          <div class="modal-header">
-            <img class="modal-image" src="./assets/images/demo1.jpg" alt="">
-            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-              <span aria-hidden="true">&times;</span>
-            </button>
+      <ng-template #content let-modal>
+        <div class="modal-header">
+          <img class="modal-image" src="./assets/images/demo1.jpg" alt="">
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-content">
+          <div align="center">
+            <span style="font:17px 'Montserrat';">Name</span><br>
+            <span style="font:16px 'Montserrat';">Organization</span><br>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Delectus harum nulla, quam vel aliquid voluptatum repellat accusamus velit illum dicta nam fugit
+              repellendus provident.
+            </p>
+            <a href="#" class="iconsp btn btn-sm mx-1">
+              <img src="./assets/images/social/twitter.svg" alt="" />
+            </a>
+            <a href="$" class="iconsp btn btn-sm mx-1">
+              <img src="./assets/images/social/instagram.svg" alt="" />
+            </a>
+            <a href="#" class="iconsp btn btn-sm mx-1">
+              <img src="./assets/images/social/github.svg" alt="" />
+            </a>
+            <a href="#" class="iconsp btn btn-sm mx-1">
+              <img src="./assets/images/social/linkedin.svg" alt="" />
+            </a>
           </div>
-          <div class="modal-content">
-            <div align="center">
-              <span style="font:17px 'Montserrat';">Name</span><br>
-              <span style="font:16px 'Montserrat';">Organization</span><br>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Delectus harum nulla, quam vel aliquid voluptatum repellat accusamus velit illum dicta nam fugit repellendus provident.
-              </p>
-              <a href="#" class="iconsp btn btn-sm mx-1">
-                <img  src="./assets/images/social/twitter.svg" alt="" />
-              </a>
-              <a href="$" class="iconsp btn btn-sm mx-1">
-                <img  src="./assets/images/social/instagram.svg" alt="" />
-              </a>
-              <a href="#" class="iconsp btn btn-sm mx-1">
-                <img  src="./assets/images/social/github.svg" alt="" />
-              </a>
-              <a href="#" class="iconsp btn btn-sm mx-1">
-                <img  src="./assets/images/social/linkedin.svg" alt="" />
-              </a>
-            </div>
-          </div>
+        </div>
       </ng-template>
 
-      <a (click)="openVerticallyCentered(content)"><img class="image" src="./assets/images/demo1.jpg"
-        alt=""></a>
+      <a (click)="openVerticallyCentered(content)"><img class="image" src="./assets/images/demo1.jpg" alt=""></a>
       <div class="info-body">
         <h3 class="information">Name</h3>
         <h4 class="information">Organization</h4>
