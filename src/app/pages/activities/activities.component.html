@@ -26,7 +26,6 @@
       <a (click)="activateTab('techbhukkads')">
         <span class="active" *ngIf="tap===2"><b>Techbhukkads</b></span>
         <span class="bar-but" *ngIf="tap!==2"><b>Techbhukkads</b></span>
-
       </a>
     </li>
     <li [ngbNavItem]="3" (click)="buttons(3)">
@@ -40,14 +39,13 @@
 </nav>
 
 <!-- -----------------------------------------------------------------------
-  <form class="search-bar form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="Type to Search" aria-label="Search">
-    <button class="btn my-2 my-sm-0" type="submit">
-      <i class="fa fa-search" aria-hidden="true"></i>
-    </button>
-  </form>
-  ------------------------------------------------------------------------->
-
+<form class="search-bar form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" placeholder="Type to Search" aria-label="Search" />
+  <button class="btn my-2 my-sm-0" type="submit">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </button>
+</form>
+------------------------------------------------------------------------->
 
 
 <div class="container" *ngIf="active === 'workshop'">
@@ -58,6 +56,7 @@
           width="100%" />
         <div class="date-cor">
           <b>01-02-2020</b>
+          <!---------------------------------------------------------------->
         </div>
         <div class="heading">
           <div style="text-align: center; margin-top: 175px;">

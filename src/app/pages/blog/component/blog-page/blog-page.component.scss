@@ -1,0 +1,10 @@
+section {
+  min-height: 100vh;
+  padding-top: 15vh;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: #854eaf;
+  border: none;
+}

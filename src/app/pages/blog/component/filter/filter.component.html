@@ -1,1 +1,79 @@
-<p>filter works!</p>
+<section class="container-fluid">
+  <div class="row mb-2">
+    <div
+      class="col-md-12 col-1 my-2 text-center"
+      style="padding-left: 0; padding-right: 0;"
+    >
+      <img width="16px" src="./assets/svgs/filter.svg" alt="" />
+      <strong class="d-none d-md-inline"> &nbsp;Filter</strong>
+    </div>
+    <!-- search bar -->
+    <div class="col-md-12 d-none d-md-block my-3 px-0">
+      <form [formGroup]="searchForm">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="searchBox"
+          placeholder="Search"
+          (keyup)="searchBlog()"
+        />
+      </form>
+    </div>
+    <!-- Categories -->
+    <div class="col-md-12 col-4" style="padding-right: 0; padding-left: 2px;">
+      <span
+        (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample"
+        id="toggle-btn"
+        style="cursor: pointer;"
+      >
+        <span id="filter-heading">
+          Categories
+          <img
+            width="16px"
+            [src]="
+              isCollapsed
+                ? './assets/svgs/chevron-down.svg'
+                : './assets/svgs/x-black.svg'
+            "
+            alt=""
+          />
+        </span>
+      </span>
+    </div>
+    <!-- search for mobile -->
+    <div class="col-7 d-md-none">
+      <div class="input-group">
+        <form [formGroup]="searchForm">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="searchBox"
+            placeholder="Search"
+            (keyup)="searchBlog()"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="categories" id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="card">
+      <div class="card-body p-1">
+        <div
+          *ngFor="let c of categories"
+          class="category-item px-2"
+          (click)="filterCategory(c)"
+        >
+          <input
+            class="category-item"
+            type="checkbox"
+            [checked]="userChoice.indexOf(c) !== -1"
+          />
+          {{ c }}
+          <hr class="my-1" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
