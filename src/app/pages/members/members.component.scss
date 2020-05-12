@@ -161,29 +161,36 @@ hr {
 // -- --------------------------------------------------------------adarsh------end----------------------------------------------
 
 // --------------------------------CSS of Corporate members--------------------------------------
-.accordian,
+
+.modal-image {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin-left:37%;
+}
+
 .card-header:after {
   font-family: 'FontAwesome';
-  content: '\f068';
+  content: '\f078';
   float: right;
 }
 
-.accordian,
-.card-header,
-.collapsed:after {
-  content: '\f067';
-}
-
-.card-header,
-.card {
-  background: #120136;
+.card,.card-header{
   text-align: center;
   color: #fff;
   width: 100%;
 }
 
-.card-title {
-  font: 2rem 'Montserrat';
+.card {
+  background: #120136;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important; 
+}
+
+.card-header {
+  font: 20px 'Montserrat';
+  background: #6a097d;
 }
 
 .image {
@@ -191,12 +198,6 @@ hr {
   height: 145px;
   width: 145px;
   margin: 2%;
-}
-
-.box-container {
-  position: absolute;
-  text-align: center;
-  padding: 3%;
 }
 
 .row {
@@ -207,14 +208,29 @@ hr {
   padding: 5px;
 }
 
-.modal-header,
-.close {
-  background: url('../../../assets/images/background.jpg');
-  color: #fff;
+.modal-header{
+  width:100%;
+  border-bottom: 0;
 }
 
-.modal-body {
-  color: #000;
+.modal-header,
+.close {
+  background-image: url('../../../assets/images/background.jpg');
+  color: #dbdbdd;
+}
+
+.modal-content{
+  color: #fff;
+  padding:5%;
+  background: #000;  
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important; 
+}
+
+.modal-content p{
+   font:17px "Montserrat";
+   margin-top: 5px;
 }
 
 .close {
@@ -233,16 +249,16 @@ hr {
 }
 
 .information {
-  line-height: 20px;
+  line-height: 19px;
   font-family: 'poppins', Arial, Helvetica, sans-serif;
 }
 
 h3.information {
-  font-size: 21px;
+  font-size: 20px;
 }
 
 h4.information {
-  font-size: 21px;
+  font-size: 19px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -265,6 +281,10 @@ h4.information {
 }
 
 @media (max-width: 767px) {
+  .modal-image{
+    margin-left:31%;
+  }
+  
   .image {
     width: 120px;
     height: 120px;

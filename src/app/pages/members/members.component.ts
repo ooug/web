@@ -100,6 +100,50 @@ export class MembersComponent implements OnInit {
         insta: 'insta',
       },
     },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
   ];
   public studentMembers2ndyear = [
     {
@@ -397,6 +441,10 @@ export class MembersComponent implements OnInit {
     }
   }
 
+  openVerticallyCentered(content) {
+    this.modalService.open(content, { centered: true });
+  }
+
   open(content) {
     this.modalService.open(content, {
       size: 'sm',
@@ -420,3 +468,5 @@ export class MembersComponent implements OnInit {
   }
   ngOnInit(): void {}
 }
+
+
