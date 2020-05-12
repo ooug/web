@@ -10,8 +10,30 @@ import { NgForm } from '@angular/forms';
 export class MembersComponent implements OnInit {
   public isCollapsed = false;
   year = '2ndyear';
-
+  wind = 'yes';
   public corporateMembers = [
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 1',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 1',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 1',
@@ -59,6 +81,50 @@ export class MembersComponent implements OnInit {
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
       name: 'Name 5',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
+      worksAt: 'This Company',
+      description: 'Some Description',
+      Links: {
+        github: 'github',
+        linkedin: 'linkedin',
+        insta: 'insta',
+      },
+    },
+    {
+      Image: { host: '', path: './assets/images/ur.jpg' },
+      name: 'Name 6',
       worksAt: 'This Company',
       description: 'Some Description',
       Links: {
@@ -367,6 +433,18 @@ export class MembersComponent implements OnInit {
 
   constructor(private modalService: NgbModal) {}
 
+  collap(wind: string) {
+    if (wind === 'yes') {
+      this.wind = 'no';
+    } else {
+      this.wind = 'yes';
+    }
+  }
+
+  openVerticallyCentered(content) {
+    this.modalService.open(content, { centered: true });
+  }
+
   open(content) {
     this.modalService.open(content, {
       size: 'sm',
@@ -390,3 +468,5 @@ export class MembersComponent implements OnInit {
   }
   ngOnInit(): void {}
 }
+
+

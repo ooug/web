@@ -1,16 +1,80 @@
+//----------------search--------------------------
+.search-bar {
+  justify-content: center;
+  align-items: center;
+  padding: 2% 2% 0 2%;
+}
+
+.form-control {
+  position: absolute;
+  border-radius: 20px;
+  width: 240px;
+  color: #fff;
+  background-color: #333;
+}
+
+.btn {
+  position: relative;
+  border-radius: 50%;
+  left: 7%;
+  height: 35px;
+  width: 35px;
+  color: #fff;
+  background-color: #333;
+}
+
+.btn:focus,
+.btn:active,
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+@media (max-width: 500px) {
+  a.nav-link b {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .btn {
+    left: 27%;
+  }
+}
+
+@media (width: 768px) {
+  .btn {
+    left: 13%;
+  }
+}
 //-----------------slide bar------------------------
+ngb-carousel {
+  z-index: 1;
+}
+
 .bar-but {
-  color: rgb(75, 39, 39);
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 0.05rem #ffffff;
+  font-size: 14px;
+  margin: 20px;
+  padding: 7px;
+  border-radius: 50px;
 }
 .bar-but:hover {
-  padding: 5px;
-  background-color: rgb(255, 0, 51);
-  color: rgb(240, 217, 217);
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 .img-box {
-  background-color: rgb(0, 217, 255);
-  opacity: 0.6;
+  background-color: rgb(68, 0, 255);
+  opacity: 1;
+}
+.buts {
+  padding: 3px;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
 }
 //-----------------cards-----------------------------
 .container {
@@ -23,25 +87,61 @@
   margin: 0;
 }
 .col-md-4 {
-  padding: 0;
+  padding: 2px;
+  margin: 0;
+}
+
+.col-sm-6 {
+  padding: 2px;
   margin: 0;
 }
 
 .banner {
   position: relative;
-  margin: auto;
+  margin: 0 auto;
 }
-.banner img {
+.image {
   width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
-.contents {
+.date-cor {
   position: absolute;
+  background-size: cover;
+  width: 99%;
+  top: 0;
+  text-align: right;
+  font-size: 10px;
+  color: white;
+}
+.heading {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  background-size: cover;
+  background-color: black;
+  height: 100%;
+  opacity: 0.5;
+  text-align: left;
+  border-top: 2px solid rgb(0, 238, 255);
+}
+.box {
+  height: 250px;
+}
+.heading-back {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-size: cover;
+  background-color: black;
+  height: 100%;
+  opacity: 0.6;
 }
 //-----------------flip-----------------------
 .middle {
   position: relative;
-
-  z-index: -1;
+  top: -100%;
+  z-index: 1;
 }
 
 .box {
@@ -50,9 +150,12 @@
 
 .front,
 .back {
+  height: 100%;
   overflow: hidden;
   backface-visibility: hidden;
   transition: transform 0.6s linear;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .front {

@@ -1,0 +1,49 @@
+<section class="container">
+  <!-- loading icon-->
+  <div class="row" *ngIf="flags.isLoading">
+    <div class="col text-center mt-2">
+      <img
+        src="./assets/images/loading-blue.gif"
+        width="50px"
+        alt="Loading.."
+      />
+    </div>
+  </div>
+
+  <!-- if event not found -->
+  <div class="row" *ngIf="!flags.isLoading && flags.notFound">
+    <div class="col text-center">
+      <h2>BLOG NOT FOUND!</h2>
+    </div>
+  </div>
+
+  <!-- event title date time and venue -->
+  <div class="row" *ngIf="!flags.isLoading && !flags.notFound">
+    <div class="col">
+      <h2 class="text-left">{{ blog.title }}</h2>
+      <p>
+        <span class="text-info"
+          >{{ blog.date }}&nbsp;|&nbsp; {{ blog.author }}&nbsp;|&nbsp;
+          {{ blog.category }}</span
+        >
+      </p>
+      <hr class="my-3" />
+    </div>
+  </div>
+  <!-- event long description and image-->
+  <div class="row" *ngIf="!flags.isLoading && !flags.notFound">
+    <div class="col-md-8 col-12 m-0">
+      <p class="text-secondary text-justify my-2">
+        {{ blog.paragraph }}
+      </p>
+    </div>
+    <div class="col-md-4 col-12 m-0">
+      <img
+        src="{{ blog.Image.host + blog.Image.path }}"
+        alt="Image.."
+        class="img-responsive my-2"
+        width="100%"
+      />
+    </div>
+  </div>
+</section>
