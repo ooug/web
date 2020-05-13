@@ -17,33 +17,42 @@
     </div>
   </div>
 
-  <!-- event title date time and venue -->
   <div class="row" *ngIf="!flags.isLoading && !flags.notFound">
-    <div class="col">
-      <h2 class="text-left">{{ blog.title }}</h2>
-      <p>
-        <span class="text-info"
-          >{{ blog.date }}&nbsp;|&nbsp; {{ blog.author }}&nbsp;|&nbsp;
-          {{ blog.category }}</span
-        >
-      </p>
-      <hr class="my-3" />
-    </div>
-  </div>
-  <!-- event long description and image-->
-  <div class="row" *ngIf="!flags.isLoading && !flags.notFound">
-    <div class="col-md-8 col-12 m-0">
+    <div class="col-md-9 col-12 m-0">
+      <!-- event title date author and category -->
+      <div>
+        <h2 class="text-left">{{ blog.title }}</h2>
+        <p>
+          <span class="text-info"
+            >{{ blog.date }}&nbsp;|&nbsp; {{ blog.Author.name }}&nbsp;|&nbsp;
+            {{ blog.category }}</span
+          >
+        </p>
+        <hr class="my-3" />
+      </div>
+      <!-- event long description and image-->
       <p class="text-secondary text-justify my-2">
         {{ blog.paragraph }}
       </p>
     </div>
-    <div class="col-md-4 col-12 m-0">
-      <img
-        src="{{ blog.Image.host + blog.Image.path }}"
-        alt="Image.."
-        class="img-responsive my-2"
-        width="100%"
-      />
+    <div class="col-md-3 col-12 m-0 mt-md-5 my-3">
+      <div>
+        <strong>This blog is contributed by:</strong>
+      </div>
+      <div class="text-center">
+        <div class="mt-3">
+          <img
+            src="{{ blog.Author.Image.host + blog.Author.Image.path }}"
+            alt=""
+            id="author-image"
+          />
+          <strong class="my-2">{{ blog.Author.name }}</strong>
+          <div>{{ blog.Author.jobTitle }} at {{ blog.Author.company }}</div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <app-popular-blogs></app-popular-blogs>
+      </div>
     </div>
   </div>
 </section>

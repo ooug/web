@@ -1,12 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto';
 footer {
-  background-color: #616c6f;
+  // background-color: #161516;
+  background-image: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
 p {
   font-family: 'Roboto';
-}
-
-.btn:disabled {
-  cursor: not-allowed;
 }

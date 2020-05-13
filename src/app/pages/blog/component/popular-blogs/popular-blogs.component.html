@@ -1,0 +1,18 @@
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 px-0">
+      <img src="./assets/svgs/trending-up.svg" width="16px" alt="" />&nbsp;
+      <strong>Popular Blogs</strong>
+      <div class="jumbotron p-3 mt-2">
+        <div class="row" *ngFor="let blog of popularBlogs; let i = index">
+          <div class="col">
+            <a [routerLink]="['/blog', blog.id]" class="blog-link">{{
+              blog.title
+            }}</a>
+            <hr class="my-1" *ngIf="i !== popularBlogs.length - 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
