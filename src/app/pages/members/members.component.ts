@@ -11,6 +11,8 @@ export class MembersComponent implements OnInit {
   public isCollapsed = false;
   year = '2ndyear';
   wind = 'yes';
+  isCollap = 'yes';
+
   public corporateMembers = [
     {
       Image: { host: '', path: './assets/images/ur.jpg' },
@@ -432,12 +434,22 @@ export class MembersComponent implements OnInit {
   closeResult = '';
 
   constructor(private modalService: NgbModal) {}
-
+  stud(collap: string) {
+    if (collap === 'yes') {
+      this.isCollap = 'no';
+      this.wind = 'yes';
+    } else {
+      this.isCollap = 'yes';
+      this.wind = 'no';
+    }
+  }
   collap(wind: string) {
     if (wind === 'yes') {
       this.wind = 'no';
+      this.isCollap = 'yes';
     } else {
       this.wind = 'yes';
+      this.isCollap = 'no';
     }
   }
 

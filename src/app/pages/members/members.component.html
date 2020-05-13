@@ -1,36 +1,37 @@
 <!-- -------------------------------------adarsh -------------start--------------------------------------------------------------- -->
 
 <div class="container-fluid" style="margin-top: 60px; margin-left: none;"></div>
-  <div class="heading" style="text-align: center;">
-    <h1>OUR MEMBERS</h1>
-  </div>
-  <div class="upper-container">
-    <p class="nme">President</p>
-  </div>
-  <div class="container-fluid" id="outer">
-  <div class="row"  id="founder">
+<div class="heading">
+  Our Members
+</div>
+<div class="upper-container">
+  <p class="nme">President</p>
+</div>
+
+
+
+<div class="container-fluid" id="outer">
+  <div class="row" id="founder">
+
     <div class="col-3" id="img">
-      <img src="./assets/images/president.jpg" alt="" srcset="" class="avatar"  (click)="open(presidentid)" />
+      <img src="./assets/images/president.jpg" alt="" srcset="" class="avatar" (click)="open(presidentid)" />
     </div>
-    <div class="col-9" id="det" >
-      <div class="container" id="nameplate">
-        Prof. Amiya Kumar Sahoo &nbsp;
+    <div class="col-9" id="det">
+      <div id="nameplate">
+        Prof. Amiya Kumar Sahoo
       </div>
       <hr />
       <p class="msg1">
-        <span>Message from the President:</span><span>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus
-        nulla dolorem perspiciatis eos
-      </span></p>
-      <div class="text-center" id="social1" >
+        <span>Message from the President:</span>
+        <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus
+        </span></p>
+      <div class="text-center" id="social1">
         <a href="#" class="icons1  btn btn-sm  mx-1">
           <img src="./assets/images/social/twitter.png" alt="" />
         </a>
         <a href="#" class="icons1  btn btn-sm  mx-1">
           <img src="./assets/images/social/mail.png" alt="" />
-        </a>
-        <a href="#" class="icons1  btn btn-sm  mx-1">
-          <img src="./assets/images/social/facebook.png" alt="" />
         </a>
         <a href="#" class="icons1  btn btn-sm  mx-1">
           <img src="./assets/images/social/instagram.png" alt="" />
@@ -42,29 +43,28 @@
           <img src="./assets/images/social/linkedin.png" alt="" />
         </a>
       </div>
+
+    </div>
+    <div class="text-center" id="social2" style="align-self: baseline;">
+      <a href="#" class="icons2 btn btn-sm mx-1">
+        <img src="./assets/images/social/twitter.png" alt="" />
+      </a>
+      <a href="#" class="icons2 btn btn-sm mx-1">
+        <img src="./assets/images/social/mail.png" alt="" />
+      </a>
+      <a href="#" class="icons2 btn btn-sm mx-1">
+        <img src="./assets/images/social/instagram.png" alt="" />
+      </a>
+      <a href="#" class="icons2 btn btn-sm mx-1">
+        <img src="./assets/images/social/github.png" alt="" />
+      </a>
+      <a href="#" class="icons2 btn btn-sm mx-1">
+        <img src="./assets/images/social/linkedin.png" alt="" />
+      </a>
     </div>
   </div>
 </div>
-  <div class="text-center" id="social2" style="align-self: baseline;">
-    <a href="#" class="icons2 btn btn-sm mx-1">
-      <img src="./assets/images/social/twitter.png" alt="" />
-    </a>
-    <a href="#" class="icons2 btn btn-sm mx-1">
-      <img src="./assets/images/social/mail.png" alt="" />
-    </a>
-    <a href="#" class="icons2 btn btn-sm mx-1">
-      <img src="./assets/images/social/facebook.png" alt="" />
-    </a>
-    <a href="#" class="icons2 btn btn-sm mx-1">
-      <img src="./assets/images/social/instagram.png" alt="" />
-    </a>
-    <a href="#" class="icons2 btn btn-sm mx-1">
-      <img src="./assets/images/social/github.png" alt="" />
-    </a>
-    <a href="#" class="icons2 btn btn-sm mx-1">
-      <img src="./assets/images/social/linkedin.png" alt="" />
-    </a>
-  </div>
+
 
 
 <ng-template #presidentid let-modal>
@@ -79,7 +79,7 @@
       <b>Prof. Amiya Kumar Sahoo</b><br>
       <span>Computer Science</span><br>
       <span>GIET University, Gunupur</span>
-      <!-- <br>
+      <br>
       <a href="#" class="icon sp btn btn-sm mx-1">
         <img src="./assets/images/social/twitter.png" alt="" />
       </a>
@@ -91,7 +91,7 @@
       </a>
       <a href="#" class="icon sp btn btn-sm mx-1">
         <img src="./assets/images/social/linkedin.png" alt="" />
-      </a> -->
+      </a>
     </div>
     <div style="margin: 7px; text-align: center;">klwec wlec lewc lkwec lkweckjewv lkjwec kje cjweckj wejc wjke
       cjjwelkwerv we we sd fjh
@@ -100,10 +100,8 @@
 
 
 </ng-template>
+
 <!-- -------------------------------------------------------------adarsh------end-------------------------------------------------------  -->
-
-
-
 
 
 
@@ -118,7 +116,7 @@
   </div>
 </a>
 
-<div class="card collapse show" *ngIf="wind==='yes'">
+<div class="card collapse show" *ngIf="wind==='no'">
   <div class="row">
     <div class="box col-lg-3 col-md-4 col-6" *ngFor="let member of corporateMembers">
 
@@ -168,13 +166,15 @@
 
 
 <!------------Student Members------------------------------->
-<a class="student-button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
+
+<!-- (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" -->
+<a class="student-button" (click)="stud(isCollap)">
   <div class="card-header" align="center">
     Students Members
   </div>
 </a>
-
-<div id="collapseExample" [ngbCollapse]="isCollapsed">
+<!-- id="collapseExample" [ngbCollapse]="isCollapsed" -->
+<div *ngIf="isCollap==='no'">
   <div class="card">
 
     <div class="col-12">
