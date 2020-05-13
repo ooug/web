@@ -8,8 +8,6 @@
   <p class="nme">President</p>
 </div>
 
-
-
 <div class="container-fluid" id="outer">
   <div class="row" id="founder">
 
@@ -112,10 +110,10 @@
 
 
 <a class="card-title" (click)="collap(wind)">
-  <div class="card-header1 collapsed" *ngIf="isCollap==='no'">
+  <div class="card-header1 collapsed" *ngIf="wind==='yes'">
     Corporate Members
   </div>
-  <div class="card-header2 collapsed" *ngIf="isCollap==='yes'">
+  <div class="card-header2 collapsed" *ngIf="wind==='no'">
     Corporate Members
   </div>
 </a>
