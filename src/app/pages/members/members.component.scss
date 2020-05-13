@@ -231,14 +231,26 @@ hr {
   margin-left: 37%;
 }
 
-.card-header:after {
+.card-header1:after {
   font-family: 'FontAwesome';
-  content: '\f00d';
+  content: '\f107';
   float: right;
 }
 
+
+.card-header2:after {
+  font-family: 'FontAwesome';
+  content: '\f106';
+  float: right;
+}
+
+
+
+
+
 .card,
-.card-header {
+.card-header1,.card-header2 {
+  padding:1%;
   text-align: center;
   color: #fff;
   width: 100%;
@@ -251,7 +263,7 @@ hr {
   border-radius: 0px !important;
 }
 
-.card-header {
+.card-header1,.card-header2 {
   font: 20px 'Montserrat';
   background: #6a097d;
   cursor: pointer;

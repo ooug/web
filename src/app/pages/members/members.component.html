@@ -110,8 +110,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
 <a class="card-title" (click)="collap(wind)">
-  <div class="card-header collapsed">
+  <div class="card-header1 collapsed" *ngIf="isCollap==='no'">
+    Corporate Members
+  </div>
+  <div class="card-header2 collapsed" *ngIf="isCollap==='yes'">
     Corporate Members
   </div>
 </a>
@@ -161,7 +165,6 @@
   </div>
 </div>
 
-
 <!-- ========================================================================= -->
 
 
@@ -169,7 +172,10 @@
 
 <!-- (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" -->
 <a class="student-button" (click)="stud(isCollap)">
-  <div class="card-header" align="center">
+  <div class="card-header1" align="center" *ngIf="isCollap==='yes'">
+    Students Members
+  </div>
+  <div class="card-header2" align="center" *ngIf="isCollap==='no'">
     Students Members
   </div>
 </a>
