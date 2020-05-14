@@ -22,7 +22,7 @@ export class BlogPageComponent implements OnInit {
     notFound: false,
   };
 
-  updateMetaTags() {
+  private updateMetaTags() {
     this.titleService.setTitle(this.blog.title);
     this.metaService.updateTag({
       name: 'description',

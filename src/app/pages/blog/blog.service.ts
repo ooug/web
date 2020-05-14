@@ -10,6 +10,7 @@ import { stringify } from 'querystring';
 export class BlogService {
   private blogNotifier: any = new Subject<any>();
   private categoryNotifier: any = new Subject<any>();
+  private popularBlogNotifier: any = new Subject<any>();
   private allBlogs = [];
   private allCategories = [];
 
@@ -18,10 +19,11 @@ export class BlogService {
       this.allBlogs = blogs;
       this.blogNotifier.next(this.allBlogs);
       this.findCategories();
+      this.getPopularBlogs();
     });
   }
 
-  findCategories() {
+  public findCategories() {
     JSON.parse(JSON.stringify(this.allBlogs)).forEach((b: any) => {
       if (this.allCategories.indexOf(b.category) === -1) {
         this.allCategories.push(b.category);
@@ -30,7 +32,7 @@ export class BlogService {
     this.categoryNotifier.next(this.allCategories);
   }
 
-  filterBlogsByCategory(categories: string[]) {
+  public filterBlogsByCategory(categories: string[]) {
     if (categories.length === 0) {
       return this.blogNotifier.next(this.allBlogs);
     }
@@ -43,12 +45,12 @@ export class BlogService {
     return this.blogNotifier.next(res);
   }
 
-  searchBlog(str: string) {
+  public searchBlog(str: string) {
     const result = this.allBlogs.filter((b) => {
       if (b.title.toLowerCase().indexOf(str.toLowerCase()) !== -1) {
         return true;
       }
-      if (b.author.toLowerCase().indexOf(str.toLowerCase()) !== -1) {
+      if (b.Author.name.toLowerCase().indexOf(str.toLowerCase()) !== -1) {
         return true;
       }
       if (b.category.toLowerCase().indexOf(str.toLowerCase()) !== -1) {
@@ -62,15 +64,23 @@ export class BlogService {
     this.blogNotifier.next(result);
   }
 
-  fetchBlogs() {
+  public getPopularBlogs() {
+    this.popularBlogNotifier.next(this.allBlogs.slice(0, 5));
+  }
+
+  public fetchBlogs() {
     return this.blogNotifier.next(this.allBlogs);
   }
 
-  getBlogNotifier(): Observable<any> {
+  public getBlogNotifier(): Observable<any> {
     return this.blogNotifier.asObservable();
   }
 
-  getCategoryNotifier(): Observable<any> {
+  public getCategoryNotifier(): Observable<any> {
     return this.categoryNotifier.asObservable();
+  }
+
+  public getPopularBlogNotifier(): Observable<any> {
+    return this.popularBlogNotifier.asObservable();
   }
 }

@@ -142,27 +142,27 @@
             <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
           </a>
 
-        </li>
-        <li [ngbNavItem]="2">
-          <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year==='3rdyear'"><b>3rd year</b>
-            <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
-          </a>
-          <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year!=='3rdyear'"><b>3rd year</b>
-            <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
-          </a>
-        </li>
-        <li [ngbNavItem]="3">
-          <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year==='4thyear'"><b>4th year</b>
-            <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
-          </a>
-          <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year!=='4thyear'"><b>4th year</b>
-            <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
-          </a>
 
-        </li>
-      </ul>
-    </nav>
-  </div>
+          </li>
+          <li [ngbNavItem]="2">
+            <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year==='3rdyear'"><b>3rd year</b>
+              <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+            </a>
+            <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year!=='3rdyear'"><b>3rd year</b>
+              <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+            </a>
+          </li>
+          <li [ngbNavItem]="3">
+            <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year==='4thyear'"><b>4th year</b>
+              <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
+            </a>
+            <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year!=='4thyear'"><b>4th year</b>
+              <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
   <div class="row" *ngIf="year ==='2ndyear'">
     <div class="col-md-3 col-sm-6 col-6" align="center" *ngFor="let member of studentMembers2ndyear">

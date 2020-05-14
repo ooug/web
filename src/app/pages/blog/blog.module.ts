@@ -9,6 +9,7 @@ import { BlogService } from './blog.service';
 import { BlogPageComponent } from './component/blog-page/blog-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PopularBlogsComponent } from './component/popular-blogs/popular-blogs.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
     FilterComponent,
     BlogListComponent,
     BlogPageComponent,
+    PopularBlogsComponent,
   ],
   imports: [
     CommonModule,
