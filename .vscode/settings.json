@@ -48,11 +48,5 @@
 
     "woff"
   ],
-  "cSpell.ignoreWords": [
-    "prefered"
-
-    "woff",
-    "youtube"
-
-  ]
+  "cSpell.ignoreWords": ["prefered", "woff", "youtube"]
 }
