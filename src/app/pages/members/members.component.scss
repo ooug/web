@@ -1,3 +1,45 @@
+//-----------------search-box----------------------------------
+.search_box {
+  top: 4%;
+  left: 1%;
+  z-index: 2;
+  position: fixed;
+  transform: translate(0, 100%);
+  background-color: black;
+  border-radius: 40px;
+}
+
+.input_box {
+  border: none;
+  outline: none;
+  background: none;
+  float: left;
+  color: #fff;
+  padding: 0;
+  font-size: 16px;
+  transition: 0.4s all;
+  width: 0px;
+}
+.bt {
+  border: 1px solid black;
+  background-color: greenyellow;
+  color: #1abc9c;
+  float: right;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.search_box:hover .input_box {
+  width: 200px;
+  padding: 7px;
+}
+
+//=============================================================================================
+
 //---------------Students members---------------------------------
 .container {
   padding: 0;
@@ -90,7 +132,7 @@ col-md-3 {
 .heading {
   font-family: 'Montserrat';
   text-align: center;
-  font-size: 45px;
+  font-size: 35px;
 }
 .upper-container {
   width: 100%;
@@ -118,11 +160,6 @@ col-md-3 {
   font: 1rem 'poppins';
   color: rgb(0, 0, 0);
   margin-left: 25px;
-}
-//president container
-#outer {
-  border-radius: 20px;
-  margin: 3%;
 }
 #founder {
   background-color: transparent;
@@ -167,7 +204,210 @@ hr {
 .icons2 {
   visibility: hidden;
 }
-@media (max-width: 1200px) {
+@media (max-width: 350px) {
+  #founder {
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 0.5%;
+    border-radius: 1px;
+    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+    align-content: center;
+  }
+  #nameplate {
+    font-size: 12px;
+    text-align: center;
+    margin-left: -11%;
+  }
+  .social1 {
+    display: none;
+  }
+  .icons1 {
+    display: none;
+  }
+  .social2 {
+    height: auto;
+  }
+  .icons2 {
+    visibility: visible;
+  }
+  .msg1 {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  #img {
+    padding: 0em;
+  }
+  #det {
+    padding-top: 7px;
+  }
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 450px) {
+  #founder {
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 0.5%;
+    border-radius: 1px;
+    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+    align-content: center;
+  }
+  .heading {
+    font-family: 'Montserrat';
+
+    font-size: 30px;
+  }
+  #nameplate {
+    font-size: 12px;
+    text-align: center;
+    margin-left: -11%;
+  }
+  .social1 {
+    display: none;
+  }
+  .icons1 {
+    display: none;
+  }
+  .social2 {
+    height: auto;
+  }
+  .icons2 {
+    visibility: visible;
+  }
+  .msg1 {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  hr {
+    display: none;
+  }
+  #img {
+    padding: 0em;
+  }
+  #det {
+    padding-top: 7px;
+  }
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 600px) {
+  #founder {
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    padding: 0.5%;
+    border-radius: 1px;
+    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+    align-content: center;
+  }
+  .heading {
+    font-family: 'Montserrat';
+
+    font-size: 30px;
+  }
+  #nameplate {
+    font-size: 12px;
+    text-align: center;
+    margin-left: -11%;
+  }
+  .social1 {
+    display: none;
+  }
+  .icons1 {
+    display: none;
+  }
+  .social2 {
+    height: auto;
+  }
+  .icons2 {
+    visibility: visible;
+  }
+  .msg1 {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  hr {
+    display: none;
+  }
+  #img {
+    padding: 0em;
+  }
+  #det {
+    padding-top: 7px;
+  }
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 900px) {
+  #founder {
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 0.5%;
+    border-radius: 1px;
+    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+    align-content: center;
+  }
+  .heading {
+    font-family: 'Montserrat';
+    font-size: 30px;
+  }
+  #nameplate {
+    font-size: 12px;
+    text-align: center;
+    margin-left: -11%;
+  }
+  .social1 {
+    display: none;
+  }
+  .icons1 {
+    display: none;
+  }
+  .social2 {
+    height: auto;
+  }
+  .icons2 {
+    visibility: visible;
+  }
+  .msg1 {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  hr {
+    display: none;
+  }
+  #img {
+    padding: 0em;
+  }
+  #det {
+    padding-top: 7px;
+  }
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 1100px) {
   #founder {
     width: 100%;
     height: min-content;
@@ -231,39 +471,28 @@ hr {
   margin-left: 37%;
 }
 
-.card-header1:after {
+.card-header:after {
   font-family: 'FontAwesome';
-  content: '\f107';
+
   float: right;
 }
-
-
-.card-header2:after {
-  font-family: 'FontAwesome';
-  content: '\f106';
-  float: right;
-}
-
-
-
-
 
 .card,
-.card-header1,.card-header2 {
-  padding:1%;
+.card-header {
+  padding: 1%;
   text-align: center;
   color: #fff;
   width: 100%;
 }
 
 .card {
-  background: #120136;
+  color: black;
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
   border-radius: 0px !important;
 }
 
-.card-header1,.card-header2 {
+.card-header {
   font: 20px 'Montserrat';
   background: #6a097d;
   cursor: pointer;
@@ -321,7 +550,6 @@ hr {
 
 .info-body {
   margin: 10px;
-  color: #fff;
 }
 
 .information {
