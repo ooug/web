@@ -3,14 +3,14 @@
     <!-- contact and newsletter -->
     <div class="row pt-5 pb-3">
       <!-- OOUG contact -->
-      <div class="col-md-4 col-12 my-auto">
+      <div class="col-md-3 col-12 my-auto">
         <img
           src="./assets/images/footer-logo.png"
           alt="footer_logo"
-          class="img-fluid"
+          class="img-fluid d-md-inline d-block"
           width="50%"
         />
-        <div class="ml-2 mt-2">
+        <div class="ml-2 mt-2 text-md-left text-center">
           OOUG Office,<br />
           2<sup>nd</sup> Floor, CSE Block,<br />
           GIET University, Gunupur.
@@ -22,8 +22,8 @@
       </div>
       <!-- subscribe to newsletter -->
       <div class="col-md-4 col-12 my-auto">
-        <h5>Subscribe to newsletter</h5>
-        <form class="form" [formGroup]="subscribeForm" (ngSubmit)="subscribe()">
+        <h5 class="text-center text-md-left">Subscribe to newsletter</h5>
+        <form class="form mt-2" [formGroup]="subscribeForm">
           <div class="form-group">
             <input
               type="email"
@@ -31,18 +31,30 @@
               name="email"
               id="email"
               class="form-control"
+              width="60%"
               formControlName="email"
-              required
-              email
             />
+            <div
+              class="text-light"
+              *ngIf="
+                formSubmitted &&
+                (subscribeForm.controls.email.invalid ||
+                  subscribeForm.controls.email.pristine)
+              "
+            >
+              <div *ngIf="subscribeForm.controls.email.errors.required">
+                Email required!
+              </div>
+              <div *ngIf="!subscribeForm.controls.email.errors.required">
+                Invalid Email!
+              </div>
+            </div>
           </div>
-          <button
-            type="submit"
-            class="btn btn-primary"
-            [disabled]="subscribeForm.invalid"
-          >
-            Subscribe
-          </button>
+          <div class="text-center text-md-left">
+            <button type="submit" class="btn btn-primary" (click)="subscribe()">
+              Subscribe
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -55,11 +67,15 @@
     <!-- copyright and social icons -->
     <div class="row pb-3">
       <div class="col-md-8 col-12 my-auto">
-        Copyright &copy; 2011-2020 &nbsp;&nbsp; ALL RIGHTS RESERVED | DESIGNED
-        WITH <img src="./assets/svgs/social/heart.svg" alt="Heart" /> BY TEAM
-        OOUG
+        <div class="text-center text-md-left">
+          Copyright &copy; 2011-2020 All Rights Reserved
+        </div>
+        <div class="text-center text-md-left">
+          Designed With
+          <img src="./assets/svgs/social/heart.svg" alt="Heart" /> By Team OOUG
+        </div>
       </div>
-      <div class="col-md-4 col-12">
+      <div class="col-md-4 col-12 text-center text-md-left px-0 my-2">
         <span>
           <a href="#" title="Facebook" class="text-white"
             ><img src="./assets/svgs/social/facebook.svg" alt="facebook" /></a
