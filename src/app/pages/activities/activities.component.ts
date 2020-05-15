@@ -245,6 +245,9 @@ export class ActivitiesComponent implements OnInit {
     }
     this.paused = !this.paused;
   }
+  public BackToTop() {
+    scroll(0, 0);
+  }
 
   ngOnInit(): void {}
 

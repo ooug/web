@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <br><br><br>
-<ngb-carousel class="slid" #carousel [interval]="2000" [pauseOnHover]="pauseOnHover">
+
+<ngb-carousel class="slid" #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" id="top">
   <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 10000">
     <div class="carousel-caption">
 
@@ -12,7 +13,13 @@
   </ng-template>
 </ngb-carousel>
 <br><br>
-
+<div>
+  <span class="back-button">
+    <a (click)="BackToTop()">
+      <img src="./assets/icons/arrow-up.svg" height="30px" width="30px">
+    </a>
+  </span>
+</div>
 
 <nav class="navbar navbar-expand navbar-dark">
   <ul ngbNav #nav="ngbNav" class="nav navbar-nav navbar-right ml-auto">
