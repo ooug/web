@@ -3,16 +3,17 @@
 .back-button {
   left: 86%;
   top: 90%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
 
   border-radius: 50%;
   position: fixed;
   z-index: 2;
-  background-color: #ff0000;
+  background-color: #401a66;
   border: 1px solid #420202;
   color: white;
-  font-size: 25px;
+  text-align: center;
+  font-size: 28px;
 }
 
 //--------------------nav bar----------------------
