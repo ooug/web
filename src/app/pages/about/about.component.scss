@@ -116,8 +116,8 @@ p {
   display: inline-block;
   width: 70px;
   height: 70px;
-  border: 3px solid #82ccdd;
-  color: #82ccdd;
+  border: 3px solid #7539ad;
+  color: #7539ad;
   transform: rotate(45deg);
   margin-bottom: 30px;
   margin-top: 16px;
@@ -129,7 +129,7 @@ p {
   font-size: 26px;
 }
 .service-box:hover .service-icon {
-  background: #82ccdd;
+  background: linear-gradient(to right, #db58ca, #6a2c85);
   color: #ddd;
 }
 .service-title {
