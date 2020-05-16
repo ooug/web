@@ -1,9 +1,12 @@
 #ooug-about {
   width: 100%;
   height: auto;
-  background: linear-gradient(to left, #fa6f65, #8942a8);
-  padding-top: 62px;
+  background: linear-gradient(to left, #9e65fa, #6a2c85);
+  padding-top: 80px;
   padding-bottom: 10px;
+}
+.details {
+  padding: 15px;
 }
 #heading-ooug {
   font-size: 40px;
@@ -11,25 +14,12 @@
   color: white;
   text-shadow: tan;
 }
-#service {
-  font-size: 40px;
-  text-align: center;
-  color: white;
-  text-shadow: tan;
-}
-.details {
-  border-radius: 10px;
-  padding: 15px;
-}
-
 p {
   text-align: justify;
   font-size: 20px;
   padding: 10px;
   font-family: sans-serif;
   color: white;
-  opacity: 100%;
-  transition-duration: initial;
 }
 
 #btn {
@@ -56,13 +46,21 @@ p {
   text-align: center;
   margin: auto;
   display: block;
-  background: black;
+  background: rgb(100, 58, 197);
   border: none;
   font-weight: bold;
   color: whitesmoke;
   text-decoration: none;
   transition: 0.5s;
 }
+
+#service {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  text-shadow: tan;
+}
+
 #our-services {
   width: 100%;
   height: auto;
@@ -74,8 +72,6 @@ p {
 * {
   margin: 0;
   padding: 0;
-  font-family: 'montserrat', sans-serif;
-  box-sizing: border-box;
 }
 
 .services-section {
