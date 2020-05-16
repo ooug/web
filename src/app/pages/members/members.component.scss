@@ -40,11 +40,12 @@
 .bt {
   border: 1px solid #420202;
   background-color: #401a66;
-  color: #1abc9c;
+  color: white;
   float: right;
   text-decoration: none;
   width: 45px;
   height: 45px;
+  font-size: 21px;
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
@@ -337,6 +338,55 @@ hr {
 
     font-size: 30px;
   }
+  #nameplate {
+    font-size: 12px;
+    text-align: center;
+    margin-left: -11%;
+  }
+  .social1 {
+    display: none;
+  }
+  .icons1 {
+    display: none;
+  }
+  .social2 {
+    height: auto;
+  }
+  .icons2 {
+    visibility: visible;
+  }
+  .msg1 {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  hr {
+    display: none;
+  }
+  #img {
+    padding: 0em;
+  }
+  #det {
+    padding-top: 7px;
+  }
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 900px) {
+  #founder {
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding: 0.5%;
+    border-radius: 1px;
+    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+    align-content: center;
+  }
+
   #nameplate {
     font-size: 12px;
     text-align: center;
