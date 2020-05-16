@@ -1,3 +1,20 @@
+//------------------back to top-------------------
+
+.back-button {
+  left: 86%;
+  top: 90%;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 2;
+  background-color: #401a66;
+  border: 1px solid #420202;
+  color: white;
+  font-size: 28px;
+}
+
 //-----------------search-box----------------------------------
 .search_box {
   top: 4%;
@@ -21,8 +38,8 @@
   width: 0px;
 }
 .bt {
-  border: 1px solid black;
-  background-color: greenyellow;
+  border: 1px solid #420202;
+  background-color: #401a66;
   color: #1abc9c;
   float: right;
   text-decoration: none;
@@ -36,6 +53,7 @@
 .search_box:hover .input_box {
   width: 200px;
   padding: 7px;
+  padding-left: 17px;
 }
 
 //=============================================================================================
@@ -150,7 +168,7 @@ col-md-3 {
   height: auto;
   border-radius: 50%;
   margin: none;
-  z-index: 2;
+  z-index: 1;
 }
 //text formats
 .nme {
@@ -165,13 +183,13 @@ col-md-3 {
   background-color: transparent;
   margin-top: 10px;
 
-  margin-left: 27.5%;
+  margin-left: 40%;
   width: 45%;
   padding: 0.5%;
 }
 
 #nameplate {
-  z-index: 1;
+  z-index: 0;
   border-radius: 30px;
   background-color: blueviolet;
   width: 120%;
@@ -193,7 +211,7 @@ hr {
   padding-top: 20px;
 }
 #img {
-  z-index: 2;
+  z-index: 1;
   margin: 0em;
   padding: 0em;
 }
@@ -308,7 +326,7 @@ hr {
     height: min-content;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 10%;
+
     padding: 0.5%;
     border-radius: 1px;
     box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
@@ -355,111 +373,7 @@ hr {
     padding: 0;
   }
 }
-@media (max-width: 900px) {
-  #founder {
-    width: 100%;
-    height: min-content;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 0;
-    padding: 0.5%;
-    border-radius: 1px;
-    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
-    align-content: center;
-  }
-  .heading {
-    font-family: 'Montserrat';
-    font-size: 30px;
-  }
-  #nameplate {
-    font-size: 12px;
-    text-align: center;
-    margin-left: -11%;
-  }
-  .social1 {
-    display: none;
-  }
-  .icons1 {
-    display: none;
-  }
-  .social2 {
-    height: auto;
-  }
-  .icons2 {
-    visibility: visible;
-  }
-  .msg1 {
-    font-size: 12px;
-    color: rgb(0, 0, 0);
-    margin-left: 20px;
-  }
-  hr {
-    display: none;
-  }
-  #img {
-    padding: 0em;
-  }
-  #det {
-    padding-top: 7px;
-  }
-  .avatar {
-    margin: 0;
-    padding: 0;
-  }
-}
-@media (max-width: 1100px) {
-  #founder {
-    width: 100%;
-    height: min-content;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 0;
-    padding: 0.5%;
-    border-radius: 1px;
-    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
-    align-content: center;
-  }
-  .heading {
-    font-family: 'Montserrat';
 
-    font-size: 30px;
-  }
-  #nameplate {
-    font-size: 12px;
-    text-align: center;
-    margin-left: -11%;
-  }
-  .social1 {
-    display: none;
-  }
-  .icons1 {
-    display: none;
-  }
-  .social2 {
-    height: auto;
-  }
-  .icons2 {
-    visibility: visible;
-  }
-  .msg1 {
-    font-size: 12px;
-    color: rgb(0, 0, 0);
-    margin-left: 20px;
-  }
-  hr {
-    display: none;
-  }
-  #img {
-    padding: 0em;
-  }
-  #det {
-    padding-top: 7px;
-  }
-  .avatar {
-    margin: 0;
-    padding: 0;
-  }
-}
 // -- ------------------------------------------------------adarsh------end----------------------------------------------
 
 // --------------------------------CSS of Corporate members--------------------------------------
@@ -516,12 +430,6 @@ hr {
 .modal-header {
   width: 100%;
   border-bottom: 0;
-}
-
-.modal-header,
-.close {
-  background-image: url('../../../assets/images/background.jpg');
-  color: #dbdbdd;
 }
 
 .modal-content {

@@ -15,7 +15,7 @@ export class MembersComponent implements OnInit {
 
   public corporateMembers = [
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 1',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -26,7 +26,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 1',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -37,7 +37,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 1',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -48,7 +48,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 2',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -59,7 +59,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 3',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -70,7 +70,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 4',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -81,7 +81,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 5',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -92,7 +92,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -103,7 +103,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -114,7 +114,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -125,7 +125,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -136,7 +136,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       worksAt: 'This Company',
       description: 'Some Description',
@@ -150,7 +150,7 @@ export class MembersComponent implements OnInit {
   public studentMembers2ndyear = [
     {
       id: 'a1',
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 1',
       branch: 'CSE',
       description: 'Some Description',
@@ -163,7 +163,7 @@ export class MembersComponent implements OnInit {
     },
     {
       id: 'a2',
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 2',
       branch: 'CSE',
       description: 'Some Description',
@@ -175,7 +175,7 @@ export class MembersComponent implements OnInit {
     },
     {
       id: 'a3',
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 3',
       branch: 'CSE',
       description: 'Some Description',
@@ -187,7 +187,7 @@ export class MembersComponent implements OnInit {
     },
     {
       id: 'a4',
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 4',
       branch: 'ECE',
       description: 'Some Description',
@@ -199,7 +199,7 @@ export class MembersComponent implements OnInit {
     },
     {
       id: 'a5',
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 5',
       branch: 'CSE',
       description: 'Some Description',
@@ -211,7 +211,7 @@ export class MembersComponent implements OnInit {
     },
     {
       id: 'a6',
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 5',
       branch: 'CSE',
       description: 'Some Description',
@@ -223,7 +223,7 @@ export class MembersComponent implements OnInit {
     },
     {
       id: 'a7',
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       branch: 'ECE',
       description: 'Some Description',
@@ -235,7 +235,7 @@ export class MembersComponent implements OnInit {
     },
     {
       id: 'a8',
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       branch: 'ECE',
       description: 'Some Description',
@@ -249,7 +249,7 @@ export class MembersComponent implements OnInit {
 
   public studentMembers3rdyear = [
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 1',
       branch: 'CSE',
       description: 'Some Description',
@@ -261,7 +261,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 2',
       branch: 'CSE',
       description: 'Some Description',
@@ -272,7 +272,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 3',
       branch: 'CSE',
       description: 'Some Description',
@@ -283,7 +283,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 4',
       branch: 'ECE',
       description: 'Some Description',
@@ -294,7 +294,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 5',
       branch: 'CSE',
       description: 'Some Description',
@@ -305,7 +305,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 5',
       branch: 'CSE',
       description: 'Some Description',
@@ -316,7 +316,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       branch: 'ECE',
       description: 'Some Description',
@@ -327,7 +327,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       branch: 'ECE',
       description: 'Some Description',
@@ -341,7 +341,7 @@ export class MembersComponent implements OnInit {
 
   public studentMembers4thyear = [
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 1',
       branch: 'CSE',
       description: 'Some Description',
@@ -353,7 +353,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 2',
       branch: 'CSE',
       description: 'Some Description',
@@ -364,7 +364,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 3',
       branch: 'CSE',
       description: 'Some Description',
@@ -375,7 +375,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 4',
       branch: 'ECE',
       description: 'Some Description',
@@ -386,7 +386,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 5',
       branch: 'CSE',
       description: 'Some Description',
@@ -397,7 +397,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 5',
       branch: 'CSE',
       description: 'Some Description',
@@ -408,7 +408,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       branch: 'ECE',
       description: 'Some Description',
@@ -419,7 +419,7 @@ export class MembersComponent implements OnInit {
       },
     },
     {
-      Image: { host: '', path: './assets/images/ur.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 6',
       branch: 'ECE',
       description: 'Some Description',
@@ -430,8 +430,14 @@ export class MembersComponent implements OnInit {
       },
     },
   ];
-
   closeResult = '';
+  BackToTop() {
+    scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
 
   constructor(private modalService: NgbModal) {}
   stud(collap: string) {
