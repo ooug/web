@@ -1,6 +1,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <br><br><br>
-<ngb-carousel class="slid" #carousel [interval]="2000" [pauseOnHover]="pauseOnHover">
+
+<a (click)="BackToTop()">
+  <span class="back-button">
+    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+  </span>
+</a>
+
+<ngb-carousel class="slid" #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" id="top">
   <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 10000">
     <div class="carousel-caption">
 
@@ -12,6 +19,8 @@
   </ng-template>
 </ngb-carousel>
 <br><br>
+
+
 
 
 <nav class="navbar navbar-expand navbar-dark">
@@ -38,14 +47,6 @@
   </ul>
 </nav>
 
-<!-- -----------------------------------------------------------------------
-<form class="search-bar form-inline my-2 my-lg-0">
-  <input class="form-control mr-sm-2" type="search" placeholder="Type to Search" aria-label="Search" />
-  <button class="btn my-2 my-sm-0" type="submit">
-    <i class="fa fa-search" aria-hidden="true"></i>
-  </button>
-</form>
------------------------------------------------------------------------>
 
 
 <div class="container" *ngIf="active === 'workshop'">
