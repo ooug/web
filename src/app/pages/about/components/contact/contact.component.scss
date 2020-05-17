@@ -61,3 +61,31 @@ img {
 .card-body {
   width: 100%;
 }
+.send-btn {
+  width: 30%;
+  height: 40px;
+  border-radius: 20px;
+  align-self: center;
+  text-align: center;
+  margin: auto;
+  display: block;
+  background: rgb(147, 32, 192);
+  border: none;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.send-btn:hover {
+  width: 33%;
+  height: 40px;
+  border-radius: 20px;
+  align-self: center;
+  text-align: center;
+  margin: auto;
+  display: block;
+  background: rgb(147, 32, 192);
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
