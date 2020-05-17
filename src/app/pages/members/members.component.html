@@ -1,17 +1,28 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-----------------------search box-------------------------------->
 
 <div class="search_box">
   <input class="input_box" type="text" name="" placeholder="search name" />
   <a class="bt">
-    <img src="./assets/icons/search.svg" height="15px" width="15px" />
+    <i class="fa fa-search" aria-hidden="true"></i>
   </a>
 </div>
 
 <!----------------------------------------------------------------->
+<a (click)="BackToTop()">
+  <span class="back-button">
+    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+  </span>
+</a>
 
 <!-- -------------------------------------adarsh -------------start--------------------------------------------------------------- -->
-<div class="container-fluid" style="margin-top: 60px; margin-left: none;"></div>
-<div class="heading">Meet The <b>Team</b></div>
+
+<br><br><br>
+<div class="heading">
+  Meet The <b>Team</b>
+</div>
+
+
 
 <div class="card-header">
   President
@@ -20,13 +31,7 @@
 <div class="container-fluid">
   <div class="row" id="founder">
     <div class="col-3" id="img">
-      <img
-        src="./assets/images/president.jpg"
-        alt=""
-        srcset=""
-        class="avatar"
-        (click)="open(presidentid)"
-      />
+      <img src="./assets/svgs/ooug.svg" alt="" srcset="" class="avatar" (click)="open(presidentid)" />
     </div>
     <div class="col-9" id="det">
       <div id="nameplate">
@@ -79,21 +84,11 @@
 
 <ng-template #presidentid let-modal>
   <div class="modal-body" style="width: 100%; background-color: black;">
-    <button
-      type="button"
-      class="close"
-      aria-label="Close"
-      (click)="modal.dismiss('Cross click')"
-    >
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
     <div class="modal-img">
-      <img
-        class="modal-img"
-        src="./assets/images/president.jpg"
-        height="100%"
-        width="100%"
-      />
+      <img class="modal-img" src="./assets/svgs/ooug.svg" height="100%" width="100%" />
     </div>
     <div align="center">
       <b>Prof. Amiya Kumar Sahoo</b><br />
@@ -137,57 +132,27 @@
     <nav class="navbar navbar-expand">
       <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
         <li [ngbNavItem]="1">
-          <a
-            class="bar-but nav-link"
-            (click)="student('2ndyear')"
-            *ngIf="year === '2ndyear'"
-            ><b>2nd year</b>
+          <a class="bar-but nav-link" (click)="student('2ndyear')" *ngIf="year === '2ndyear'"><b>2nd year</b>
             <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
           </a>
-          <a
-            class="bar-but nav-link"
-            (click)="student('2ndyear')"
-            *ngIf="year !== '2ndyear'"
-            ><b>2nd year</b>
-            <div
-              style="background-color: rgb(226, 226, 226); height: 1px;"
-            ></div>
+          <a class="bar-but nav-link" (click)="student('2ndyear')" *ngIf="year !== '2ndyear'"><b>2nd year</b>
+            <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
           </a>
         </li>
         <li [ngbNavItem]="2">
-          <a
-            class="bar-but nav-link"
-            (click)="student('3rdyear')"
-            *ngIf="year === '3rdyear'"
-            ><b>3rd year</b>
+          <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year === '3rdyear'"><b>3rd year</b>
             <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
           </a>
-          <a
-            class="bar-but nav-link"
-            (click)="student('3rdyear')"
-            *ngIf="year !== '3rdyear'"
-            ><b>3rd year</b>
-            <div
-              style="background-color: rgb(226, 226, 226); height: 1px;"
-            ></div>
+          <a class="bar-but nav-link" (click)="student('3rdyear')" *ngIf="year !== '3rdyear'"><b>3rd year</b>
+            <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
           </a>
         </li>
         <li [ngbNavItem]="3">
-          <a
-            class="bar-but nav-link"
-            (click)="student('4thyear')"
-            *ngIf="year === '4thyear'"
-            ><b>4th year</b>
+          <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year === '4thyear'"><b>4th year</b>
             <div style="background-color: rgb(255, 0, 0); height: 2px;"></div>
           </a>
-          <a
-            class="bar-but nav-link"
-            (click)="student('4thyear')"
-            *ngIf="year !== '4thyear'"
-            ><b>4th year</b>
-            <div
-              style="background-color: rgb(226, 226, 226); height: 1px;"
-            ></div>
+          <a class="bar-but nav-link" (click)="student('4thyear')" *ngIf="year !== '4thyear'"><b>4th year</b>
+            <div style="background-color: rgb(226, 226, 226); height: 1px;"></div>
           </a>
         </li>
       </ul>
@@ -195,17 +160,10 @@
   </div>
 
   <div class="row" *ngIf="year === '2ndyear'">
-    <div
-      class="col-md-3 col-sm-6 col-6"
-      align="center"
-      *ngFor="let member of studentMembers2ndyear"
-    >
+    <div class="col-md-3 col-sm-6 col-6" align="center" *ngFor="let member of studentMembers2ndyear">
       <a (click)="open(id)">
         <div class="member-img">
-          <img
-            class="member-img"
-            src="{{ member.Image.host + member.Image.path }}"
-          />
+          <img class="member-img" src="{{ member.Image.host + member.Image.path }}" />
         </div>
         <div>
           <b>{{ member.name }}</b>
@@ -215,19 +173,10 @@
     </div>
   </div>
   <div class="row" *ngIf="year === '3rdyear'">
-    <div
-      class="col-md-3 col-sm-4 col-6"
-      align="center"
-      *ngFor="let member of studentMembers3rdyear"
-    >
+    <div class="col-md-3 col-sm-4 col-6" align="center" *ngFor="let member of studentMembers3rdyear">
       <a class="btn-outline-primary" (click)="open(id)">
         <div class="member-img">
-          <img
-            class="member-img"
-            src="{{ member.Image.host + member.Image.path }}"
-            height="100%"
-            width="100%"
-          />
+          <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%" />
         </div>
         <div>
           <b>{{ member.name }}</b>
@@ -237,19 +186,10 @@
     </div>
   </div>
   <div class="row" *ngIf="year === '4thyear'">
-    <div
-      class="col-md-3 col-sm-4 col-6"
-      align="center"
-      *ngFor="let member of studentMembers4thyear"
-    >
+    <div class="col-md-3 col-sm-4 col-6" align="center" *ngFor="let member of studentMembers4thyear">
       <a class="btn-outline-primary" (click)="open(id)">
         <div class="member-img">
-          <img
-            class="member-img"
-            src="{{ member.Image.host + member.Image.path }}"
-            height="100%"
-            width="100%"
-          />
+          <img class="member-img" src="{{ member.Image.host + member.Image.path }}" height="100%" width="100%" />
         </div>
         <div>
           <b>{{ member.name }}</b>
@@ -262,18 +202,13 @@
 
 <ng-template #id let-modal>
   <div class="modal-body">
-    <button
-      type="button"
-      class="close"
-      aria-label="Close"
-      (click)="modal.dismiss('Cross click')"
-    >
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
     <div class="row">
       <div class="col-md-4">
         <div class="modal-img">
-          <img class="modal-img" src="./assets/images/ur.jpg" />
+          <img class="modal-img" src="./assets/svgs/ooug.svg" />
         </div>
       </div>
       <div class="col-md-8">
@@ -300,7 +235,7 @@
     <div style="margin: 7px;">
       <div class="row">
         <div class="col-2">
-          <img src="./assets/images/z.png" width="100%" height="100%" />
+          <img src="./assets/svgs/ooug.svg" width="100%" height="100%" />
         </div>
         <div class="col-10">
           <div style="margin-left: 4px;">
@@ -312,7 +247,7 @@
       </div>
       <div class="row">
         <div class="col-2">
-          <img src="./assets/images/z.png" width="100%" height="100%" />
+          <img src="./assets/svgs/ooug.svg" width="100%" height="100%" />
         </div>
         <div class="col-10">
           <div style="margin-left: 4px;">
@@ -335,50 +270,11 @@
 
 <div class="card collapse show">
   <div class="row">
-    <div
-      class="box col-lg-3 col-md-4 col-6"
-      *ngFor="let member of corporateMembers"
-    >
-      <ng-template #content let-modal>
-        <div class="modal-header">
-          <img class="modal-image" src="./assets/images/demo1.jpg" alt="" />
-          <button
-            type="button"
-            class="close"
-            aria-label="Close"
-            (click)="modal.dismiss('Cross click')"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-content">
-          <div align="center">
-            <span style="font: 17px 'Montserrat';">Name</span><br />
-            <span style="font: 16px 'Montserrat';">Organization</span><br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-              harum nulla, quam vel aliquid voluptatum repellat accusamus velit
-              illum dicta nam repellendus provident.
-            </p>
-            <a href="#" class="iconsp btn btn-sm mx-1">
-              <img src="./assets/images/social/twitter.svg" alt="" />
-            </a>
-            <a href="$" class="iconsp btn btn-sm mx-1">
-              <img src="./assets/images/social/instagram.svg" alt="" />
-            </a>
-            <a href="#" class="iconsp btn btn-sm mx-1">
-              <img src="./assets/images/social/github.svg" alt="" />
-            </a>
-            <a href="#" class="iconsp btn btn-sm mx-1">
-              <img src="./assets/images/social/linkedin.svg" alt="" />
-            </a>
-          </div>
-        </div>
-      </ng-template>
+    <div class="box col-lg-3 col-md-4 col-6" *ngFor="let member of corporateMembers">
 
-      <a (click)="openVerticallyCentered(content)"
-        ><img class="image" src="./assets/images/demo1.jpg" alt=""
-      /></a>
+
+      <a (click)="openVerticallyCentered(content)"><img class="image" src="{{ member.Image.host + member.Image.path }}"
+          alt="" /></a>
       <div class="info-body">
         <h3 class="information">Name</h3>
         <h4 class="information">Organization</h4>
@@ -386,5 +282,35 @@
     </div>
   </div>
 </div>
-
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <img class="modal-image" src="./assets/svgs/ooug.svg" alt="" />
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-content">
+    <div align="center">
+      <span style="font: 17px 'Montserrat';">Name</span><br />
+      <span style="font: 16px 'Montserrat';">Organization</span><br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+        harum nulla, quam vel aliquid voluptatum repellat accusamus velit
+        illum dicta nam repellendus provident.
+      </p>
+      <a href="#" class="iconsp btn btn-sm mx-1">
+        <img src="./assets/images/social/twitter.svg" alt="" />
+      </a>
+      <a href="$" class="iconsp btn btn-sm mx-1">
+        <img src="./assets/images/social/instagram.svg" alt="" />
+      </a>
+      <a href="#" class="iconsp btn btn-sm mx-1">
+        <img src="./assets/images/social/github.svg" alt="" />
+      </a>
+      <a href="#" class="iconsp btn btn-sm mx-1">
+        <img src="./assets/images/social/linkedin.svg" alt="" />
+      </a>
+    </div>
+  </div>
+</ng-template>
 <!-- ========================================================================= -->

@@ -1,3 +1,21 @@
+//------------------back to top-------------------
+
+.back-button {
+  left: 86%;
+  top: 90%;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  border-radius: 50%;
+  position: fixed;
+  z-index: 2;
+  background-color: #401a66;
+  border: 1px solid #420202;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+}
+
 //--------------------nav bar----------------------
 .bar-but {
   color: black;
@@ -5,11 +23,11 @@
   font-size: 14px;
   padding: 7px;
   margin: 10px;
-  background: linear-gradient(145deg, rgb(181, 176, 247), blue);
   cursor: pointer;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 .active {
-  background-color: blue;
+  background-color: #562d80;
   color: white;
   font-size: 14px;
   padding: 7px;
@@ -17,7 +35,7 @@
   cursor: pointer;
 }
 .bar-but:hover {
-  background-color: rgb(17, 0, 255);
+  background-color: #764ba2;
 }
 //-----------------slide bar------------------------
 ngb-carousel {
