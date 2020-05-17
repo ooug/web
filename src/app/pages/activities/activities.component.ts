@@ -16,131 +16,68 @@ export class ActivitiesComponent implements OnInit {
   constructor(config: NgbCarouselConfig) {
     config.interval = 10000;
   }
-  active = 'all';
-  public all = [
-    {
-      Image: { host: '', path: './assets/images/1.jpg' },
-      name: 'Activity 1',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/2.jpg' },
-      name: 'Activity 2',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 3',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/3.jpg' },
-      name: 'Activity 4',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 5',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/4.jpg' },
-      name: 'Activity 6',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/1.jpg' },
-      name: 'Activity 1',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/2.jpg' },
-      name: 'Activity 2',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 3',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-  ];
+  active = 'workshop';
+  tap = 1;
+
   public workshop = [
     {
-      Image: { host: '', path: './assets/images/2.jpg' },
-      name: 'Activity 1',
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
+      name: 'web development',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 2',
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
+      name: 'Android',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/1.jpg' },
-      name: 'Activity 3',
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
+      name: 'Python',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 4',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/3.jpg' },
-      name: 'Activity 5',
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
+      name: 'web development',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/4.jpg' },
-      name: 'Activity 6',
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
+      name: 'Machine Learning',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/2.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 1',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/3.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 2',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
@@ -150,63 +87,63 @@ export class ActivitiesComponent implements OnInit {
 
   public techbhukkads = [
     {
-      Image: { host: '', path: './assets/images/1.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 1',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/4.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 2',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/2.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 4',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 5',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/4.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 6',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/1.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 1',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/3.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 2',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
@@ -216,63 +153,63 @@ export class ActivitiesComponent implements OnInit {
 
   public farewell = [
     {
-      Image: { host: '', path: './assets/images/1.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 1',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/2.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 2',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/3.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 4',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 5',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/4.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 6',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/1.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 1',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/2.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 2',
       place: 'Some Place',
       date: '24/04/2020',
       description: 'Some Description',
     },
     {
-      Image: { host: '', path: './assets/images/gray.jpg' },
+      Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Activity 3',
       place: 'Some Place',
       date: '24/04/2020',
@@ -283,28 +220,22 @@ export class ActivitiesComponent implements OnInit {
   // slider------------------------
 
   images = [
-    './assets/images/ooug.png',
-    './assets/images/1.jpg',
-    './assets/images/2.jpg',
-    './assets/images/3.jpg',
-    './assets/images/4.jpg',
-    './assets/images/bg.jpg',
-    './assets/images/e.jpg',
-  ];
-  slidertitle = [
-    'ooug logo',
-    'workshop on python',
-    'web develop workshop',
-    'selebration party',
-    'Motivational speach is delivered by the president',
-    'Accept the challenges so that you can feel the exhilaration of victory.',
-    'Failure will never overtake me if my determination to succeed is strong enough.',
+    './assets/svgs/ooug.svg',
+    './assets/svgs/ooug.svg',
+    './assets/svgs/ooug.svg',
+    './assets/svgs/ooug.svg',
+    './assets/svgs/ooug.svg',
+    './assets/svgs/ooug.svg',
   ];
 
   paused = false;
   pauseOnHover = false;
 
   @ViewChild('carousel', { static: true }) carousel: NgbCarousel;
+
+  buttons(but: number) {
+    this.tap = but;
+  }
 
   togglePaused() {
     if (this.paused) {
@@ -313,6 +244,13 @@ export class ActivitiesComponent implements OnInit {
       this.carousel.pause();
     }
     this.paused = !this.paused;
+  }
+  public BackToTop() {
+    scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 
   ngOnInit(): void {}

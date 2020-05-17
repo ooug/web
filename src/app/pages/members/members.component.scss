@@ -1,241 +1,556 @@
-//-----------------flip----------
-.box {
-  background-image: url('../../../assets/images/ooug.png');
-}
+//------------------back to top-------------------
 
-.midd {
-  position: inherit;
-  top: -100%;
-}
-
-.col-md-5 {
+.back-button {
+  left: 86%;
+  top: 90%;
+  height: 45px;
+  width: 45px;
   text-align: center;
-  border-radius: 5%;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 2;
+  background-color: #401a66;
+  border: 1px solid #420202;
+  color: white;
+  font-size: 28px;
 }
 
-.front,
-.back {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  backface-visibility: hidden;
-  transition: transform 0.6s linear;
+//-----------------search-box----------------------------------
+.search_box {
+  top: 4%;
+  left: 1%;
+  z-index: 2;
+  position: fixed;
+  transform: translate(0, 100%);
+  background-color: black;
+  border-radius: 40px;
 }
 
-.front {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-.back {
-  background: #fff;
-  transform: perspective(600px) rotateY(180deg);
-}
-
-.box:hover .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-
-.box:hover .back {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-//--------------------------------------------------
-
-.but {
+.input_box {
   border: none;
-  background-color: rgb(119, 96, 80);
-  color: #fdfbf9;
+  outline: none;
+  background: none;
+  float: left;
+  color: #fff;
+  padding: 0;
+  font-size: 16px;
+  transition: 0.4s all;
+  width: 0px;
 }
-.but:hover {
-  border: none;
-}
-
-.det-box {
-  background-color: rgb(240, 238, 236);
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-.det-box:hover {
-  position: relative;
-  box-shadow: 0 0 1rem #000000;
-  transition: box-shadow 0.3s;
-  background-color: rgb(199, 195, 189);
-}
-.name {
-  font-family: cursive;
-  color: black;
-}
-.msg {
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  color: rgb(0, 0, 0);
+.bt {
+  border: 1px solid #420202;
+  background-color: #401a66;
+  color: white;
+  float: right;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  font-size: 21px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
 }
 
-.col-md-5 {
+.search_box:hover .input_box {
+  width: 200px;
+  padding: 7px;
+  padding-left: 17px;
+}
+
+//=============================================================================================
+
+//---------------Students members---------------------------------
+.container {
   padding: 0;
   margin: 0;
 }
-.col-md-6 {
+.row {
+  padding: 0;
+  margin: 0;
+}
+col-6 {
   padding: 0;
 }
 
-.view {
-  background-image: url('../../../assets/images/gray.jpg');
-  transition: abs;
-  background-size: cover !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  position: relative;
+.bar-but {
+  color: #00909e;
+}
+col-md-3 {
+  padding: 0;
+  margin: 0;
 }
 
-//--------------------------------
-//------------president------------------
-
-.avatar {
-  vertical-align: middle;
-  width: 500px;
-  height: 500px;
+.bar-but:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+.stud-button {
+  background-color: #6a097d;
+  color: white;
+  padding: 3px;
+  font: 20px 'Montserrat';
+}
+.student-button {
+  border: none;
+}
+.member-img {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
 }
+.col-md-4 {
+  padding: 0;
+  margin: 0;
+}
+.col-md-8 {
+  padding: 0;
+  margin: 0;
+}
+.col-2 {
+  padding: 0;
+  margin: 0;
+}
+.col-10 {
+  padding: 0;
+  margin: 0;
+}
 
+.modal-body {
+  padding: 0;
+  color: white;
+  width: 100%;
+  background: #000;
+}
+.modal-img {
+  margin-top: 7px;
+  margin-bottom: 12px;
+  height: 130px;
+  width: 130px;
+}
+.member-det {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+@media (max-width: 900px) {
+  .modal-img {
+    margin-top: 7px;
+    margin-bottom: 12px;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+  }
+  .member-det {
+    text-align: center;
+  }
+}
+
+//-------------------------------------------------------------------
+
+//-------------------------------------adarsh -------------start-------------------------------------------------------------------
+
+.heading {
+  font-family: 'Montserrat';
+  text-align: center;
+  font-size: 35px;
+}
+.upper-container {
+  width: 100%;
+  background-color: #6a097d;
+  color: white;
+  text-align: center;
+}
+
+.upper-container p.nme {
+  font: 25px 'Montserrat';
+  padding: 0.5%;
+}
+.avatar {
+  width: 110%;
+  height: auto;
+  border-radius: 50%;
+  margin: none;
+  z-index: 1;
+  background-color: white;
+}
+//text formats
 .nme {
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  font-size: xx-large;
-  color: rgba(0, 0, 0, 0.514);
+  color: #fff;
 }
-
 .msg1 {
-  font-family: Brush Script MT, Brush Script Std, cursive;
+  font: 1rem 'poppins';
   color: rgb(0, 0, 0);
-  font-size: xx-large;
+  margin-left: 25px;
+}
+#founder {
+  background-color: transparent;
+  margin-top: 10px;
+  margin-left: 27%;
+  width: 45%;
+  padding: 0.5%;
 }
 
-.msg2 {
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  color: rgb(0, 0, 0);
-  font-size: x-large;
+#nameplate {
+  z-index: 0;
+  border-radius: 30px;
+  background-color: blueviolet;
+  width: 120%;
+  margin-left: -25%;
+  padding: 5px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Montserrat';
+}
+hr {
+  margin: 10px;
+}
+
+.icons:hover {
+  filter: brightness(150%);
+}
+#det {
+  padding-top: 20px;
+}
+#img {
+  z-index: 1;
+  margin: 0em;
+  padding: 0em;
+}
+.social2 {
+  display: none;
+}
+
+.icons2 {
+  visibility: hidden;
+}
+@media (max-width: 350px) {
+  #founder {
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 0.5%;
+    border-radius: 1px;
+    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+    align-content: center;
+  }
+  #nameplate {
+    font-size: 12px;
+    text-align: center;
+    margin-left: -11%;
+  }
+  .social1 {
+    display: none;
+  }
+  .icons1 {
+    display: none;
+  }
+  .social2 {
+    height: auto;
+  }
+  .icons2 {
+    visibility: visible;
+  }
+  .msg1 {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  #img {
+    padding: 0em;
+  }
+  #det {
+    padding-top: 7px;
+  }
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 450px) {
+  #founder {
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 0.5%;
+    border-radius: 1px;
+    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+    align-content: center;
+  }
+  .heading {
+    font-family: 'Montserrat';
+
+    font-size: 30px;
+  }
+  #nameplate {
+    font-size: 12px;
+    text-align: center;
+    margin-left: -11%;
+  }
+  .social1 {
+    display: none;
+  }
+  .icons1 {
+    display: none;
+  }
+  .social2 {
+    height: auto;
+  }
+  .icons2 {
+    visibility: visible;
+  }
+  .msg1 {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  hr {
+    display: none;
+  }
+  #img {
+    padding: 0em;
+  }
+  #det {
+    padding-top: 7px;
+  }
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 600px) {
+  #founder {
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding: 0.5%;
+    border-radius: 1px;
+    box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
+    align-content: center;
+  }
+  .heading {
+    font-family: 'Montserrat';
+
+    font-size: 30px;
+  }
+  #nameplate {
+    font-size: 12px;
+    text-align: center;
+    margin-left: -11%;
+  }
+  .social1 {
+    display: none;
+  }
+  .icons1 {
+    display: none;
+  }
+  .social2 {
+    height: auto;
+  }
+  .icons2 {
+    visibility: visible;
+  }
+  .msg1 {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  hr {
+    display: none;
+  }
+  #img {
+    padding: 0em;
+  }
+  #det {
+    padding-top: 7px;
+  }
+  .avatar {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// -- ------------------------------------------------------adarsh------end----------------------------------------------
+
+// --------------------------------CSS of Corporate members--------------------------------------
+
+.modal-image {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin-left: 37%;
+}
+
+.card-header:after {
+  font-family: 'FontAwesome';
+
+  float: right;
+}
+
+.card,
+.card-header {
+  padding: 1%;
+  text-align: center;
+  color: #fff;
+  width: 100%;
 }
 
 .card {
-  transition: box-shadow 0.3s;
-  border: 0px;
-  background-color: transparent;
-}
-
-.founder {
-  background-color: #b4b4ff41;
-  margin: 3%;
-  padding: 3%;
-  border-radius: 1px;
-  box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.884);
-  border-radius: 2%;
-}
-
-//social media links
-.iconsp {
-  background-color: rgb(228, 68, 68);
-}
-.iconsp:hover {
-  background-color: rgb(2, 0, 0);
-}
-.icons:hover {
-  background-color: rgb(2, 0, 0);
-}
-
-.flip-box {
-  background-image: url('../../../assets/images/ooug.png');
-  background-size: cover;
-  width: 500px;
-  height: 500px;
-  border: none;
-  perspective: 1000px;
-}
-.flip-box-inner {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-.flip-box-front,
-.flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.flip-box-front {
-  background-color: transparent;
   color: black;
-}
-.flip-box-back {
-  border-radius: 50%;
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-.flip-box-member {
-  background-image: url('../../../assets/images/ooug.png');
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  border: none;
-  perspective: 1000px;
-}
-.flip-box-inner-member {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-.flip-box-member:hover .flip-box-inner-member {
-  transform: rotateY(180deg);
-}
-.flip-box-front-member,
-.flip-box-back-member {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.flip-box-front-member {
-  background-color: transparent;
-  color: black;
-}
-.flip-box-back-member {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
 }
 
-@media only screen and (max-width: 700px) {
-  //president main flip box
-  .flip-box {
-    width: 300px;
-    height: 300px;
+.card-header {
+  font: 20px 'Montserrat';
+  background: #6a097d;
+  cursor: pointer;
+}
+
+.image {
+  border-radius: 50%;
+  height: 145px;
+  width: 145px;
+  margin: 2%;
+}
+
+.row {
+  margin: 2rem;
+}
+
+.box {
+  padding: 5px;
+}
+
+.modal-header {
+  width: 100%;
+  border-bottom: 0;
+}
+
+.modal-content {
+  color: #fff;
+  padding: 5%;
+  background: #000;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+}
+
+.modal-content p {
+  font: 17px 'Montserrat';
+  margin-top: 5px;
+}
+
+.close {
+  background: none;
+}
+
+.close:hover {
+  color: #fff;
+  outline: none;
+  background: none;
+}
+
+.info-body {
+  margin: 10px;
+}
+
+.information {
+  line-height: 19px;
+  font-family: 'poppins', Arial, Helvetica, sans-serif;
+}
+
+h3.information {
+  font-size: 20px;
+}
+
+h4.information {
+  font-size: 19px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image {
+    width: 180px;
+    height: 180px;
   }
-  //---------------------------------------doubt------change hover to prefered type of ------
-  .flip-box-member:hover .flip-box-inner-member {
-    transform: rotateY(180deg);
+
+  .row {
+    margin: 5px;
   }
-  //--------------------------------------doubt------change hover to prefered type of ------
-  .flip-box:active .flip-box-inner {
-    transform: rotateY(180deg);
+
+  h3.information {
+    font-size: 25px;
   }
-  //president dp
+
+  h4.information {
+    font-size: 24px;
+  }
+
+  #nameplate {
+    text-align: center;
+  }
+
+  #founder {
+    width: 50%;
+  }
+
+  #social1 {
+    width: 105%;
+  }
+
+  #outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-image {
+    margin-left: 31%;
+  }
+
+  .image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .row {
+    margin: 10px;
+  }
+
+  .information {
+    line-height: 18px;
+  }
+
+  h3.information {
+    font-size: 18px;
+  }
+
+  h4.information {
+    font-size: 17px;
+  }
+
   .avatar {
-    width: 300px;
-    height: 300px;
+    width: 140%;
+  }
+
+  .msg1 {
+    margin-left: 2rem;
+  }
+
+  #social2 {
+    width: 105%;
   }
 }
+//=============================================================================================

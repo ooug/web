@@ -1,0 +1,257 @@
+[
+  {
+    "status": true,
+    "data": [
+      {
+        "title": "Android Workshop",
+        "desc": "my description",
+        "categoryId": "1",
+        "Images": [
+          {
+            "Image": {
+              "host": "/",
+              "path": ""
+            },
+            "title": "2 days workshop for 2nd years",
+            "desc": "my description"
+          }
+        ],
+        "Background": {
+          "host": "/",
+          "path": ""
+        },
+        "createdAt": "date",
+        "modifiedAt": "date"
+      }
+    ],
+    "page": 1,
+    "limit": 25
+  },
+
+  {
+    "status": true,
+    "data": [
+      {
+        "title": "Android Workshop 2",
+        "desc": "my description",
+        "categoryId": "1",
+        "Images": [
+          {
+            "Image": {
+              "host": "/",
+              "path": ""
+            },
+            "title": "4 days workshop for 2nd years",
+            "desc": "my description"
+          }
+        ],
+        "Background": {
+          "host": "/",
+          "path": ""
+        },
+        "createdAt": "date",
+        "modifiedAt": "date"
+      }
+    ],
+    "page": 1,
+    "limit": 25
+  },
+  {
+    "status": true,
+    "data": [
+      {
+        "title": "Android Workshop 3",
+        "desc": "my description",
+        "categoryId": "1",
+        "Images": [
+          {
+            "Image": {
+              "host": "/",
+              "path": ""
+            },
+            "title": "5 days workshop for 2nd years",
+            "desc": "my description"
+          }
+        ],
+        "Background": {
+          "host": "/",
+          "path": ""
+        },
+        "createdAt": "date",
+        "modifiedAt": "date"
+      }
+    ],
+    "page": 1,
+    "limit": 25
+  },
+
+  {
+    "status": true,
+    "data": [
+      {
+        "title": "Official Events",
+        "desc": "my description",
+        "categoryId": "2",
+        "Images": [
+          {
+            "Image": {
+              "host": "/",
+              "path": ""
+            },
+            "title": "techbhukkads",
+            "desc": "my description"
+          }
+        ],
+        "Background": {
+          "host": "/",
+          "path": ""
+        },
+        "createdAt": "date",
+        "modifiedAt": "date"
+      }
+    ],
+    "page": 1,
+    "limit": 25
+  },
+  {
+    "status": true,
+    "data": [
+      {
+        "title": "Official Events",
+        "desc": "my description",
+        "categoryId": "2",
+        "Images": [
+          {
+            "Image": {
+              "host": "/",
+              "path": ""
+            },
+            "title": "foundation day",
+            "desc": "my description"
+          }
+        ],
+        "Background": {
+          "host": "/",
+          "path": ""
+        },
+        "createdAt": "date",
+        "modifiedAt": "date"
+      }
+    ],
+    "page": 1,
+    "limit": 25
+  },
+  {
+    "status": true,
+    "data": [
+      {
+        "title": "Official Events",
+        "desc": "my description",
+        "categoryId": "2",
+        "Images": [
+          {
+            "Image": {
+              "host": "/",
+              "path": ""
+            },
+            "title": "fresher party",
+            "desc": "my description"
+          }
+        ],
+        "Background": {
+          "host": "/",
+          "path": ""
+        },
+        "createdAt": "date",
+        "modifiedAt": "date"
+      }
+    ],
+    "page": 1,
+    "limit": 25
+  },
+
+  {
+    "status": true,
+    "data": [
+      {
+        "title": "Other events",
+        "desc": "my description",
+        "categoryId": "3",
+        "Images": [
+          {
+            "Image": {
+              "host": "/",
+              "path": ""
+            },
+            "title": "Social work 1",
+            "desc": "my description"
+          }
+        ],
+        "Background": {
+          "host": "/",
+          "path": ""
+        },
+        "createdAt": "date",
+        "modifiedAt": "date"
+      }
+    ],
+    "page": 1,
+    "limit": 25
+  },
+  {
+    "status": true,
+    "data": [
+      {
+        "title": "Other events",
+        "desc": "my description",
+        "categoryId": "3",
+        "Images": [
+          {
+            "Image": {
+              "host": "/",
+              "path": ""
+            },
+            "title": "Social work 2",
+            "desc": "my description"
+          }
+        ],
+        "Background": {
+          "host": "/",
+          "path": ""
+        },
+        "createdAt": "date",
+        "modifiedAt": "date"
+      }
+    ],
+    "page": 1,
+    "limit": 25
+  },
+  {
+    "status": true,
+    "data": [
+      {
+        "title": "Other events",
+        "desc": "my description",
+        "categoryId": "3",
+        "Images": [
+          {
+            "Image": {
+              "host": "/",
+              "path": ""
+            },
+            "title": "Social work 3",
+            "desc": "my description"
+          }
+        ],
+        "Background": {
+          "host": "/",
+          "path": ""
+        },
+        "createdAt": "date",
+        "modifiedAt": "date"
+      }
+    ],
+    "page": 1,
+    "limit": 25
+  }
+]
