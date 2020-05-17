@@ -1,21 +1,64 @@
-//-----------------slide bar------------------------
+//--------------------nav bar----------------------
 .bar-but {
-  color: rgb(75, 39, 39);
+  color: black;
   text-shadow: 0 0 0.05rem #ffffff;
+  font-size: 14px;
+  padding: 7px;
+  margin: 10px;
+  background: linear-gradient(145deg, rgb(181, 176, 247), blue);
+  cursor: pointer;
+}
+.active {
+  background-color: blue;
+  color: white;
+  font-size: 14px;
+  padding: 7px;
+  margin: 10px;
+  cursor: pointer;
 }
 .bar-but:hover {
-  padding: 5px;
-  background-color: rgb(255, 0, 51);
-  color: rgb(240, 217, 217);
+  background-color: rgb(17, 0, 255);
 }
-.img-box {
-  background-color: rgb(0, 217, 255);
-  opacity: 0.6;
+//-----------------slide bar------------------------
+ngb-carousel {
+  z-index: 1;
+  padding: 0;
 }
+.carousel-caption {
+  padding: 0;
+}
+.slid {
+  width: 90%;
+  border: 2px solid black;
+}
+.imag {
+  height: 400px;
+}
+@media (max-width: 950px) {
+  .imag {
+    height: 350px;
+  }
+}
+@media (max-width: 850px) {
+  .imag {
+    height: 300px;
+  }
+}
+@media (max-width: 750px) {
+  .imag {
+    height: 250px;
+  }
+}
+@media (max-width: 600px) {
+  .imag {
+    height: 200px;
+  }
+}
+
 //-----------------cards-----------------------------
 .container {
-  padding: 0;
-  margin-top: 30px;
+  padding: 2px;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 .row {
@@ -23,51 +66,37 @@
   margin: 0;
 }
 .col-md-4 {
-  padding: 0;
+  padding: 5px;
+  margin: 0;
+}
+
+.col-sm-6 {
+  padding: 5px;
   margin: 0;
 }
 
 .banner {
   position: relative;
-  margin: auto;
+  cursor: pointer;
 }
-.banner img {
-  width: 100%;
+.image {
+  border-radius: 2%;
 }
-.contents {
+
+.date-cor {
   position: absolute;
+  background-size: cover;
+  width: 98%;
+  top: 2%;
+  text-align: right;
+  font-size: 10px;
+  color: white;
 }
-//-----------------flip-----------------------
-.middle {
-  position: relative;
-
-  z-index: -1;
-}
-
-.box {
-  text-align: center;
-}
-
-.front,
-.back {
-  overflow: hidden;
-  backface-visibility: hidden;
-  transition: transform 0.6s linear;
-}
-
-.front {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-.back {
-  background: #fff;
-  transform: perspective(600px) rotateY(180deg);
-}
-
-.box:hover .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-
-.box:hover .back {
-  transform: perspective(600px) rotateY(0deg);
+.heading {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  height: 100%;
+  border-radius: 2%;
 }

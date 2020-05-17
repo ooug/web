@@ -12,7 +12,10 @@
 
   <!-- Main Wrapper -->
   <div class="fbt-main-wrapper px-1 col-12" *ngIf="blogs">
-    <div id="main-wrapper">
+    <div class="text-center" *ngIf="blogs.length === 0">
+      <h3>No Results Found!</h3>
+    </div>
+    <div id="main-wrapper" *ngIf="blogs.length > 0">
       <div class="main-section" id="main_content">
         <!-- blogs wrapper -->
         <div class="blog-posts fbt-index-post-wrap card-columns">
@@ -22,7 +25,7 @@
             *ngFor="let blog of blogs"
           >
             <div class="fbt-post-thumbnail">
-              <a routerLink="{{ blog.link }}">
+              <a [routerLink]="['/blog', blog.id]">
                 <img
                   alt=""
                   class="post-thumbnail lazyloaded"
@@ -32,13 +35,14 @@
             </div>
             <div class="fbt-post-caption card-body">
               <h3 class="post-title h4 card-title">
-                <a routerLink="{{ blog.link }}">
+                <a [routerLink]="['/blog', blog.id]">
                   {{ blog.title }}
                 </a>
               </h3>
               <div class="post-meta">
-                <span class="post-author">{{ blog.author }}</span>
+                <span class="post-author">{{ blog.Author.name }}</span>
                 <span class="post-date published">{{ blog.date }}</span>
+                <span class="post-date published">{{ blog.category }}</span>
               </div>
               <p class="post-excerpt card-text">
                 {{ blog.paragraph.split(' ').slice(0, 28).join(' ') + '...' }}

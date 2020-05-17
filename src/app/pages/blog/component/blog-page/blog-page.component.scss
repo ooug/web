@@ -1,0 +1,16 @@
+section {
+  min-height: 100vh;
+  padding-top: 15vh;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: #854eaf;
+  border: none;
+}
+
+#author-image {
+  width: 40%;
+  display: block;
+  border-radius: 50%;
+}
