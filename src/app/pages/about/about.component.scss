@@ -6,18 +6,22 @@
   padding-bottom: 10px;
 }
 .details {
-  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #heading-ooug {
   font-size: 40px;
   text-align: center;
   color: white;
   text-shadow: tan;
+  font-family: Arial, Helvetica, sans-serif;
 }
 p {
   text-align: justify;
   font-size: 20px;
-  padding: 10px;
+  padding: 20px;
   font-family: sans-serif;
   color: white;
 }
@@ -27,6 +31,9 @@ p {
 .logo-image {
   width: 150px;
   height: 150px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
 }
 #btn {
   width: 150px;
@@ -151,17 +158,26 @@ p {
   .service-box {
     max-width: 45%;
   }
+  .details {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .service-box {
     max-width: 50%;
   }
+  .details {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .service-box {
     max-width: 100%;
+  }
+  .details {
+    padding: 10px;
   }
 }
 
