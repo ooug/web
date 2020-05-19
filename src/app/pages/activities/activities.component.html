@@ -1,200 +1,108 @@
-<link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-/>
-<div style="background-color: rgb(197, 192, 185);">
-  <ngb-carousel
-    #carousel
-    [interval]="1000"
-    [pauseOnHover]="pauseOnHover"
-    style="background-color: rgb(133, 126, 126);"
-  >
-    <ng-template
-      ngbSlide
-      *ngFor="let img of images; index as i"
-      delay="toast.delay || 200000"
-    >
-      <div class="carousel-caption">
-        <h2 style="color: rgb(196, 192, 192);">Join Our Events</h2>
-        <nav
-          class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-dark"
-        >
-          <ul ngbNav #nav="ngbNav" class="navbar-nav ml-auto">
-            <li [ngbNavItem]="1" class="but">
-              <a class="nav-link" (click)="activateTab('all')" ngbNavLink
-                ><span class="bar-but"><b>ALL</b></span></a
-              >
-            </li>
-            <li [ngbNavItem]="2" class="but">
-              <a class="nav-link" (click)="activateTab('workshop')" ngbNavLink
-                ><span class="bar-but"><b>WORKSHOP</b></span></a
-              >
-            </li>
-            <li [ngbNavItem]="3" class="but">
-              <a
-                class="nav-link"
-                (click)="activateTab('techbhukkads')"
-                ngbNavLink
-                ><span class="bar-but"><b>TECHBHUKKADS</b></span></a
-              >
-            </li>
-            <li [ngbNavItem]="4" class="but">
-              <a class="nav-link" (click)="activateTab('farewell')" ngbNavLink>
-                <span class="bar-but"><b>FAREWELL CELIBRATION</b></span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <p
-          style="
-            font-family: cursive;
-            color: rgb(255, 217, 0);
-            text-shadow: 0 0 0.1rem rgb(0, 0, 0);
-          "
-        >
-          {{ slidertitle[i] }}
-        </p>
-      </div>
-      <a href="#" target="_blank" rel="nofollow noopener noreferrer">
-        <div class="picsum-img-wrapper img-box">
-          <img
-            style="opacity: 0.4;"
-            [src]="img"
-            alt="image not found!!"
-            height="450px"
-            width="100%"
-          />
-        </div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<br><br><br>
+
+<a (click)="BackToTop()">
+  <span class="back-button">
+    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+  </span>
+</a>
+
+<ngb-carousel class="slid" #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" id="top">
+  <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 10000">
+    <div class="carousel-caption">
+
+    </div>
+    <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+      <div class="picsum-img-wrapper img-box">
+        <img [src]="img" alt="image not found!!" class="imag" width="100%"> </div>
+    </a>
+  </ng-template>
+</ngb-carousel>
+<br><br>
+
+
+
+
+<nav class="navbar navbar-expand navbar-dark">
+  <ul ngbNav #nav="ngbNav" class="nav navbar-nav navbar-right ml-auto">
+    <li [ngbNavItem]="1" (click)="buttons(1)">
+      <a class="" (click)="activateTab('workshop')">
+        <span class="active" *ngIf="tap===1"><b>Workshop</b></span>
+        <span class="bar-but" *ngIf="tap!==1"><b>Workshop</b></span>
       </a>
-    </ng-template>
-  </ngb-carousel>
+    </li>
+    <li [ngbNavItem]="2" (click)="buttons(2)">
+      <a (click)="activateTab('techbhukkads')">
+        <span class="active" *ngIf="tap===2"><b>Techbhukkads</b></span>
+        <span class="bar-but" *ngIf="tap!==2"><b>Techbhukkads</b></span>
+      </a>
+    </li>
+    <li [ngbNavItem]="3" (click)="buttons(3)">
+      <a (click)="activateTab('farewell')">
+        <span class="active" *ngIf="tap===3"><b>Farewell</b></span>
+        <span class="bar-but" *ngIf="tap!==3"><b>Farewell</b></span>
 
-  <!--------------------------------------------------------------------------->
-  <form class="search-bar form-inline my-2 my-lg-0">
-    <input
-      class="form-control mr-sm-2"
-      type="search"
-      placeholder="Type to Search"
-      aria-label="Search"
-    />
-    <button class="btn my-2 my-sm-0" type="submit">
-      <i class="fa fa-search" aria-hidden="true"></i>
-    </button>
-  </form>
-  <!--------------------------------------------------------------------------->
+      </a>
+    </li>
+  </ul>
+</nav>
 
-  <div class="container" *ngIf="active === 'all'">
-    <div class="image-deck row">
-      <div class="box col-md-4 col-sm-6" *ngFor="let item of all">
-        <!--------------------------------------------------------------------------------->
-        <div class="front">
-          <div class="banner">
-            <img
-              class="image"
-              src="{{ item.Image.host + item.Image.path }}"
-              alt="Card image cap"
-              height="300px"
-              width="100%"
-            />
-            <div class="date-cor">
-              <b>01-02-2020</b>
-            </div>
-            <div class="heading">
-              <div style="margin-left: 5px;">
-                <b style="color: rgb(255, 255, 255);">Event name</b><br />
-                <b style="color: rgb(204, 198, 187);">Organized by</b>
-              </div>
-            </div>
+
+
+<div class="container" *ngIf="active === 'workshop'">
+  <div class="row">
+    <div class="box col-md-4 col-sm-6" *ngFor="let item of workshop;">
+      <div class="banner">
+        <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
+          width="100%" />
+        <div class="date-cor">
+          <b>01-02-2020</b>
+
+        </div>
+        <div class="heading">
+          <div style="text-align: center; margin-top: 175px;">
+            <b style="color:rgb(255, 255, 255);">Workshop on {{ item.name }} by ath year</b>
+            <p style="color: rgb(204, 198, 187);">@GIET University</p>
           </div>
         </div>
-        <!------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>
-
-  <div class="container" *ngIf="active === 'workshop'">
-    <div class="image-deck row">
-      <div class="box col-md-4 col-sm-6" *ngFor="let item of workshop">
-        <!--------------------------------------------------------------------------------->
-        <div class="front">
-          <div class="banner">
-            <img
-              class="image"
-              src="{{ item.Image.host + item.Image.path }}"
-              alt="Card image cap"
-              height="300px"
-              width="100%"
-            />
-            <div class="date-cor">
-              <b>01-02-2020</b>
-            </div>
-            <div class="heading">
-              <div style="margin-left: 5px;">
-                <b style="color: rgb(255, 255, 255);">Event name</b><br />
-                <b style="color: rgb(204, 198, 187);">Organized by</b>
-              </div>
-            </div>
+</div>
+<div class="container" *ngIf="active === 'techbhukkads'">
+  <div class="row">
+    <div class="box col-md-4 col-sm-6" *ngFor="let item of techbhukkads;">
+      <div class="banner">
+        <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
+          width="100%" />
+        <div class="date-cor">
+          <b>01-02-2020</b>
+        </div>
+        <div class="heading">
+          <div style="text-align: center; margin-top: 175px;">
+            <b style="color:rgb(255, 255, 255);">Event name on xyz by kjkj</b>
+            <p style="color: rgb(204, 198, 187);">@kejbvv</p>
           </div>
         </div>
-        <!------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>
-
-  <div class="container" *ngIf="active === 'techbhukkads'">
-    <div class="image-deck row">
-      <div class="box col-md-4 col-sm-6" *ngFor="let item of techbhukkads">
-        <!--------------------------------------------------------------------------------->
-        <div class="front">
-          <div class="banner">
-            <img
-              class="image"
-              src="{{ item.Image.host + item.Image.path }}"
-              alt="Card image cap"
-              height="300px"
-              width="100%"
-            />
-            <div class="date-cor">
-              <b>01-02-2020</b>
-            </div>
-            <div class="heading">
-              <div style="margin-left: 5px;">
-                <b style="color: rgb(255, 255, 255);">Event name</b><br />
-                <b style="color: rgb(204, 198, 187);">Organized by</b>
-              </div>
-            </div>
+</div>
+<div class="container" *ngIf="active === 'farewell'">
+  <div class="row">
+    <div class="box col-md-4 col-sm-6" *ngFor="let item of farewell;">
+      <div class="banner">
+        <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
+          width="100%" />
+        <div class="date-cor">
+          <b>01-02-2020</b>
+        </div>
+        <div class="heading">
+          <div style="text-align: center; margin-top: 175px;">
+            <b style="color:rgb(255, 255, 255);">Event name on xyz by kjkj</b>
+            <p style="color: rgb(204, 198, 187);">@kejbvv</p>
           </div>
         </div>
-        <!------------------------------------------------------------------------------------->
-      </div>
-    </div>
-  </div>
-
-  <div class="container" *ngIf="active === 'farewell'">
-    <div class="image-deck row">
-      <div class="box col-md-4 col-sm-6" *ngFor="let item of farewell">
-        <!--------------------------------------------------------------------------------->
-        <div class="front">
-          <div class="banner">
-            <img
-              class="image"
-              src="{{ item.Image.host + item.Image.path }}"
-              alt="Card image cap"
-              height="300px"
-              width="100%"
-            />
-            <div class="date-cor">
-              <b>01-02-2020</b>
-            </div>
-            <div class="heading">
-              <div style="margin-left: 5px;">
-                <b style="color: rgb(255, 255, 255);">Event name</b><br />
-                <b style="color: rgb(204, 198, 187);">Organized by</b>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>
