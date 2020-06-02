@@ -11,6 +11,7 @@
 .container {
   padding-right: 0;
   padding-left: 0;
+  z-index: 0;
 }
 .card-img-top {
   height: 40vh;
@@ -49,6 +50,7 @@ body {
   height: 40vh;
   padding-bottom: 30px;
 }
+
 .hr {
   margin-top: 30px;
   width: 75%;
@@ -64,6 +66,10 @@ body {
     padding-bottom: 30px;
     overflow: hidden;
   }
+  .card-img-top {
+    height: 30vh;
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -71,6 +77,10 @@ body {
     width: 100%;
     height: 30vh;
     padding-bottom: 30px;
+    overflow: hidden;
+  }
+  .card-img-top {
+    height: 30vh;
     overflow: hidden;
   }
 }
@@ -82,4 +92,12 @@ body {
     padding-bottom: 30px;
     overflow: hidden;
   }
+  .card-img-top {
+    height: 30vh;
+    overflow: hidden;
+  }
+}
+
+#shadow-lg {
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(27, 22, 22, 0.486) !important;
 }
