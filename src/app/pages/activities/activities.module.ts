@@ -6,6 +6,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ActivitiesComponent } from './activities.component';
 import { FormsModule } from '@angular/forms';
+import { ActivitiesService } from './activities.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -21,6 +23,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
+    HttpClientModule,
   ],
+  providers: [ActivitiesService],
 })
 export class ActivitiesModule {}

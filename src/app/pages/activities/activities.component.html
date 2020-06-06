@@ -1,13 +1,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <br><br><br>
-
-<a (click)="BackToTop()">
-  <span class="back-button">
-    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
-  </span>
-</a>
-
-<ngb-carousel class="slid" #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" id="top">
+<ngb-carousel class="slid" #carousel [interval]="2000" [pauseOnHover]="pauseOnHover">
   <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 10000">
     <div class="carousel-caption">
 
@@ -19,9 +12,9 @@
   </ng-template>
 </ngb-carousel>
 <br><br>
-
-
-
+<div *ngIf="errorMsg">
+  {{errorMsg}}
+</div>
 
 <nav class="navbar navbar-expand navbar-dark">
   <ul ngbNav #nav="ngbNav" class="nav navbar-nav navbar-right ml-auto">
@@ -46,7 +39,6 @@
     </li>
   </ul>
 </nav>
-
 
 
 <div class="container" *ngIf="active === 'workshop'">
