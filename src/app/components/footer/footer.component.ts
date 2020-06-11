@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { apiURL } from '../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-footer',
@@ -7,24 +9,45 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
-  constructor() {}
-  public formSubmitted = false;
+  constructor(private http: HttpClient) {}
+  public infoStr: string = null;
   public subscribeForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
   });
 
-  subscribe() {
-    this.formSubmitted = true;
+  public subscribe(): void {
+    // handling errors
     if (this.subscribeForm.invalid) {
-      setTimeout(() => {
-        this.formSubmitted = false;
-      }, 3000);
-      return;
+      if (this.subscribeForm.controls.email.errors.required) {
+        this.AlertUser('Email required!');
+      } else {
+        this.AlertUser('Invalid Email!');
+      }
+    } else {
+      this.AlertUser('Subscribing...');
+      // sending to the server
+      this.http
+        .post((apiURL as string) + '/about/newsletter-subscribe', {
+          email: this.subscribeForm.value.email,
+        })
+        .subscribe((response: any) => {
+          if (response.data === 'EMAIL_ALREADY_SUBSCRIBED') {
+            this.AlertUser('Email already subscribed');
+          } else if (response.data === 'NEWSLETTER_SUBSCRIBED') {
+            this.AlertUser('Subscribed!');
+          } else {
+            this.AlertUser('Something went wrong!');
+          }
+          this.subscribeForm.reset();
+        });
     }
-    // send to the server
-    alert(this.subscribeForm.value.email + ' have subscribed!');
-    this.subscribeForm.reset();
-    this.formSubmitted = false;
+  }
+
+  private AlertUser(str: string): void {
+    this.infoStr = str;
+    setTimeout(() => {
+      this.infoStr = null;
+    }, 3000);
   }
 
   ngOnInit(): void {}

@@ -8,6 +8,8 @@ export const environment = {
   development: true,
 };
 
+export const apiURL = 'https://ooug-dev-1fbf3.el.r.appspot.com';
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

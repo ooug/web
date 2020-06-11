@@ -18,6 +18,7 @@ import { ErrorsComponent } from './components/errors/errors.component';
 import { MaintenanceComponent } from './components/maintenance/maintenance.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { environment } from '../environments/environment';
       enabled: environment.production,
     }),
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
