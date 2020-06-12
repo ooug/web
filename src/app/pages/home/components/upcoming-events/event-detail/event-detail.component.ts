@@ -3,6 +3,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Title, Meta } from '@angular/platform-browser';
+import { apiURL } from '../../../../../../environments/environment';
 
 @Component({
   selector: 'app-event-detail',
@@ -22,6 +23,7 @@ export class EventDetailComponent implements OnInit {
     isLoading: false,
     notFound: false,
   };
+  public infoText = '';
 
   registerForm = new FormGroup({
     userName: new FormControl(''),
@@ -31,9 +33,26 @@ export class EventDetailComponent implements OnInit {
   });
 
   register() {
-    console.log(this.registerForm.value);
-    this.registerForm.reset();
-    alert('Registered');
+    this.infoText = 'Registering...';
+    this.http
+      .post((apiURL as string) + '/upcoming-event/register', {
+        id: this.event._id,
+        name: this.registerForm.value.userName,
+        roll: this.registerForm.value.roll.toUpperCase(),
+        email: this.registerForm.value.email,
+        mobile: this.registerForm.value.mobile,
+      })
+      .subscribe((data: any) => {
+        if (data.data === 'EMAIL_REGISTERED') {
+          this.infoText = 'Email already registered!';
+        } else if (data.data === 'REGISTERED_FOR_EVENT') {
+          this.infoText = 'Registered successfully!';
+        } else if (data.data === 'EVENT_NOT_FOUND') {
+          this.infoText = 'Event not found';
+        } else {
+          this.infoText = 'Something went wrong';
+        }
+      });
   }
 
   updateMetaTags() {
@@ -62,19 +81,19 @@ export class EventDetailComponent implements OnInit {
       if (paramMap.has('eventId')) {
         const eventId = paramMap.get('eventId');
         // fetching from api
-        this.http.get('./assets/api/upcomingEvent.json').subscribe((events) => {
-          // searching for particular event
-          this.event = JSON.parse(JSON.stringify(events)).find((e: any) => {
-            return e.id === eventId;
+        this.http
+          .get((apiURL as string) + '/upcoming-event/get-one/' + eventId)
+          .subscribe((data: any) => {
+            // searching for particular event
+            this.event = data.data;
+            // if event not found
+            if (!this.event) {
+              this.flags.notFound = true;
+            } else {
+              this.updateMetaTags();
+            }
+            this.flags.isLoading = false;
           });
-          // if event not found
-          if (!this.event) {
-            this.flags.notFound = true;
-          } else {
-            this.updateMetaTags();
-          }
-          this.flags.isLoading = false;
-        });
       }
     });
   }

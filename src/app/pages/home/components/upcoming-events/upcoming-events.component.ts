@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { apiURL } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-upcoming-events',
@@ -15,9 +16,11 @@ export class UpcomingEventsComponent implements OnInit {
   ngOnInit(): void {
     // getting data from json file
     this.isLoading = true;
-    this.http.get('./assets/api/upcomingEvent.json').subscribe((events) => {
-      this.upcomingEvents = events;
-      this.isLoading = false;
-    });
+    this.http
+      .get((apiURL as string) + '/upcoming-event/get-all')
+      .subscribe((events: any) => {
+        this.upcomingEvents = events.data;
+        this.isLoading = false;
+      });
   }
 }

@@ -27,7 +27,7 @@ export class FooterComponent implements OnInit {
       this.AlertUser('Subscribing...');
       // sending to the server
       this.http
-        .post((apiURL as string) + '/about/newsletter-subscribe', {
+        .post((apiURL as string) + '/app/newsletter-subscribe', {
           email: this.subscribeForm.value.email,
         })
         .subscribe((response: any) => {

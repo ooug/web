@@ -9,6 +9,7 @@ export const environment = {
 };
 
 export const apiURL = 'https://ooug-dev-1fbf3.el.r.appspot.com';
+// export const apiURL = 'http://localhost:8080';
 
 /*
  * For easier debugging in development mode, you can import the following file
