@@ -34,21 +34,7 @@
               width="60%"
               formControlName="email"
             />
-            <div
-              class="text-light"
-              *ngIf="
-                formSubmitted &&
-                (subscribeForm.controls.email.invalid ||
-                  subscribeForm.controls.email.pristine)
-              "
-            >
-              <div *ngIf="subscribeForm.controls.email.errors.required">
-                Email required!
-              </div>
-              <div *ngIf="!subscribeForm.controls.email.errors.required">
-                Invalid Email!
-              </div>
-            </div>
+            <div class="text-light">{{ infoStr }}</div>
           </div>
           <div class="text-center">
             <button type="submit" class="btn btn-primary" (click)="subscribe()">
