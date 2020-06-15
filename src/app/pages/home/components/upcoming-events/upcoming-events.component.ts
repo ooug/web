@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { apiURL } from '../../../../../environments/environment';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-upcoming-events',
@@ -17,7 +17,7 @@ export class UpcomingEventsComponent implements OnInit {
     // getting data from json file
     this.isLoading = true;
     this.http
-      .get((apiURL as string) + '/upcoming-event/get-all')
+      .get((environment.API as string) + '/upcoming-event/get-all')
       .subscribe((events: any) => {
         this.upcomingEvents = events.data;
         this.isLoading = false;

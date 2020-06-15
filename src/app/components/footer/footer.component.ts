@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { apiURL } from '../../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -27,7 +27,7 @@ export class FooterComponent implements OnInit {
       this.AlertUser('Subscribing...');
       // sending to the server
       this.http
-        .post((apiURL as string) + '/app/newsletter-subscribe', {
+        .post((environment.API as string) + '/app/newsletter-subscribe', {
           email: this.subscribeForm.value.email,
         })
         .subscribe((response: any) => {

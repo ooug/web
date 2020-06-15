@@ -3,7 +3,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Title, Meta } from '@angular/platform-browser';
-import { apiURL } from '../../../../../../environments/environment';
+import { environment } from '../../../../../../environments/environment';
 
 @Component({
   selector: 'app-event-detail',
@@ -35,7 +35,7 @@ export class EventDetailComponent implements OnInit {
   register() {
     this.infoText = 'Registering...';
     this.http
-      .post((apiURL as string) + '/upcoming-event/register', {
+      .post((environment.API as string) + '/upcoming-event/register', {
         id: this.event._id,
         name: this.registerForm.value.userName,
         roll: this.registerForm.value.roll.toUpperCase(),
@@ -82,7 +82,9 @@ export class EventDetailComponent implements OnInit {
         const eventId = paramMap.get('eventId');
         // fetching from api
         this.http
-          .get((apiURL as string) + '/upcoming-event/get-one/' + eventId)
+          .get(
+            (environment.API as string) + '/upcoming-event/get-one/' + eventId
+          )
           .subscribe((data: any) => {
             // searching for particular event
             this.event = data.data;
