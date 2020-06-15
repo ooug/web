@@ -55,80 +55,148 @@
 
         <div class="col-lg-5 mb-4">
           <!--Form with header-->
-          <div class="card">
-            <div class="card-body">
-              <!--Header-->
-              <!--Body-->
-              <h3
-                style="
-                  font-weight: bold;
-                  font-family: sans-serif;
-                  color: white;
-                "
-              >
-                WRITE TO US
-              </h3>
-              <div class="md-form">
-                <label
-                  for=""
+          <form [formGroup]="contactForm" (submit)="contact()">
+            <div class="card">
+              <div class="card-body">
+                <!--Header-->
+                <!--Body-->
+                <h3
                   style="
                     font-weight: bold;
-                    color: white;
                     font-family: sans-serif;
-                  "
-                  >Your name</label
-                >
-                <input type="text" id="form-name" class="form-control" />
-              </div>
-
-              <div class="md-form">
-                <label
-                  for=""
-                  style="
-                    font-weight: bold;
                     color: white;
-                    font-family: sans-serif;
                   "
-                  >Your email</label
                 >
-                <input type="text" id="form-email" class="form-control" />
-              </div>
+                  WRITE TO US
+                </h3>
+                <div class="md-form">
+                  <label
+                    for=""
+                    style="
+                      font-weight: bold;
+                      color: white;
+                      font-family: sans-serif;
+                    "
+                    >Your name</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    formControlName="name"
+                    id="form-name"
+                    class="form-control"
+                    required
+                  />
+                  <div
+                    class="text-white"
+                    *ngIf="
+                      contactForm.controls.name.touched &&
+                      contactForm.controls.name.errors?.required
+                    "
+                  >
+                    Required!
+                  </div>
+                </div>
 
-              <div class="md-form">
-                <label
-                  for=""
-                  style="
-                    font-weight: bold;
-                    color: white;
-                    font-family: sans-serif;
-                  "
-                  >Your subject</label
-                >
-                <input type="text" id="form-Subject" class="form-control" />
-              </div>
+                <div class="md-form">
+                  <label
+                    for=""
+                    style="
+                      font-weight: bold;
+                      color: white;
+                      font-family: sans-serif;
+                    "
+                    >Your email</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    formControlName="email"
+                    id="form-email"
+                    class="form-control"
+                    required
+                    email
+                  />
+                  <div
+                    class="text-white"
+                    *ngIf="
+                      contactForm.controls.email.touched &&
+                      contactForm.controls.email.status === 'INVALID'
+                    "
+                  >
+                    <div *ngIf="contactForm.controls.email.errors?.required">
+                      Required!
+                    </div>
+                    <div *ngIf="!contactForm.controls.email.errors?.required">
+                      Invalid Email!
+                    </div>
+                  </div>
+                </div>
 
-              <div class="md-form">
-                <label
-                  for=""
-                  style="
-                    font-weight: bold;
-                    color: white;
-                    font-family: sans-serif;
-                  "
-                  >Your message</label
-                >
-                <textarea
-                  id="form-text"
-                  class="form-control md-textarea"
-                  rows="3"
-                ></textarea>
-              </div>
+                <div class="md-form">
+                  <label
+                    for=""
+                    style="
+                      font-weight: bold;
+                      color: white;
+                      font-family: sans-serif;
+                    "
+                    >Your subject</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    formControlName="subject"
+                    id="form-Subject"
+                    class="form-control"
+                    required
+                  />
+                  <div
+                    class="text-white"
+                    *ngIf="
+                      contactForm.controls.subject.touched &&
+                      contactForm.controls.subject.errors?.required
+                    "
+                  >
+                    Required!
+                  </div>
+                </div>
 
-              <div class="text-center mt-4">
-                <button class="send-btn">Send</button>
+                <div class="md-form">
+                  <label
+                    for=""
+                    style="
+                      font-weight: bold;
+                      color: white;
+                      font-family: sans-serif;
+                    "
+                    >Your message</label
+                  >
+                  <textarea
+                    id="form-text"
+                    class="form-control md-textarea"
+                    rows="3"
+                    placeholder="Message"
+                    formControlName="message"
+                    required
+                  ></textarea>
+                  <div
+                    class="text-white"
+                    *ngIf="
+                      contactForm.controls.message.touched &&
+                      contactForm.controls.message.errors?.required
+                    "
+                  >
+                    Required!
+                  </div>
+                </div>
+                <div class="text-center text-white mt-3">{{ infoText }}</div>
+                <div class="text-center mt-4">
+                  <button class="send-btn" type="submit">Send</button>
+                </div>
               </div>
             </div>
-          </div>
+          </form>
           <!--Form with header-->
         </div>
         <!--Grid column-->
