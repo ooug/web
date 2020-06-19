@@ -47,6 +47,7 @@ export class EventDetailComponent implements OnInit {
           this.infoText = 'Email already registered!';
         } else if (data.data === 'REGISTERED_FOR_EVENT') {
           this.infoText = 'Registered successfully!';
+          this.registerForm.reset();
         } else if (data.data === 'EVENT_NOT_FOUND') {
           this.infoText = 'Event not found';
         } else {

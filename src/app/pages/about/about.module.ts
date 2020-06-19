@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -15,6 +17,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [AboutComponent, ContactComponent, NewsletterComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
 })
 export class AboutModule {}
