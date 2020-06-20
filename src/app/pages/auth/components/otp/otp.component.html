@@ -5,7 +5,7 @@
       <img src="./assets/images/ooug.png" alt="OOUG Logo" />
     </div>
     <div class="login-content">
-      <form #loginForm="ngForm">
+      <form [formGroup]="otpForm" (submit)="verifyOtp()">
         <h2 class="title" style="font-family: Roboto; color: #1e4235;">
           OTP
         </h2>
@@ -28,38 +28,18 @@
             <!-- <img src="./assets/svgs/user.svg" width="50px" alt="user" /> -->
           </div>
           <div class="div">
-            <h5>Username</h5>
+            <h5>Enter OTP</h5>
             <input
               (focus)="focus('username')"
-              name="user"
+              name="otp"
               required
-              #username="ngModel"
-              [(ngModel)]="user.username"
               (focusout)="focusout('username')"
               type="text"
+              formControlName="otp"
               class="input"
             />
           </div>
         </div>
-
-        <!-- <div [ngClass]="passwordClass" style="margin-top: 0px;">
-          <div class="i">
-            <i class="fas fa-lock"></i>
-          </div>
-          <div class="div">
-            <h5>Password</h5>
-            <input
-              (focus)="focus('password')"
-              name="password"
-              #password="ngModel"
-              required
-              [(ngModel)]="user.password"
-              (focusout)="focusout('password')"
-              type="password"
-              class="input"
-            />
-          </div>
-        </div> -->
         <a routerLink="/auth/login">Login</a>
         <input type="submit" class="btn" value="VERIFY" />
       </form>
