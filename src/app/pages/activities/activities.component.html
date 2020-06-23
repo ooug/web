@@ -3,17 +3,17 @@
 <ngb-carousel class="slid" #carousel [interval]="2000" [pauseOnHover]="pauseOnHover">
   <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 10000">
     <div class="carousel-caption">
-
     </div>
-    <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+    <a href="{{ img.url }}" target="_blank" rel="nofollow noopener noreferrer">
       <div class="picsum-img-wrapper img-box">
-        <img [src]="img" alt="image not found!!" class="imag" width="100%"> </div>
+        <img [src]="img.imageName" alt="image not found!!" class="imag" width="100%">
+      </div>
     </a>
   </ng-template>
 </ngb-carousel>
 <br><br>
-<div *ngIf="errorMsg">
-  {{errorMsg}}
+<div *ngIf="errorSlider">
+  {{errorSlider}}
 </div>
 
 <nav class="navbar navbar-expand navbar-dark">
@@ -42,19 +42,22 @@
 
 
 <div class="container" *ngIf="active === 'workshop'">
+  <div *ngIf="errorWorkshop">
+    {{ errorWorkshop }}
+  </div>
   <div class="row">
     <div class="box col-md-4 col-sm-6" *ngFor="let item of workshop;">
       <div class="banner">
-        <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
-          width="100%" />
+        <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
         <div class="date-cor">
-          <b>01-02-2020</b>
+          <b>{{ item.eventDate }}</b>
 
         </div>
         <div class="heading">
           <div style="text-align: center; margin-top: 175px;">
-            <b style="color:rgb(255, 255, 255);">Workshop on {{ item.name }} by ath year</b>
-            <p style="color: rgb(204, 198, 187);">@GIET University</p>
+            <b style="color:rgb(255, 255, 255); padding: 5px;">Workshop on {{ item.eventOn }} by
+              {{ item.organizedBy }}</b>
+            <p style="color: rgb(204, 198, 187); padding: 5px;">@{{ item.organizedAt }}</p>
           </div>
         </div>
       </div>
@@ -62,18 +65,21 @@
   </div>
 </div>
 <div class="container" *ngIf="active === 'techbhukkads'">
+  <div *ngIf="errorTechbhukkads">
+    {{ errorTechbhukkads }}
+  </div>
   <div class="row">
     <div class="box col-md-4 col-sm-6" *ngFor="let item of techbhukkads;">
       <div class="banner">
-        <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
-          width="100%" />
+        <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
         <div class="date-cor">
-          <b>01-02-2020</b>
+          <b>{{ item.eventDate }}</b>
         </div>
         <div class="heading">
           <div style="text-align: center; margin-top: 175px;">
-            <b style="color:rgb(255, 255, 255);">Event name on xyz by kjkj</b>
-            <p style="color: rgb(204, 198, 187);">@kejbvv</p>
+            <b style="color:rgb(255, 255, 255); padding: 5px;">Techbhukkads on {{ item.eventOn }} by
+              {{ item.organizedBy }}</b>
+            <p style="color: rgb(204, 198, 187); padding: 5px;">@{{ item.organizedAt }}</p>
           </div>
         </div>
       </div>
@@ -81,18 +87,21 @@
   </div>
 </div>
 <div class="container" *ngIf="active === 'farewell'">
+  <div *ngIf="errorFarewell">
+    {{ errorFarewell }}
+  </div>
   <div class="row">
     <div class="box col-md-4 col-sm-6" *ngFor="let item of farewell;">
       <div class="banner">
-        <img class="image" src="{{ item.Image.host + item.Image.path }}" alt="Card image cap" height="250px"
-          width="100%" />
+        <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
         <div class="date-cor">
-          <b>01-02-2020</b>
+          <b>{{ item.eventDate }}</b>
         </div>
         <div class="heading">
           <div style="text-align: center; margin-top: 175px;">
-            <b style="color:rgb(255, 255, 255);">Event name on xyz by kjkj</b>
-            <p style="color: rgb(204, 198, 187);">@kejbvv</p>
+            <b style="color:rgb(255, 255, 255); padding: 5px;">celebration on {{item.eventOn}} by
+              {{ item.organizedBy }}</b>
+            <p style="color: rgb(204, 198, 187); padding: 5px;">@{{item.organizedAt}}</p>
           </div>
         </div>
       </div>

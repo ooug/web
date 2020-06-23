@@ -7,7 +7,7 @@ import {
   NgbSlideEventSource,
 } from '@ng-bootstrap/ng-bootstrap';
 import { from } from 'rxjs';
-
+import { ImageSlider, Workshop, Techbhukkads, Farewell } from './activities';
 @Component({
   selector: 'app-activities',
   templateUrl: './activities.component.html',
@@ -24,208 +24,15 @@ export class ActivitiesComponent implements OnInit {
   active = 'workshop';
   tap = 1;
 
-  public workshop = [
-    {
-      Image: { host: '', path: './assets/images/2.jpg' },
-      name: 'web development',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Android',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/1.jpg' },
-      name: 'Python',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 4',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/3.jpg' },
-      name: 'web development',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/4.jpg' },
-      name: 'Machine Learning',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/2.jpg' },
-      name: 'Activity 1',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/3.jpg' },
-      name: 'Activity 2',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 3',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-  ];
+  public images: ImageSlider;
+  public workshop: Workshop;
+  public techbhukkads: Techbhukkads;
+  public farewell: Farewell;
 
-  public techbhukkads = [
-    {
-      Image: { host: '', path: './assets/images/1.jpg' },
-      name: 'Activity 1',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/4.jpg' },
-      name: 'Activity 2',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 3',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/2.jpg' },
-      name: 'Activity 4',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 5',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/4.jpg' },
-      name: 'Activity 6',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/1.jpg' },
-      name: 'Activity 1',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/3.jpg' },
-      name: 'Activity 2',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 3',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-  ];
-
-  public farewell = [
-    {
-      Image: { host: '', path: './assets/images/1.jpg' },
-      name: 'Activity 1',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/2.jpg' },
-      name: 'Activity 2',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 3',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/3.jpg' },
-      name: 'Activity 4',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 5',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/4.jpg' },
-      name: 'Activity 6',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/1.jpg' },
-      name: 'Activity 1',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/2.jpg' },
-      name: 'Activity 2',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-    {
-      Image: { host: '', path: './assets/images/gray.jpg' },
-      name: 'Activity 3',
-      place: 'Some Place',
-      date: '24/04/2020',
-      description: 'Some Description',
-    },
-  ];
-
-  // slider------------------------
-
-  images = [];
-  public errorMsg: any;
+  public errorSlider: any;
+  public errorWorkshop: any;
+  public errorTechbhukkads: any;
+  public errorFarewell: any;
 
   paused = false;
   pauseOnHover = false;
@@ -247,8 +54,20 @@ export class ActivitiesComponent implements OnInit {
 
   ngOnInit() {
     this.activitiesService.getSlide().subscribe(
-      (data) => (this.images = data.images),
-      (error) => (this.errorMsg = error)
+      (data) => (this.images = data),
+      (error) => (this.errorSlider = error)
+    );
+    this.activitiesService.getWorkshop().subscribe(
+      (data) => (this.workshop = data),
+      (error) => (this.errorWorkshop = error)
+    );
+    this.activitiesService.getTechbhukkads().subscribe(
+      (data) => (this.techbhukkads = data),
+      (error) => (this.errorTechbhukkads = error)
+    );
+    this.activitiesService.getFarewell().subscribe(
+      (data) => (this.farewell = data),
+      (error) => (this.errorFarewell = error)
     );
   }
 
