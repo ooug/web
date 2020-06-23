@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormGroup, FormControl } from '@angular/forms';
 import { Title, Meta } from '@angular/platform-browser';
+import { AuthService } from '../../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-otp',
@@ -8,12 +10,21 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./otp.component.scss'],
 })
 export class OtpComponent implements OnInit {
-  constructor(private titleService: Title, private metaService: Meta) {}
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   public usernameClass = ['input-div']; // classes used for username field
   public user = {
     username: '',
   };
+
+  public otpForm = new FormGroup({
+    otp: new FormControl(''),
+  });
 
   // when focused on input fields
   focus(input: string) {
@@ -25,18 +36,18 @@ export class OtpComponent implements OnInit {
   // when focused out
   focusout(input: string) {
     if (input === 'username') {
-      if (this.user.username === '') {
+      if (this.otpForm.value.otp === '') {
         this.usernameClass.pop();
       }
     }
   }
 
-  // login
-  sendOTP(loginForm: NgForm) {
-    if (loginForm.invalid) {
-      return;
+  public verifyOtp() {
+    if (this.authService.verifyOtp(this.otpForm.value.otp)) {
+      this.router.navigate(['/auth/reset-password']);
+    } else {
+      alert('OTP Incorrect');
     }
-    console.log(loginForm);
   }
 
   updateMetaTags() {
@@ -61,5 +72,8 @@ export class OtpComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateMetaTags();
+    if (!this.authService.isOtpSent()) {
+      this.router.navigate(['/auth/forgot-password']);
+    }
   }
 }

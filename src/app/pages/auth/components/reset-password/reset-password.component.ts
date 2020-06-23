@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormGroup, FormControl } from '@angular/forms';
 import { Title, Meta } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-reset-password',
@@ -8,35 +10,62 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./reset-password.component.scss'],
 })
 export class ResetPasswordComponent implements OnInit {
-  constructor(private titleService: Title, private metaService: Meta) {}
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
-  public usernameClass = ['input-div']; // classes used for username field
-  public user = {
-    username: '',
-  };
+  public passwordClass = ['input-div'];
+  public conPasswordClass = ['input-div'];
+  public isLoading = false;
+
+  public resetForm = new FormGroup({
+    newPass: new FormControl(''),
+    confNewPass: new FormControl(''),
+  });
 
   // when focused on input fields
   focus(input: string) {
-    if (input === 'username') {
-      this.usernameClass.push('focus');
+    if (input === 'password') {
+      this.passwordClass.push('focus');
+    }
+    if (input === 'con_password') {
+      this.conPasswordClass.push('focus');
     }
   }
 
   // when focused out
   focusout(input: string) {
-    if (input === 'username') {
-      if (this.user.username === '') {
-        this.usernameClass.pop();
+    if (input === 'password') {
+      if (this.resetForm.value.newPass === '') {
+        this.passwordClass.pop();
+      }
+    }
+    if (input === 'con_password') {
+      if (this.resetForm.value.confNewPass === '') {
+        this.conPasswordClass.pop();
       }
     }
   }
 
-  // login
-  sendOTP(loginForm: NgForm) {
-    if (loginForm.invalid) {
-      return;
-    }
-    console.log(loginForm);
+  public resetPassword() {
+    this.isLoading = true;
+    this.authService
+      .resetPassword(this.resetForm.value.newPass)
+      .subscribe((data: any) => {
+        this.isLoading = false;
+        if (data.status === false) {
+          if (data.message === 'EMAIL_NOT_REGISTERED') {
+            alert('Email not registered');
+            this.router.navigate(['/auth/login']);
+          }
+        } else {
+          alert('Password successfully changed!');
+          this.router.navigate(['/auth/login']);
+        }
+      });
   }
 
   updateMetaTags() {
@@ -61,5 +90,8 @@ export class ResetPasswordComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateMetaTags();
+    if (!this.authService.isOtpVerified()) {
+      this.router.navigate(['/auth/forgot-password']);
+    }
   }
 }
