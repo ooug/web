@@ -12,7 +12,19 @@ export class AuthService {
   private resetData = {
     email: '',
     otp: '',
+    otpVerified: false,
   };
+
+  public isOtpVerified() {
+    return this.resetData.otpVerified;
+  }
+
+  public isOtpSent() {
+    if (this.resetData.otp === '') {
+      return false;
+    }
+    return true;
+  }
 
   public sendOTP(email: string) {
     return this.http.post((environment.API as string) + '/auth/send-otp', {
@@ -24,13 +36,20 @@ export class AuthService {
   public setOtpDetails(email: string, otp: string) {
     this.resetData.email = email;
     this.resetData.otp = otp;
-    console.log(this.resetData);
   }
 
   public verifyOtp(otp: string) {
     if (otp.toString() === this.resetData.otp.toString()) {
+      this.resetData.otpVerified = true;
       return true;
     }
     return false;
+  }
+
+  public resetPassword(newPass: string) {
+    return this.http.post(environment.API + '/auth/reset-password', {
+      email: this.resetData.email,
+      newPassword: newPass,
+    });
   }
 }

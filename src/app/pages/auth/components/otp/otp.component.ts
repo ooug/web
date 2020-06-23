@@ -72,5 +72,8 @@ export class OtpComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateMetaTags();
+    if (!this.authService.isOtpSent()) {
+      this.router.navigate(['/auth/forgot-password']);
+    }
   }
 }
