@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ActivitiesService } from './activities.service';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import {
   NgbCarousel,
   NgbSlideEvent,
@@ -16,6 +17,7 @@ import { ImageSlider, Workshop, Techbhukkads, Farewell } from './activities';
 })
 export class ActivitiesComponent implements OnInit {
   constructor(
+    private modalService: NgbModal,
     config: NgbCarouselConfig,
     private activitiesService: ActivitiesService
   ) {
@@ -37,7 +39,31 @@ export class ActivitiesComponent implements OnInit {
   paused = false;
   pauseOnHover = false;
 
+  closeResult = '';
   @ViewChild('carousel', { static: true }) carousel: NgbCarousel;
+
+  open(content) {
+    this.modalService
+      .open(content, { ariaLabelledBy: 'modal-basic-title', size: 'lg' })
+      .result.then(
+        (result) => {
+          this.closeResult = `Closed with: ${result}`;
+        },
+        (reason) => {
+          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        }
+      );
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
 
   buttons(but: number) {
     this.tap = but;

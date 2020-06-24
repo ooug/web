@@ -1,3 +1,79 @@
+//-------------------modal---------------------
+.col-md-4 {
+  margin: 0;
+  padding: 0;
+}
+.left {
+  text-align: left;
+  color: #311f55;
+}
+.center {
+  text-align: center;
+  color: #311f55;
+}
+.right {
+  text-align: right;
+  color: #311f55;
+}
+.modal-image {
+  height: 250px;
+  width: 75%;
+  margin-top: 8px;
+  margin-left: 100px;
+  margin-right: 100px;
+  position: relative;
+  align-items: center;
+  border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+}
+.event-heading {
+  color: white;
+  font-size: 30px;
+  background-color: #432d70;
+  padding-left: 20px;
+}
+.close {
+  opacity: 1;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+@media (max-width: 1000px) {
+  .close {
+    margin-right: 3px;
+    margin-top: 0;
+  }
+  .modal-image {
+    height: 250px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .left {
+    text-align: center;
+  }
+  .center {
+    text-align: center;
+  }
+  .right {
+    text-align: center;
+  }
+  .event-heading {
+    font-size: 25px;
+    padding-left: 5px;
+  }
+}
+.cross {
+  position: absolute;
+  z-index: 5;
+  margin-top: 4px;
+  margin-left: -36px;
+  background-color: #6a097d;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 1px;
+  padding-bottom: 7px;
+  border-radius: 50%;
+}
+
 //--------------------nav bar----------------------
 .bar-but {
   color: black;

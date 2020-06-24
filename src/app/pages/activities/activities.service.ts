@@ -8,10 +8,14 @@ import { ImageSlider, Workshop, Techbhukkads, Farewell } from './activities';
 @Injectable()
 export class ActivitiesService {
   constructor(private http: HttpClient) {}
-  public imageSlider = 'http://localhost:8080/get-image-slider';
-  public workshop = 'http://localhost:8080/get-event-detail-workshop';
-  public techbhukkads = 'http://localhost:8080/get-event-detail-techbhukkads';
-  public farewell = 'http://localhost:8080/get-event-detail-farewell';
+  public imageSlider =
+    'https://ooug-dev-1fbf3.el.r.appspot.com/get-image-slider';
+  public workshop =
+    'https://ooug-dev-1fbf3.el.r.appspot.com/get-event-detail-workshop';
+  public techbhukkads =
+    'https://ooug-dev-1fbf3.el.r.appspot.com/get-event-detail-techbhukkads';
+  public farewell =
+    'https://ooug-dev-1fbf3.el.r.appspot.com/get-event-detail-farewell';
   getSlide(): Observable<ImageSlider> {
     return this.http
       .get<ImageSlider>(this.imageSlider)

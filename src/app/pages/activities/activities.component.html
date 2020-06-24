@@ -47,20 +47,41 @@
   </div>
   <div class="row">
     <div class="box col-md-4 col-sm-6" *ngFor="let item of workshop;">
-      <div class="banner">
-        <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
-        <div class="date-cor">
-          <b>{{ item.eventDate }}</b>
-
-        </div>
-        <div class="heading">
-          <div style="text-align: center; margin-top: 175px;">
-            <b style="color:rgb(255, 255, 255); padding: 5px;">Workshop on {{ item.eventOn }} by
-              {{ item.organizedBy }}</b>
-            <p style="color: rgb(204, 198, 187); padding: 5px;">@{{ item.organizedAt }}</p>
+      <a (click)="open(item1)">
+        <div class="banner">
+          <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
+          <div class="date-cor">
+            <b>{{ item.eventDate }}</b>
+          </div>
+          <div class="heading">
+            <div style="text-align: center; margin-top: 175px;">
+              <b style="color:rgb(255, 255, 255); padding: 5px;">{{ item.eventOn }}</b>
+              <p style="color: rgb(204, 198, 187); padding: 5px;">@{{ item.organizedAt }}</p>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
+      <ng-template #item1 let-modal style="border-radius: 0;">
+        <div class="modal-body" style="padding: 0; margin: -5px; background-color: white; border-radius: 3px;">
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true" class="cross">&times;</span>
+          </button>
+          <div class="event-heading">{{ item.eventOn }}
+          </div>
+          <img src="{{ item.eventImage }}" alt="Image is not available" class="modal-image" />
+          <hr style="background-color: #8262c2">
+          <div class="row" style="background-color: #bda2f2; padding: 5px;">
+            <div class="col-lg-4 left"><b style="font-size: 15px;">Venue: {{item.organizedAt}}</b>
+            </div>
+            <div class="col-lg-4 center"><b style="font-size: 15px;">Organized By: {{item.organizedBy}}</b>
+            </div>
+            <div class="col-lg-4 right"><b style="font-size: 15px;">Date: {{item.eventDate}}</b></div>
+          </div>
+          <div style="text-align: justify; margin: 15px; margin-bottom: 20px;">
+            <small> {{ item.eventDetails }} </small>
+          </div>
+        </div>
+      </ng-template>
     </div>
   </div>
 </div>
@@ -70,19 +91,41 @@
   </div>
   <div class="row">
     <div class="box col-md-4 col-sm-6" *ngFor="let item of techbhukkads;">
-      <div class="banner">
-        <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
-        <div class="date-cor">
-          <b>{{ item.eventDate }}</b>
-        </div>
-        <div class="heading">
-          <div style="text-align: center; margin-top: 175px;">
-            <b style="color:rgb(255, 255, 255); padding: 5px;">Techbhukkads on {{ item.eventOn }} by
-              {{ item.organizedBy }}</b>
-            <p style="color: rgb(204, 198, 187); padding: 5px;">@{{ item.organizedAt }}</p>
+      <a (click)="open(item1)">
+        <div class="banner">
+          <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
+          <div class="date-cor">
+            <b>{{ item.eventDate }}</b>
+          </div>
+          <div class="heading">
+            <div style="text-align: center; margin-top: 175px;">
+              <b style="color:rgb(255, 255, 255); padding: 5px;">{{ item.eventOn }}</b>
+              <p style="color: rgb(204, 198, 187); padding: 5px;">@{{ item.organizedAt }}</p>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
+      <ng-template #item1 let-modal style="border-radius: 0;">
+        <div class="modal-body" style="padding: 0; margin: -5px; background-color: white; border-radius: 3px;">
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true" class="cross">&times;</span>
+          </button>
+          <div class="event-heading">{{ item.eventOn }}
+          </div>
+          <img src="{{ item.eventImage }}" alt="Image is not available" class="modal-image" />
+          <hr style="background-color: #8262c2">
+          <div class="row" style="background-color: #bda2f2; padding: 5px;">
+            <div class="col-lg-4 left"><b style="font-size: 15px;">Venue: {{item.organizedAt}}</b>
+            </div>
+            <div class="col-lg-4 center"><b style="font-size: 15px;">Organized By: {{item.organizedBy}}</b>
+            </div>
+            <div class="col-lg-4 right"><b style="font-size: 15px;">Date: {{item.eventDate}}</b></div>
+          </div>
+          <div style="text-align: justify; margin: 15px; margin-bottom: 20px;">
+            <small> {{ item.eventDetails }} </small>
+          </div>
+        </div>
+      </ng-template>
     </div>
   </div>
 </div>
@@ -92,19 +135,41 @@
   </div>
   <div class="row">
     <div class="box col-md-4 col-sm-6" *ngFor="let item of farewell;">
-      <div class="banner">
-        <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
-        <div class="date-cor">
-          <b>{{ item.eventDate }}</b>
-        </div>
-        <div class="heading">
-          <div style="text-align: center; margin-top: 175px;">
-            <b style="color:rgb(255, 255, 255); padding: 5px;">celebration on {{item.eventOn}} by
-              {{ item.organizedBy }}</b>
-            <p style="color: rgb(204, 198, 187); padding: 5px;">@{{item.organizedAt}}</p>
+      <a (click)="open(item1)">
+        <div class="banner">
+          <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
+          <div class="date-cor">
+            <b>{{ item.eventDate }}</b>
+          </div>
+          <div class="heading">
+            <div style="text-align: center; margin-top: 175px;">
+              <b style="color:rgb(255, 255, 255); padding: 5px;">{{item.eventOn}}</b>
+              <p style="color: rgb(247, 227, 192); padding: 5px;">@{{item.organizedAt}}</p>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
+      <ng-template #item1 let-modal style="border-radius: 0;">
+        <div class="modal-body" style="padding: 0; margin: -5px; background-color: white; border-radius: 3px;">
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true" class="cross">&times;</span>
+          </button>
+          <div class="event-heading">{{ item.eventOn }}
+          </div>
+          <img src="{{ item.eventImage }}" alt="Image is not available" class="modal-image" />
+          <hr style="background-color: #8262c2">
+          <div class="row" style="background-color: #bda2f2; padding: 5px;">
+            <div class="col-lg-4 left"><b style="font-size: 15px;">Venue: {{item.organizedAt}}</b>
+            </div>
+            <div class="col-lg-4 center"><b style="font-size: 15px;">Organized By: {{item.organizedBy}}</b>
+            </div>
+            <div class="col-lg-4 right"><b style="font-size: 15px;">Date: {{item.eventDate}}</b></div>
+          </div>
+          <div style="text-align: justify; margin: 15px; margin-bottom: 20px;">
+            <small> {{ item.eventDetails }} </small>
+          </div>
+        </div>
+      </ng-template>
     </div>
   </div>
 </div>
