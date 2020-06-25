@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm, FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Title, Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../../../environments/environment';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,13 +14,14 @@ export class LoginComponent implements OnInit {
   constructor(
     private titleService: Title,
     private metaService: Meta,
-    private http: HttpClient
+    private http: HttpClient,
+    private authService: AuthService
   ) {}
 
   public usernameClass = ['input-div']; // classes used for username field
   public passwordClass = ['input-div']; // classes used for password field
 
-  loginForm = new FormGroup({
+  public loginForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
   });
@@ -48,29 +51,29 @@ export class LoginComponent implements OnInit {
   }
 
   // login
-  login() {
+  public login() {
     if (this.loginForm.invalid) {
       return;
     }
-    this.http.get('./assets/api/user.json').subscribe((users) => {
-      const user = JSON.parse(JSON.stringify(users)).find((u) => {
-        return u.email === this.loginForm.value.email;
-      });
-      if (user) {
-        // user found
-        if (user.password === this.loginForm.value.password) {
-          // login successfully
-          alert(user.name + ' logged in !');
+    this.http
+      .post((environment.API as string) + '/auth/login', {
+        email: this.loginForm.value.email,
+        password: this.loginForm.value.password,
+      })
+      .subscribe((data: any) => {
+        if (data.status === false) {
+          alert(data.data);
         } else {
-          // incorrect password
-          alert('Incorrect Password!');
+          this.authService
+            .setLoginUser(data.token, {
+              name: data.User.name,
+              email: data.User.email,
+            })
+            .then(() => {
+              alert('Logged in');
+            });
         }
-      } else {
-        // email mot valid
-        alert('Invalid Email!');
-      }
-      this.loginForm.reset();
-    });
+      });
   }
 
   updateMetaTags() {
