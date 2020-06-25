@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
 // For MDB Angular Pro
-
 import { AppRoutingModule } from './app-routing.module';
 
 // components
@@ -19,6 +18,7 @@ import { MaintenanceComponent } from './components/maintenance/maintenance.compo
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import { BEARER_TOKEN_INTERCEPTOR } from './interceptors/auth/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [BEARER_TOKEN_INTERCEPTOR],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

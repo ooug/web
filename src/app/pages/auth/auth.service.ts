@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AuthModule } from './auth.module';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
-  providedIn: AuthModule,
+  providedIn: 'root',
 })
 export class AuthService {
   constructor(private http: HttpClient) {}
@@ -15,6 +14,20 @@ export class AuthService {
     otpVerified: false,
   };
 
+  // login function downwards
+  public setLoginUser(token: string, user: { name: string; email: string }) {
+    return new Promise((resolve, reject) => {
+      localStorage.setItem('token', token);
+      localStorage.setItem('user', JSON.stringify(user));
+      resolve('done');
+    });
+  }
+
+  public getToken() {
+    return localStorage.getItem('token');
+  }
+
+  // reset password functions downward
   public isOtpVerified() {
     return this.resetData.otpVerified;
   }
