@@ -18,7 +18,7 @@ import { MaintenanceComponent } from './components/maintenance/maintenance.compo
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { BEARER_TOKEN_INTERCEPTOR } from './interceptors/auth/auth-interceptor.service';
+import { BEARER_TOKEN_INTERCEPTOR } from './interceptors/bearer-token-interceptor/bearer-token-interceptor.service';
 
 @NgModule({
   declarations: [

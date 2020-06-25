@@ -8,9 +8,8 @@ import {
 } from '@angular/common/http';
 import { AuthService } from '../../pages/auth/auth.service';
 import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
 @Injectable()
-export class TokenInterceptor implements HttpInterceptor {
+export class TokenInterceptorService implements HttpInterceptor {
   constructor(private authService: AuthService) {}
   intercept(
     req: HttpRequest<any>,
@@ -27,6 +26,6 @@ export class TokenInterceptor implements HttpInterceptor {
 
 export const BEARER_TOKEN_INTERCEPTOR = {
   provide: HTTP_INTERCEPTORS,
-  useClass: TokenInterceptor,
+  useClass: TokenInterceptorService,
   multi: true,
 };
