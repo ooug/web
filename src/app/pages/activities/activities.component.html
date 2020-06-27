@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <br><br><br>
+
 <ngb-carousel class="slid" #carousel [interval]="2000" [pauseOnHover]="pauseOnHover">
   <ng-template ngbSlide *ngFor="let img of images; index as i" delay="toast.delay || 10000">
     <div class="carousel-caption">
@@ -45,131 +46,137 @@
   <div *ngIf="errorWorkshop">
     {{ errorWorkshop }}
   </div>
-  <div class="row">
-    <div class="box col-md-4 col-sm-6" *ngFor="let item of workshop;">
-      <a (click)="open(item1)">
-        <div class="banner">
-          <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
-          <div class="date-cor">
-            <b>{{ item.eventDate }}</b>
-          </div>
-          <div class="heading">
-            <div style="text-align: center; margin-top: 175px;">
-              <b style="color:rgb(255, 255, 255); padding: 5px;">{{ item.eventOn }}</b>
-              <p style="color: rgb(204, 198, 187); padding: 5px;">@{{ item.organizedAt }}</p>
+  <cdk-virtual-scroll-viewport itemSize="100" class="cont">
+    <div class="row">
+      <div class="box col-md-4" *cdkVirtualFor="let item of workshop;">
+        <a (click)="open(item1)">
+          <div class="banner">
+            <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
+            <div class="date-cor">
+              <b>{{ item.eventDate }}</b>
+            </div>
+            <div class="heading">
+              <div style="text-align: center; margin-top: 175px;">
+                <b style="color:rgb(255, 255, 255); padding: 5px; text-transform: capitalize;">{{ item.eventOn }}</b>
+                <p style="color: rgb(204, 198, 187); padding: 5px;">@{{ item.organizedAt }}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
-      <ng-template #item1 let-modal style="border-radius: 0;">
-        <div class="modal-body" style="padding: 0; margin: -5px; background-color: white; border-radius: 3px;">
-          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true" class="cross">&times;</span>
-          </button>
-          <div class="event-heading">{{ item.eventOn }}
-          </div>
-          <img src="{{ item.eventImage }}" alt="Image is not available" class="modal-image" />
-          <hr style="background-color: #8262c2">
-          <div class="row" style="background-color: #bda2f2; padding: 5px;">
-            <div class="col-lg-4 left"><b style="font-size: 15px;">Venue: {{item.organizedAt}}</b>
+        </a>
+        <ng-template #item1 let-modal style="border-radius: 0;">
+          <div class="modal-body" style="padding: 0; margin: -5px; background-color: white; border-radius: 3px;">
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true" class="cross">&times;</span>
+            </button>
+            <div class="event-heading">{{ item.eventOn }}
             </div>
-            <div class="col-lg-4 center"><b style="font-size: 15px;">Organized By: {{item.organizedBy}}</b>
+            <img src="{{ item.eventImage }}" alt="Image is not available" class="modal-image" />
+            <hr style="background-color: #8262c2">
+            <div class="row" style="background-color: #bda2f2; padding: 5px;">
+              <div class="col-lg-4 left"><b style="font-size: 15px;">Venue: {{item.organizedAt}}</b>
+              </div>
+              <div class="col-lg-4 center"><b style="font-size: 15px;">Organized By: {{item.organizedBy}}</b>
+              </div>
+              <div class="col-lg-4 right"><b style="font-size: 15px;">Date: {{item.eventDate}}</b></div>
             </div>
-            <div class="col-lg-4 right"><b style="font-size: 15px;">Date: {{item.eventDate}}</b></div>
+            <div style="text-align: justify; margin: 15px; margin-bottom: 20px;">
+              <small> {{ item.eventDetails }} </small>
+            </div>
           </div>
-          <div style="text-align: justify; margin: 15px; margin-bottom: 20px;">
-            <small> {{ item.eventDetails }} </small>
-          </div>
-        </div>
-      </ng-template>
+        </ng-template>
+      </div>
     </div>
-  </div>
+  </cdk-virtual-scroll-viewport>
 </div>
 <div class="container" *ngIf="active === 'techbhukkads'">
   <div *ngIf="errorTechbhukkads">
     {{ errorTechbhukkads }}
   </div>
-  <div class="row">
-    <div class="box col-md-4 col-sm-6" *ngFor="let item of techbhukkads;">
-      <a (click)="open(item1)">
-        <div class="banner">
-          <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
-          <div class="date-cor">
-            <b>{{ item.eventDate }}</b>
-          </div>
-          <div class="heading">
-            <div style="text-align: center; margin-top: 175px;">
-              <b style="color:rgb(255, 255, 255); padding: 5px;">{{ item.eventOn }}</b>
-              <p style="color: rgb(204, 198, 187); padding: 5px;">@{{ item.organizedAt }}</p>
+  <cdk-virtual-scroll-viewport itemSize="100" class="cont">
+    <div class="row">
+      <div class="box col-md-4" *cdkVirtualFor="let item of techbhukkads;">
+        <a (click)="open(item1)">
+          <div class="banner">
+            <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
+            <div class="date-cor">
+              <b>{{ item.eventDate }}</b>
+            </div>
+            <div class="heading">
+              <div style="text-align: center; margin-top: 175px;">
+                <b style="color:rgb(255, 255, 255); padding: 5px;  text-transform: capitalize;">{{ item.eventOn }}</b>
+                <p style="color: rgb(204, 198, 187); padding: 5px;">@{{ item.organizedAt }}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
-      <ng-template #item1 let-modal style="border-radius: 0;">
-        <div class="modal-body" style="padding: 0; margin: -5px; background-color: white; border-radius: 3px;">
-          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true" class="cross">&times;</span>
-          </button>
-          <div class="event-heading">{{ item.eventOn }}
-          </div>
-          <img src="{{ item.eventImage }}" alt="Image is not available" class="modal-image" />
-          <hr style="background-color: #8262c2">
-          <div class="row" style="background-color: #bda2f2; padding: 5px;">
-            <div class="col-lg-4 left"><b style="font-size: 15px;">Venue: {{item.organizedAt}}</b>
+        </a>
+        <ng-template #item1 let-modal style="border-radius: 0;">
+          <div class="modal-body" style="padding: 0; margin: -5px; background-color: white; border-radius: 3px;">
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true" class="cross">&times;</span>
+            </button>
+            <div class="event-heading">{{ item.eventOn }}
             </div>
-            <div class="col-lg-4 center"><b style="font-size: 15px;">Organized By: {{item.organizedBy}}</b>
+            <img src="{{ item.eventImage }}" alt="Image is not available" class="modal-image" />
+            <hr style="background-color: #8262c2">
+            <div class="row" style="background-color: #bda2f2; padding: 5px;">
+              <div class="col-lg-4 left"><b style="font-size: 15px;">Venue: {{item.organizedAt}}</b>
+              </div>
+              <div class="col-lg-4 center"><b style="font-size: 15px;">Organized By: {{item.organizedBy}}</b>
+              </div>
+              <div class="col-lg-4 right"><b style="font-size: 15px;">Date: {{item.eventDate}}</b></div>
             </div>
-            <div class="col-lg-4 right"><b style="font-size: 15px;">Date: {{item.eventDate}}</b></div>
+            <div style="text-align: justify; margin: 15px; margin-bottom: 20px;">
+              <small> {{ item.eventDetails }} </small>
+            </div>
           </div>
-          <div style="text-align: justify; margin: 15px; margin-bottom: 20px;">
-            <small> {{ item.eventDetails }} </small>
-          </div>
-        </div>
-      </ng-template>
+        </ng-template>
+      </div>
     </div>
-  </div>
+  </cdk-virtual-scroll-viewport>
 </div>
 <div class="container" *ngIf="active === 'farewell'">
   <div *ngIf="errorFarewell">
     {{ errorFarewell }}
   </div>
-  <div class="row">
-    <div class="box col-md-4 col-sm-6" *ngFor="let item of farewell;">
-      <a (click)="open(item1)">
-        <div class="banner">
-          <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
-          <div class="date-cor">
-            <b>{{ item.eventDate }}</b>
-          </div>
-          <div class="heading">
-            <div style="text-align: center; margin-top: 175px;">
-              <b style="color:rgb(255, 255, 255); padding: 5px;">{{item.eventOn}}</b>
-              <p style="color: rgb(247, 227, 192); padding: 5px;">@{{item.organizedAt}}</p>
+  <cdk-virtual-scroll-viewport itemSize="100" class="cont">
+    <div class="row">
+      <div class="box col-md-4" *cdkVirtualFor="let item of farewell;">
+        <a (click)="open(item1)">
+          <div class="banner">
+            <img class="image" src="{{ item.eventImage }}" alt="Card image cap" height="250px" width="100%" />
+            <div class="date-cor">
+              <b>{{ item.eventDate }}</b>
+            </div>
+            <div class="heading">
+              <div style="text-align: center; margin-top: 175px;">
+                <b style="color:rgb(255, 255, 255); padding: 5px;  text-transform: capitalize;">{{item.eventOn}}</b>
+                <p style="color: rgb(247, 227, 192); padding: 5px;">@{{item.organizedAt}}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
-      <ng-template #item1 let-modal style="border-radius: 0;">
-        <div class="modal-body" style="padding: 0; margin: -5px; background-color: white; border-radius: 3px;">
-          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true" class="cross">&times;</span>
-          </button>
-          <div class="event-heading">{{ item.eventOn }}
-          </div>
-          <img src="{{ item.eventImage }}" alt="Image is not available" class="modal-image" />
-          <hr style="background-color: #8262c2">
-          <div class="row" style="background-color: #bda2f2; padding: 5px;">
-            <div class="col-lg-4 left"><b style="font-size: 15px;">Venue: {{item.organizedAt}}</b>
+        </a>
+        <ng-template #item1 let-modal style="border-radius: 0;">
+          <div class="modal-body" style="padding: 0; margin: -5px; background-color: white; border-radius: 3px;">
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true" class="cross">&times;</span>
+            </button>
+            <div class="event-heading">{{ item.eventOn }}
             </div>
-            <div class="col-lg-4 center"><b style="font-size: 15px;">Organized By: {{item.organizedBy}}</b>
+            <img src="{{ item.eventImage }}" alt="Image is not available" class="modal-image" />
+            <hr style="background-color: #8262c2">
+            <div class="row" style="background-color: #bda2f2; padding: 5px;">
+              <div class="col-lg-4 left"><b style="font-size: 15px;">Venue: {{item.organizedAt}}</b>
+              </div>
+              <div class="col-lg-4 center"><b style="font-size: 15px;">Organized By: {{item.organizedBy}}</b>
+              </div>
+              <div class="col-lg-4 right"><b style="font-size: 15px;">Date: {{item.eventDate}}</b></div>
             </div>
-            <div class="col-lg-4 right"><b style="font-size: 15px;">Date: {{item.eventDate}}</b></div>
+            <div style="text-align: justify; margin: 15px; margin-bottom: 20px;">
+              <small> {{ item.eventDetails }} </small>
+            </div>
           </div>
-          <div style="text-align: justify; margin: 15px; margin-bottom: 20px;">
-            <small> {{ item.eventDetails }} </small>
-          </div>
-        </div>
-      </ng-template>
+        </ng-template>
+      </div>
     </div>
-  </div>
+  </cdk-virtual-scroll-viewport>
 </div>
