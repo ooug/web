@@ -23,6 +23,7 @@ export class ActivitiesComponent implements OnInit {
   ) {
     config.interval = 10000;
   }
+
   active = 'workshop';
   tap = 1;
 
