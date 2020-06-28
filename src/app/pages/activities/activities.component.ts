@@ -27,11 +27,11 @@ export class ActivitiesComponent implements OnInit {
   active = 'workshop';
   tap = 1;
 
-  public images: ImageSlider;
+  public images;
   public workshop: Workshop;
   public techbhukkads: Techbhukkads;
   public farewell: Farewell;
-
+  public flex = false;
   public errorSlider: any;
   public errorWorkshop: any;
   public errorTechbhukkads: any;
@@ -97,7 +97,6 @@ export class ActivitiesComponent implements OnInit {
       (error) => (this.errorFarewell = error)
     );
   }
-
   public activateTab(tab: string) {
     this.active = tab;
   }
