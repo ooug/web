@@ -30,9 +30,7 @@
               "src/humans.txt",
               "src/sitemap.xml"
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -129,9 +127,7 @@
               "src/humans.txt",
               "src/sitemap.xml"
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -143,9 +139,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -165,6 +159,7 @@
   },
   "defaultProject": "web",
   "cli": {
-    "analytics": "5ba35133-90d1-4977-902a-525c39a280c8"
+    "analytics": "5ba35133-90d1-4977-902a-525c39a280c8",
+    "packageManager": "yarn"
   }
 }

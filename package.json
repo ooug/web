@@ -1,6 +1,10 @@
 {
   "name": "web",
   "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "12"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "format": "prettier --write \"src/**/*.ts\" \"e2e/**/*.ts\"",
@@ -13,7 +17,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.1",
     "@angular/cdk": "^10.0.0",
