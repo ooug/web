@@ -17,7 +17,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "huksy": {
+  "husky": {
     "hooks": {
       "pre-commit": "yarn format && git add ."
     }
