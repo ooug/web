@@ -6,7 +6,7 @@ import { ActivitiesComponent } from './activities.component';
 import { FormsModule } from '@angular/forms';
 import { ActivitiesService } from './activities.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ScrollingModule } from '@angular/cdk/Scrolling';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 const routes: Routes = [
   {
