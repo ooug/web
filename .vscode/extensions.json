@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "johnpapa.angular2",
+    "angular.ng-template",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "cssho.vscode-svgviewer",
+    "redhat.vscode-yaml",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "xabikos.javascriptsnippets",
+    "esbenp.prettier-vscode",
+    "humao.rest-client",
+    "deerawan.vscode-faker",
+    "gruntfuggly.todo-tree",
+    "streetsidesoftware.code-spell-checker",
+    "coenraads.bracket-pair-colorizer"
+  ]
+}
