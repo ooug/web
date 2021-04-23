@@ -41,10 +41,6 @@ export class AuthComponent implements OnInit {
    * @return boolean true or false
    */
   public doLogin(email: string, password: string): boolean {
-    console.log('email :', email);
-    console.log('password :', password);
-    const status = confirm('Want to login ?');
-    console.log(`status :`, status);
     return status;
   }
 }
