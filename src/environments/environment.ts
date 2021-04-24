@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   staging: false,
   development: true,
-  API: 'https://ooug-dev-1fbf3.el.r.appspot.com',
+  API: 'http://localhost:3000',
 };
 
 /*

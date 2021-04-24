@@ -24,8 +24,8 @@
       <p>
         Date:
         <span class="text-info"
-          >{{ event.Date.day }} {{ event.Date.month }}
-          {{ event.Date.year }}</span
+          >{{ event.date.day }} {{ event.date.month }}
+          {{ event.date.year }}</span
         >
         at <span class="text-info">{{ event.time }}</span
         >&nbsp;&nbsp;&nbsp;&nbsp; Venue:
@@ -43,7 +43,7 @@
     </div>
     <div class="col-md-4 col-12 m-0">
       <img
-        src="{{ event.Image.host + event.Image.path }}"
+        src="{{ event.image.host + event.image.path }}"
         alt="Image.."
         class="img-responsive my-2"
         width="100%"
