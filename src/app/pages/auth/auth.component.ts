@@ -41,6 +41,6 @@ export class AuthComponent implements OnInit {
    * @return boolean true or false
    */
   public doLogin(email: string, password: string): boolean {
-    return status;
+    return true;
   }
 }
