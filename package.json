@@ -35,7 +35,7 @@
     "@angular/router": "~10.0.14",
     "@angular/service-worker": "~10.0.14",
     "@ng-bootstrap/ng-bootstrap": "^9.1.0",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.6.0",
     "husky": "^4.2.5",
     "rxjs": "~6.6.2",
     "tslib": "^2.0.0",
