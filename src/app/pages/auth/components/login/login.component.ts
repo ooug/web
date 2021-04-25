@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
       return;
     }
     this.http
-      .post((environment.API as string) + '/auth/login', {
+      .post((environment.api as string) + '/auth/login', {
         email: this.loginForm.value.email,
         password: this.loginForm.value.password,
       })

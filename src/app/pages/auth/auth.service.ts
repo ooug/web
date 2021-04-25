@@ -40,7 +40,7 @@ export class AuthService {
   }
 
   public sendOTP(email: string) {
-    return this.http.post((environment.API as string) + '/auth/send-otp', {
+    return this.http.post((environment.api as string) + '/auth/send-otp', {
       // tslint:disable-next-line: object-literal-shorthand
       email: email,
     });
@@ -60,7 +60,7 @@ export class AuthService {
   }
 
   public resetPassword(newPass: string) {
-    return this.http.post(environment.API + '/auth/reset-password', {
+    return this.http.post(environment.api + '/auth/reset-password', {
       email: this.resetData.email,
       newPassword: newPass,
     });

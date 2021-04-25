@@ -6,11 +6,10 @@ export const environment = {
   production: false,
   staging: false,
   development: true,
-  API: 'http://localhost:3000',
+  api: 'https://ooug-dev-1fbf3.el.r.appspot.com',
 };
 
 /*
-API: 'https://ooug-dev-1fbf3.el.r.appspot.com',
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
  *

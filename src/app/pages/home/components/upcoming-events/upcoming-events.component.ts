@@ -17,7 +17,7 @@ export class UpcomingEventsComponent implements OnInit {
     // getting data from json file
     this.isLoading = true;
     this.http
-      .get((environment.API as string) + '/upcoming-event/get-all')
+      .get((environment.api as string) + '/upcoming-event/get-all')
       .subscribe((events: any) => {
         this.upcomingEvents = events.data;
         this.isLoading = false;

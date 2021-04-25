@@ -35,7 +35,7 @@ export class EventDetailComponent implements OnInit {
   register() {
     this.infoText = 'Registering...';
     this.http
-      .post((environment.API as string) + '/upcoming-event/register', {
+      .post((environment.api as string) + '/upcoming-event/register', {
         id: this.event._id,
         name: this.registerForm.value.userName,
         roll: this.registerForm.value.roll.toUpperCase(),
@@ -84,7 +84,7 @@ export class EventDetailComponent implements OnInit {
         // fetching from api
         this.http
           .get(
-            (environment.API as string) + '/upcoming-event/get-one/' + eventId
+            (environment.api as string) + '/upcoming-event/get-one/' + eventId
           )
           .subscribe((data: any) => {
             // searching for particular event

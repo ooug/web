@@ -27,7 +27,7 @@ export class ContactComponent implements OnInit {
     this.infoText = 'Submitting...';
     this.http
       .post(
-        (environment.API as string) + '/app/contact-us',
+        (environment.api as string) + '/app/contact-us',
         this.contactForm.value
       )
       .subscribe((data: any) => {
