@@ -17,6 +17,12 @@
       />
     </div>
   </div>
+  <!-- If no upcoming event found -->
+  <div class="row" *ngIf="!isLoading && upcomingEvents.length === 0">
+    <div class="col-md-12 text-center">
+      <h4 class="text-secondary">No Upcoming Events!</h4>
+    </div>
+  </div>
   <!-- event cards -->
   <div class="row" *ngIf="!isLoading">
     <div
