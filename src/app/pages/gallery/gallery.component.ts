@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent implements OnInit {
-  constructor() {}
+  constructor(private httpClient: HttpClient) {}
 
-  ngOnInit(): void {}
+  public sliderItems: any = [];
+  public imageItems: any = [];
+
+  public isLoading: Boolean = false;
+
+  ngOnInit(): void {
+    this.isLoading = true;
+    this.httpClient.get('./assets/api/gallery.json').subscribe((data: any) => {
+      this.sliderItems = data.slider;
+      this.imageItems = data.images;
+      this.isLoading = false;
+    });
+  }
 }

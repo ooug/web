@@ -1,241 +1,39 @@
-<div class="container-fluid">
-  <div class="workshop">
-    <div class="container-xl">
-      <div class="row" id="top-row">
-        <div class="card mb-3">
-          <img src="./assets/images/e.jpg" class="card-img-top" alt="..." />
-          <div class="card-img-overlay">
-            <h5 class="card-title">Android Workshop</h5>
-          </div>
-          <div class="card-body">
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.This is a wider card with supporting text below as a
-              natural lead-in to additional content. This content is a little
-              bit longer.
-            </p>
-            <p class="card-text-by">
-              <small class="text-muted">Amiya kumar sahoo</small>
-            </p>
-          </div>
-        </div>
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let slide of sliderItems">
+    <div class="img-body">
+      <div class="picsum-img-wrapper">
+        <img
+          src="{{ slide.image.host + slide.image.path }}"
+          alt="{{ slide.title }}"
+        />
       </div>
+      <div class="carousel-caption">
+        <h3>{{ slide.title }}</h3>
+        <p>{{ slide.description }}</p>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>
 
-      <div class="row" id="shadow-lg">
-        <div class="container">
-          <ngb-carousel>
-            <ng-template ngbSlide>
-              <div class="img-body">
-                <div class="picsum-img-wrapper">
-                  <img
-                    src="./assets/images/gallery.jpg"
-                    alt="Random first slide"
-                  />
-                </div>
-                <div class="carousel-caption">
-                  <h3>First slide label</h3>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template ngbSlide>
-              <div class="img-body">
-                <div class="picsum-img-wrapper">
-                  <img
-                    src="./assets/images/gallery.jpg"
-                    alt="Random second slide"
-                  />
-                </div>
-                <div class="carousel-caption">
-                  <h3>Second slide label</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template ngbSlide>
-              <div class="img-body">
-                <div class="picsum-img-wrapper">
-                  <img
-                    src="./assets/images/gallery.jpg"
-                    alt="Random third slide"
-                  />
-                </div>
-                <div class="carousel-caption">
-                  <h3>Third slide label</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
-            </ng-template>
-          </ngb-carousel>
-        </div>
-      </div>
-      <hr class="hr" />
+<div class="container my-3">
+  <div class="row my-3">
+    <div class="col text-center">
+      <div id="galleryTitle"><span id="oougTitle">OOUG</span>'s Gallery</div>
     </div>
   </div>
-
-  <div class="official-event">
-    <div class="container-xl">
-      <div class="row" id="top-row">
-        <div class="card mb-3">
-          <img src="./assets/images/e.jpg" class="card-img-top" alt="..." />
-          <div class="card-img-overlay">
-            <h5 class="card-title">Official Events</h5>
-          </div>
-          <div class="card-body">
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.This is a wider card with supporting text below as a
-              natural lead-in to additional content. This content is a little
-              bit longer.
-            </p>
-            <p class="card-text-by">
-              <small class="text-muted">Amiya kumar sahoo</small>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row" id="shadow-lg">
-        <div class="container">
-          <ngb-carousel>
-            <ng-template ngbSlide>
-              <div class="img-body">
-                <div class="picsum-img-wrapper">
-                  <img
-                    src="./assets/images/gallery.jpg"
-                    alt="Random first slide"
-                  />
-                </div>
-                <div class="carousel-caption">
-                  <h3>First slide label</h3>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template ngbSlide>
-              <div class="img-body">
-                <div class="picsum-img-wrapper">
-                  <img
-                    src="./assets/images/gallery.jpg"
-                    alt="Random first slide"
-                  />
-                </div>
-                <div class="carousel-caption">
-                  <h3>Second slide label</h3>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template ngbSlide>
-              <div class="img-body">
-                <div class="picsum-img-wrapper">
-                  <img
-                    src="./assets/images/gallery.jpg"
-                    alt="Random first slide"
-                  />
-                </div>
-                <div class="carousel-caption">
-                  <h3>Third slide label</h3>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
-                </div>
-              </div>
-            </ng-template>
-          </ngb-carousel>
-        </div>
-      </div>
-      <hr class="hr" />
-    </div>
-  </div>
-
-  <div class="others-event">
-    <div class="container-xl">
-      <div class="row" id="top-row">
-        <div class="card mb-3">
-          <img src="./assets/images/e.jpg" class="card-img-top" alt="..." />
-          <div class="card-img-overlay">
-            <h5 class="card-title">Other Events</h5>
-          </div>
-          <div class="card-body">
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.This is a wider card with supporting text below as a
-              natural lead-in to additional content. This content is a little
-              bit longer.
-            </p>
-            <p class="card-text-by">
-              <small class="text-muted">Amiya kumar sahoo</small>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row" id="shadow-lg">
-        <div class="container">
-          <ngb-carousel>
-            <ng-template ngbSlide>
-              <div class="img-body">
-                <div class="picsum-img-wrapper">
-                  <img
-                    src="./assets/images/gallery.jpg"
-                    alt="Random first slide"
-                  />
-                </div>
-                <div class="carousel-caption">
-                  <h3>First slide label</h3>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template ngbSlide>
-              <div class="img-body">
-                <div class="picsum-img-wrapper">
-                  <img
-                    src="./assets/images/gallery.jpg"
-                    alt="Random first slide"
-                  />
-                </div>
-                <div class="carousel-caption">
-                  <h3>Second slide label</h3>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template ngbSlide>
-              <div class="img-body">
-                <div class="picsum-img-wrapper">
-                  <img
-                    src="./assets/images/gallery.jpg"
-                    alt="Random first slide"
-                  />
-                </div>
-                <div class="carousel-caption">
-                  <h3>Third slide label</h3>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
-                </div>
-              </div>
-            </ng-template>
-          </ngb-carousel>
+  <div class="row">
+    <div class="card-columns" lightbox-group>
+      <div class="card" *ngFor="let image of imageItems">
+        <img
+          class="card-img-top"
+          src="{{ image.image.host + image.image.path }}"
+          alt="{{ image.description }}"
+          lightbox
+        />
+        <div class="card-body">
+          <p class="card-text">
+            {{ image.description }}
+          </p>
         </div>
       </div>
     </div>
