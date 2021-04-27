@@ -21,28 +21,28 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/gallery/gallery.module').then((m) => m.GalleryModule),
   },
-  {
-    path: 'activities',
-    loadChildren: () =>
-      import('./pages/activities/activities.module').then(
-        (m) => m.ActivitiesModule
-      ),
-  },
-  {
-    path: 'members',
-    loadChildren: () =>
-      import('./pages/members/members.module').then((m) => m.MembersModule),
-  },
-  {
-    path: 'auth',
-    loadChildren: () =>
-      import('./pages/auth/auth.module').then((m) => m.AuthModule),
-  },
-  {
-    path: 'blog',
-    loadChildren: () =>
-      import('./pages/blog/blog.module').then((m) => m.BlogModule),
-  },
+  // {
+  //   path: 'activities',
+  //   loadChildren: () =>
+  //     import('./pages/activities/activities.module').then(
+  //       (m) => m.ActivitiesModule
+  //     ),
+  // },
+  // {
+  //   path: 'members',
+  //   loadChildren: () =>
+  //     import('./pages/members/members.module').then((m) => m.MembersModule),
+  // },
+  // {
+  //   path: 'auth',
+  //   loadChildren: () =>
+  //     import('./pages/auth/auth.module').then((m) => m.AuthModule),
+  // },
+  // {
+  //   path: 'blog',
+  //   loadChildren: () =>
+  //     import('./pages/blog/blog.module').then((m) => m.BlogModule),
+  // },
   {
     path: 'offline',
     component: OfflineComponent,
