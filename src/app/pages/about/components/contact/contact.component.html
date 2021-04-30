@@ -89,7 +89,7 @@
                     required
                   />
                   <div
-                    class="text-white"
+                    class="text-black"
                     *ngIf="
                       contactForm.controls.name.touched &&
                       contactForm.controls.name.errors?.required
@@ -119,13 +119,13 @@
                     email
                   />
                   <div
-                    class="text-white"
+                    class="text-black"
                     *ngIf="
                       contactForm.controls.email.touched &&
                       contactForm.controls.email.status === 'INVALID'
                     "
                   >
-                    <div *ngIf="contactForm.controls.email.errors?.required">
+                    <div *ngIf="contactForm.controls.email.errors?.required" class="text-black">
                       Required!
                     </div>
                     <div *ngIf="!contactForm.controls.email.errors?.required">
@@ -153,7 +153,7 @@
                     required
                   />
                   <div
-                    class="text-white"
+                    class="text-black"
                     *ngIf="
                       contactForm.controls.subject.touched &&
                       contactForm.controls.subject.errors?.required
@@ -182,7 +182,7 @@
                     required
                   ></textarea>
                   <div
-                    class="text-white"
+                    class="text-black"
                     *ngIf="
                       contactForm.controls.message.touched &&
                       contactForm.controls.message.errors?.required
