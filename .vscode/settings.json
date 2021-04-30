@@ -1,5 +1,5 @@
 {
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "off",
   "editor.formatOnSave": true,
   "cSpell.words": [
     "GIET",
