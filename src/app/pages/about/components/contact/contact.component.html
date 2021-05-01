@@ -64,17 +64,18 @@
                   style="
                     font-weight: bold;
                     font-family: sans-serif;
-                    color: white;
+                    color: grey;
                   "
                 >
                   WRITE TO US
+                  <div class="border2"></div>
                 </h3>
                 <div class="md-form">
                   <label
                     for=""
                     style="
                       font-weight: bold;
-                      color: white;
+                      color: grey;
                       font-family: sans-serif;
                     "
                     >Your name</label
@@ -88,7 +89,7 @@
                     required
                   />
                   <div
-                    class="text-white"
+                    class="text-black"
                     *ngIf="
                       contactForm.controls.name.touched &&
                       contactForm.controls.name.errors?.required
@@ -103,7 +104,7 @@
                     for=""
                     style="
                       font-weight: bold;
-                      color: white;
+                      color: grey;
                       font-family: sans-serif;
                     "
                     >Your email</label
@@ -118,13 +119,13 @@
                     email
                   />
                   <div
-                    class="text-white"
+                    class="text-black"
                     *ngIf="
                       contactForm.controls.email.touched &&
                       contactForm.controls.email.status === 'INVALID'
                     "
                   >
-                    <div *ngIf="contactForm.controls.email.errors?.required">
+                    <div *ngIf="contactForm.controls.email.errors?.required" class="text-black">
                       Required!
                     </div>
                     <div *ngIf="!contactForm.controls.email.errors?.required">
@@ -138,7 +139,7 @@
                     for=""
                     style="
                       font-weight: bold;
-                      color: white;
+                      color: grey;
                       font-family: sans-serif;
                     "
                     >Your subject</label
@@ -152,7 +153,7 @@
                     required
                   />
                   <div
-                    class="text-white"
+                    class="text-black"
                     *ngIf="
                       contactForm.controls.subject.touched &&
                       contactForm.controls.subject.errors?.required
@@ -167,7 +168,7 @@
                     for=""
                     style="
                       font-weight: bold;
-                      color: white;
+                      color: grey;
                       font-family: sans-serif;
                     "
                     >Your message</label
@@ -181,7 +182,7 @@
                     required
                   ></textarea>
                   <div
-                    class="text-white"
+                    class="text-black"
                     *ngIf="
                       contactForm.controls.message.touched &&
                       contactForm.controls.message.errors?.required
@@ -192,7 +193,7 @@
                 </div>
                 <div class="text-center text-white mt-3">{{ infoText }}</div>
                 <div class="text-center mt-4">
-                  <button class="send-btn" type="submit">Send</button>
+                  <button class="btn btn-outline-primary">Send</button>
                 </div>
               </div>
             </div>
