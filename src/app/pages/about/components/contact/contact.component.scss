@@ -22,8 +22,9 @@ h2 {
   background: rgb(233, 229, 229);
 }
 .card {
-  background: rgb(100, 58, 197);
   padding: 4px;
+  border: 2px solid;
+  border-color: #9e65fa;
   border-radius: 10px;
 }
 
@@ -32,10 +33,17 @@ h2 {
 }
 
 .border {
-  width: 160px;
-  height: 5px;
+  width: 190px;
+  height: 4px;
   background: black;
-  margin: 10px auto;
+  margin: 7px auto;
+  margin-bottom: 30px;
+}
+.border2 {
+  width: 190px;
+  height: 4px;
+  background: grey;
+  margin-left: 0px;
   margin-bottom: 30px;
 }
 p {
@@ -51,6 +59,16 @@ a {
 .form-control {
   background: white;
 }
+input {
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #9e65fa;
+}
+textarea {
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #9e65fa;
+}
 img {
   background: black;
   border-radius: 15px;
@@ -61,31 +79,24 @@ img {
 .card-body {
   width: 100%;
 }
-.send-btn {
-  width: 30%;
+
+.btn-outline-primary {
+  width: 100px;
   height: 40px;
   border-radius: 20px;
   align-self: center;
   text-align: center;
   margin: auto;
   display: block;
-  background: rgb(147, 32, 192);
-  border: none;
   font-weight: bold;
-  color: white;
-  text-decoration: none;
+  color: #9e65fa;
+  border-color: #9e65fa;
 }
-.send-btn:hover {
-  width: 33%;
-  height: 40px;
-  border-radius: 20px;
-  align-self: center;
-  text-align: center;
-  margin: auto;
-  display: block;
-  background: rgb(155, 48, 197);
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  transition: 0.5s;
+
+.btn-outline-primary:hover {
+  width: 130px;
+  color: #ddd;
+  background-color: #9e65fa;
+  border-color: #9e65fa;
+  transition: 0.3s;
 }
