@@ -2,10 +2,7 @@
   <ng-template ngbSlide *ngFor="let slide of sliderItems">
     <div class="img-body">
       <div class="picsum-img-wrapper">
-        <img
-          src="{{ slide.image.host + slide.image.path }}"
-          alt="{{ slide.title }}"
-        />
+        <img src="{{ slide.image }}" alt="{{ slide.title }}" />
       </div>
       <div class="carousel-caption">
         <h3>{{ slide.title }}</h3>
@@ -26,7 +23,7 @@
       <div class="card" *ngFor="let image of imageItems">
         <img
           class="card-img-top"
-          src="{{ image.image.host + image.image.path }}"
+          src="{{ image.image }}"
           alt="{{ image.description }}"
           lightbox
         />

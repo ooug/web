@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-gallery',
@@ -16,10 +17,12 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoading = true;
-    this.httpClient.get('./assets/api/gallery.json').subscribe((data: any) => {
-      this.sliderItems = data.slider;
-      this.imageItems = data.images;
-      this.isLoading = false;
-    });
+    this.httpClient
+      .get(environment.api + '/gallery/get')
+      .subscribe((data: any) => {
+        this.sliderItems = data.gallery.slider;
+        this.imageItems = data.gallery.images;
+        this.isLoading = false;
+      });
   }
 }
