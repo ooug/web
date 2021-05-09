@@ -17,12 +17,10 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoading = true;
-    this.httpClient
-      .get(environment.api + '/gallery/get')
-      .subscribe((data: any) => {
-        this.sliderItems = data.gallery.slider;
-        this.imageItems = data.gallery.images;
-        this.isLoading = false;
-      });
+    this.httpClient.get(environment.api + '/gallery').subscribe((data: any) => {
+      this.sliderItems = data.gallery.sliders;
+      this.imageItems = data.gallery.images;
+      this.isLoading = false;
+    });
   }
 }
