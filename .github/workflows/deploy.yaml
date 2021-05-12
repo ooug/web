@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: install dependencies
-        run: npm i
+        run: HUSKY=0&& npm i
 
       - name: make build for stating
         run: npm run build:staging
