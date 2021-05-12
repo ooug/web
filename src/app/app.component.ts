@@ -8,8 +8,8 @@ import { HelperService } from './services/helper/helper.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  private subs = new Subscription();
-  public isSideBarCollapse: boolean;
+  subs = new Subscription();
+  isSideBarCollapse = true;
   constructor(public helperService: HelperService) {}
 
   ngOnInit(): void {

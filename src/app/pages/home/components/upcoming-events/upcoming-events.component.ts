@@ -8,10 +8,9 @@ import { environment } from '../../../../../environments/environment';
   styleUrls: ['./upcoming-events.component.scss'],
 })
 export class UpcomingEventsComponent implements OnInit {
+  upcomingEvents: any = null;
+  isLoading = true;
   constructor(private http: HttpClient) {}
-
-  public upcomingEvents = null;
-  public isLoading = true;
 
   ngOnInit(): void {
     // getting data from json file

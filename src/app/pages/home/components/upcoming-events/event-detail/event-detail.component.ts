@@ -11,6 +11,18 @@ import { environment } from '../../../../../../environments/environment';
   styleUrls: ['./event-detail.component.scss'],
 })
 export class EventDetailComponent implements OnInit {
+  event: any = null;
+  flags = {
+    isLoading: false,
+    notFound: false,
+  };
+  infoText = '';
+  registerForm = new FormGroup({
+    userName: new FormControl(''),
+    roll: new FormControl(''),
+    email: new FormControl(''),
+    mobile: new FormControl(''),
+  });
   constructor(
     private route: ActivatedRoute,
     private http: HttpClient,
@@ -18,19 +30,30 @@ export class EventDetailComponent implements OnInit {
     private metaService: Meta
   ) {}
 
-  public event = null;
-  public flags = {
-    isLoading: false,
-    notFound: false,
-  };
-  public infoText = '';
-
-  registerForm = new FormGroup({
-    userName: new FormControl(''),
-    roll: new FormControl(''),
-    email: new FormControl(''),
-    mobile: new FormControl(''),
-  });
+  ngOnInit(): void {
+    this.flags.isLoading = true;
+    this.route.paramMap.subscribe((paramMap: ParamMap) => {
+      if (paramMap.has('eventId')) {
+        const eventId = paramMap.get('eventId');
+        // fetching from api
+        this.http
+          .get(
+            (environment.api as string) + '/upcoming-event/get-one/' + eventId
+          )
+          .subscribe((data: any) => {
+            // searching for particular event
+            this.event = data.data;
+            // if event not found
+            if (!this.event) {
+              this.flags.notFound = true;
+            } else {
+              this.updateMetaTags();
+            }
+            this.flags.isLoading = false;
+          });
+      }
+    });
+  }
 
   register() {
     this.infoText = 'Registering...';
@@ -73,31 +96,6 @@ export class EventDetailComponent implements OnInit {
     this.metaService.updateTag({
       property: 'og:description',
       content: this.event.shortDescription,
-    });
-  }
-
-  ngOnInit(): void {
-    this.flags.isLoading = true;
-    this.route.paramMap.subscribe((paramMap: ParamMap) => {
-      if (paramMap.has('eventId')) {
-        const eventId = paramMap.get('eventId');
-        // fetching from api
-        this.http
-          .get(
-            (environment.api as string) + '/upcoming-event/get-one/' + eventId
-          )
-          .subscribe((data: any) => {
-            // searching for particular event
-            this.event = data.data;
-            // if event not found
-            if (!this.event) {
-              this.flags.notFound = true;
-            } else {
-              this.updateMetaTags();
-            }
-            this.flags.isLoading = false;
-          });
-      }
     });
   }
 }
