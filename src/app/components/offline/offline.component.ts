@@ -1,12 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-offline',
   templateUrl: './offline.component.html',
   styleUrls: ['./offline.component.scss'],
 })
-export class OfflineComponent implements OnInit {
+export class OfflineComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }
