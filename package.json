@@ -16,7 +16,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prepare": "husky install"
+    "prepare": "is-ci || husky install"
   },
   "resolutions": {
     "webpack": "^5.0.0"
@@ -57,6 +57,7 @@
     "@typescript-eslint/parser": "4.16.1",
     "eslint": "^7.6.0",
     "husky": "^6.0.0",
+    "is-ci": "^3.0.0",
     "jasmine-core": "~3.7.1",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.3.2",
