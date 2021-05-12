@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "engines": {
     "node": "14"
@@ -15,15 +15,11 @@
     "build:staging": "ng build --configuration=staging && ./scripts/build-staging.sh",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prepare": "husky install"
   },
   "resolutions": {
     "webpack": "^5.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format && git add ."
-    }
   },
   "dependencies": {
     "@angular/animations": "~11.2.11",
@@ -53,6 +49,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^14.14.41",
     "codelyzer": "^6.0.2",
+    "husky": "^6.0.0",
     "jasmine-core": "~3.7.1",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.3.2",
