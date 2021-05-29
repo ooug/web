@@ -19,9 +19,10 @@ export class ContactComponent {
   constructor(private http: HttpClient) {}
 
   onSend(): void {
-    if (this.form.invalid) {
+    if (this.form.invalid && this.form.markAllAsTouched()) {
       return;
     }
+
     this.infoText = 'Submitting...';
     this.http
       .post((environment.api as string) + '/app/contact-us', this.form.value)
