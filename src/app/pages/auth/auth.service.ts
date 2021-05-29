@@ -41,7 +41,7 @@ export class AuthService {
 
   public sendOTP(email: string) {
     return this.http.post((environment.api as string) + '/auth/send-otp', {
-      // tslint:disable-next-line: object-literal-shorthand
+      // eslint-disable-next-line object-shorthand
       email: email,
     });
   }

@@ -10,10 +10,10 @@ import { HelperService } from 'src/app/services/helper/helper.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  private subs = new Subscription();
-  private isHomePage = false;
-  public isSideBarCollapse: boolean;
-  public isTransparent = true;
+  subs = new Subscription();
+  isHomePage = false;
+  isSideBarCollapse = true;
+  isTransparent = true;
 
   constructor(
     private scroll: ViewportScroller,

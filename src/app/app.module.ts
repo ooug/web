@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // For MDB Angular Pro
 import { AppRoutingModule } from './app-routing.module';
@@ -35,8 +36,12 @@ import { BEARER_TOKEN_INTERCEPTOR } from './interceptors/bearer-token-intercepto
     BrowserModule,
     NgbModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
+      enabled: environment.production || environment.staging,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000',
     }),
     ReactiveFormsModule,
     HttpClientModule,

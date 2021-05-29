@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../../environments/environment';
@@ -8,19 +8,17 @@ import { environment } from '../../../../../environments/environment';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
-export class ContactComponent implements OnInit {
-  constructor(private http: HttpClient) {}
-
-  public contactForm = new FormGroup({
+export class ContactComponent {
+  contactForm = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
     subject: new FormControl(''),
     message: new FormControl(''),
   });
+  infoText = '';
+  constructor(private http: HttpClient) {}
 
-  public infoText = '';
-
-  public contact(): void {
+  contact(): void {
     if (this.contactForm.invalid) {
       return;
     }
@@ -40,6 +38,4 @@ export class ContactComponent implements OnInit {
         }
       });
   }
-
-  ngOnInit(): void {}
 }

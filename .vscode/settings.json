@@ -1,5 +1,5 @@
 {
-  "files.autoSave": "off",
+  "files.autoSave": "onWindowChange",
   "editor.formatOnSave": true,
   "cSpell.words": [
     "GIET",
@@ -12,9 +12,11 @@
     "Zilla",
     "allowfullscreen",
     "behance",
+    "browserslist",
     "childs",
     "closebtn",
     "codelyzer",
+    "compodoc",
     "cufonfonts",
     "devkit",
     "flexbox",
