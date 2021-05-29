@@ -1,103 +1,18 @@
-.container-fluid {
-  padding-top: 65px;
-  padding-bottom: 30px;
-  background-color: #9068db;
-}
-.card-title {
-  color: white;
-  font-size: 25px;
-  text-transform: uppercase;
-}
-.container {
-  padding-right: 0;
-  padding-left: 0;
-  z-index: 0;
-}
-.card-img-top {
-  height: 40vh;
-  overflow: hidden;
-}
-.card-body {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  background: #000;
-  color: white;
-  padding: 10px;
-  z-index: 1px;
-  width: 100%;
-  height: auto;
-}
-.card-text-by {
-  text-align: right;
-}
-.text-muted {
-  align-self: left;
-}
-#top-row {
-  padding-top: 10px;
-}
-.carousel-inner {
-  height: 300px;
-  width: 50%;
-}
-
-body {
-  font-family: sans-serif;
-}
 .img-body {
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   padding-bottom: 30px;
 }
 
-.hr {
-  margin-top: 30px;
-  width: 75%;
-  background-color: white;
-  height: 3px;
-  border-radius: 10px;
+#oougTitle {
+  font-family: 'GoodTimesRg-Regular', 'Roboto';
+  font-size: 3rem;
+  line-height: 3.8rem;
+  color: red;
 }
 
-@media screen and (max-width: 960px) {
-  .img-body {
-    width: 100%;
-    height: 30vh;
-    padding-bottom: 30px;
-    overflow: hidden;
-  }
-  .card-img-top {
-    height: 30vh;
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .img-body {
-    width: 100%;
-    height: 30vh;
-    padding-bottom: 30px;
-    overflow: hidden;
-  }
-  .card-img-top {
-    height: 30vh;
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .img-body {
-    width: 100%;
-    height: 30vh;
-    padding-bottom: 30px;
-    overflow: hidden;
-  }
-  .card-img-top {
-    height: 30vh;
-    overflow: hidden;
-  }
-}
-
-#shadow-lg {
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(27, 22, 22, 0.486) !important;
+#galleryTitle {
+  font-family: 'GoodTimesRg-Regular', 'Roboto';
+  font-size: 3rem;
+  line-height: 3.8rem;
 }
