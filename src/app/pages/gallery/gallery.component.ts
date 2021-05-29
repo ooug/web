@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -8,12 +9,11 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent implements OnInit {
+  sliderItems: any = [];
+  imageItems: any = [];
+  isLoading: Boolean = false;
+
   constructor(private httpClient: HttpClient) {}
-
-  public sliderItems: any = [];
-  public imageItems: any = [];
-
-  public isLoading: Boolean = false;
 
   ngOnInit(): void {
     this.isLoading = true;

@@ -15,7 +15,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UnauthorizedGuard
-  implements CanActivate, CanActivateChild, CanLoad {
+  implements CanActivate, CanActivateChild, CanLoad
+{
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot

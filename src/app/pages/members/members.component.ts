@@ -1,19 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-members',
   templateUrl: './members.component.html',
   styleUrls: ['./members.component.scss'],
 })
-export class MembersComponent implements OnInit {
-  public isCollapsed = false;
+export class MembersComponent {
+  isCollapsed = false;
   year = '2ndyear';
   wind = 'yes';
   isCollap = 'yes';
-
-  public corporateMembers = [
+  corporateMembers = [
     {
       Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 1',
@@ -147,7 +145,7 @@ export class MembersComponent implements OnInit {
       },
     },
   ];
-  public studentMembers2ndyear = [
+  studentMembers2ndyear = [
     {
       id: 'a1',
       Image: { host: '', path: './assets/svgs/ooug.svg' },
@@ -246,8 +244,7 @@ export class MembersComponent implements OnInit {
       },
     },
   ];
-
-  public studentMembers3rdyear = [
+  studentMembers3rdyear = [
     {
       Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 1',
@@ -338,8 +335,7 @@ export class MembersComponent implements OnInit {
       },
     },
   ];
-
-  public studentMembers4thyear = [
+  studentMembers4thyear = [
     {
       Image: { host: '', path: './assets/svgs/ooug.svg' },
       name: 'Name 1',
@@ -431,7 +427,10 @@ export class MembersComponent implements OnInit {
     },
   ];
   closeResult = '';
-  BackToTop() {
+
+  constructor(private modalService: NgbModal) {}
+
+  backToTop() {
     scroll({
       top: 0,
       left: 0,
@@ -439,7 +438,6 @@ export class MembersComponent implements OnInit {
     });
   }
 
-  constructor(private modalService: NgbModal) {}
   stud(collap: string) {
     if (collap === 'yes') {
       this.isCollap = 'no';
@@ -449,6 +447,7 @@ export class MembersComponent implements OnInit {
       this.wind = 'no';
     }
   }
+
   collap(wind: string) {
     if (wind === 'yes') {
       this.wind = 'no';
@@ -459,11 +458,11 @@ export class MembersComponent implements OnInit {
     }
   }
 
-  openVerticallyCentered(content) {
+  openVerticallyCentered(content: any) {
     this.modalService.open(content, { centered: true });
   }
 
-  open(content) {
+  open(content: any) {
     this.modalService.open(content, {
       backdropClass: 'red-backdrop',
       windowClass: 'dark-modal',
@@ -471,7 +470,7 @@ export class MembersComponent implements OnInit {
     });
   }
 
-  private getDismissReason(reason: any): string {
+  getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
@@ -480,8 +479,8 @@ export class MembersComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+
   student(y: string) {
     this.year = y;
   }
-  ngOnInit(): void {}
 }
