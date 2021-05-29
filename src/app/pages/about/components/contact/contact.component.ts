@@ -9,7 +9,7 @@ import { environment } from '../../../../../environments/environment';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-  contactForm = new FormGroup({
+  form = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
     subject: new FormControl(''),
@@ -18,21 +18,19 @@ export class ContactComponent {
   infoText = '';
   constructor(private http: HttpClient) {}
 
-  contact(): void {
-    if (this.contactForm.invalid) {
+  onSend(): void {
+    if (this.form.invalid && this.form.markAllAsTouched()) {
       return;
     }
+
     this.infoText = 'Submitting...';
     this.http
-      .post(
-        (environment.api as string) + '/app/contact-us',
-        this.contactForm.value
-      )
+      .post((environment.api as string) + '/app/contact-us', this.form.value)
       .subscribe((data: any) => {
         if (data.data === 'FORM_SUBMITTED') {
           this.infoText =
             'Submitted! Someone from our team will contact you soon.';
-          this.contactForm.reset();
+          this.form.reset();
         } else {
           this.infoText = 'Something went wrong! Please try again.';
         }

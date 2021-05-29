@@ -15,12 +15,12 @@
           <div
             id="map-container-google-11"
             class="z-depth-1-half map-container-6"
-            style="height: 400px; border-radius: 10px;"
+            style="height: 400px; border-radius: 10px"
           >
             <iframe
-              src="https://maps.google.com/maps?q=new%20delphi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471.4185707934767!2d83.83153832492712!3d19.04840625635751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5b8fd4f53db5b60f!2sOdisha%20Oracle%20User&#39;s%20Group(GIET%20GUNUPUR)!5e0!3m2!1sen!2sin!4v1621086855771!5m2!1sen!2sin"
               frameborder="0"
-              style="border: 0;"
+              style="border: 0"
               allowfullscreen
             ></iframe>
           </div>
@@ -55,7 +55,7 @@
 
         <div class="col-lg-5 mb-4">
           <!--Form with header-->
-          <form [formGroup]="contactForm" (submit)="contact()">
+          <form [formGroup]="form" (keydown.enter)="onSend()">
             <div class="card">
               <div class="card-body">
                 <!--Header-->
@@ -91,8 +91,8 @@
                   <div
                     class="text-black"
                     *ngIf="
-                      contactForm.controls.name.touched &&
-                      contactForm.controls.name.errors?.required
+                      form.controls.name.touched &&
+                      form.controls.name.errors?.required
                     "
                   >
                     Required!
@@ -121,14 +121,17 @@
                   <div
                     class="text-black"
                     *ngIf="
-                      contactForm.controls.email.touched &&
-                      contactForm.controls.email.status === 'INVALID'
+                      form.controls.email.touched &&
+                      form.controls.email.status === 'INVALID'
                     "
                   >
-                    <div *ngIf="contactForm.controls.email.errors?.required" class="text-black">
+                    <div
+                      *ngIf="form.controls.email.errors?.required"
+                      class="text-black"
+                    >
                       Required!
                     </div>
-                    <div *ngIf="!contactForm.controls.email.errors?.required">
+                    <div *ngIf="!form.controls.email.errors?.required">
                       Invalid Email!
                     </div>
                   </div>
@@ -155,8 +158,8 @@
                   <div
                     class="text-black"
                     *ngIf="
-                      contactForm.controls.subject.touched &&
-                      contactForm.controls.subject.errors?.required
+                      form.controls.subject.touched &&
+                      form.controls.subject.errors?.required
                     "
                   >
                     Required!
@@ -184,8 +187,8 @@
                   <div
                     class="text-black"
                     *ngIf="
-                      contactForm.controls.message.touched &&
-                      contactForm.controls.message.errors?.required
+                      form.controls.message.touched &&
+                      form.controls.message.errors?.required
                     "
                   >
                     Required!
@@ -193,7 +196,9 @@
                 </div>
                 <div class="text-center text-white mt-3">{{ infoText }}</div>
                 <div class="text-center mt-4">
-                  <button class="btn btn-outline-primary">Send</button>
+                  <button class="btn btn-outline-primary" (click)="onSend()">
+                    Send
+                  </button>
                 </div>
               </div>
             </div>
